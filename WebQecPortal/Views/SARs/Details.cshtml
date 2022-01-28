@@ -1,0 +1,55 @@
+﻿@model WebQecPortal.Models.SAR
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/_DashboardLayoutPage1.cshtml";
+
+}
+<div class="content-wrapper">
+
+
+    <h2>Details</h2>
+
+    <div>
+        <h4>SAR</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Course.CourseCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Course.CourseCode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Department.DepartmentName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Department.DepartmentName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Program.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Program.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Term.Semester)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Term.Semester)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.SARID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

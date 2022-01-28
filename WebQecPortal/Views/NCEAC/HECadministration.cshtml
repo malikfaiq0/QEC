@@ -1,0 +1,392 @@
+﻿@model WebQecPortal.Models.AvailableRoom
+@{
+    ViewBag.Title = "HECadministration";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="container contact">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="enter-class-header">
+                        <h2 class="text-white text-center pt-3">HEC Administration Form</h2>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+
+                <div class="col-md-10">
+                    <div class="contact-form">
+
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b> 1. Total Number of Dedicated Lecture Rooms</b></p>
+
+                                <input type="text" value="@ViewBag.Dedicated" class="form-control" id="fname" placeholder="(For the Program Under Evaluation)" name="fname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b>2. Total Number of Shared Lecture Rooms</b></p>
+                                <input type="text" value="@ViewBag.SharedRoom" class="form-control" id="lname" placeholder="(For the Program Under Evaluation)" name="lname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b>3. Average Size of each lecture rooms</b></p>
+                                <input type="text" value="@ViewBag.AverageRoomSize" class="form-control" id="lname" placeholder="(In Square Feet)" name="lname">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b>4. Instructional Facilities provided in lecture rooms</b></p>
+                                <p> Provide details</p>
+                                <input type="checkbox"  checked="@ViewBag.ismultimedia" id="multimedia1" name="multimedia1" value="multi">
+                                <label for="multimedia1">All classrooms has equipped with multimedia projectors</label><br>
+                                <input type="checkbox"  checked="@ViewBag.isair" id="air1" name="air1" value="air">
+                                <label for="air1">
+                                    All Classrooms are air-conditioned providing a relaxed
+                                    favorable learning environment.
+                                </label><br>
+                                <input type="checkbox" checked="@ViewBag.iswifi" id="wifi1" name="wifi1" value="wifi">
+                                <label for="wifi1"> Wi-Fi facility is available around the clock on the campus</label><br>
+                                <input type="checkbox" checked="@ViewBag.issound" id="sound1" name="sound1" value="sound">
+                                <label for="sound1"> All classrooms has sound system.</label><br>
+                                <input type="checkbox" checked="@ViewBag.isadvanced" id="videos1" name="videos1" value="videos">
+                                <label for="videos1">
+                                    The advanced equipped setup permits faculty members to supplement their lectures
+                                    with audio/video effects to engage students furthermore.
+                                </label><br>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b>5. Other facilities</b></p>
+                                <p> (For Example: Heating System, ACs etc.)</p>
+                                <input type="checkbox" checked="@ViewBag.isAc" id="ac1" name="ac1" value="ac">
+                                <label for="ac1">AC</label><br>
+                                <input type="checkbox" checked="@ViewBag.isLight" id="light1" name="light1" value="light">
+                                <label for="light1">Lights </label><br>
+                                <input type="checkbox" checked="@ViewBag.isFans" id="fan1" name="fan1" value="fan">
+                                <label for="fan1"> Fans</label><br>
+                                <input type="checkbox" checked="@ViewBag.isWhiteboard" id="wb1" name="wb1" value="wb">
+                                <label for="wb1"> White Board</label><br>
+                                <input type="checkbox"  checked="@ViewBag.isproj" id="ps1" name="ps1" value="ps">
+                                <label for="ps1"> Projector Screen</label><br>
+                            </div>
+                        </div>
+                        <h6><b> Computing Labs</b></h6>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b> 6. Total Number of Computing Labs</b></p>
+
+                                <input type="text" value="@ViewBag.totalLab" class="form-control" id="fname" placeholder="(For the Program Under Evaluation)" name="fname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b>7. Average Number of Computers per Lab </b></p>
+
+                                <input type="text" value="@ViewBag.avgLab"class="form-control" id="fname" placeholder="(For the Program Under Evaluation)" name="fname">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b> 8. Average Lifetime of PC in computer lab</b></p>
+
+                                <input type="text" value="@ViewBag.avgLifeTime" class="form-control" id="fname" placeholder="No of Years" name="fname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b>9. Lab contact hours per credit hour per week</b></p>
+
+                                <input type="text"  value="@ViewBag.LabContact" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b> 10. Nature & level of Networking</b></p>
+                                <p>(Provide Details) </p>
+                                <input type="checkbox"  checked="@ViewBag.isCisco" id="speed1" name="speed1" value="speed">
+                                <label for="speed1">High Speed Gigabyte Campus Network (Cisco Switches)</label><br>
+                                <input type="checkbox"  checked="@ViewBag.isWAN" id="wan1" name="wan1" value="wan">
+                                <label for="wan1">High Speed WAN Connection (15 Mbps CIR) By Wateen Telecom </label><br>
+                                <input type="checkbox"   checked="@ViewBag.isDigi"id="intra1" name="intra1" value="intra">
+                                <label for="intra1">
+                                    HEC (PERN) WAN connection 16Mbps internet & 20 Mbps Intranet for other
+                                    resources (e.g. HEC Digital Library)
+                                </label><br>
+
+                                <input type="checkbox"  checked="@ViewBag.isVirtual" id="data1" name="data1" value="data">
+                                <label for="data1">
+                                    Data Center with high-end Hardware Servers (Dell & HP) with Virtualization
+                                    Platform VMware enabled.
+                                </label><br>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b> 11. Specialized lab facilities & Hours of their availability</b></p>
+                                <p>(Provide Details) </p>
+                                <input type="checkbox" checked="@ViewBag.isLab"id="gpu1" name="gpu1" value="gpu">
+                                <label for="gpu1">02 GPUs in Advanced Research Lab (24/7 availability).</label><br>
+                                <input type="checkbox" checked="@ViewBag.isprojec" id="multi1" name="multi1" value="multi">
+                                <label for="multi1">Multimedia Projectors </label><br>
+                                <input type="checkbox" checked="@ViewBag.isSounds" id="sound1" name="sound1" value="sound1">
+                                <label for="sound1">
+                                    Sound Systems
+                                </label><br>
+
+                                <input type="checkbox"  checked="@ViewBag.isLAN"id="lan1" name="lan1" value="lan">
+                                <label for="lan1">LAN </label><br>
+                                <input type="checkbox" checked="@ViewBag.isWhite" id="white1" name="white1" value="white">
+                                <label for="white1">White Boards </label><br>
+                                <input type="checkbox" checked="@ViewBag.isStaff" id="staff1" name="staff1" value="staff">
+                                <label for="staff1">Support Staff</label><br>
+                                <input type="checkbox" checked="@ViewBag.isPrint" id="print1" name="  print1" value="print">
+                                <label for="print1">Printers</label><br>
+
+                                <p>
+                                    All specialized facilities are available from 8:30 am to 4:30 pm (for Undergraduate
+                                    Students) and from 8:30 am to 9:30 pm (for Graduate Students).
+                                </p>
+
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b> 12. Is there Logic Design Lab for CS students</b></p>
+
+                                <input type="text" value="@ViewBag.DLDlab"class="form-control" id="fname" placeholder="Please write clear answer.)" name="fname">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p> <b> 13. Is there any exclusive Final Year Lab for CS students</b></p>
+
+                                <input type="text" value="@ViewBag.FYPlab" class="form-control" id="fname" placeholder="Please write clear answer." name="fname">
+                            </div>
+                            <label> Labs Info. for the Year 2020</label>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p> <b> 14. Student to Computer Ratio</b></p>
+
+                                    <input type="text"value="@ViewBag.ratio20" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                </div>
+                                <label> Labs Info. for the Year 2019</label>
+
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b> 15. Student to Computer Ratio</b></p>
+
+                                        <input type="text" value="@ViewBag.ratio19" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+
+                                <label> Labs Info. for the Year 2018</label>
+
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b> 16. Student to Computer Ratio</b></p>
+
+                                        <input type="text"   value="@ViewBag.ratio18"class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+
+
+                                <label> Library</label>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b> 18. Total Number of books in Library</b></p>
+
+                                        <input type="text"value="@ViewBag.totalBooks" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b> 18. Total Number of Unique titles in Library</b></p>
+
+                                        <input type="text" value="@ViewBag.Titles"class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b> 19. Is connected to HEC digital Library</b></p>
+
+                                        <input type="text"value="@ViewBag.HecConnected" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b> 20. Is there any library management system</b></p>
+
+                                        <input type="text" value="@ViewBag.libMgnt" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b> 21. Is there access to IEEE/ACM Journals/Proceedings in library</b></p>
+
+                                        <input type="text"value="@ViewBag.IEEEE" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+                                <label>Library Info. for the Year 2020</label>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b> 22. Computing Books added to Library</b></p>
+
+                                        <input type="text" value="@ViewBag.BooksAdded20" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b> 23. Number of printed technical magazines</b></p>
+
+                                        <input type="text" value="@ViewBag.magazines20" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+                                <label>Library Info. for the Year 2019</label>
+
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b> 24. Computing Books added to Library</b></p>
+
+                                        <input type="text" value="@ViewBag.BooksAdded19" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b>25. Number of printed technical magazines</b></p>
+
+                                        <input type="text" value="@ViewBag.magazines19" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b>26. Computing Books added to Library</b></p>
+
+                                        <input type="text" value="@ViewBag.BooksAdded18" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+                                <label>Library Info. for the Year 2018</label>
+
+                                <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <p> <b>27. Number of printed technical magazines</b></p>
+
+                                        <input type="text" value="@ViewBag.magazines18" class="form-control" id="fname" placeholder="(Please write clear answer.)" name="fname">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-primary"><a href="@Url.Action("Admission","NCEAC")" style="color:white;">Next</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    @Html.ActionLink("AdminStructure", "AdminStructure", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("Admission", "Admission", "NCEAC")
+                    <br />
+                    @Html.ActionLink("AlumniBSCS", "AlumniBSCS", "NCEAC")
+                    <br />
+                    @Html.ActionLink("AlumniBSSE", "AlumniBSSE", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("CourseDescription", "CourseDescription", "NCEAC")
+                    <br />
+                    @Html.ActionLink("CourseLog", "CourseLog", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("CPMF", "CPMF", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("FacultyWorkload", "FacultyWorkload", "NCEAC")
+                    <br />
+                    @Html.ActionLink("FIF", "FIF", "NCEAC")
+                    <br />
+                    @Html.ActionLink("FinancialBSCS", "FinancialBSCS", "NCEAC")
+                    <br />
+                    @Html.ActionLink("FinancialBSSE", "FinancialBSSE", "NCEAC")
+                    <br />
+                    @Html.ActionLink("HECadministration", "HECadministration", "NCEAC")
+                    <br />
+                    @Html.ActionLink("PMPF", "PMPF", "NCEAC")
+                    <br />
+                    @Html.ActionLink("CRI", "CRI", "NCEAC")
+                    <br />
+                </div>
+    </section>
+    <!-- /.content -->
+</div>
+
+<!-- /.content-wrapper -->
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../plugins/moment/moment.min.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../dist/js/pages/dashboard.js"></script>
+

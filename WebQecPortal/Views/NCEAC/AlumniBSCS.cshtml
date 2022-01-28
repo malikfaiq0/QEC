@@ -1,0 +1,190 @@
+﻿@model WebQecPortal.Models.Institution
+
+@{
+    ViewBag.Title = "AlumniBSCS";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="container contact">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="enter-class-header">
+                        <h2 class="text-white text-center pt-3">Alumni (BSCS) Form</h2>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+
+                <div class="col-md-10">
+                    <div class="contact-form">
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>INSTITUTION:</p>
+                                <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>How many students has the institution graduated over the past five years?</p>
+                                <input type="text" value="@ViewBag.noOfGrad15" class="form-control" id="fname" placeholder="2015" name="fname" maxlength="6" size="6">
+                                <input type="text" value="@ViewBag.noOfGrad16" class="form-control" id="fname" placeholder="2016" name="fname" maxlength="6" size="6">
+                                <input type="text" value="@ViewBag.noOfGrad17" class="form-control" id="fname" placeholder="2017" name="fname" maxlength="6" size="6">
+                                <input type="text" value="@ViewBag.noOfGrad18" class="form-control" id="fname" placeholder="2018" name="fname" maxlength="6" size="6">
+                                <input type="text" value="@ViewBag.noOfGrad19" class="form-control" id="fname" placeholder="2019" name="fname" maxlength="6" size="6">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>How many students have graduated under the program over the past five years?</p>
+                                <input type="text" value="@ViewBag.noOfGrad15" class="form-control" id="fname" placeholder="2015" name="fname" maxlength="6" size="6">
+                                <input type="text" value="@ViewBag.noOfGrad16" class="form-control" id="fname" placeholder="2016" name="fname" maxlength="6" size="6">
+                                <input type="text" value="@ViewBag.noOfGrad17" class="form-control" id="fname" placeholder="2017" name="fname" maxlength="6" size="6">
+                                <input type="text" value="@ViewBag.noOfGrad18" class="form-control" id="fname" placeholder="2018" name="fname" maxlength="6" size="6">
+                                <input type="text" value="@ViewBag.noOfGrad19" class="form-control" id="fname" placeholder="2019" name="fname" maxlength="6" size="6">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>What facilities and resources are available to students for internships and placement?</p>
+                                <textarea name="name" class="form-control">@ViewBag.facility</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>How does the university maintain contact with her alumni?</p>
+                                <textarea name="name"class="form-control">@ViewBag.contact</textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>Summary of the record of graduate’s placement in industry for the last five years</p>
+                                <input type="file" value="@ViewBag.industryPath" class="form-control" id="customFile" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>Summary of the record of graduate’s placement in national and international institutions for MS and PhD studies</p>
+                                <input type="file" value="@ViewBag.acadpath" class="form-control" id="customFile" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>Process to maintain communication with graduates</p>
+                                <textarea name="name" class="form-control">@ViewBag.comm</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>Alumni Registered Association?</p>
+                                <textarea name="name" class="form-control">@ViewBag.association</textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary"><a href="@Url.Action("CourseLog","NCEAC")" style="color:white;">Next</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    @Html.ActionLink("AdminStructure", "AdminStructure", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("Admission", "Admission", "NCEAC")
+                    <br />
+                    @Html.ActionLink("AlumniBSCS", "AlumniBSCS", "NCEAC")
+                    <br />
+                    @Html.ActionLink("AlumniBSSE", "AlumniBSSE", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("CourseDescription", "CourseDescription", "NCEAC")
+                    <br />
+                    @Html.ActionLink("CourseLog", "CourseLog", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("CPMF", "CPMF", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("FacultyWorkload", "FacultyWorkload", "NCEAC")
+                    <br />
+                    @Html.ActionLink("FIF", "FIF", "NCEAC")
+                    <br />
+                    @Html.ActionLink("FinancialBSCS", "FinancialBSCS", "NCEAC")
+                    <br />
+                    @Html.ActionLink("FinancialBSSE", "FinancialBSSE", "NCEAC")
+                    <br />
+                    @Html.ActionLink("HECadministration", "HECadministration", "NCEAC")
+                    <br />
+                    @Html.ActionLink("PMPF", "PMPF", "NCEAC")
+                    <br />
+                    @Html.ActionLink("CRI", "CRI", "NCEAC")
+                    <br />
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+
+<!-- /.content-wrapper -->
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../plugins/moment/moment.min.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../dist/js/pages/dashboard.js"></script>

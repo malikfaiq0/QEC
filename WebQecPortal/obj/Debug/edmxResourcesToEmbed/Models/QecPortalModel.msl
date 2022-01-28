@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QecPortalModelStoreContainer" CdmEntityContainer="QecPortalEntities">
+    <EntitySetMapping Name="AdmissionForms">
+      <EntityTypeMapping TypeName="QecPortalModel.AdmissionForm">
+        <MappingFragment StoreEntitySet="AdmissionForm">
+          <ScalarProperty Name="InductionYearsAdmissionID" ColumnName="InductionYearsAdmissionID" />
+          <ScalarProperty Name="policies" ColumnName="policies" />
+          <ScalarProperty Name="MeritCompiled" ColumnName="MeritCompiled" />
+          <ScalarProperty Name="Merit" ColumnName="Merit" />
+          <ScalarProperty Name="MiniRequirement" ColumnName="MiniRequirement" />
+          <ScalarProperty Name="Instrument" ColumnName="Instrument" />
+          <ScalarProperty Name="WhenStudentAdmit" ColumnName="WhenStudentAdmit" />
+          <ScalarProperty Name="FrequencyAdmission" ColumnName="FrequencyAdmission" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="AdmisionID" ColumnName="AdmisionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alumni">
+      <EntityTypeMapping TypeName="QecPortalModel.Alumnus">
+        <MappingFragment StoreEntitySet="Alumni">
+          <ScalarProperty Name="GraduateAcademicsPath" ColumnName="GraduateAcademicsPath" />
+          <ScalarProperty Name="GraduateIndustryPath" ColumnName="GraduateIndustryPath" />
+          <ScalarProperty Name="YearlyPassoutID" ColumnName="YearlyPassoutID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="AlumniAssociation" ColumnName="AlumniAssociation" />
+          <ScalarProperty Name="CommunicateGraduates" ColumnName="CommunicateGraduates" />
+          <ScalarProperty Name="ContactAlumni" ColumnName="ContactAlumni" />
+          <ScalarProperty Name="FacilityInternship" ColumnName="FacilityInternship" />
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="AlumniID" ColumnName="AlumniID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Assignments">
+      <EntityTypeMapping TypeName="QecPortalModel.Assignment">
+        <MappingFragment StoreEntitySet="Assignment">
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="DedlineDate" ColumnName="DedlineDate" />
+          <ScalarProperty Name="AssignDate" ColumnName="AssignDate" />
+          <ScalarProperty Name="AssignName" ColumnName="AssignName" />
+          <ScalarProperty Name="AssignNumber" ColumnName="AssignNumber" />
+          <ScalarProperty Name="AssignmentID" ColumnName="AssignmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssignmentReports">
+      <EntityTypeMapping TypeName="QecPortalModel.AssignmentReport">
+        <MappingFragment StoreEntitySet="AssignmentReport">
+          <ScalarProperty Name="RubricsID" ColumnName="RubricsID" />
+          <ScalarProperty Name="SCRID" ColumnName="SCRID" />
+          <ScalarProperty Name="AssignmentID" ColumnName="AssignmentID" />
+          <ScalarProperty Name="CLOnumber" ColumnName="CLOnumber" />
+          <ScalarProperty Name="AssignReportID" ColumnName="AssignReportID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AvailableRooms">
+      <EntityTypeMapping TypeName="QecPortalModel.AvailableRoom">
+        <MappingFragment StoreEntitySet="AvailableRoom">
+          <ScalarProperty Name="projector" ColumnName="projector" />
+          <ScalarProperty Name="whiteboard" ColumnName="whiteboard" />
+          <ScalarProperty Name="fans" ColumnName="fans" />
+          <ScalarProperty Name="lights" ColumnName="lights" />
+          <ScalarProperty Name="advancedEquipment" ColumnName="advancedEquipment" />
+          <ScalarProperty Name="sound" ColumnName="sound" />
+          <ScalarProperty Name="wifi" ColumnName="wifi" />
+          <ScalarProperty Name="airConditioned" ColumnName="airConditioned" />
+          <ScalarProperty Name="multimedia" ColumnName="multimedia" />
+          <ScalarProperty Name="RoomLocation" ColumnName="RoomLocation" />
+          <ScalarProperty Name="RoomTypeID" ColumnName="RoomTypeID" />
+          <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+          <ScalarProperty Name="AvailableRoomID" ColumnName="AvailableRoomID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComputerRatios">
+      <EntityTypeMapping TypeName="QecPortalModel.ComputerRatio">
+        <MappingFragment StoreEntitySet="ComputerRatio">
+          <ScalarProperty Name="RatioYearlyBudgetID" ColumnName="RatioYearlyBudgetID" />
+          <ScalarProperty Name="ComputerRatioID" ColumnName="ComputerRatioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComputingBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.ComputingBudget">
+        <MappingFragment StoreEntitySet="ComputingBudget">
+          <ScalarProperty Name="CYearlyBudgetID" ColumnName="CYearlyBudgetID" />
+          <ScalarProperty Name="DepComputingBudgetID" ColumnName="DepComputingBudgetID" />
+          <ScalarProperty Name="LabAvailabilityID" ColumnName="LabAvailabilityID" />
+          <ScalarProperty Name="LevelNetworkingID" ColumnName="LevelNetworkingID" />
+          <ScalarProperty Name="ComputerRatioID" ColumnName="ComputerRatioID" />
+          <ScalarProperty Name="FYPLab" ColumnName="FYPLab" />
+          <ScalarProperty Name="DLDlab" ColumnName="DLDlab" />
+          <ScalarProperty Name="LabContact" ColumnName="LabContact" />
+          <ScalarProperty Name="AvgLifetimePC" ColumnName="AvgLifetimePC" />
+          <ScalarProperty Name="AvgCompLab" ColumnName="AvgCompLab" />
+          <ScalarProperty Name="TotalCompLab" ColumnName="TotalCompLab" />
+          <ScalarProperty Name="ComputingBudgetID" ColumnName="ComputingBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="QecPortalModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="PrereqCourse" ColumnName="PrereqCourse" />
+          <ScalarProperty Name="Credithr" ColumnName="Credithr" />
+          <ScalarProperty Name="CourseTitle" ColumnName="CourseTitle" />
+          <ScalarProperty Name="CourseCode" ColumnName="CourseCode" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseDescriptions">
+      <EntityTypeMapping TypeName="QecPortalModel.CourseDescription">
+        <MappingFragment StoreEntitySet="CourseDescription">
+          <ScalarProperty Name="Application" ColumnName="Application" />
+          <ScalarProperty Name="topicCover" ColumnName="topicCover" />
+          <ScalarProperty Name="CourseCatDescription" ColumnName="CourseCatDescription" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="EvaluationInstrument" ColumnName="EvaluationInstrument" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CatalogNumber" ColumnName="CatalogNumber" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+          <ScalarProperty Name="OWminutes" ColumnName="OWminutes" />
+          <ScalarProperty Name="OWpresentation" ColumnName="OWpresentation" />
+          <ScalarProperty Name="OWpages" ColumnName="OWpages" />
+          <ScalarProperty Name="OWwritten" ColumnName="OWwritten" />
+          <ScalarProperty Name="TimeSpentIssues" ColumnName="TimeSpentIssues" />
+          <ScalarProperty Name="TimeSpentSolution" ColumnName="TimeSpentSolution" />
+          <ScalarProperty Name="TimeSpentProblem" ColumnName="TimeSpentProblem" />
+          <ScalarProperty Name="TimeSpentTheory" ColumnName="TimeSpentTheory" />
+          <ScalarProperty Name="AssessmentWeights" ColumnName="AssessmentWeights" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="ProgrammingAssignment" ColumnName="ProgrammingAssignment" />
+          <ScalarProperty Name="ProjectCourse" ColumnName="ProjectCourse" />
+          <ScalarProperty Name="CourseGoals" ColumnName="CourseGoals" />
+          <ScalarProperty Name="Textbook" ColumnName="Textbook" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="CourseDescriptionID" ColumnName="CourseDescriptionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseEvaluations">
+      <EntityTypeMapping TypeName="QecPortalModel.CourseEvaluation">
+        <MappingFragment StoreEntitySet="CourseEvaluation">
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="CourseEvaluationID" ColumnName="CourseEvaluationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseOutlines">
+      <EntityTypeMapping TypeName="QecPortalModel.CourseOutline">
+        <MappingFragment StoreEntitySet="CourseOutline">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="CourseOutlineID" ColumnName="CourseOutlineID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CRIs">
+      <EntityTypeMapping TypeName="QecPortalModel.CRI">
+        <MappingFragment StoreEntitySet="CRI">
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="SumTotalCredit" ColumnName="SumTotalCredit" />
+          <ScalarProperty Name="SumCumulativeCredit" ColumnName="SumCumulativeCredit" />
+          <ScalarProperty Name="SumGeneralElective" ColumnName="SumGeneralElective" />
+          <ScalarProperty Name="SumUniversityElective" ColumnName="SumUniversityElective" />
+          <ScalarProperty Name="SumSupportingSci" ColumnName="SumSupportingSci" />
+          <ScalarProperty Name="SumCumulative" ColumnName="SumCumulative" />
+          <ScalarProperty Name="SumBasedlective" ColumnName="SumBasedlective" />
+          <ScalarProperty Name="SumMajorCore" ColumnName="SumMajorCore" />
+          <ScalarProperty Name="SumComputingCore" ColumnName="SumComputingCore" />
+          <ScalarProperty Name="HecTotalCredit" ColumnName="HecTotalCredit" />
+          <ScalarProperty Name="HecCumulativeCredit" ColumnName="HecCumulativeCredit" />
+          <ScalarProperty Name="HecGeneralElective" ColumnName="HecGeneralElective" />
+          <ScalarProperty Name="HecUniversityElective" ColumnName="HecUniversityElective" />
+          <ScalarProperty Name="HecSupportingSci" ColumnName="HecSupportingSci" />
+          <ScalarProperty Name="HecCumulative" ColumnName="HecCumulative" />
+          <ScalarProperty Name="HecBasedlective" ColumnName="HecBasedlective" />
+          <ScalarProperty Name="HecMajorCore" ColumnName="HecMajorCore" />
+          <ScalarProperty Name="HecComputingCore" ColumnName="HecComputingCore" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="CRI_ID" ColumnName="CRI_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CYearlyBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.CYearlyBudget">
+        <MappingFragment StoreEntitySet="CYearlyBudget">
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CYearlyBudgetID" ColumnName="CYearlyBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DCYearlyBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.DCYearlyBudget">
+        <MappingFragment StoreEntitySet="DCYearlyBudget">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="DCYearlyBudgetID" ColumnName="DCYearlyBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="QecPortalModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepComputingBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.DepComputingBudget">
+        <MappingFragment StoreEntitySet="DepComputingBudget">
+          <ScalarProperty Name="DCYearlyBudgetID" ColumnName="DCYearlyBudgetID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="DepComputingBudgetID" ColumnName="DepComputingBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepOfferProgBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.DepOfferProgBudget">
+        <MappingFragment StoreEntitySet="DepOfferProgBudget">
+          <ScalarProperty Name="DOPYearlyBudgetID" ColumnName="DOPYearlyBudgetID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="DepOfferProgBudgetID" ColumnName="DepOfferProgBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepResearchBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.DepResearchBudget">
+        <MappingFragment StoreEntitySet="DepResearchBudget">
+          <ScalarProperty Name="DRYearlyBudgetID" ColumnName="DRYearlyBudgetID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="DepResearchBudgetID" ColumnName="DepResearchBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOPYearlyBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.DOPYearlyBudget">
+        <MappingFragment StoreEntitySet="DOPYearlyBudget">
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DOPYearlyBudgetID" ColumnName="DOPYearlyBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRYearlyBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.DRYearlyBudget">
+        <MappingFragment StoreEntitySet="DRYearlyBudget">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="DRYearlyBudgetID" ColumnName="DRYearlyBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ECourseFoders">
+      <EntityTypeMapping TypeName="QecPortalModel.ECourseFoder">
+        <MappingFragment StoreEntitySet="ECourseFoders">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+          <ScalarProperty Name="FolderName" ColumnName="FolderName" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="ECourseFolderID" ColumnName="ECourseFolderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FacultyCourses">
+      <EntityTypeMapping TypeName="QecPortalModel.FacultyCours">
+        <MappingFragment StoreEntitySet="FacultyCourses">
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+          <ScalarProperty Name="FacultyCoursesID" ColumnName="FacultyCoursesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FIFs">
+      <EntityTypeMapping TypeName="QecPortalModel.FIF">
+        <MappingFragment StoreEntitySet="FIF">
+          <ScalarProperty Name="TechReports" ColumnName="TechReports" />
+          <ScalarProperty Name="Patents" ColumnName="Patents" />
+          <ScalarProperty Name="PubBookChap" ColumnName="PubBookChap" />
+          <ScalarProperty Name="PubBook" ColumnName="PubBook" />
+          <ScalarProperty Name="PubConLocal" ColumnName="PubConLocal" />
+          <ScalarProperty Name="PubConinternational" ColumnName="PubConinternational" />
+          <ScalarProperty Name="PubJnlLocal" ColumnName="PubJnlLocal" />
+          <ScalarProperty Name="PubJnlinternational" ColumnName="PubJnlinternational" />
+          <ScalarProperty Name="ExpIndustry" ColumnName="ExpIndustry" />
+          <ScalarProperty Name="ExpHigherEdu" ColumnName="ExpHigherEdu" />
+          <ScalarProperty Name="Specialization" ColumnName="Specialization" />
+          <ScalarProperty Name="DegreeAwarding" ColumnName="DegreeAwarding" />
+          <ScalarProperty Name="AcademicDegree" ColumnName="AcademicDegree" />
+          <ScalarProperty Name="InsructorID" ColumnName="InsructorID" />
+          <ScalarProperty Name="FIFID" ColumnName="FIFID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Financials">
+      <EntityTypeMapping TypeName="QecPortalModel.Financial">
+        <MappingFragment StoreEntitySet="Financial">
+          <ScalarProperty Name="DepComputingBudgetID" ColumnName="DepComputingBudgetID" />
+          <ScalarProperty Name="DepResearchBudgetID" ColumnName="DepResearchBudgetID" />
+          <ScalarProperty Name="WholeBudgetID" ColumnName="WholeBudgetID" />
+          <ScalarProperty Name="Fund" ColumnName="Fund" />
+          <ScalarProperty Name="TotalAssets" ColumnName="TotalAssets" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="SourcesOfIncomeID" ColumnName="SourcesOfIncomeID" />
+          <ScalarProperty Name="FreeStructureID" ColumnName="FreeStructureID" />
+          <ScalarProperty Name="DepOfferProgBudgetID" ColumnName="DepOfferProgBudgetID" />
+          <ScalarProperty Name="ComputingBudgetID" ColumnName="ComputingBudgetID" />
+          <ScalarProperty Name="LibraryBudgetID" ColumnName="LibraryBudgetID" />
+          <ScalarProperty Name="ResearchBudgetID" ColumnName="ResearchBudgetID" />
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="FinancialID" ColumnName="FinancialID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FreeStructures">
+      <EntityTypeMapping TypeName="QecPortalModel.FreeStructure">
+        <MappingFragment StoreEntitySet="FreeStructure">
+          <ScalarProperty Name="FYearlyBudgetID" ColumnName="FYearlyBudgetID" />
+          <ScalarProperty Name="FreeStructureID" ColumnName="FreeStructureID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FYearlyBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.FYearlyBudget">
+        <MappingFragment StoreEntitySet="FYearlyBudget">
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FYearlyBudgetID" ColumnName="FYearlyBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HecAdministrations">
+      <EntityTypeMapping TypeName="QecPortalModel.HecAdministration">
+        <MappingFragment StoreEntitySet="HecAdministration">
+          <ScalarProperty Name="LibraryBudgetID" ColumnName="LibraryBudgetID" />
+          <ScalarProperty Name="ComputingBudgetID" ColumnName="ComputingBudgetID" />
+          <ScalarProperty Name="OtherFacilitiesID" ColumnName="OtherFacilitiesID" />
+          <ScalarProperty Name="InstructionalFacilitiesID" ColumnName="InstructionalFacilitiesID" />
+          <ScalarProperty Name="RoomTypeID" ColumnName="RoomTypeID" />
+          <ScalarProperty Name="HecAdminID" ColumnName="HecAdminID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InductionYears">
+      <EntityTypeMapping TypeName="QecPortalModel.InductionYear">
+        <MappingFragment StoreEntitySet="InductionYears">
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="InductionYearID" ColumnName="InductionYearID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InductionYearsAdmissions">
+      <EntityTypeMapping TypeName="QecPortalModel.InductionYearsAdmission">
+        <MappingFragment StoreEntitySet="InductionYearsAdmission">
+          <ScalarProperty Name="InductionYearID" ColumnName="InductionYearID" />
+          <ScalarProperty Name="InductionYearsAdmissionID" ColumnName="InductionYearsAdmissionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Institutions">
+      <EntityTypeMapping TypeName="QecPortalModel.Institution">
+        <MappingFragment StoreEntitySet="Institution">
+          <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstructionalFacilities">
+      <EntityTypeMapping TypeName="QecPortalModel.InstructionalFacility">
+        <MappingFragment StoreEntitySet="InstructionalFacilities">
+          <ScalarProperty Name="advanced" ColumnName="advanced" />
+          <ScalarProperty Name="sound" ColumnName="sound" />
+          <ScalarProperty Name="wifi" ColumnName="wifi" />
+          <ScalarProperty Name="AC" ColumnName="AC" />
+          <ScalarProperty Name="multimedia" ColumnName="multimedia" />
+          <ScalarProperty Name="InstructionalFacilitiesID" ColumnName="InstructionalFacilitiesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instructors">
+      <EntityTypeMapping TypeName="QecPortalModel.Instructor">
+        <MappingFragment StoreEntitySet="Instructor">
+          <ScalarProperty Name="InstructorRegID" ColumnName="InstructorRegID" />
+          <ScalarProperty Name="InstructorDept" ColumnName="InstructorDept" />
+          <ScalarProperty Name="InstructorName" ColumnName="InstructorName" />
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LabAvailabilities">
+      <EntityTypeMapping TypeName="QecPortalModel.LabAvailability">
+        <MappingFragment StoreEntitySet="LabAvailability">
+          <ScalarProperty Name="Printers" ColumnName="Printers" />
+          <ScalarProperty Name="supportStaff" ColumnName="supportStaff" />
+          <ScalarProperty Name="whiteboards" ColumnName="whiteboards" />
+          <ScalarProperty Name="LAN" ColumnName="LAN" />
+          <ScalarProperty Name="sound" ColumnName="sound" />
+          <ScalarProperty Name="Projectors" ColumnName="Projectors" />
+          <ScalarProperty Name="AdvancedLab" ColumnName="AdvancedLab" />
+          <ScalarProperty Name="LabAvailabilityID" ColumnName="LabAvailabilityID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LevelNetworkings">
+      <EntityTypeMapping TypeName="QecPortalModel.LevelNetworking">
+        <MappingFragment StoreEntitySet="LevelNetworking">
+          <ScalarProperty Name="Virtualizaion" ColumnName="Virtualizaion" />
+          <ScalarProperty Name="HecDigitalLibrary" ColumnName="HecDigitalLibrary" />
+          <ScalarProperty Name="WAN" ColumnName="WAN" />
+          <ScalarProperty Name="Cisco" ColumnName="Cisco" />
+          <ScalarProperty Name="LevelNetworkingID" ColumnName="LevelNetworkingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LibraryBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.LibraryBudget">
+        <MappingFragment StoreEntitySet="LibraryBudget">
+          <ScalarProperty Name="NumberOfTitles" ColumnName="NumberOfTitles" />
+          <ScalarProperty Name="TotalBooks" ColumnName="TotalBooks" />
+          <ScalarProperty Name="LYearlyBudgetID" ColumnName="LYearlyBudgetID" />
+          <ScalarProperty Name="IEEEElib" ColumnName="IEEEElib" />
+          <ScalarProperty Name="LibManagment" ColumnName="LibManagment" />
+          <ScalarProperty Name="HecLib" ColumnName="HecLib" />
+          <ScalarProperty Name="LibraryBudgetID" ColumnName="LibraryBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="QecPortalModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LYearlyBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.LYearlyBudget">
+        <MappingFragment StoreEntitySet="LYearlyBudget">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NumberOfMagazines" ColumnName="NumberOfMagazines" />
+          <ScalarProperty Name="ComputingBooksAdded" ColumnName="ComputingBooksAdded" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="LYearlyBudgetID" ColumnName="LYearlyBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtherFacilities">
+      <EntityTypeMapping TypeName="QecPortalModel.OtherFacility">
+        <MappingFragment StoreEntitySet="OtherFacilities">
+          <ScalarProperty Name="projector" ColumnName="projector" />
+          <ScalarProperty Name="whiteboard" ColumnName="whiteboard" />
+          <ScalarProperty Name="fans" ColumnName="fans" />
+          <ScalarProperty Name="lights" ColumnName="lights" />
+          <ScalarProperty Name="Ac" ColumnName="Ac" />
+          <ScalarProperty Name="OtherFacilitiesID" ColumnName="OtherFacilitiesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PMPFs">
+      <EntityTypeMapping TypeName="QecPortalModel.PMPF">
+        <MappingFragment StoreEntitySet="PMPF">
+          <ScalarProperty Name="Application" ColumnName="Application" />
+          <ScalarProperty Name="CorrelateIndus" ColumnName="CorrelateIndus" />
+          <ScalarProperty Name="Assesment" ColumnName="Assesment" />
+          <ScalarProperty Name="SummaryTech" ColumnName="SummaryTech" />
+          <ScalarProperty Name="SummaryProblem" ColumnName="SummaryProblem" />
+          <ScalarProperty Name="Reviewed" ColumnName="Reviewed" />
+          <ScalarProperty Name="Objective" ColumnName="Objective" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="PMPFID" ColumnName="PMPFID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programs">
+      <EntityTypeMapping TypeName="QecPortalModel.Program">
+        <MappingFragment StoreEntitySet="Program">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="QecPortalModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="DeadlineDate" ColumnName="DeadlineDate" />
+          <ScalarProperty Name="PAssignDate" ColumnName="PAssignDate" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectReports">
+      <EntityTypeMapping TypeName="QecPortalModel.ProjectReport">
+        <MappingFragment StoreEntitySet="ProjectReport">
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="RubricID" ColumnName="RubricID" />
+          <ScalarProperty Name="SCRID" ColumnName="SCRID" />
+          <ScalarProperty Name="ProjectIReportD" ColumnName="ProjectIReportD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Quizs">
+      <EntityTypeMapping TypeName="QecPortalModel.Quiz">
+        <MappingFragment StoreEntitySet="Quiz">
+          <ScalarProperty Name="InstructorID" ColumnName="InstructorID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="QuizDate" ColumnName="QuizDate" />
+          <ScalarProperty Name="QuizName" ColumnName="QuizName" />
+          <ScalarProperty Name="QuizNumber" ColumnName="QuizNumber" />
+          <ScalarProperty Name="QuizID" ColumnName="QuizID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuizReports">
+      <EntityTypeMapping TypeName="QecPortalModel.QuizReport">
+        <MappingFragment StoreEntitySet="QuizReport">
+          <ScalarProperty Name="SCRID" ColumnName="SCRID" />
+          <ScalarProperty Name="QuizID" ColumnName="QuizID" />
+          <ScalarProperty Name="RubricID" ColumnName="RubricID" />
+          <ScalarProperty Name="CLOnumber" ColumnName="CLOnumber" />
+          <ScalarProperty Name="QuizReportID" ColumnName="QuizReportID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RatioYearlyBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.RatioYearlyBudget">
+        <MappingFragment StoreEntitySet="RatioYearlyBudget">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="RatioYearlyBudgetID" ColumnName="RatioYearlyBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResearchBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.ResearchBudget">
+        <MappingFragment StoreEntitySet="ResearchBudget">
+          <ScalarProperty Name="RYearlyBudgetID" ColumnName="RYearlyBudgetID" />
+          <ScalarProperty Name="ResearchBudgetID" ColumnName="ResearchBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomTypes">
+      <EntityTypeMapping TypeName="QecPortalModel.RoomType">
+        <MappingFragment StoreEntitySet="RoomType">
+          <ScalarProperty Name="AverageSize" ColumnName="AverageSize" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RoomTypeID" ColumnName="RoomTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rubrics">
+      <EntityTypeMapping TypeName="QecPortalModel.Rubric">
+        <MappingFragment StoreEntitySet="Rubrics">
+          <ScalarProperty Name="RubricDescription" ColumnName="RubricDescription" />
+          <ScalarProperty Name="RubricNumber" ColumnName="RubricNumber" />
+          <ScalarProperty Name="RubricsID" ColumnName="RubricsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RYearlyBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.RYearlyBudget">
+        <MappingFragment StoreEntitySet="RYearlyBudget">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="RYearlyBudgetID" ColumnName="RYearlyBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SARs">
+      <EntityTypeMapping TypeName="QecPortalModel.SAR">
+        <MappingFragment StoreEntitySet="SAR">
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+          <ScalarProperty Name="ProgramID" ColumnName="ProgramID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="SARID" ColumnName="SARID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SourcesOfIncomes">
+      <EntityTypeMapping TypeName="QecPortalModel.SourcesOfIncome">
+        <MappingFragment StoreEntitySet="SourcesOfIncome">
+          <ScalarProperty Name="SYearlyBudgetID" ColumnName="SYearlyBudgetID" />
+          <ScalarProperty Name="SourcesOfIncomeID" ColumnName="SourcesOfIncomeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="QecPortalModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="FolderStatus" ColumnName="FolderStatus" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="QecPortalModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="StudentMail" ColumnName="StudentMail" />
+          <ScalarProperty Name="StudentContact" ColumnName="StudentContact" />
+          <ScalarProperty Name="SudentName" ColumnName="SudentName" />
+          <ScalarProperty Name="StudentRegNum" ColumnName="StudentRegNum" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentCourseRegs">
+      <EntityTypeMapping TypeName="QecPortalModel.StudentCourseReg">
+        <MappingFragment StoreEntitySet="StudentCourseReg">
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="SCRID" ColumnName="SCRID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentEvaluations">
+      <EntityTypeMapping TypeName="QecPortalModel.StudentEvaluation">
+        <MappingFragment StoreEntitySet="StudentEvaluation">
+          <ScalarProperty Name="AssignmentReportID" ColumnName="AssignmentReportID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="StudentEvaluationID" ColumnName="StudentEvaluationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentReports">
+      <EntityTypeMapping TypeName="QecPortalModel.StudentReport">
+        <MappingFragment StoreEntitySet="StudentReport">
+          <ScalarProperty Name="ProjectReportID" ColumnName="ProjectReportID" />
+          <ScalarProperty Name="QuizIReportD" ColumnName="QuizIReportD" />
+          <ScalarProperty Name="SCRID" ColumnName="SCRID" />
+          <ScalarProperty Name="AssignReportID" ColumnName="AssignReportID" />
+          <ScalarProperty Name="StudentReportID" ColumnName="StudentReportID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYearlyBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.SYearlyBudget">
+        <MappingFragment StoreEntitySet="SYearlyBudget">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="SYearlyBudgetID" ColumnName="SYearlyBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QecPortalModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Terms">
+      <EntityTypeMapping TypeName="QecPortalModel.Term">
+        <MappingFragment StoreEntitySet="Term">
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Semester" ColumnName="Semester" />
+          <ScalarProperty Name="TermID" ColumnName="TermID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WholeBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.WholeBudget">
+        <MappingFragment StoreEntitySet="WholeBudget">
+          <ScalarProperty Name="WholeYearlyBudgetID" ColumnName="WholeYearlyBudgetID" />
+          <ScalarProperty Name="WholeBudgetID" ColumnName="WholeBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WholeYearlyBudgets">
+      <EntityTypeMapping TypeName="QecPortalModel.WholeYearlyBudget">
+        <MappingFragment StoreEntitySet="WholeYearlyBudget">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="WholeYearlyBudgetID" ColumnName="WholeYearlyBudgetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YearlyPassouts">
+      <EntityTypeMapping TypeName="QecPortalModel.YearlyPassout">
+        <MappingFragment StoreEntitySet="YearlyPassout">
+          <ScalarProperty Name="NoOfUnderGraduatedTotal" ColumnName="NoOfUnderGraduatedTotal" />
+          <ScalarProperty Name="NoOfGraduatedTotal" ColumnName="NoOfGraduatedTotal" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="YearlyPassoutID" ColumnName="YearlyPassoutID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

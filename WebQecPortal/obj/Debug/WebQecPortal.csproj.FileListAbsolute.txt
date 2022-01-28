@@ -1,0 +1,250 @@
+C:\WebQecPortal\WebQecPortal\bin\WebQecPortal.dll.config
+C:\WebQecPortal\WebQecPortal\bin\WebQecPortal.dll
+C:\WebQecPortal\WebQecPortal\bin\WebQecPortal.pdb
+C:\WebQecPortal\WebQecPortal\bin\roslyn\csc.exe
+C:\WebQecPortal\WebQecPortal\bin\roslyn\csc.exe.config
+C:\WebQecPortal\WebQecPortal\bin\roslyn\csc.rsp
+C:\WebQecPortal\WebQecPortal\bin\roslyn\csi.exe
+C:\WebQecPortal\WebQecPortal\bin\roslyn\csi.exe.config
+C:\WebQecPortal\WebQecPortal\bin\roslyn\csi.rsp
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.Managed.Core.targets
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.AppContext.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Collections.Immutable.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Console.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Globalization.Calendars.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.IO.Compression.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.IO.FileSystem.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Net.Http.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Net.Sockets.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Reflection.Metadata.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.ValueTuple.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Xml.XmlDocument.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Xml.XPath.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\WebQecPortal\WebQecPortal\bin\roslyn\vbc.exe
+C:\WebQecPortal\WebQecPortal\bin\roslyn\vbc.exe.config
+C:\WebQecPortal\WebQecPortal\bin\roslyn\vbc.rsp
+C:\WebQecPortal\WebQecPortal\bin\roslyn\VBCSCompiler.exe
+C:\WebQecPortal\WebQecPortal\bin\roslyn\VBCSCompiler.exe.config
+C:\WebQecPortal\WebQecPortal\bin\Antlr3.Runtime.dll
+C:\WebQecPortal\WebQecPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\WebQecPortal\WebQecPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\WebQecPortal\WebQecPortal\bin\Newtonsoft.Json.dll
+C:\WebQecPortal\WebQecPortal\bin\System.Web.Helpers.dll
+C:\WebQecPortal\WebQecPortal\bin\System.Web.Mvc.dll
+C:\WebQecPortal\WebQecPortal\bin\System.Web.Optimization.dll
+C:\WebQecPortal\WebQecPortal\bin\System.Web.Razor.dll
+C:\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.Deployment.dll
+C:\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.dll
+C:\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.Razor.dll
+C:\WebQecPortal\WebQecPortal\bin\WebGrease.dll
+C:\WebQecPortal\WebQecPortal\bin\System.Web.Helpers.xml
+C:\WebQecPortal\WebQecPortal\bin\System.Web.Mvc.xml
+C:\WebQecPortal\WebQecPortal\bin\System.Web.Optimization.xml
+C:\WebQecPortal\WebQecPortal\bin\System.Web.Razor.xml
+C:\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.xml
+C:\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.Deployment.xml
+C:\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.Razor.xml
+C:\WebQecPortal\WebQecPortal\bin\Newtonsoft.Json.xml
+C:\WebQecPortal\WebQecPortal\bin\Antlr3.Runtime.pdb
+C:\WebQecPortal\WebQecPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\WebQecPortal\WebQecPortal\obj\Debug\WebQecPortal.csprojAssemblyReference.cache
+C:\WebQecPortal\WebQecPortal\obj\Debug\WebQecPortal.csproj.CoreCompileInputs.cache
+C:\WebQecPortal\WebQecPortal\obj\Debug\WebQecPortal.csproj.CopyComplete
+C:\WebQecPortal\WebQecPortal\obj\Debug\WebQecPortal.dll
+C:\WebQecPortal\WebQecPortal\obj\Debug\WebQecPortal.pdb
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\WebQecPortal.dll.config
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\WebQecPortal.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\WebQecPortal.pdb
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\csc.exe
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\csc.exe.config
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\csc.rsp
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\csi.exe
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\csi.exe.config
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\csi.rsp
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.Managed.Core.targets
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.AppContext.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Collections.Immutable.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Console.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Globalization.Calendars.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.IO.Compression.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.IO.FileSystem.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Net.Http.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Net.Sockets.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Reflection.Metadata.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.ValueTuple.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Xml.XmlDocument.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Xml.XPath.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\vbc.exe
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\vbc.exe.config
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\vbc.rsp
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\VBCSCompiler.exe
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\roslyn\VBCSCompiler.exe.config
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\Antlr3.Runtime.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\Newtonsoft.Json.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.Helpers.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.Mvc.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.Optimization.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.Razor.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.Deployment.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.Razor.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\WebGrease.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.Helpers.xml
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.Mvc.xml
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.Optimization.xml
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.Razor.xml
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.xml
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.Deployment.xml
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\System.Web.WebPages.Razor.xml
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\Newtonsoft.Json.xml
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\Antlr3.Runtime.pdb
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\obj\Debug\WebQecPortal.csprojAssemblyReference.cache
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\obj\Debug\WebQecPortal.csproj.CoreCompileInputs.cache
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\obj\Debug\WebQecPortal.csproj.CopyComplete
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\obj\Debug\WebQecPortal.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\obj\Debug\WebQecPortal.pdb
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\EntityFramework.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\EntityFramework.SqlServer.dll
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\EntityFramework.xml
+C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\EntityFramework.SqlServer.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csproj.CoreCompileInputs.cache
+C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.pdb
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\WebQecPortal.dll.config
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\WebQecPortal.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\WebQecPortal.pdb
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\csc.exe
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\csc.exe.config
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\csc.rsp
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\csi.exe
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\csi.exe.config
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\csi.rsp
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.Managed.Core.targets
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.AppContext.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Collections.Immutable.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Console.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Globalization.Calendars.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.IO.Compression.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.IO.FileSystem.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Net.Http.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Net.Sockets.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Reflection.Metadata.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.ValueTuple.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Xml.XmlDocument.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Xml.XPath.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\vbc.exe
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\vbc.exe.config
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\vbc.rsp
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\VBCSCompiler.exe
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\VBCSCompiler.exe.config
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\Antlr3.Runtime.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\EntityFramework.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\EntityFramework.SqlServer.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\Microsoft.Web.Infrastructure.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\Newtonsoft.Json.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Helpers.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Mvc.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Optimization.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Razor.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.WebPages.Deployment.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.WebPages.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.WebPages.Razor.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\WebGrease.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\EntityFramework.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\EntityFramework.SqlServer.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Helpers.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Mvc.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Optimization.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Razor.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.WebPages.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.WebPages.Deployment.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.WebPages.Razor.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\Newtonsoft.Json.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\Antlr3.Runtime.pdb
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csproj.CopyComplete
+C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csprojAssemblyReference.cache
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\BouncyCastle.Crypto.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.xmlworker.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.pdfa.dll

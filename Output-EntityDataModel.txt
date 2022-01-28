@@ -1,0 +1,9 @@
+﻿Generated model file: QecPortalModel.edmx.
+Loading metadata from the database took 00:00:01.5802764.
+Generating the model took 00:00:03.1658865.
+Generated model file: QecPortalModel.edmx.
+Loading metadata from the database took 00:00:00.8078097.
+Generating the model took 00:00:09.4671727.
+Generated model file: QecPortalModel.edmx.
+Loading metadata from the database took 00:00:00.4315391.
+Generating the model took 00:00:01.0492380.

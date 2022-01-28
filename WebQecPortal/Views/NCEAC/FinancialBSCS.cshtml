@@ -1,0 +1,279 @@
+﻿@model WebQecPortal.Models.Institution
+
+@{
+    ViewBag.Title = "FinancialBSCS";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="container contact">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="enter-class-header">
+                        <h2 class="text-white text-center pt-3">Financial (BSCS) Form</h2>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+
+                <div class="col-md-10">
+                    <div class="contact-form">
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>INSTITUTION:</p>
+                                <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <p>
+                                    PROGRAM (S) TO BE
+                                    EVALUATED
+                                    :
+                                </p>
+                                <input type="text" value=" @ViewBag.prog" class="form-control" id="fname" placeholder="" name="fname">
+                            </div>
+                        </div>
+
+                        <p>
+                            <i>
+                                Intent: Adequate financial resources are available for short- and long-term running of the institution
+                                and the program under evaluation. Proper budgeting process is in place for the institution and the program. Adequate
+                                financial resources are set aside
+                                for important academic indicators: research, faculty development, library, and computing resources.
+                            </i>
+                        </p>
+                        <label>A.	Financial Information about the Institution and the Program</label>
+                        <label> Criteria/Attributes</label>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+
+                                <input type="text" value=" @ViewBag.asset" class="form-control" id="fname" placeholder="Total assets of the institution" name="fname">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <input type="text" value=" @ViewBag.fund" class="form-control" id="fname" placeholder="Total endowment fund of the institution" name="fname">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <table style="width:auto">
+
+                                     <strong>Yearly budget for the past five years </strong>
+                                    <tr>
+                                        <td><input type="text" value="@ViewBag.wholebudget15" class="form-control" id="fname" placeholder="2015-2016" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.wholebudget16" class="form-control" id="fname" placeholder="2016-2017" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.wholebudget17" class="form-control" id="fname" placeholder="2017-2018" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.wholebudget18" class="form-control" id="fname" placeholder="2018-2019" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.wholebudget19" class="form-control" id="fname" placeholder="2019-2020" name="fname" maxlength="6" size="6"></td>
+                                    </tr>
+                                </table>
+                                <br>
+                                <table style="width:auto">
+                                     <label> Institution’s yearly budget for research and faculty development for the past five years</label>
+                                    <tr>
+                                        <td><input type="text" value="@ViewBag.research15" class="form-control" id="fname" placeholder="2015-2016" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.research16" class="form-control" id="fname" placeholder="2016-2017" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.research17" class="form-control" id="fname" placeholder="2017-2018" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.research18" class="form-control" id="fname" placeholder="2018-2019" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.research19" class="form-control" id="fname" placeholder="2019-2020" name="fname" maxlength="6" size="6"></td>
+
+                                    </tr>
+                                </table>
+                                <br>
+
+                                <table style="width:auto">
+                                    <caption>  <label> Institution’s yearly budget for library</label></caption>
+                                    <tr>
+                                        <td><input type="text" value="@ViewBag.library15" class="form-control" id="fname" placeholder="2015-2016" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.library16" class="form-control" id="fname" placeholder="2016-2017" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.library17" class="form-control" id="fname" placeholder="2017-2018" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.library18" class="form-control" id="fname" placeholder="2018-2019" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.library19" class="form-control" id="fname" placeholder="2019-2020" name="fname" maxlength="6" size="6"></td>
+
+                                    </tr>
+                                </table>
+                                <br>
+                                <table style="width:auto">
+                                    <caption>   <label> Institution’s yearly budget for computing facilities</label></caption>
+                                    <tr>
+                                        <td><input type="text" value="@ViewBag.computing15" class="form-control" id="fname" placeholder="2015-2016" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.computing16" class="form-control" id="fname" placeholder="2016-2017" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.computing17" class="form-control" id="fname" placeholder="2017-2018" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.computing18" class="form-control" id="fname" placeholder="2018-2019" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.computing19" class="form-control" id="fname" placeholder="2019-2020" name="fname" maxlength="6" size="6"></td>
+
+                                    </tr>
+                                </table>
+                                <br>
+                                <table style="width:auto">
+
+                                    <caption>
+                                        <label>
+                                            Institution’s yearly budget for computing facilities
+                                            Total working capital of the department/school/college that offers the program
+                                        </label>
+                                    </caption>
+                                    <tr>
+                                        <td><input type="text" value="@ViewBag.dcomputing15" class="form-control" id="fname" placeholder="2015-2016" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.dcomputing16" class="form-control" id="fname" placeholder="2016-2017" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.dcomputing17" class="form-control" id="fname" placeholder="2017-2018" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.dcomputing18" class="form-control" id="fname" placeholder="2018-2019" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.dcomputing19" class="form-control" id="fname" placeholder="2019-2020" name="fname" maxlength="6" size="6"></td>
+
+                                    </tr>
+                                </table>
+                                <br>
+                                <table style="width:auto">
+
+                                    <caption> <label> Yearly budget of the department/school/college that offers the program</label></caption>
+                                    <tr>
+                                        <td><input type="text" value="@ViewBag.prog15" class="form-control" id="fname" placeholder="2015-2016" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.prog16" class="form-control" id="fname" placeholder="2016-2017" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.prog17" class="form-control" id="fname" placeholder="2017-2018" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.prog18" class="form-control" id="fname" placeholder="2018-2019" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.prog19" class="form-control" id="fname" placeholder="2019-2020" name="fname" maxlength="6" size="6"></td>
+
+                                    </tr>
+                                </table>
+                                <br>
+                                <table style="width:auto">
+                                    <caption>  <label>Department/school/college’s yearly budget for research and faculty development for the past five years</label></caption>
+                                    <tr>
+                                        <td><input type="text" value="@ViewBag.dresearch15" class="form-control" id="fname" placeholder="2015-2016" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.dresearch16" class="form-control" id="fname" placeholder="2016-2017" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.dresearch17" class="form-control" id="fname" placeholder="2017-2018" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.dresearch18" class="form-control" id="fname" placeholder="2018-2019" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.dresearch19" class="form-control" id="fname" placeholder="2019-2020" name="fname" maxlength="6" size="6"></td>
+
+                                    </tr>
+                                </table>
+                                <br>
+                                <table style="width:auto">
+                                    <caption> <label> Fee Structure</label></caption>
+                                    <tr>
+                                        <td><input type="text" value="@ViewBag.fee15" class="form-control" id="fname" placeholder="2015-2016" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.fee16" class="form-control" id="fname" placeholder="2016-2017" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.fee17" class="form-control" id="fname" placeholder="2017-2018" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.fee18" class="form-control" id="fname" placeholder="2018-2019" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.fee19" class="form-control" id="fname" placeholder="2019-2020" name="fname" maxlength="6" size="6"></td>
+
+                                    </tr>
+                                </table>
+                                <br>
+                                <table style="width:auto">
+                                    <caption> <label>What are sources of income</label></caption>
+                                    <tr>
+                                        <td><input type="text" value="@ViewBag.source15" class="form-control" id="fname" placeholder="2015-2016" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.source16" class="form-control" id="fname" placeholder="2016-2017" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.source17" class="form-control" id="fname" placeholder="2017-2018" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.source18" class="form-control" id="fname" placeholder="2018-2019" name="fname" maxlength="6" size="6"></td>
+                                        <td><input type="text" value="@ViewBag.source19" class="form-control" id="fname" placeholder="2019-2020" name="fname" maxlength="6" size="6"></td>
+
+                                    </tr>
+                                </table>
+                                <br>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary"><a href="@Url.Action("PMPF","NCEAC")" style="color:white;">Next</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    @Html.ActionLink("AdminStructure", "AdminStructure", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("Admission", "Admission", "NCEAC")
+                    <br />
+                    @Html.ActionLink("AlumniBSCS", "AlumniBSCS", "NCEAC")
+                    <br />
+                    @Html.ActionLink("AlumniBSSE", "AlumniBSSE", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("CourseDescription", "CourseDescription", "NCEAC")
+                    <br />
+                    @Html.ActionLink("CourseLog", "CourseLog", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("CPMF", "CPMF", "NCEAC")
+                    <br />
+
+                    @Html.ActionLink("FacultyWorkload", "FacultyWorkload", "NCEAC")
+                    <br />
+                    @Html.ActionLink("FIF", "FIF", "NCEAC")
+                    <br />
+                    @Html.ActionLink("FinancialBSCS", "FinancialBSCS", "NCEAC")
+                    <br />
+                    @Html.ActionLink("FinancialBSSE", "FinancialBSSE", "NCEAC")
+                    <br />
+                    @Html.ActionLink("HECadministration", "HECadministration", "NCEAC")
+                    <br />
+                    @Html.ActionLink("PMPF", "PMPF", "NCEAC")
+                    <br />
+                    @Html.ActionLink("CRI", "CRI", "NCEAC")
+                    <br />
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+
+<!-- /.content-wrapper -->
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../plugins/moment/moment.min.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../dist/js/pages/dashboard.js"></script>

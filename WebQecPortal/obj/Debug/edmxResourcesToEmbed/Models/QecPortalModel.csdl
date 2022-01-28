@@ -1,0 +1,2670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QecPortalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QecPortalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdmissionForms" EntityType="QecPortalModel.AdmissionForm" />
+    <EntitySet Name="Alumni" EntityType="QecPortalModel.Alumnus" />
+    <EntitySet Name="Assignments" EntityType="QecPortalModel.Assignment" />
+    <EntitySet Name="AssignmentReports" EntityType="QecPortalModel.AssignmentReport" />
+    <EntitySet Name="AvailableRooms" EntityType="QecPortalModel.AvailableRoom" />
+    <EntitySet Name="ComputerRatios" EntityType="QecPortalModel.ComputerRatio" />
+    <EntitySet Name="ComputingBudgets" EntityType="QecPortalModel.ComputingBudget" />
+    <EntitySet Name="Courses" EntityType="QecPortalModel.Course" />
+    <EntitySet Name="CourseDescriptions" EntityType="QecPortalModel.CourseDescription" />
+    <EntitySet Name="CourseEvaluations" EntityType="QecPortalModel.CourseEvaluation" />
+    <EntitySet Name="CourseOutlines" EntityType="QecPortalModel.CourseOutline" />
+    <EntitySet Name="CRIs" EntityType="QecPortalModel.CRI" />
+    <EntitySet Name="CYearlyBudgets" EntityType="QecPortalModel.CYearlyBudget" />
+    <EntitySet Name="DCYearlyBudgets" EntityType="QecPortalModel.DCYearlyBudget" />
+    <EntitySet Name="Departments" EntityType="QecPortalModel.Department" />
+    <EntitySet Name="DepComputingBudgets" EntityType="QecPortalModel.DepComputingBudget" />
+    <EntitySet Name="DepOfferProgBudgets" EntityType="QecPortalModel.DepOfferProgBudget" />
+    <EntitySet Name="DepResearchBudgets" EntityType="QecPortalModel.DepResearchBudget" />
+    <EntitySet Name="DOPYearlyBudgets" EntityType="QecPortalModel.DOPYearlyBudget" />
+    <EntitySet Name="DRYearlyBudgets" EntityType="QecPortalModel.DRYearlyBudget" />
+    <EntitySet Name="ECourseFoders" EntityType="QecPortalModel.ECourseFoder" />
+    <EntitySet Name="FacultyCourses" EntityType="QecPortalModel.FacultyCours" />
+    <EntitySet Name="FIFs" EntityType="QecPortalModel.FIF" />
+    <EntitySet Name="Financials" EntityType="QecPortalModel.Financial" />
+    <EntitySet Name="FreeStructures" EntityType="QecPortalModel.FreeStructure" />
+    <EntitySet Name="FYearlyBudgets" EntityType="QecPortalModel.FYearlyBudget" />
+    <EntitySet Name="HecAdministrations" EntityType="QecPortalModel.HecAdministration" />
+    <EntitySet Name="InductionYears" EntityType="QecPortalModel.InductionYear" />
+    <EntitySet Name="InductionYearsAdmissions" EntityType="QecPortalModel.InductionYearsAdmission" />
+    <EntitySet Name="Institutions" EntityType="QecPortalModel.Institution" />
+    <EntitySet Name="InstructionalFacilities" EntityType="QecPortalModel.InstructionalFacility" />
+    <EntitySet Name="Instructors" EntityType="QecPortalModel.Instructor" />
+    <EntitySet Name="LabAvailabilities" EntityType="QecPortalModel.LabAvailability" />
+    <EntitySet Name="LevelNetworkings" EntityType="QecPortalModel.LevelNetworking" />
+    <EntitySet Name="LibraryBudgets" EntityType="QecPortalModel.LibraryBudget" />
+    <EntitySet Name="Logins" EntityType="QecPortalModel.Login" />
+    <EntitySet Name="LYearlyBudgets" EntityType="QecPortalModel.LYearlyBudget" />
+    <EntitySet Name="OtherFacilities" EntityType="QecPortalModel.OtherFacility" />
+    <EntitySet Name="PMPFs" EntityType="QecPortalModel.PMPF" />
+    <EntitySet Name="Programs" EntityType="QecPortalModel.Program" />
+    <EntitySet Name="Projects" EntityType="QecPortalModel.Project" />
+    <EntitySet Name="ProjectReports" EntityType="QecPortalModel.ProjectReport" />
+    <EntitySet Name="Quizs" EntityType="QecPortalModel.Quiz" />
+    <EntitySet Name="QuizReports" EntityType="QecPortalModel.QuizReport" />
+    <EntitySet Name="RatioYearlyBudgets" EntityType="QecPortalModel.RatioYearlyBudget" />
+    <EntitySet Name="ResearchBudgets" EntityType="QecPortalModel.ResearchBudget" />
+    <EntitySet Name="RoomTypes" EntityType="QecPortalModel.RoomType" />
+    <EntitySet Name="Rubrics" EntityType="QecPortalModel.Rubric" />
+    <EntitySet Name="RYearlyBudgets" EntityType="QecPortalModel.RYearlyBudget" />
+    <EntitySet Name="SARs" EntityType="QecPortalModel.SAR" />
+    <EntitySet Name="SourcesOfIncomes" EntityType="QecPortalModel.SourcesOfIncome" />
+    <EntitySet Name="Status" EntityType="QecPortalModel.Status" />
+    <EntitySet Name="Students" EntityType="QecPortalModel.Student" />
+    <EntitySet Name="StudentCourseRegs" EntityType="QecPortalModel.StudentCourseReg" />
+    <EntitySet Name="StudentEvaluations" EntityType="QecPortalModel.StudentEvaluation" />
+    <EntitySet Name="StudentReports" EntityType="QecPortalModel.StudentReport" />
+    <EntitySet Name="SYearlyBudgets" EntityType="QecPortalModel.SYearlyBudget" />
+    <EntitySet Name="sysdiagrams" EntityType="QecPortalModel.sysdiagram" />
+    <EntitySet Name="Terms" EntityType="QecPortalModel.Term" />
+    <EntitySet Name="WholeBudgets" EntityType="QecPortalModel.WholeBudget" />
+    <EntitySet Name="WholeYearlyBudgets" EntityType="QecPortalModel.WholeYearlyBudget" />
+    <EntitySet Name="YearlyPassouts" EntityType="QecPortalModel.YearlyPassout" />
+    <AssociationSet Name="FK_AdmissionForm_InductionYearsAdmission" Association="QecPortalModel.FK_AdmissionForm_InductionYearsAdmission">
+      <End Role="InductionYearsAdmission" EntitySet="InductionYearsAdmissions" />
+      <End Role="AdmissionForm" EntitySet="AdmissionForms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdmissionForm_Institution" Association="QecPortalModel.FK_AdmissionForm_Institution">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="AdmissionForm" EntitySet="AdmissionForms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdmissionForm_Program" Association="QecPortalModel.FK_AdmissionForm_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="AdmissionForm" EntitySet="AdmissionForms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumni_Institution" Association="QecPortalModel.FK_Alumni_Institution">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="Alumnus" EntitySet="Alumni" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumni_Program" Association="QecPortalModel.FK_Alumni_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="Alumnus" EntitySet="Alumni" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumni_YearlyPassout" Association="QecPortalModel.FK_Alumni_YearlyPassout">
+      <End Role="YearlyPassout" EntitySet="YearlyPassouts" />
+      <End Role="Alumnus" EntitySet="Alumni" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assignment_Instructor" Association="QecPortalModel.FK_Assignment_Instructor">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="Assignment" EntitySet="Assignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assignment_Program" Association="QecPortalModel.FK_Assignment_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="Assignment" EntitySet="Assignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assignment_Term" Association="QecPortalModel.FK_Assignment_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="Assignment" EntitySet="Assignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssignmentReport_Assignment" Association="QecPortalModel.FK_AssignmentReport_Assignment">
+      <End Role="Assignment" EntitySet="Assignments" />
+      <End Role="AssignmentReport" EntitySet="AssignmentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssignmentReport_Rubrics" Association="QecPortalModel.FK_AssignmentReport_Rubrics">
+      <End Role="Rubric" EntitySet="Rubrics" />
+      <End Role="AssignmentReport" EntitySet="AssignmentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssignmentReport_StudentCourseReg" Association="QecPortalModel.FK_AssignmentReport_StudentCourseReg">
+      <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
+      <End Role="AssignmentReport" EntitySet="AssignmentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_AssignmentReport" Association="QecPortalModel.FK_StudentReport_AssignmentReport">
+      <End Role="AssignmentReport" EntitySet="AssignmentReports" />
+      <End Role="StudentReport" EntitySet="StudentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AvailableRoom_RoomType" Association="QecPortalModel.FK_AvailableRoom_RoomType">
+      <End Role="RoomType" EntitySet="RoomTypes" />
+      <End Role="AvailableRoom" EntitySet="AvailableRooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerRatio_RatioYearlyBudget" Association="QecPortalModel.FK_ComputerRatio_RatioYearlyBudget">
+      <End Role="RatioYearlyBudget" EntitySet="RatioYearlyBudgets" />
+      <End Role="ComputerRatio" EntitySet="ComputerRatios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputingBudget_ComputerRatio" Association="QecPortalModel.FK_ComputingBudget_ComputerRatio">
+      <End Role="ComputerRatio" EntitySet="ComputerRatios" />
+      <End Role="ComputingBudget" EntitySet="ComputingBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputingBudget_CYearlyBudget" Association="QecPortalModel.FK_ComputingBudget_CYearlyBudget">
+      <End Role="CYearlyBudget" EntitySet="CYearlyBudgets" />
+      <End Role="ComputingBudget" EntitySet="ComputingBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputingBudget_DepComputingBudget" Association="QecPortalModel.FK_ComputingBudget_DepComputingBudget">
+      <End Role="DepComputingBudget" EntitySet="DepComputingBudgets" />
+      <End Role="ComputingBudget" EntitySet="ComputingBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputingBudget_LabAvailability" Association="QecPortalModel.FK_ComputingBudget_LabAvailability">
+      <End Role="LabAvailability" EntitySet="LabAvailabilities" />
+      <End Role="ComputingBudget" EntitySet="ComputingBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputingBudget_LevelNetworking" Association="QecPortalModel.FK_ComputingBudget_LevelNetworking">
+      <End Role="LevelNetworking" EntitySet="LevelNetworkings" />
+      <End Role="ComputingBudget" EntitySet="ComputingBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_ComputingBudget" Association="QecPortalModel.FK_HecAdministration_ComputingBudget">
+      <End Role="ComputingBudget" EntitySet="ComputingBudgets" />
+      <End Role="HecAdministration" EntitySet="HecAdministrations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_ComputingBudget1" Association="QecPortalModel.FK_HecAdministration_ComputingBudget1">
+      <End Role="ComputingBudget" EntitySet="ComputingBudgets" />
+      <End Role="HecAdministration" EntitySet="HecAdministrations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDescription_Course" Association="QecPortalModel.FK_CourseDescription_Course">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="CourseDescription" EntitySet="CourseDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseEvaluation_Course" Association="QecPortalModel.FK_CourseEvaluation_Course">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="CourseEvaluation" EntitySet="CourseEvaluations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Course" Association="QecPortalModel.FK_CourseOutline_Course">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="CourseOutline" EntitySet="CourseOutlines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CRI_Course" Association="QecPortalModel.FK_CRI_Course">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="CRI" EntitySet="CRIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Course" Association="QecPortalModel.FK_ECourseFoders_Course">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="ECourseFoder" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacultyCourses_Course" Association="QecPortalModel.FK_FacultyCourses_Course">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="FacultyCours" EntitySet="FacultyCourses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SAR_Course" Association="QecPortalModel.FK_SAR_Course">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="SAR" EntitySet="SARs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentCourseReg_Course" Association="QecPortalModel.FK_StudentCourseReg_Course">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDescription_Institution" Association="QecPortalModel.FK_CourseDescription_Institution">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="CourseDescription" EntitySet="CourseDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDescription_Instructor" Association="QecPortalModel.FK_CourseDescription_Instructor">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="CourseDescription" EntitySet="CourseDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDescription_Program" Association="QecPortalModel.FK_CourseDescription_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="CourseDescription" EntitySet="CourseDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDescription_Term" Association="QecPortalModel.FK_CourseDescription_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="CourseDescription" EntitySet="CourseDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseEvaluation_Program" Association="QecPortalModel.FK_CourseEvaluation_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="CourseEvaluation" EntitySet="CourseEvaluations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseEvaluation_Term" Association="QecPortalModel.FK_CourseEvaluation_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="CourseEvaluation" EntitySet="CourseEvaluations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_CourseOutline" Association="QecPortalModel.FK_CourseOutline_CourseOutline">
+      <End Role="CourseOutline" EntitySet="CourseOutlines" />
+      <End Role="CourseOutline1" EntitySet="CourseOutlines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Department" Association="QecPortalModel.FK_CourseOutline_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="CourseOutline" EntitySet="CourseOutlines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Instructor" Association="QecPortalModel.FK_CourseOutline_Instructor">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="CourseOutline" EntitySet="CourseOutlines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Program" Association="QecPortalModel.FK_CourseOutline_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="CourseOutline" EntitySet="CourseOutlines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Status" Association="QecPortalModel.FK_CourseOutline_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="CourseOutline" EntitySet="CourseOutlines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Term" Association="QecPortalModel.FK_CourseOutline_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="CourseOutline" EntitySet="CourseOutlines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CRI_Institution" Association="QecPortalModel.FK_CRI_Institution">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="CRI" EntitySet="CRIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CRI_Program" Association="QecPortalModel.FK_CRI_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="CRI" EntitySet="CRIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepComputingBudget_DCYearlyBudget" Association="QecPortalModel.FK_DepComputingBudget_DCYearlyBudget">
+      <End Role="DCYearlyBudget" EntitySet="DCYearlyBudgets" />
+      <End Role="DepComputingBudget" EntitySet="DepComputingBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepComputingBudget_Department" Association="QecPortalModel.FK_DepComputingBudget_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="DepComputingBudget" EntitySet="DepComputingBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepOfferProgBudget_Department" Association="QecPortalModel.FK_DepOfferProgBudget_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="DepOfferProgBudget" EntitySet="DepOfferProgBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepResearchBudget_Department" Association="QecPortalModel.FK_DepResearchBudget_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="DepResearchBudget" EntitySet="DepResearchBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Department" Association="QecPortalModel.FK_ECourseFoders_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="ECourseFoder" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Program_Department1" Association="QecPortalModel.FK_Program_Department1">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Program" EntitySet="Programs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SAR_Department" Association="QecPortalModel.FK_SAR_Department">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="SAR" EntitySet="SARs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_DepComputingBudget" Association="QecPortalModel.FK_Financial_DepComputingBudget">
+      <End Role="DepComputingBudget" EntitySet="DepComputingBudgets" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepOfferProgBudget_DOPYearlyBudget" Association="QecPortalModel.FK_DepOfferProgBudget_DOPYearlyBudget">
+      <End Role="DOPYearlyBudget" EntitySet="DOPYearlyBudgets" />
+      <End Role="DepOfferProgBudget" EntitySet="DepOfferProgBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_DepOfferProgBudget" Association="QecPortalModel.FK_Financial_DepOfferProgBudget">
+      <End Role="DepOfferProgBudget" EntitySet="DepOfferProgBudgets" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepResearchBudget_DRYearlyBudget" Association="QecPortalModel.FK_DepResearchBudget_DRYearlyBudget">
+      <End Role="DRYearlyBudget" EntitySet="DRYearlyBudgets" />
+      <End Role="DepResearchBudget" EntitySet="DepResearchBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_DepResearchBudget" Association="QecPortalModel.FK_Financial_DepResearchBudget">
+      <End Role="DepResearchBudget" EntitySet="DepResearchBudgets" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Instructor" Association="QecPortalModel.FK_ECourseFoders_Instructor">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="ECourseFoder" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Program" Association="QecPortalModel.FK_ECourseFoders_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="ECourseFoder" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Status" Association="QecPortalModel.FK_ECourseFoders_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="ECourseFoder" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Term" Association="QecPortalModel.FK_ECourseFoders_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="ECourseFoder" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacultyCourses_Instructor" Association="QecPortalModel.FK_FacultyCourses_Instructor">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="FacultyCours" EntitySet="FacultyCourses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacultyCourses_Term" Association="QecPortalModel.FK_FacultyCourses_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="FacultyCours" EntitySet="FacultyCourses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FIF_Instructor" Association="QecPortalModel.FK_FIF_Instructor">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="FIF" EntitySet="FIFs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_FreeStructure" Association="QecPortalModel.FK_Financial_FreeStructure">
+      <End Role="FreeStructure" EntitySet="FreeStructures" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_FreeStructure1" Association="QecPortalModel.FK_Financial_FreeStructure1">
+      <End Role="FreeStructure" EntitySet="FreeStructures" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_LibraryBudget" Association="QecPortalModel.FK_Financial_LibraryBudget">
+      <End Role="LibraryBudget" EntitySet="LibraryBudgets" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_LibraryBudget1" Association="QecPortalModel.FK_Financial_LibraryBudget1">
+      <End Role="LibraryBudget" EntitySet="LibraryBudgets" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_Program" Association="QecPortalModel.FK_Financial_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_ResearchBudget" Association="QecPortalModel.FK_Financial_ResearchBudget">
+      <End Role="ResearchBudget" EntitySet="ResearchBudgets" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_ResearchBudget1" Association="QecPortalModel.FK_Financial_ResearchBudget1">
+      <End Role="ResearchBudget" EntitySet="ResearchBudgets" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_SourcesOfIncome" Association="QecPortalModel.FK_Financial_SourcesOfIncome">
+      <End Role="SourcesOfIncome" EntitySet="SourcesOfIncomes" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_SourcesOfIncome1" Association="QecPortalModel.FK_Financial_SourcesOfIncome1">
+      <End Role="SourcesOfIncome" EntitySet="SourcesOfIncomes" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_WholeBudget" Association="QecPortalModel.FK_Financial_WholeBudget">
+      <End Role="WholeBudget" EntitySet="WholeBudgets" />
+      <End Role="Financial" EntitySet="Financials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FreeStructure_FYearlyBudget" Association="QecPortalModel.FK_FreeStructure_FYearlyBudget">
+      <End Role="FYearlyBudget" EntitySet="FYearlyBudgets" />
+      <End Role="FreeStructure" EntitySet="FreeStructures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_InstructionalFacilities" Association="QecPortalModel.FK_HecAdministration_InstructionalFacilities">
+      <End Role="InstructionalFacility" EntitySet="InstructionalFacilities" />
+      <End Role="HecAdministration" EntitySet="HecAdministrations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_LibraryBudget" Association="QecPortalModel.FK_HecAdministration_LibraryBudget">
+      <End Role="LibraryBudget" EntitySet="LibraryBudgets" />
+      <End Role="HecAdministration" EntitySet="HecAdministrations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_OtherFacilities" Association="QecPortalModel.FK_HecAdministration_OtherFacilities">
+      <End Role="OtherFacility" EntitySet="OtherFacilities" />
+      <End Role="HecAdministration" EntitySet="HecAdministrations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_OtherFacilities1" Association="QecPortalModel.FK_HecAdministration_OtherFacilities1">
+      <End Role="OtherFacility" EntitySet="OtherFacilities" />
+      <End Role="HecAdministration" EntitySet="HecAdministrations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InductionYears_Term" Association="QecPortalModel.FK_InductionYears_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="InductionYear" EntitySet="InductionYears" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InductionYearsAdmission_InductionYears" Association="QecPortalModel.FK_InductionYearsAdmission_InductionYears">
+      <End Role="InductionYear" EntitySet="InductionYears" />
+      <End Role="InductionYearsAdmission" EntitySet="InductionYearsAdmissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PMPF_Institution" Association="QecPortalModel.FK_PMPF_Institution">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="PMPF" EntitySet="PMPFs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PMPF_Institution1" Association="QecPortalModel.FK_PMPF_Institution1">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="PMPF" EntitySet="PMPFs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Instructor" Association="QecPortalModel.FK_Project_Instructor">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Instructor1" Association="QecPortalModel.FK_Project_Instructor1">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Quiz_Instructor" Association="QecPortalModel.FK_Quiz_Instructor">
+      <End Role="Instructor" EntitySet="Instructors" />
+      <End Role="Quiz" EntitySet="Quizs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LibraryBudget_LYearlyBudget" Association="QecPortalModel.FK_LibraryBudget_LYearlyBudget">
+      <End Role="LYearlyBudget" EntitySet="LYearlyBudgets" />
+      <End Role="LibraryBudget" EntitySet="LibraryBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PMPF_Program" Association="QecPortalModel.FK_PMPF_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="PMPF" EntitySet="PMPFs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PMPF_Program1" Association="QecPortalModel.FK_PMPF_Program1">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="PMPF" EntitySet="PMPFs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Program" Association="QecPortalModel.FK_Project_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Program1" Association="QecPortalModel.FK_Project_Program1">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Quiz_Program" Association="QecPortalModel.FK_Quiz_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="Quiz" EntitySet="Quizs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SAR_Program" Association="QecPortalModel.FK_SAR_Program">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="SAR" EntitySet="SARs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Term" Association="QecPortalModel.FK_Project_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectReport_Project" Association="QecPortalModel.FK_ProjectReport_Project">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="ProjectReport" EntitySet="ProjectReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_Project" Association="QecPortalModel.FK_StudentReport_Project">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="StudentReport" EntitySet="StudentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectReport_StudentCourseReg" Association="QecPortalModel.FK_ProjectReport_StudentCourseReg">
+      <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
+      <End Role="ProjectReport" EntitySet="ProjectReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_ProjectReport" Association="QecPortalModel.FK_StudentReport_ProjectReport">
+      <End Role="ProjectReport" EntitySet="ProjectReports" />
+      <End Role="StudentReport" EntitySet="StudentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Quiz_Term" Association="QecPortalModel.FK_Quiz_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="Quiz" EntitySet="Quizs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuizReport_Quiz" Association="QecPortalModel.FK_QuizReport_Quiz">
+      <End Role="Quiz" EntitySet="Quizs" />
+      <End Role="QuizReport" EntitySet="QuizReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_Quiz" Association="QecPortalModel.FK_StudentReport_Quiz">
+      <End Role="Quiz" EntitySet="Quizs" />
+      <End Role="StudentReport" EntitySet="StudentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuizReport_StudentCourseReg" Association="QecPortalModel.FK_QuizReport_StudentCourseReg">
+      <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
+      <End Role="QuizReport" EntitySet="QuizReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_QuizReport" Association="QecPortalModel.FK_StudentReport_QuizReport">
+      <End Role="QuizReport" EntitySet="QuizReports" />
+      <End Role="StudentReport" EntitySet="StudentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResearchBudget_RYearlyBudget" Association="QecPortalModel.FK_ResearchBudget_RYearlyBudget">
+      <End Role="RYearlyBudget" EntitySet="RYearlyBudgets" />
+      <End Role="ResearchBudget" EntitySet="ResearchBudgets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SAR_Term" Association="QecPortalModel.FK_SAR_Term">
+      <End Role="Term" EntitySet="Terms" />
+      <End Role="SAR" EntitySet="SARs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SourcesOfIncome_SYearlyBudget" Association="QecPortalModel.FK_SourcesOfIncome_SYearlyBudget">
+      <End Role="SYearlyBudget" EntitySet="SYearlyBudgets" />
+      <End Role="SourcesOfIncome" EntitySet="SourcesOfIncomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentCourseReg_Student" Association="QecPortalModel.FK_StudentCourseReg_Student">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_StudentCourseReg" Association="QecPortalModel.FK_StudentReport_StudentCourseReg">
+      <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
+      <End Role="StudentReport" EntitySet="StudentReports" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WholeBudget_WholeYearlyBudget" Association="QecPortalModel.FK_WholeBudget_WholeYearlyBudget">
+      <End Role="WholeYearlyBudget" EntitySet="WholeYearlyBudgets" />
+      <End Role="WholeBudget" EntitySet="WholeBudgets" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AdmissionForm">
+    <Key>
+      <PropertyRef Name="AdmisionID" />
+    </Key>
+    <Property Name="AdmisionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="FrequencyAdmission" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WhenStudentAdmit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Instrument" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MiniRequirement" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Merit" Type="Boolean" />
+    <Property Name="MeritCompiled" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="policies" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InductionYearsAdmissionID" Type="Int32" />
+    <NavigationProperty Name="InductionYearsAdmission" Relationship="QecPortalModel.FK_AdmissionForm_InductionYearsAdmission" FromRole="AdmissionForm" ToRole="InductionYearsAdmission" />
+    <NavigationProperty Name="Institution" Relationship="QecPortalModel.FK_AdmissionForm_Institution" FromRole="AdmissionForm" ToRole="Institution" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_AdmissionForm_Program" FromRole="AdmissionForm" ToRole="Program" />
+  </EntityType>
+  <EntityType Name="Alumnus">
+    <Key>
+      <PropertyRef Name="AlumniID" />
+    </Key>
+    <Property Name="AlumniID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionID" Type="Int32" />
+    <Property Name="FacilityInternship" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactAlumni" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CommunicateGraduates" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AlumniAssociation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProgramID" Type="Int32" Nullable="false" />
+    <Property Name="YearlyPassoutID" Type="Int32" />
+    <Property Name="GraduateIndustryPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GraduateAcademicsPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Institution" Relationship="QecPortalModel.FK_Alumni_Institution" FromRole="Alumnus" ToRole="Institution" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_Alumni_Program" FromRole="Alumnus" ToRole="Program" />
+    <NavigationProperty Name="YearlyPassout" Relationship="QecPortalModel.FK_Alumni_YearlyPassout" FromRole="Alumnus" ToRole="YearlyPassout" />
+  </EntityType>
+  <EntityType Name="Assignment">
+    <Key>
+      <PropertyRef Name="AssignmentID" />
+    </Key>
+    <Property Name="AssignmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssignNumber" Type="Int32" />
+    <Property Name="AssignName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AssignDate" Type="DateTime" Precision="0" />
+    <Property Name="DedlineDate" Type="DateTime" Precision="0" />
+    <Property Name="TermID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="InstructorID" Type="Int32" />
+    <NavigationProperty Name="Instructor" Relationship="QecPortalModel.FK_Assignment_Instructor" FromRole="Assignment" ToRole="Instructor" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_Assignment_Program" FromRole="Assignment" ToRole="Program" />
+    <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_Assignment_Term" FromRole="Assignment" ToRole="Term" />
+    <NavigationProperty Name="AssignmentReports" Relationship="QecPortalModel.FK_AssignmentReport_Assignment" FromRole="Assignment" ToRole="AssignmentReport" />
+  </EntityType>
+  <EntityType Name="AssignmentReport">
+    <Key>
+      <PropertyRef Name="AssignReportID" />
+    </Key>
+    <Property Name="AssignReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CLOnumber" Type="Int32" />
+    <Property Name="AssignmentID" Type="Int32" />
+    <Property Name="SCRID" Type="Int32" />
+    <Property Name="RubricsID" Type="Int32" />
+    <NavigationProperty Name="Assignment" Relationship="QecPortalModel.FK_AssignmentReport_Assignment" FromRole="AssignmentReport" ToRole="Assignment" />
+    <NavigationProperty Name="Rubric" Relationship="QecPortalModel.FK_AssignmentReport_Rubrics" FromRole="AssignmentReport" ToRole="Rubric" />
+    <NavigationProperty Name="StudentCourseReg" Relationship="QecPortalModel.FK_AssignmentReport_StudentCourseReg" FromRole="AssignmentReport" ToRole="StudentCourseReg" />
+    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_AssignmentReport" FromRole="AssignmentReport" ToRole="StudentReport" />
+  </EntityType>
+  <EntityType Name="AvailableRoom">
+    <Key>
+      <PropertyRef Name="AvailableRoomID" />
+    </Key>
+    <Property Name="AvailableRoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoomNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoomTypeID" Type="Int32" />
+    <Property Name="RoomLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="multimedia" Type="Boolean" />
+    <Property Name="airConditioned" Type="Boolean" />
+    <Property Name="wifi" Type="Boolean" />
+    <Property Name="sound" Type="Boolean" />
+    <Property Name="advancedEquipment" Type="Boolean" />
+    <Property Name="lights" Type="Boolean" />
+    <Property Name="fans" Type="Boolean" />
+    <Property Name="whiteboard" Type="Boolean" />
+    <Property Name="projector" Type="Boolean" />
+    <NavigationProperty Name="RoomType" Relationship="QecPortalModel.FK_AvailableRoom_RoomType" FromRole="AvailableRoom" ToRole="RoomType" />
+  </EntityType>
+  <EntityType Name="ComputerRatio">
+    <Key>
+      <PropertyRef Name="ComputerRatioID" />
+    </Key>
+    <Property Name="ComputerRatioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RatioYearlyBudgetID" Type="Int32" />
+    <NavigationProperty Name="RatioYearlyBudget" Relationship="QecPortalModel.FK_ComputerRatio_RatioYearlyBudget" FromRole="ComputerRatio" ToRole="RatioYearlyBudget" />
+    <NavigationProperty Name="ComputingBudgets" Relationship="QecPortalModel.FK_ComputingBudget_ComputerRatio" FromRole="ComputerRatio" ToRole="ComputingBudget" />
+  </EntityType>
+  <EntityType Name="ComputingBudget">
+    <Key>
+      <PropertyRef Name="ComputingBudgetID" />
+    </Key>
+    <Property Name="ComputingBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TotalCompLab" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AvgCompLab" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AvgLifetimePC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LabContact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DLDlab" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FYPLab" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerRatioID" Type="Int32" />
+    <Property Name="LevelNetworkingID" Type="Int32" />
+    <Property Name="LabAvailabilityID" Type="Int32" />
+    <Property Name="DepComputingBudgetID" Type="Int32" />
+    <Property Name="CYearlyBudgetID" Type="Int32" />
+    <NavigationProperty Name="ComputerRatio" Relationship="QecPortalModel.FK_ComputingBudget_ComputerRatio" FromRole="ComputingBudget" ToRole="ComputerRatio" />
+    <NavigationProperty Name="CYearlyBudget" Relationship="QecPortalModel.FK_ComputingBudget_CYearlyBudget" FromRole="ComputingBudget" ToRole="CYearlyBudget" />
+    <NavigationProperty Name="DepComputingBudget" Relationship="QecPortalModel.FK_ComputingBudget_DepComputingBudget" FromRole="ComputingBudget" ToRole="DepComputingBudget" />
+    <NavigationProperty Name="LabAvailability" Relationship="QecPortalModel.FK_ComputingBudget_LabAvailability" FromRole="ComputingBudget" ToRole="LabAvailability" />
+    <NavigationProperty Name="LevelNetworking" Relationship="QecPortalModel.FK_ComputingBudget_LevelNetworking" FromRole="ComputingBudget" ToRole="LevelNetworking" />
+    <NavigationProperty Name="HecAdministrations" Relationship="QecPortalModel.FK_HecAdministration_ComputingBudget" FromRole="ComputingBudget" ToRole="HecAdministration" />
+    <NavigationProperty Name="HecAdministrations1" Relationship="QecPortalModel.FK_HecAdministration_ComputingBudget1" FromRole="ComputingBudget" ToRole="HecAdministration" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourseTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Credithr" Type="Int32" />
+    <Property Name="PrereqCourse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CourseDescriptions" Relationship="QecPortalModel.FK_CourseDescription_Course" FromRole="Course" ToRole="CourseDescription" />
+    <NavigationProperty Name="CourseEvaluations" Relationship="QecPortalModel.FK_CourseEvaluation_Course" FromRole="Course" ToRole="CourseEvaluation" />
+    <NavigationProperty Name="CourseOutlines" Relationship="QecPortalModel.FK_CourseOutline_Course" FromRole="Course" ToRole="CourseOutline" />
+    <NavigationProperty Name="CRIs" Relationship="QecPortalModel.FK_CRI_Course" FromRole="Course" ToRole="CRI" />
+    <NavigationProperty Name="ECourseFoders" Relationship="QecPortalModel.FK_ECourseFoders_Course" FromRole="Course" ToRole="ECourseFoder" />
+    <NavigationProperty Name="FacultyCourses" Relationship="QecPortalModel.FK_FacultyCourses_Course" FromRole="Course" ToRole="FacultyCours" />
+    <NavigationProperty Name="SARs" Relationship="QecPortalModel.FK_SAR_Course" FromRole="Course" ToRole="SAR" />
+    <NavigationProperty Name="StudentCourseRegs" Relationship="QecPortalModel.FK_StudentCourseReg_Course" FromRole="Course" ToRole="StudentCourseReg" />
+  </EntityType>
+  <EntityType Name="CourseDescription">
+    <Key>
+      <PropertyRef Name="CourseDescriptionID" />
+    </Key>
+    <Property Name="CourseDescriptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="URL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Textbook" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourseGoals" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectCourse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProgrammingAssignment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AssessmentWeights" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeSpentTheory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeSpentProblem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeSpentSolution" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeSpentIssues" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OWwritten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OWpages" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OWpresentation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OWminutes" Type="Int32" />
+    <Property Name="InstructorID" Type="Int32" />
+    <Property Name="TermID" Type="Int32" />
+    <Property Name="CatalogNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Duration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EvaluationInstrument" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourseID" Type="Int32" />
+    <Property Name="CourseCatDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="topicCover" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Application" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_CourseDescription_Course" FromRole="CourseDescription" ToRole="Course" />
+    <NavigationProperty Name="Institution" Relationship="QecPortalModel.FK_CourseDescription_Institution" FromRole="CourseDescription" ToRole="Institution" />
+    <NavigationProperty Name="Instructor" Relationship="QecPortalModel.FK_CourseDescription_Instructor" FromRole="CourseDescription" ToRole="Instructor" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_CourseDescription_Program" FromRole="CourseDescription" ToRole="Program" />
+    <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_CourseDescription_Term" FromRole="CourseDescription" ToRole="Term" />
+  </EntityType>
+  <EntityType Name="CourseEvaluation">
+    <Key>
+      <PropertyRef Name="CourseEvaluationID" />
+    </Key>
+    <Property Name="CourseEvaluationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="CourseID" Type="Int32" />
+    <Property Name="TermID" Type="Int32" />
+    <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_CourseEvaluation_Course" FromRole="CourseEvaluation" ToRole="Course" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_CourseEvaluation_Program" FromRole="CourseEvaluation" ToRole="Program" />
+    <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_CourseEvaluation_Term" FromRole="CourseEvaluation" ToRole="Term" />
+  </EntityType>
+  <EntityType Name="CourseOutline">
+    <Key>
+      <PropertyRef Name="CourseOutlineID" />
+    </Key>
+    <Property Name="CourseOutlineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="InstructorID" Type="Int32" />
+    <Property Name="StatusID" Type="Int32" />
+    <Property Name="TermID" Type="Int32" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_CourseOutline_Course" FromRole="CourseOutline" ToRole="Course" />
+    <NavigationProperty Name="CourseOutline1" Relationship="QecPortalModel.FK_CourseOutline_CourseOutline" FromRole="CourseOutline" ToRole="CourseOutline1" />
+    <NavigationProperty Name="CourseOutline2" Relationship="QecPortalModel.FK_CourseOutline_CourseOutline" FromRole="CourseOutline1" ToRole="CourseOutline" />
+    <NavigationProperty Name="Department" Relationship="QecPortalModel.FK_CourseOutline_Department" FromRole="CourseOutline" ToRole="Department" />
+    <NavigationProperty Name="Instructor" Relationship="QecPortalModel.FK_CourseOutline_Instructor" FromRole="CourseOutline" ToRole="Instructor" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_CourseOutline_Program" FromRole="CourseOutline" ToRole="Program" />
+    <NavigationProperty Name="Status" Relationship="QecPortalModel.FK_CourseOutline_Status" FromRole="CourseOutline" ToRole="Status" />
+    <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_CourseOutline_Term" FromRole="CourseOutline" ToRole="Term" />
+  </EntityType>
+  <EntityType Name="CRI">
+    <Key>
+      <PropertyRef Name="CRI_ID" />
+    </Key>
+    <Property Name="CRI_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="HecComputingCore" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HecMajorCore" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HecBasedlective" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HecCumulative" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HecSupportingSci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HecUniversityElective" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HecGeneralElective" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HecCumulativeCredit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HecTotalCredit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SumComputingCore" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SumMajorCore" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SumBasedlective" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SumCumulative" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SumSupportingSci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SumUniversityElective" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SumGeneralElective" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SumCumulativeCredit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SumTotalCredit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CourseID" Type="Int32" />
+    <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_CRI_Course" FromRole="CRI" ToRole="Course" />
+    <NavigationProperty Name="Institution" Relationship="QecPortalModel.FK_CRI_Institution" FromRole="CRI" ToRole="Institution" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_CRI_Program" FromRole="CRI" ToRole="Program" />
+  </EntityType>
+  <EntityType Name="CYearlyBudget">
+    <Key>
+      <PropertyRef Name="CYearlyBudgetID" />
+    </Key>
+    <Property Name="CYearlyBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YearNumber" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ComputingBudgets" Relationship="QecPortalModel.FK_ComputingBudget_CYearlyBudget" FromRole="CYearlyBudget" ToRole="ComputingBudget" />
+  </EntityType>
+  <EntityType Name="DCYearlyBudget">
+    <Key>
+      <PropertyRef Name="DCYearlyBudgetID" />
+    </Key>
+    <Property Name="DCYearlyBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearNumber" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DepComputingBudgets" Relationship="QecPortalModel.FK_DepComputingBudget_DCYearlyBudget" FromRole="DCYearlyBudget" ToRole="DepComputingBudget" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CourseOutlines" Relationship="QecPortalModel.FK_CourseOutline_Department" FromRole="Department" ToRole="CourseOutline" />
+    <NavigationProperty Name="DepComputingBudgets" Relationship="QecPortalModel.FK_DepComputingBudget_Department" FromRole="Department" ToRole="DepComputingBudget" />
+    <NavigationProperty Name="DepOfferProgBudgets" Relationship="QecPortalModel.FK_DepOfferProgBudget_Department" FromRole="Department" ToRole="DepOfferProgBudget" />
+    <NavigationProperty Name="DepResearchBudgets" Relationship="QecPortalModel.FK_DepResearchBudget_Department" FromRole="Department" ToRole="DepResearchBudget" />
+    <NavigationProperty Name="ECourseFoders" Relationship="QecPortalModel.FK_ECourseFoders_Department" FromRole="Department" ToRole="ECourseFoder" />
+    <NavigationProperty Name="Programs" Relationship="QecPortalModel.FK_Program_Department1" FromRole="Department" ToRole="Program" />
+    <NavigationProperty Name="SARs" Relationship="QecPortalModel.FK_SAR_Department" FromRole="Department" ToRole="SAR" />
+  </EntityType>
+  <EntityType Name="DepComputingBudget">
+    <Key>
+      <PropertyRef Name="DepComputingBudgetID" />
+    </Key>
+    <Property Name="DepComputingBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="DCYearlyBudgetID" Type="Int32" />
+    <NavigationProperty Name="ComputingBudgets" Relationship="QecPortalModel.FK_ComputingBudget_DepComputingBudget" FromRole="DepComputingBudget" ToRole="ComputingBudget" />
+    <NavigationProperty Name="DCYearlyBudget" Relationship="QecPortalModel.FK_DepComputingBudget_DCYearlyBudget" FromRole="DepComputingBudget" ToRole="DCYearlyBudget" />
+    <NavigationProperty Name="Department" Relationship="QecPortalModel.FK_DepComputingBudget_Department" FromRole="DepComputingBudget" ToRole="Department" />
+    <NavigationProperty Name="Financials" Relationship="QecPortalModel.FK_Financial_DepComputingBudget" FromRole="DepComputingBudget" ToRole="Financial" />
+  </EntityType>
+  <EntityType Name="DepOfferProgBudget">
+    <Key>
+      <PropertyRef Name="DepOfferProgBudgetID" />
+    </Key>
+    <Property Name="DepOfferProgBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="DOPYearlyBudgetID" Type="Int32" />
+    <NavigationProperty Name="Department" Relationship="QecPortalModel.FK_DepOfferProgBudget_Department" FromRole="DepOfferProgBudget" ToRole="Department" />
+    <NavigationProperty Name="DOPYearlyBudget" Relationship="QecPortalModel.FK_DepOfferProgBudget_DOPYearlyBudget" FromRole="DepOfferProgBudget" ToRole="DOPYearlyBudget" />
+    <NavigationProperty Name="Financials" Relationship="QecPortalModel.FK_Financial_DepOfferProgBudget" FromRole="DepOfferProgBudget" ToRole="Financial" />
+  </EntityType>
+  <EntityType Name="DepResearchBudget">
+    <Key>
+      <PropertyRef Name="DepResearchBudgetID" />
+    </Key>
+    <Property Name="DepResearchBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="DRYearlyBudgetID" Type="Int32" />
+    <NavigationProperty Name="Department" Relationship="QecPortalModel.FK_DepResearchBudget_Department" FromRole="DepResearchBudget" ToRole="Department" />
+    <NavigationProperty Name="DRYearlyBudget" Relationship="QecPortalModel.FK_DepResearchBudget_DRYearlyBudget" FromRole="DepResearchBudget" ToRole="DRYearlyBudget" />
+    <NavigationProperty Name="Financials" Relationship="QecPortalModel.FK_Financial_DepResearchBudget" FromRole="DepResearchBudget" ToRole="Financial" />
+  </EntityType>
+  <EntityType Name="DOPYearlyBudget">
+    <Key>
+      <PropertyRef Name="DOPYearlyBudgetID" />
+    </Key>
+    <Property Name="DOPYearlyBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YearNumber" Type="Int32" />
+    <NavigationProperty Name="DepOfferProgBudgets" Relationship="QecPortalModel.FK_DepOfferProgBudget_DOPYearlyBudget" FromRole="DOPYearlyBudget" ToRole="DepOfferProgBudget" />
+  </EntityType>
+  <EntityType Name="DRYearlyBudget">
+    <Key>
+      <PropertyRef Name="DRYearlyBudgetID" />
+    </Key>
+    <Property Name="DRYearlyBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearNumber" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DepResearchBudgets" Relationship="QecPortalModel.FK_DepResearchBudget_DRYearlyBudget" FromRole="DRYearlyBudget" ToRole="DepResearchBudget" />
+  </EntityType>
+  <EntityType Name="ECourseFoder">
+    <Key>
+      <PropertyRef Name="ECourseFolderID" />
+    </Key>
+    <Property Name="ECourseFolderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TermID" Type="Int32" />
+    <Property Name="CourseID" Type="Int32" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="FolderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InstructorID" Type="Int32" />
+    <Property Name="StatusID" Type="Int32" />
+    <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_ECourseFoders_Course" FromRole="ECourseFoder" ToRole="Course" />
+    <NavigationProperty Name="Department" Relationship="QecPortalModel.FK_ECourseFoders_Department" FromRole="ECourseFoder" ToRole="Department" />
+    <NavigationProperty Name="Instructor" Relationship="QecPortalModel.FK_ECourseFoders_Instructor" FromRole="ECourseFoder" ToRole="Instructor" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_ECourseFoders_Program" FromRole="ECourseFoder" ToRole="Program" />
+    <NavigationProperty Name="Status" Relationship="QecPortalModel.FK_ECourseFoders_Status" FromRole="ECourseFoder" ToRole="Status" />
+    <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_ECourseFoders_Term" FromRole="ECourseFoder" ToRole="Term" />
+  </EntityType>
+  <EntityType Name="FacultyCours">
+    <Key>
+      <PropertyRef Name="FacultyCoursesID" />
+    </Key>
+    <Property Name="FacultyCoursesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstructorID" Type="Int32" />
+    <Property Name="CourseID" Type="Int32" />
+    <Property Name="TermID" Type="Int32" />
+    <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_FacultyCourses_Course" FromRole="FacultyCours" ToRole="Course" />
+    <NavigationProperty Name="Instructor" Relationship="QecPortalModel.FK_FacultyCourses_Instructor" FromRole="FacultyCours" ToRole="Instructor" />
+    <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_FacultyCourses_Term" FromRole="FacultyCours" ToRole="Term" />
+  </EntityType>
+  <EntityType Name="FIF">
+    <Key>
+      <PropertyRef Name="FIFID" />
+    </Key>
+    <Property Name="FIFID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InsructorID" Type="Int32" />
+    <Property Name="AcademicDegree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DegreeAwarding" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Specialization" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExpHigherEdu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExpIndustry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PubJnlinternational" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PubJnlLocal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PubConinternational" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PubConLocal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PubBook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PubBookChap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Patents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TechReports" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Instructor" Relationship="QecPortalModel.FK_FIF_Instructor" FromRole="FIF" ToRole="Instructor" />
+  </EntityType>
+  <EntityType Name="Financial">
+    <Key>
+      <PropertyRef Name="FinancialID" />
+    </Key>
+    <Property Name="FinancialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionID" Type="Int32" />
+    <Property Name="ResearchBudgetID" Type="Int32" />
+    <Property Name="LibraryBudgetID" Type="Int32" />
+    <Property Name="ComputingBudgetID" Type="Int32" />
+    <Property Name="DepOfferProgBudgetID" Type="Int32" />
+    <Property Name="FreeStructureID" Type="Int32" />
+    <Property Name="SourcesOfIncomeID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" Nullable="false" />
+    <Property Name="TotalAssets" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fund" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WholeBudgetID" Type="Int32" />
+    <Property Name="DepResearchBudgetID" Type="Int32" />
+    <Property Name="DepComputingBudgetID" Type="Int32" />
+    <NavigationProperty Name="DepComputingBudget" Relationship="QecPortalModel.FK_Financial_DepComputingBudget" FromRole="Financial" ToRole="DepComputingBudget" />
+    <NavigationProperty Name="DepOfferProgBudget" Relationship="QecPortalModel.FK_Financial_DepOfferProgBudget" FromRole="Financial" ToRole="DepOfferProgBudget" />
+    <NavigationProperty Name="DepResearchBudget" Relationship="QecPortalModel.FK_Financial_DepResearchBudget" FromRole="Financial" ToRole="DepResearchBudget" />
+    <NavigationProperty Name="FreeStructure" Relationship="QecPortalModel.FK_Financial_FreeStructure" FromRole="Financial" ToRole="FreeStructure" />
+    <NavigationProperty Name="FreeStructure1" Relationship="QecPortalModel.FK_Financial_FreeStructure1" FromRole="Financial" ToRole="FreeStructure" />
+    <NavigationProperty Name="LibraryBudget" Relationship="QecPortalModel.FK_Financial_LibraryBudget" FromRole="Financial" ToRole="LibraryBudget" />
+    <NavigationProperty Name="LibraryBudget1" Relationship="QecPortalModel.FK_Financial_LibraryBudget1" FromRole="Financial" ToRole="LibraryBudget" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_Financial_Program" FromRole="Financial" ToRole="Program" />
+    <NavigationProperty Name="ResearchBudget" Relationship="QecPortalModel.FK_Financial_ResearchBudget" FromRole="Financial" ToRole="ResearchBudget" />
+    <NavigationProperty Name="ResearchBudget1" Relationship="QecPortalModel.FK_Financial_ResearchBudget1" FromRole="Financial" ToRole="ResearchBudget" />
+    <NavigationProperty Name="SourcesOfIncome" Relationship="QecPortalModel.FK_Financial_SourcesOfIncome" FromRole="Financial" ToRole="SourcesOfIncome" />
+    <NavigationProperty Name="SourcesOfIncome1" Relationship="QecPortalModel.FK_Financial_SourcesOfIncome1" FromRole="Financial" ToRole="SourcesOfIncome" />
+    <NavigationProperty Name="WholeBudget" Relationship="QecPortalModel.FK_Financial_WholeBudget" FromRole="Financial" ToRole="WholeBudget" />
+  </EntityType>
+  <EntityType Name="FreeStructure">
+    <Key>
+      <PropertyRef Name="FreeStructureID" />
+    </Key>
+    <Property Name="FreeStructureID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FYearlyBudgetID" Type="Int32" />
+    <NavigationProperty Name="Financials" Relationship="QecPortalModel.FK_Financial_FreeStructure" FromRole="FreeStructure" ToRole="Financial" />
+    <NavigationProperty Name="Financials1" Relationship="QecPortalModel.FK_Financial_FreeStructure1" FromRole="FreeStructure" ToRole="Financial" />
+    <NavigationProperty Name="FYearlyBudget" Relationship="QecPortalModel.FK_FreeStructure_FYearlyBudget" FromRole="FreeStructure" ToRole="FYearlyBudget" />
+  </EntityType>
+  <EntityType Name="FYearlyBudget">
+    <Key>
+      <PropertyRef Name="FYearlyBudgetID" />
+    </Key>
+    <Property Name="FYearlyBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YearNumber" Type="Int32" />
+    <NavigationProperty Name="FreeStructures" Relationship="QecPortalModel.FK_FreeStructure_FYearlyBudget" FromRole="FYearlyBudget" ToRole="FreeStructure" />
+  </EntityType>
+  <EntityType Name="HecAdministration">
+    <Key>
+      <PropertyRef Name="HecAdminID" />
+    </Key>
+    <Property Name="HecAdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoomTypeID" Type="Int32" />
+    <Property Name="InstructionalFacilitiesID" Type="Int32" />
+    <Property Name="OtherFacilitiesID" Type="Int32" />
+    <Property Name="ComputingBudgetID" Type="Int32" />
+    <Property Name="LibraryBudgetID" Type="Int32" />
+    <NavigationProperty Name="ComputingBudget" Relationship="QecPortalModel.FK_HecAdministration_ComputingBudget" FromRole="HecAdministration" ToRole="ComputingBudget" />
+    <NavigationProperty Name="ComputingBudget1" Relationship="QecPortalModel.FK_HecAdministration_ComputingBudget1" FromRole="HecAdministration" ToRole="ComputingBudget" />
+    <NavigationProperty Name="InstructionalFacility" Relationship="QecPortalModel.FK_HecAdministration_InstructionalFacilities" FromRole="HecAdministration" ToRole="InstructionalFacility" />
+    <NavigationProperty Name="LibraryBudget" Relationship="QecPortalModel.FK_HecAdministration_LibraryBudget" FromRole="HecAdministration" ToRole="LibraryBudget" />
+    <NavigationProperty Name="OtherFacility" Relationship="QecPortalModel.FK_HecAdministration_OtherFacilities" FromRole="HecAdministration" ToRole="OtherFacility" />
+    <NavigationProperty Name="OtherFacility1" Relationship="QecPortalModel.FK_HecAdministration_OtherFacilities1" FromRole="HecAdministration" ToRole="OtherFacility" />
+  </EntityType>
+  <EntityType Name="InductionYear">
+    <Key>
+      <PropertyRef Name="InductionYearID" />
+    </Key>
+    <Property Name="InductionYearID" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TermID" Type="Int32" />
+    <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_InductionYears_Term" FromRole="InductionYear" ToRole="Term" />
+    <NavigationProperty Name="InductionYearsAdmissions" Relationship="QecPortalModel.FK_InductionYearsAdmission_InductionYears" FromRole="InductionYear" ToRole="InductionYearsAdmission" />
+  </EntityType>
+  <EntityType Name="InductionYearsAdmission">
+    <Key>
+      <PropertyRef Name="InductionYearsAdmissionID" />
+    </Key>
+    <Property Name="InductionYearsAdmissionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InductionYearID" Type="Int32" />
+    <NavigationProperty Name="AdmissionForms" Relationship="QecPortalModel.FK_AdmissionForm_InductionYearsAdmission" FromRole="InductionYearsAdmission" ToRole="AdmissionForm" />
+    <NavigationProperty Name="InductionYear" Relationship="QecPortalModel.FK_InductionYearsAdmission_InductionYears" FromRole="InductionYearsAdmission" ToRole="InductionYear" />
+  </EntityType>
+  <EntityType Name="Institution">
+    <Key>
+      <PropertyRef Name="InstitutionID" />
+    </Key>
+    <Property Name="InstitutionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AdmissionForms" Relationship="QecPortalModel.FK_AdmissionForm_Institution" FromRole="Institution" ToRole="AdmissionForm" />
+    <NavigationProperty Name="Alumni" Relationship="QecPortalModel.FK_Alumni_Institution" FromRole="Institution" ToRole="Alumnus" />
+    <NavigationProperty Name="CourseDescriptions" Relationship="QecPortalModel.FK_CourseDescription_Institution" FromRole="Institution" ToRole="CourseDescription" />
+    <NavigationProperty Name="CRIs" Relationship="QecPortalModel.FK_CRI_Institution" FromRole="Institution" ToRole="CRI" />
+    <NavigationProperty Name="PMPFs" Relationship="QecPortalModel.FK_PMPF_Institution" FromRole="Institution" ToRole="PMPF" />
+    <NavigationProperty Name="PMPFs1" Relationship="QecPortalModel.FK_PMPF_Institution1" FromRole="Institution" ToRole="PMPF" />
+  </EntityType>
+  <EntityType Name="InstructionalFacility">
+    <Key>
+      <PropertyRef Name="InstructionalFacilitiesID" />
+    </Key>
+    <Property Name="InstructionalFacilitiesID" Type="Int32" Nullable="false" />
+    <Property Name="multimedia" Type="Boolean" />
+    <Property Name="AC" Type="Boolean" />
+    <Property Name="wifi" Type="Boolean" />
+    <Property Name="sound" Type="Boolean" />
+    <Property Name="advanced" Type="Boolean" />
+    <NavigationProperty Name="HecAdministrations" Relationship="QecPortalModel.FK_HecAdministration_InstructionalFacilities" FromRole="InstructionalFacility" ToRole="HecAdministration" />
+  </EntityType>
+  <EntityType Name="Instructor">
+    <Key>
+      <PropertyRef Name="InstructorID" />
+    </Key>
+    <Property Name="InstructorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstructorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InstructorDept" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InstructorRegID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Assignments" Relationship="QecPortalModel.FK_Assignment_Instructor" FromRole="Instructor" ToRole="Assignment" />
+    <NavigationProperty Name="CourseDescriptions" Relationship="QecPortalModel.FK_CourseDescription_Instructor" FromRole="Instructor" ToRole="CourseDescription" />
+    <NavigationProperty Name="CourseOutlines" Relationship="QecPortalModel.FK_CourseOutline_Instructor" FromRole="Instructor" ToRole="CourseOutline" />
+    <NavigationProperty Name="ECourseFoders" Relationship="QecPortalModel.FK_ECourseFoders_Instructor" FromRole="Instructor" ToRole="ECourseFoder" />
+    <NavigationProperty Name="FacultyCourses" Relationship="QecPortalModel.FK_FacultyCourses_Instructor" FromRole="Instructor" ToRole="FacultyCours" />
+    <NavigationProperty Name="FIFs" Relationship="QecPortalModel.FK_FIF_Instructor" FromRole="Instructor" ToRole="FIF" />
+    <NavigationProperty Name="Projects" Relationship="QecPortalModel.FK_Project_Instructor" FromRole="Instructor" ToRole="Project" />
+    <NavigationProperty Name="Projects1" Relationship="QecPortalModel.FK_Project_Instructor1" FromRole="Instructor" ToRole="Project" />
+    <NavigationProperty Name="Quizs" Relationship="QecPortalModel.FK_Quiz_Instructor" FromRole="Instructor" ToRole="Quiz" />
+  </EntityType>
+  <EntityType Name="LabAvailability">
+    <Key>
+      <PropertyRef Name="LabAvailabilityID" />
+    </Key>
+    <Property Name="LabAvailabilityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdvancedLab" Type="Boolean" />
+    <Property Name="Projectors" Type="Boolean" />
+    <Property Name="sound" Type="Boolean" />
+    <Property Name="LAN" Type="Boolean" />
+    <Property Name="whiteboards" Type="Boolean" />
+    <Property Name="supportStaff" Type="Boolean" />
+    <Property Name="Printers" Type="Boolean" />
+    <NavigationProperty Name="ComputingBudgets" Relationship="QecPortalModel.FK_ComputingBudget_LabAvailability" FromRole="LabAvailability" ToRole="ComputingBudget" />
+  </EntityType>
+  <EntityType Name="LevelNetworking">
+    <Key>
+      <PropertyRef Name="LevelNetworkingID" />
+    </Key>
+    <Property Name="LevelNetworkingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cisco" Type="Boolean" />
+    <Property Name="WAN" Type="Boolean" />
+    <Property Name="HecDigitalLibrary" Type="Boolean" />
+    <Property Name="Virtualizaion" Type="Boolean" />
+    <NavigationProperty Name="ComputingBudgets" Relationship="QecPortalModel.FK_ComputingBudget_LevelNetworking" FromRole="LevelNetworking" ToRole="ComputingBudget" />
+  </EntityType>
+  <EntityType Name="LibraryBudget">
+    <Key>
+      <PropertyRef Name="LibraryBudgetID" />
+    </Key>
+    <Property Name="LibraryBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HecLib" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LibManagment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IEEEElib" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LYearlyBudgetID" Type="Int32" />
+    <Property Name="TotalBooks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfTitles" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Financials" Relationship="QecPortalModel.FK_Financial_LibraryBudget" FromRole="LibraryBudget" ToRole="Financial" />
+    <NavigationProperty Name="Financials1" Relationship="QecPortalModel.FK_Financial_LibraryBudget1" FromRole="LibraryBudget" ToRole="Financial" />
+    <NavigationProperty Name="HecAdministrations" Relationship="QecPortalModel.FK_HecAdministration_LibraryBudget" FromRole="LibraryBudget" ToRole="HecAdministration" />
+    <NavigationProperty Name="LYearlyBudget" Relationship="QecPortalModel.FK_LibraryBudget_LYearlyBudget" FromRole="LibraryBudget" ToRole="LYearlyBudget" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LYearlyBudget">
+    <Key>
+      <PropertyRef Name="LYearlyBudgetID" />
+    </Key>
+    <Property Name="LYearlyBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearNumber" Type="Int32" />
+    <Property Name="ComputingBooksAdded" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NumberOfMagazines" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LibraryBudgets" Relationship="QecPortalModel.FK_LibraryBudget_LYearlyBudget" FromRole="LYearlyBudget" ToRole="LibraryBudget" />
+  </EntityType>
+  <EntityType Name="OtherFacility">
+    <Key>
+      <PropertyRef Name="OtherFacilitiesID" />
+    </Key>
+    <Property Name="OtherFacilitiesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ac" Type="Boolean" />
+    <Property Name="lights" Type="Boolean" />
+    <Property Name="fans" Type="Boolean" />
+    <Property Name="whiteboard" Type="Boolean" />
+    <Property Name="projector" Type="Boolean" />
+    <NavigationProperty Name="HecAdministrations" Relationship="QecPortalModel.FK_HecAdministration_OtherFacilities" FromRole="OtherFacility" ToRole="HecAdministration" />
+    <NavigationProperty Name="HecAdministrations1" Relationship="QecPortalModel.FK_HecAdministration_OtherFacilities1" FromRole="OtherFacility" ToRole="HecAdministration" />
+  </EntityType>
+  <EntityType Name="PMPF">
+    <Key>
+      <PropertyRef Name="PMPFID" />
+    </Key>
+    <Property Name="PMPFID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="Objective" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Reviewed" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SummaryProblem" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SummaryTech" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Assesment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CorrelateIndus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Application" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Institution" Relationship="QecPortalModel.FK_PMPF_Institution" FromRole="PMPF" ToRole="Institution" />
+    <NavigationProperty Name="Institution1" Relationship="QecPortalModel.FK_PMPF_Institution1" FromRole="PMPF" ToRole="Institution" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_PMPF_Program" FromRole="PMPF" ToRole="Program" />
+    <NavigationProperty Name="Program1" Relationship="QecPortalModel.FK_PMPF_Program1" FromRole="PMPF" ToRole="Program" />
+  </EntityType>
+  <EntityType Name="Program">
+    <Key>
+      <PropertyRef Name="ProgramID" />
+    </Key>
+    <Property Name="ProgramID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <NavigationProperty Name="AdmissionForms" Relationship="QecPortalModel.FK_AdmissionForm_Program" FromRole="Program" ToRole="AdmissionForm" />
+    <NavigationProperty Name="Alumni" Relationship="QecPortalModel.FK_Alumni_Program" FromRole="Program" ToRole="Alumnus" />
+    <NavigationProperty Name="Assignments" Relationship="QecPortalModel.FK_Assignment_Program" FromRole="Program" ToRole="Assignment" />
+    <NavigationProperty Name="CourseDescriptions" Relationship="QecPortalModel.FK_CourseDescription_Program" FromRole="Program" ToRole="CourseDescription" />
+    <NavigationProperty Name="CourseEvaluations" Relationship="QecPortalModel.FK_CourseEvaluation_Program" FromRole="Program" ToRole="CourseEvaluation" />
+    <NavigationProperty Name="CourseOutlines" Relationship="QecPortalModel.FK_CourseOutline_Program" FromRole="Program" ToRole="CourseOutline" />
+    <NavigationProperty Name="CRIs" Relationship="QecPortalModel.FK_CRI_Program" FromRole="Program" ToRole="CRI" />
+    <NavigationProperty Name="Department" Relationship="QecPortalModel.FK_Program_Department1" FromRole="Program" ToRole="Department" />
+    <NavigationProperty Name="ECourseFoders" Relationship="QecPortalModel.FK_ECourseFoders_Program" FromRole="Program" ToRole="ECourseFoder" />
+    <NavigationProperty Name="Financials" Relationship="QecPortalModel.FK_Financial_Program" FromRole="Program" ToRole="Financial" />
+    <NavigationProperty Name="PMPFs" Relationship="QecPortalModel.FK_PMPF_Program" FromRole="Program" ToRole="PMPF" />
+    <NavigationProperty Name="PMPFs1" Relationship="QecPortalModel.FK_PMPF_Program1" FromRole="Program" ToRole="PMPF" />
+    <NavigationProperty Name="Projects" Relationship="QecPortalModel.FK_Project_Program" FromRole="Program" ToRole="Project" />
+    <NavigationProperty Name="Projects1" Relationship="QecPortalModel.FK_Project_Program1" FromRole="Program" ToRole="Project" />
+    <NavigationProperty Name="Quizs" Relationship="QecPortalModel.FK_Quiz_Program" FromRole="Program" ToRole="Quiz" />
+    <NavigationProperty Name="SARs" Relationship="QecPortalModel.FK_SAR_Program" FromRole="Program" ToRole="SAR" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectNumber" Type="Int32" />
+    <Property Name="PAssignDate" Type="DateTime" Precision="0" />
+    <Property Name="DeadlineDate" Type="DateTime" Precision="0" />
+    <Property Name="TermID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="InstructorID" Type="Int32" />
+    <NavigationProperty Name="Instructor" Relationship="QecPortalModel.FK_Project_Instructor" FromRole="Project" ToRole="Instructor" />
+    <NavigationProperty Name="Instructor1" Relationship="QecPortalModel.FK_Project_Instructor1" FromRole="Project" ToRole="Instructor" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_Project_Program" FromRole="Project" ToRole="Program" />
+    <NavigationProperty Name="Program1" Relationship="QecPortalModel.FK_Project_Program1" FromRole="Project" ToRole="Program" />
+    <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_Project_Term" FromRole="Project" ToRole="Term" />
+    <NavigationProperty Name="ProjectReports" Relationship="QecPortalModel.FK_ProjectReport_Project" FromRole="Project" ToRole="ProjectReport" />
+    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_Project" FromRole="Project" ToRole="StudentReport" />
+  </EntityType>
+  <EntityType Name="ProjectReport">
+    <Key>
+      <PropertyRef Name="ProjectIReportD" />
+    </Key>
+    <Property Name="ProjectIReportD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SCRID" Type="Int32" />
+    <Property Name="RubricID" Type="Int32" />
+    <Property Name="ProjectID" Type="Int32" />
+    <NavigationProperty Name="Project" Relationship="QecPortalModel.FK_ProjectReport_Project" FromRole="ProjectReport" ToRole="Project" />
+    <NavigationProperty Name="StudentCourseReg" Relationship="QecPortalModel.FK_ProjectReport_StudentCourseReg" FromRole="ProjectReport" ToRole="StudentCourseReg" />
+    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_ProjectReport" FromRole="ProjectReport" ToRole="StudentReport" />
+  </EntityType>
+  <EntityType Name="Quiz">
+    <Key>
+      <PropertyRef Name="QuizID" />
+    </Key>
+    <Property Name="QuizID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuizNumber" Type="Int32" />
+    <Property Name="QuizName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QuizDate" Type="DateTime" Precision="0" />
+    <Property Name="TermID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="InstructorID" Type="Int32" />
+    <NavigationProperty Name="Instructor" Relationship="QecPortalModel.FK_Quiz_Instructor" FromRole="Quiz" ToRole="Instructor" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_Quiz_Program" FromRole="Quiz" ToRole="Program" />
+    <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_Quiz_Term" FromRole="Quiz" ToRole="Term" />
+    <NavigationProperty Name="QuizReports" Relationship="QecPortalModel.FK_QuizReport_Quiz" FromRole="Quiz" ToRole="QuizReport" />
+    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_Quiz" FromRole="Quiz" ToRole="StudentReport" />
+  </EntityType>
+  <EntityType Name="QuizReport">
+    <Key>
+      <PropertyRef Name="QuizReportID" />
+    </Key>
+    <Property Name="QuizReportID" Type="Int32" Nullable="false" />
+    <Property Name="CLOnumber" Type="Int32" />
+    <Property Name="RubricID" Type="Int32" />
+    <Property Name="QuizID" Type="Int32" />
+    <Property Name="SCRID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Quiz" Relationship="QecPortalModel.FK_QuizReport_Quiz" FromRole="QuizReport" ToRole="Quiz" />
+    <NavigationProperty Name="StudentCourseReg" Relationship="QecPortalModel.FK_QuizReport_StudentCourseReg" FromRole="QuizReport" ToRole="StudentCourseReg" />
+    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_QuizReport" FromRole="QuizReport" ToRole="StudentReport" />
+  </EntityType>
+  <EntityType Name="RatioYearlyBudget">
+    <Key>
+      <PropertyRef Name="RatioYearlyBudgetID" />
+    </Key>
+    <Property Name="RatioYearlyBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearNumber" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ComputerRatios" Relationship="QecPortalModel.FK_ComputerRatio_RatioYearlyBudget" FromRole="RatioYearlyBudget" ToRole="ComputerRatio" />
+  </EntityType>
+  <EntityType Name="ResearchBudget">
+    <Key>
+      <PropertyRef Name="ResearchBudgetID" />
+    </Key>
+    <Property Name="ResearchBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RYearlyBudgetID" Type="Int32" />
+    <NavigationProperty Name="Financials" Relationship="QecPortalModel.FK_Financial_ResearchBudget" FromRole="ResearchBudget" ToRole="Financial" />
+    <NavigationProperty Name="Financials1" Relationship="QecPortalModel.FK_Financial_ResearchBudget1" FromRole="ResearchBudget" ToRole="Financial" />
+    <NavigationProperty Name="RYearlyBudget" Relationship="QecPortalModel.FK_ResearchBudget_RYearlyBudget" FromRole="ResearchBudget" ToRole="RYearlyBudget" />
+  </EntityType>
+  <EntityType Name="RoomType">
+    <Key>
+      <PropertyRef Name="RoomTypeID" />
+    </Key>
+    <Property Name="RoomTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AverageSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AvailableRooms" Relationship="QecPortalModel.FK_AvailableRoom_RoomType" FromRole="RoomType" ToRole="AvailableRoom" />
+  </EntityType>
+  <EntityType Name="Rubric">
+    <Key>
+      <PropertyRef Name="RubricsID" />
+    </Key>
+    <Property Name="RubricsID" Type="Int32" Nullable="false" />
+    <Property Name="RubricNumber" Type="Int32" />
+    <Property Name="RubricDescription" Type="Int32" />
+    <NavigationProperty Name="AssignmentReports" Relationship="QecPortalModel.FK_AssignmentReport_Rubrics" FromRole="Rubric" ToRole="AssignmentReport" />
+  </EntityType>
+  <EntityType Name="RYearlyBudget">
+    <Key>
+      <PropertyRef Name="RYearlyBudgetID" />
+    </Key>
+    <Property Name="RYearlyBudgetID" Type="Int32" Nullable="false" />
+    <Property Name="YearNumber" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ResearchBudgets" Relationship="QecPortalModel.FK_ResearchBudget_RYearlyBudget" FromRole="RYearlyBudget" ToRole="ResearchBudget" />
+  </EntityType>
+  <EntityType Name="SAR">
+    <Key>
+      <PropertyRef Name="SARID" />
+    </Key>
+    <Property Name="SARID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="ProgramID" Type="Int32" />
+    <Property Name="TermID" Type="Int32" />
+    <Property Name="CourseID" Type="Int32" />
+    <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_SAR_Course" FromRole="SAR" ToRole="Course" />
+    <NavigationProperty Name="Department" Relationship="QecPortalModel.FK_SAR_Department" FromRole="SAR" ToRole="Department" />
+    <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_SAR_Program" FromRole="SAR" ToRole="Program" />
+    <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_SAR_Term" FromRole="SAR" ToRole="Term" />
+  </EntityType>
+  <EntityType Name="SourcesOfIncome">
+    <Key>
+      <PropertyRef Name="SourcesOfIncomeID" />
+    </Key>
+    <Property Name="SourcesOfIncomeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SYearlyBudgetID" Type="Int32" />
+    <NavigationProperty Name="Financials" Relationship="QecPortalModel.FK_Financial_SourcesOfIncome" FromRole="SourcesOfIncome" ToRole="Financial" />
+    <NavigationProperty Name="Financials1" Relationship="QecPortalModel.FK_Financial_SourcesOfIncome1" FromRole="SourcesOfIncome" ToRole="Financial" />
+    <NavigationProperty Name="SYearlyBudget" Relationship="QecPortalModel.FK_SourcesOfIncome_SYearlyBudget" FromRole="SourcesOfIncome" ToRole="SYearlyBudget" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FolderStatus" Type="Boolean" />
+    <NavigationProperty Name="CourseOutlines" Relationship="QecPortalModel.FK_CourseOutline_Status" FromRole="Status" ToRole="CourseOutline" />
+    <NavigationProperty Name="ECourseFoders" Relationship="QecPortalModel.FK_ECourseFoders_Status" FromRole="Status" ToRole="ECourseFoder" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentRegNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StudentContact" Type="Int64" />
+    <Property Name="StudentMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="StudentCourseRegs" Relationship="QecPortalModel.FK_StudentCourseReg_Student" FromRole="Student" ToRole="StudentCourseReg" />
+  </EntityType>
+  <EntityType Name="StudentCourseReg">
+    <Key>
+      <PropertyRef Name="SCRID" />
+    </Key>
+    <Property Name="SCRID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="CourseID" Type="Int32" />
+    <NavigationProperty Name="AssignmentReports" Relationship="QecPortalModel.FK_AssignmentReport_StudentCourseReg" FromRole="StudentCourseReg" ToRole="AssignmentReport" />
+    <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_StudentCourseReg_Course" FromRole="StudentCourseReg" ToRole="Course" />
+    <NavigationProperty Name="ProjectReports" Relationship="QecPortalModel.FK_ProjectReport_StudentCourseReg" FromRole="StudentCourseReg" ToRole="ProjectReport" />
+    <NavigationProperty Name="QuizReports" Relationship="QecPortalModel.FK_QuizReport_StudentCourseReg" FromRole="StudentCourseReg" ToRole="QuizReport" />
+    <NavigationProperty Name="Student" Relationship="QecPortalModel.FK_StudentCourseReg_Student" FromRole="StudentCourseReg" ToRole="Student" />
+    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_StudentCourseReg" FromRole="StudentCourseReg" ToRole="StudentReport" />
+  </EntityType>
+  <EntityType Name="StudentEvaluation">
+    <Key>
+      <PropertyRef Name="StudentEvaluationID" />
+    </Key>
+    <Property Name="StudentEvaluationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="AssignmentReportID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="StudentReport">
+    <Key>
+      <PropertyRef Name="StudentReportID" />
+    </Key>
+    <Property Name="StudentReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssignReportID" Type="Int32" />
+    <Property Name="SCRID" Type="Int32" />
+    <Property Name="QuizIReportD" Type="Int32" />
+    <Property Name="ProjectReportID" Type="Int32" />
+    <NavigationProperty Name="AssignmentReport" Relationship="QecPortalModel.FK_StudentReport_AssignmentReport" FromRole="StudentReport" ToRole="AssignmentReport" />
+    <NavigationProperty Name="Project" Relationship="QecPortalModel.FK_StudentReport_Project" FromRole="StudentReport" ToRole="Project" />
+    <NavigationProperty Name="ProjectReport" Relationship="QecPortalModel.FK_StudentReport_ProjectReport" FromRole="StudentReport" ToRole="ProjectReport" />
+    <NavigationProperty Name="Quiz" Relationship="QecPortalModel.FK_StudentReport_Quiz" FromRole="StudentReport" ToRole="Quiz" />
+    <NavigationProperty Name="QuizReport" Relationship="QecPortalModel.FK_StudentReport_QuizReport" FromRole="StudentReport" ToRole="QuizReport" />
+    <NavigationProperty Name="StudentCourseReg" Relationship="QecPortalModel.FK_StudentReport_StudentCourseReg" FromRole="StudentReport" ToRole="StudentCourseReg" />
+  </EntityType>
+  <EntityType Name="SYearlyBudget">
+    <Key>
+      <PropertyRef Name="SYearlyBudgetID" />
+    </Key>
+    <Property Name="SYearlyBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearNumber" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SourcesOfIncomes" Relationship="QecPortalModel.FK_SourcesOfIncome_SYearlyBudget" FromRole="SYearlyBudget" ToRole="SourcesOfIncome" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Term">
+    <Key>
+      <PropertyRef Name="TermID" />
+    </Key>
+    <Property Name="TermID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Semester" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="Int32" />
+    <NavigationProperty Name="Assignments" Relationship="QecPortalModel.FK_Assignment_Term" FromRole="Term" ToRole="Assignment" />
+    <NavigationProperty Name="CourseDescriptions" Relationship="QecPortalModel.FK_CourseDescription_Term" FromRole="Term" ToRole="CourseDescription" />
+    <NavigationProperty Name="CourseEvaluations" Relationship="QecPortalModel.FK_CourseEvaluation_Term" FromRole="Term" ToRole="CourseEvaluation" />
+    <NavigationProperty Name="CourseOutlines" Relationship="QecPortalModel.FK_CourseOutline_Term" FromRole="Term" ToRole="CourseOutline" />
+    <NavigationProperty Name="ECourseFoders" Relationship="QecPortalModel.FK_ECourseFoders_Term" FromRole="Term" ToRole="ECourseFoder" />
+    <NavigationProperty Name="FacultyCourses" Relationship="QecPortalModel.FK_FacultyCourses_Term" FromRole="Term" ToRole="FacultyCours" />
+    <NavigationProperty Name="InductionYears" Relationship="QecPortalModel.FK_InductionYears_Term" FromRole="Term" ToRole="InductionYear" />
+    <NavigationProperty Name="Projects" Relationship="QecPortalModel.FK_Project_Term" FromRole="Term" ToRole="Project" />
+    <NavigationProperty Name="Quizs" Relationship="QecPortalModel.FK_Quiz_Term" FromRole="Term" ToRole="Quiz" />
+    <NavigationProperty Name="SARs" Relationship="QecPortalModel.FK_SAR_Term" FromRole="Term" ToRole="SAR" />
+  </EntityType>
+  <EntityType Name="WholeBudget">
+    <Key>
+      <PropertyRef Name="WholeBudgetID" />
+    </Key>
+    <Property Name="WholeBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WholeYearlyBudgetID" Type="Int32" />
+    <NavigationProperty Name="Financials" Relationship="QecPortalModel.FK_Financial_WholeBudget" FromRole="WholeBudget" ToRole="Financial" />
+    <NavigationProperty Name="WholeYearlyBudget" Relationship="QecPortalModel.FK_WholeBudget_WholeYearlyBudget" FromRole="WholeBudget" ToRole="WholeYearlyBudget" />
+  </EntityType>
+  <EntityType Name="WholeYearlyBudget">
+    <Key>
+      <PropertyRef Name="WholeYearlyBudgetID" />
+    </Key>
+    <Property Name="WholeYearlyBudgetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearNumber" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="WholeBudgets" Relationship="QecPortalModel.FK_WholeBudget_WholeYearlyBudget" FromRole="WholeYearlyBudget" ToRole="WholeBudget" />
+  </EntityType>
+  <EntityType Name="YearlyPassout">
+    <Key>
+      <PropertyRef Name="YearlyPassoutID" />
+    </Key>
+    <Property Name="YearlyPassoutID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YearNumber" Type="Int32" />
+    <Property Name="NoOfGraduatedTotal" Type="Int32" />
+    <Property Name="NoOfUnderGraduatedTotal" Type="Int32" />
+    <NavigationProperty Name="Alumni" Relationship="QecPortalModel.FK_Alumni_YearlyPassout" FromRole="YearlyPassout" ToRole="Alumnus" />
+  </EntityType>
+  <Association Name="FK_AdmissionForm_InductionYearsAdmission">
+    <End Type="QecPortalModel.InductionYearsAdmission" Role="InductionYearsAdmission" Multiplicity="0..1" />
+    <End Type="QecPortalModel.AdmissionForm" Role="AdmissionForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InductionYearsAdmission">
+        <PropertyRef Name="InductionYearsAdmissionID" />
+      </Principal>
+      <Dependent Role="AdmissionForm">
+        <PropertyRef Name="InductionYearsAdmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdmissionForm_Institution">
+    <End Type="QecPortalModel.Institution" Role="Institution" Multiplicity="0..1" />
+    <End Type="QecPortalModel.AdmissionForm" Role="AdmissionForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="AdmissionForm">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdmissionForm_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.AdmissionForm" Role="AdmissionForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="AdmissionForm">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumni_Institution">
+    <End Type="QecPortalModel.Institution" Role="Institution" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Alumnus" Role="Alumnus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="Alumnus">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumni_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="1" />
+    <End Type="QecPortalModel.Alumnus" Role="Alumnus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Alumnus">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumni_YearlyPassout">
+    <End Type="QecPortalModel.YearlyPassout" Role="YearlyPassout" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Alumnus" Role="Alumnus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YearlyPassout">
+        <PropertyRef Name="YearlyPassoutID" />
+      </Principal>
+      <Dependent Role="Alumnus">
+        <PropertyRef Name="YearlyPassoutID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assignment_Instructor">
+    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Assignment" Role="Assignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="Assignment">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assignment_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Assignment" Role="Assignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Assignment">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assignment_Term">
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Assignment" Role="Assignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="Assignment">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssignmentReport_Assignment">
+    <End Type="QecPortalModel.Assignment" Role="Assignment" Multiplicity="0..1" />
+    <End Type="QecPortalModel.AssignmentReport" Role="AssignmentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assignment">
+        <PropertyRef Name="AssignmentID" />
+      </Principal>
+      <Dependent Role="AssignmentReport">
+        <PropertyRef Name="AssignmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssignmentReport_Rubrics">
+    <End Type="QecPortalModel.Rubric" Role="Rubric" Multiplicity="0..1" />
+    <End Type="QecPortalModel.AssignmentReport" Role="AssignmentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rubric">
+        <PropertyRef Name="RubricsID" />
+      </Principal>
+      <Dependent Role="AssignmentReport">
+        <PropertyRef Name="RubricsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssignmentReport_StudentCourseReg">
+    <End Type="QecPortalModel.StudentCourseReg" Role="StudentCourseReg" Multiplicity="0..1" />
+    <End Type="QecPortalModel.AssignmentReport" Role="AssignmentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentCourseReg">
+        <PropertyRef Name="SCRID" />
+      </Principal>
+      <Dependent Role="AssignmentReport">
+        <PropertyRef Name="SCRID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_AssignmentReport">
+    <End Type="QecPortalModel.AssignmentReport" Role="AssignmentReport" Multiplicity="0..1" />
+    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssignmentReport">
+        <PropertyRef Name="AssignReportID" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="AssignReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AvailableRoom_RoomType">
+    <End Type="QecPortalModel.RoomType" Role="RoomType" Multiplicity="0..1" />
+    <End Type="QecPortalModel.AvailableRoom" Role="AvailableRoom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoomType">
+        <PropertyRef Name="RoomTypeID" />
+      </Principal>
+      <Dependent Role="AvailableRoom">
+        <PropertyRef Name="RoomTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerRatio_RatioYearlyBudget">
+    <End Type="QecPortalModel.RatioYearlyBudget" Role="RatioYearlyBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ComputerRatio" Role="ComputerRatio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RatioYearlyBudget">
+        <PropertyRef Name="RatioYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="ComputerRatio">
+        <PropertyRef Name="RatioYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputingBudget_ComputerRatio">
+    <End Type="QecPortalModel.ComputerRatio" Role="ComputerRatio" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ComputingBudget" Role="ComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputerRatio">
+        <PropertyRef Name="ComputerRatioID" />
+      </Principal>
+      <Dependent Role="ComputingBudget">
+        <PropertyRef Name="ComputerRatioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputingBudget_CYearlyBudget">
+    <End Type="QecPortalModel.CYearlyBudget" Role="CYearlyBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ComputingBudget" Role="ComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CYearlyBudget">
+        <PropertyRef Name="CYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="ComputingBudget">
+        <PropertyRef Name="CYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputingBudget_DepComputingBudget">
+    <End Type="QecPortalModel.DepComputingBudget" Role="DepComputingBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ComputingBudget" Role="ComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepComputingBudget">
+        <PropertyRef Name="DepComputingBudgetID" />
+      </Principal>
+      <Dependent Role="ComputingBudget">
+        <PropertyRef Name="DepComputingBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputingBudget_LabAvailability">
+    <End Type="QecPortalModel.LabAvailability" Role="LabAvailability" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ComputingBudget" Role="ComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LabAvailability">
+        <PropertyRef Name="LabAvailabilityID" />
+      </Principal>
+      <Dependent Role="ComputingBudget">
+        <PropertyRef Name="LabAvailabilityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputingBudget_LevelNetworking">
+    <End Type="QecPortalModel.LevelNetworking" Role="LevelNetworking" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ComputingBudget" Role="ComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LevelNetworking">
+        <PropertyRef Name="LevelNetworkingID" />
+      </Principal>
+      <Dependent Role="ComputingBudget">
+        <PropertyRef Name="LevelNetworkingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_ComputingBudget">
+    <End Type="QecPortalModel.ComputingBudget" Role="ComputingBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.HecAdministration" Role="HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputingBudget">
+        <PropertyRef Name="ComputingBudgetID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="ComputingBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_ComputingBudget1">
+    <End Type="QecPortalModel.ComputingBudget" Role="ComputingBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.HecAdministration" Role="HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputingBudget">
+        <PropertyRef Name="ComputingBudgetID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="ComputingBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDescription_Course">
+    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseDescription" Role="CourseDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CourseDescription">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseEvaluation_Course">
+    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseEvaluation" Role="CourseEvaluation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CourseEvaluation">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Course">
+    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CRI_Course">
+    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CRI" Role="CRI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CRI">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Course">
+    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ECourseFoder" Role="ECourseFoder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="ECourseFoder">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacultyCourses_Course">
+    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+    <End Type="QecPortalModel.FacultyCours" Role="FacultyCours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="FacultyCours">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SAR_Course">
+    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+    <End Type="QecPortalModel.SAR" Role="SAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="SAR">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentCourseReg_Course">
+    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+    <End Type="QecPortalModel.StudentCourseReg" Role="StudentCourseReg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="StudentCourseReg">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDescription_Institution">
+    <End Type="QecPortalModel.Institution" Role="Institution" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseDescription" Role="CourseDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="CourseDescription">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDescription_Instructor">
+    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseDescription" Role="CourseDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="CourseDescription">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDescription_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseDescription" Role="CourseDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="CourseDescription">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDescription_Term">
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseDescription" Role="CourseDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="CourseDescription">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseEvaluation_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseEvaluation" Role="CourseEvaluation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="CourseEvaluation">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseEvaluation_Term">
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseEvaluation" Role="CourseEvaluation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="CourseEvaluation">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_CourseOutline">
+    <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="1" />
+    <End Type="QecPortalModel.CourseOutline" Role="CourseOutline1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CourseOutline">
+        <PropertyRef Name="CourseOutlineID" />
+      </Principal>
+      <Dependent Role="CourseOutline1">
+        <PropertyRef Name="CourseOutlineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Department">
+    <End Type="QecPortalModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Instructor">
+    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Status">
+    <End Type="QecPortalModel.Status" Role="Status" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Term">
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CRI_Institution">
+    <End Type="QecPortalModel.Institution" Role="Institution" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CRI" Role="CRI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="CRI">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CRI_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.CRI" Role="CRI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="CRI">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepComputingBudget_DCYearlyBudget">
+    <End Type="QecPortalModel.DCYearlyBudget" Role="DCYearlyBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.DepComputingBudget" Role="DepComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DCYearlyBudget">
+        <PropertyRef Name="DCYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="DepComputingBudget">
+        <PropertyRef Name="DCYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepComputingBudget_Department">
+    <End Type="QecPortalModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="QecPortalModel.DepComputingBudget" Role="DepComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="DepComputingBudget">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepOfferProgBudget_Department">
+    <End Type="QecPortalModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="QecPortalModel.DepOfferProgBudget" Role="DepOfferProgBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="DepOfferProgBudget">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepResearchBudget_Department">
+    <End Type="QecPortalModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="QecPortalModel.DepResearchBudget" Role="DepResearchBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="DepResearchBudget">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Department">
+    <End Type="QecPortalModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ECourseFoder" Role="ECourseFoder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="ECourseFoder">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Program_Department1">
+    <End Type="QecPortalModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="Program">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SAR_Department">
+    <End Type="QecPortalModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="QecPortalModel.SAR" Role="SAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="SAR">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_DepComputingBudget">
+    <End Type="QecPortalModel.DepComputingBudget" Role="DepComputingBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepComputingBudget">
+        <PropertyRef Name="DepComputingBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="DepComputingBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepOfferProgBudget_DOPYearlyBudget">
+    <End Type="QecPortalModel.DOPYearlyBudget" Role="DOPYearlyBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.DepOfferProgBudget" Role="DepOfferProgBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DOPYearlyBudget">
+        <PropertyRef Name="DOPYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="DepOfferProgBudget">
+        <PropertyRef Name="DOPYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_DepOfferProgBudget">
+    <End Type="QecPortalModel.DepOfferProgBudget" Role="DepOfferProgBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepOfferProgBudget">
+        <PropertyRef Name="DepOfferProgBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="DepOfferProgBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepResearchBudget_DRYearlyBudget">
+    <End Type="QecPortalModel.DRYearlyBudget" Role="DRYearlyBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.DepResearchBudget" Role="DepResearchBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DRYearlyBudget">
+        <PropertyRef Name="DRYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="DepResearchBudget">
+        <PropertyRef Name="DRYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_DepResearchBudget">
+    <End Type="QecPortalModel.DepResearchBudget" Role="DepResearchBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepResearchBudget">
+        <PropertyRef Name="DepResearchBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="DepResearchBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Instructor">
+    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ECourseFoder" Role="ECourseFoder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="ECourseFoder">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ECourseFoder" Role="ECourseFoder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="ECourseFoder">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Status">
+    <End Type="QecPortalModel.Status" Role="Status" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ECourseFoder" Role="ECourseFoder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="ECourseFoder">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Term">
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ECourseFoder" Role="ECourseFoder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="ECourseFoder">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacultyCourses_Instructor">
+    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+    <End Type="QecPortalModel.FacultyCours" Role="FacultyCours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="FacultyCours">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacultyCourses_Term">
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.FacultyCours" Role="FacultyCours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="FacultyCours">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FIF_Instructor">
+    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+    <End Type="QecPortalModel.FIF" Role="FIF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="FIF">
+        <PropertyRef Name="InsructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_FreeStructure">
+    <End Type="QecPortalModel.FreeStructure" Role="FreeStructure" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FreeStructure">
+        <PropertyRef Name="FreeStructureID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="FreeStructureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_FreeStructure1">
+    <End Type="QecPortalModel.FreeStructure" Role="FreeStructure" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FreeStructure">
+        <PropertyRef Name="FreeStructureID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="FreeStructureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_LibraryBudget">
+    <End Type="QecPortalModel.LibraryBudget" Role="LibraryBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LibraryBudget">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_LibraryBudget1">
+    <End Type="QecPortalModel.LibraryBudget" Role="LibraryBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LibraryBudget">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_ResearchBudget">
+    <End Type="QecPortalModel.ResearchBudget" Role="ResearchBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResearchBudget">
+        <PropertyRef Name="ResearchBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="ResearchBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_ResearchBudget1">
+    <End Type="QecPortalModel.ResearchBudget" Role="ResearchBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResearchBudget">
+        <PropertyRef Name="ResearchBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="ResearchBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_SourcesOfIncome">
+    <End Type="QecPortalModel.SourcesOfIncome" Role="SourcesOfIncome" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SourcesOfIncome">
+        <PropertyRef Name="SourcesOfIncomeID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="SourcesOfIncomeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_SourcesOfIncome1">
+    <End Type="QecPortalModel.SourcesOfIncome" Role="SourcesOfIncome" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SourcesOfIncome">
+        <PropertyRef Name="SourcesOfIncomeID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="SourcesOfIncomeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_WholeBudget">
+    <End Type="QecPortalModel.WholeBudget" Role="WholeBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Financial" Role="Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WholeBudget">
+        <PropertyRef Name="WholeBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="WholeBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FreeStructure_FYearlyBudget">
+    <End Type="QecPortalModel.FYearlyBudget" Role="FYearlyBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.FreeStructure" Role="FreeStructure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FYearlyBudget">
+        <PropertyRef Name="FYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="FreeStructure">
+        <PropertyRef Name="FYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_InstructionalFacilities">
+    <End Type="QecPortalModel.InstructionalFacility" Role="InstructionalFacility" Multiplicity="0..1" />
+    <End Type="QecPortalModel.HecAdministration" Role="HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstructionalFacility">
+        <PropertyRef Name="InstructionalFacilitiesID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="InstructionalFacilitiesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_LibraryBudget">
+    <End Type="QecPortalModel.LibraryBudget" Role="LibraryBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.HecAdministration" Role="HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LibraryBudget">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_OtherFacilities">
+    <End Type="QecPortalModel.OtherFacility" Role="OtherFacility" Multiplicity="0..1" />
+    <End Type="QecPortalModel.HecAdministration" Role="HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OtherFacility">
+        <PropertyRef Name="OtherFacilitiesID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="OtherFacilitiesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_OtherFacilities1">
+    <End Type="QecPortalModel.OtherFacility" Role="OtherFacility" Multiplicity="0..1" />
+    <End Type="QecPortalModel.HecAdministration" Role="HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OtherFacility">
+        <PropertyRef Name="OtherFacilitiesID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="OtherFacilitiesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InductionYears_Term">
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.InductionYear" Role="InductionYear" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="InductionYear">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InductionYearsAdmission_InductionYears">
+    <End Type="QecPortalModel.InductionYear" Role="InductionYear" Multiplicity="0..1" />
+    <End Type="QecPortalModel.InductionYearsAdmission" Role="InductionYearsAdmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InductionYear">
+        <PropertyRef Name="InductionYearID" />
+      </Principal>
+      <Dependent Role="InductionYearsAdmission">
+        <PropertyRef Name="InductionYearID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PMPF_Institution">
+    <End Type="QecPortalModel.Institution" Role="Institution" Multiplicity="0..1" />
+    <End Type="QecPortalModel.PMPF" Role="PMPF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="PMPF">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PMPF_Institution1">
+    <End Type="QecPortalModel.Institution" Role="Institution" Multiplicity="0..1" />
+    <End Type="QecPortalModel.PMPF" Role="PMPF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="PMPF">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Instructor">
+    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Project" Role="Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Instructor1">
+    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Project" Role="Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Quiz_Instructor">
+    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Quiz" Role="Quiz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="Quiz">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LibraryBudget_LYearlyBudget">
+    <End Type="QecPortalModel.LYearlyBudget" Role="LYearlyBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.LibraryBudget" Role="LibraryBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LYearlyBudget">
+        <PropertyRef Name="LYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="LibraryBudget">
+        <PropertyRef Name="LYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PMPF_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.PMPF" Role="PMPF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="PMPF">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PMPF_Program1">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.PMPF" Role="PMPF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="PMPF">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Project" Role="Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Program1">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Project" Role="Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Quiz_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Quiz" Role="Quiz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Quiz">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SAR_Program">
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.SAR" Role="SAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="SAR">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Term">
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Project" Role="Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectReport_Project">
+    <End Type="QecPortalModel.Project" Role="Project" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ProjectReport" Role="ProjectReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="ProjectReport">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_Project">
+    <End Type="QecPortalModel.Project" Role="Project" Multiplicity="0..1" />
+    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="ProjectReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectReport_StudentCourseReg">
+    <End Type="QecPortalModel.StudentCourseReg" Role="StudentCourseReg" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ProjectReport" Role="ProjectReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentCourseReg">
+        <PropertyRef Name="SCRID" />
+      </Principal>
+      <Dependent Role="ProjectReport">
+        <PropertyRef Name="SCRID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_ProjectReport">
+    <End Type="QecPortalModel.ProjectReport" Role="ProjectReport" Multiplicity="0..1" />
+    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectReport">
+        <PropertyRef Name="ProjectIReportD" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="ProjectReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Quiz_Term">
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Quiz" Role="Quiz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="Quiz">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuizReport_Quiz">
+    <End Type="QecPortalModel.Quiz" Role="Quiz" Multiplicity="0..1" />
+    <End Type="QecPortalModel.QuizReport" Role="QuizReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Quiz">
+        <PropertyRef Name="QuizID" />
+      </Principal>
+      <Dependent Role="QuizReport">
+        <PropertyRef Name="QuizID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_Quiz">
+    <End Type="QecPortalModel.Quiz" Role="Quiz" Multiplicity="0..1" />
+    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Quiz">
+        <PropertyRef Name="QuizID" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="QuizIReportD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuizReport_StudentCourseReg">
+    <End Type="QecPortalModel.StudentCourseReg" Role="StudentCourseReg" Multiplicity="1" />
+    <End Type="QecPortalModel.QuizReport" Role="QuizReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentCourseReg">
+        <PropertyRef Name="SCRID" />
+      </Principal>
+      <Dependent Role="QuizReport">
+        <PropertyRef Name="SCRID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_QuizReport">
+    <End Type="QecPortalModel.QuizReport" Role="QuizReport" Multiplicity="0..1" />
+    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuizReport">
+        <PropertyRef Name="QuizReportID" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="QuizIReportD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResearchBudget_RYearlyBudget">
+    <End Type="QecPortalModel.RYearlyBudget" Role="RYearlyBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.ResearchBudget" Role="ResearchBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RYearlyBudget">
+        <PropertyRef Name="RYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="ResearchBudget">
+        <PropertyRef Name="RYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SAR_Term">
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.SAR" Role="SAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="SAR">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SourcesOfIncome_SYearlyBudget">
+    <End Type="QecPortalModel.SYearlyBudget" Role="SYearlyBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.SourcesOfIncome" Role="SourcesOfIncome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYearlyBudget">
+        <PropertyRef Name="SYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="SourcesOfIncome">
+        <PropertyRef Name="SYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentCourseReg_Student">
+    <End Type="QecPortalModel.Student" Role="Student" Multiplicity="0..1" />
+    <End Type="QecPortalModel.StudentCourseReg" Role="StudentCourseReg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="StudentCourseReg">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_StudentCourseReg">
+    <End Type="QecPortalModel.StudentCourseReg" Role="StudentCourseReg" Multiplicity="0..1" />
+    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentCourseReg">
+        <PropertyRef Name="SCRID" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="SCRID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WholeBudget_WholeYearlyBudget">
+    <End Type="QecPortalModel.WholeYearlyBudget" Role="WholeYearlyBudget" Multiplicity="0..1" />
+    <End Type="QecPortalModel.WholeBudget" Role="WholeBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WholeYearlyBudget">
+        <PropertyRef Name="WholeYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="WholeBudget">
+        <PropertyRef Name="WholeYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

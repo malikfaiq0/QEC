@@ -1,0 +1,305 @@
+﻿@*@model IEnumerable<WebQecPortal.Models.SARDataModel>*@
+
+
+@{
+    ViewBag.Title = "CourseOutlineMain";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+
+
+            <div class="card bg-info text-white">
+                <div class="card-body">
+
+                    <center><h3>Course Outline</h3></center>
+
+                </div>
+            </div>
+
+            @*<div class="row">
+
+                <div class="col-md-3">
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Department</label>
+                        @Html.DropDownList("Departments", (IEnumerable<SelectListItem>)ViewBag.dep)
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Select Term</label>
+                        @Html.DropDownList("Terms", (IEnumerable<SelectListItem>)ViewBag.Terms)
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Program</label>
+                        @Html.DropDownList("Programs", (IEnumerable<SelectListItem>)ViewBag.prog)
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Course Title</label>
+                        @Html.DropDownList("Courses", (IEnumerable<SelectListItem>)ViewBag.course)
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Status</label>
+                        @Html.DropDownList("Statuses", (IEnumerable<SelectListItem>)ViewBag.status)
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="ADD" class="btn btn-primary" />
+                </div>
+            </div>*@
+
+            <hr>
+
+            <div class="row">
+
+                <div class="col-md-1">
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">  All </label>
+                    </div>
+                </div>
+                <div class="btn btn-outline-dark">
+                    @Html.ActionLink("Create New", "Create", "CourseOutlines")
+                </div>
+
+              
+
+                <div class="col-md-9">
+
+                </div>
+
+
+            </div>
+
+            <div class="table100 ver1 m-b-110">
+                <table data-vertable="ver1">
+                    <thead>
+                        <tr class="row100 head">
+                     
+                            <th class="column100 column2" data-column="column2">Term</th>
+                            <th class="column100 column3" data-column="column3">Title</th>
+                            <th class="column100 column4" data-column="column4">Program</th>
+                            <th class="column100 column5" data-column="column5">Department</th>
+                            <th class="column100 column6" data-column="column6">Status</th>
+                            <th class="column100 column7" data-column="column7"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td class="Vcenter">@item.Terms.Semester</td>
+                            <td class="Vcenter">@item.Courses.CourseTitle</td>
+                            <td class="Vcenter">@item.Programs.Description</td>
+                            <td class="Vcenter">@item.Departments.DepartmentName</td>
+                            <td class="Vcenter">@item.Statuses.FolderStatus</td>
+
+
+                          
+
+
+                            <td>
+                                <center>
+                                    <button type="submit" class="btn btn-info"><a href="@Url.Action("CourseOutlineForm","CourseOutline")" style="color:white;">View Outline</a></button>
+                                    @*<div class="btn btn-outline-dark">
+                                        @Html.ActionLink("Delete", "Delete", "CourseOutlines")
+
+                                    </div>*@
+
+                                    <div class="btn btn-outline-dark">
+                                        @Html.ActionLink("Edit", "Edit", "CourseOutlines")
+                                    </div>
+                                </center>
+
+                                
+
+
+                            </td>
+                        </tr>
+                        }
+                        @*<tr class="row100">
+            <td class="column100 column0" data-column="column0"><input type="checkbox" name="name1" />&nbsp;</td>
+            <td class="column100 column1" data-column="column1">SP21</td>
+            <td class="column100 column2" data-column="column2">SCD</td>
+            <td class="column100 column3" data-column="column3">BSCS</td>
+            <td class="column100 column4" data-column="column4">M Tauseef, Aman Farooq</td>
+            <td class="column100 column3" data-column="column3">Uploaded</td>
+            <td>
+                <center>
+                    <button type="submit" class="btn btn-info"><a href="@Url.Action("CourseOutlineForm","CourseOutline")" style="color:white;">View Outline</a></button>
+                </center>
+            </td>
+        </tr>
+
+        <tr class="row100">
+            <td class="column100 column0" data-column="column0"><input type="checkbox" name="name1" />&nbsp;</td>
+            <td class="column100 column1" data-column="column1">SP21</td>
+            <td class="column100 column2" data-column="column2">SCD</td>
+            <td class="column100 column3" data-column="column3">BSCS</td>
+            <td class="column100 column4" data-column="column4">M Tauseef, Aman Farooq</td>
+            <td class="column100 column3" data-column="column3">Partially Uploaded</td>
+            <td>
+                <center>
+                    <button type="submit" class="btn btn-info"><a href="" @Url.Action("CourseOutlineForm", "CourseOutline") " style="color:white;">View Outline</a></button>
+                </center>
+            </td>
+        </tr>
+
+        <tr class="row100">
+            <td class="column100 column0" data-column="column0"><input type="checkbox" name="name1" />&nbsp;</td>
+            <td class="column100 column1" data-column="column1">SP21</td>
+            <td class="column100 column2" data-column="column2">SCD</td>
+            <td class="column100 column3" data-column="column3">BSCS</td>
+            <td class="column100 column4" data-column="column4">M Tauseef, Aman Farooq</td>
+            <td class="column100 column3" data-column="column3">Not Uploaded</td>
+            <td>
+                <center>
+                    <button type="submit" class="btn btn-info"><a href="@Url.Action("CourseOutlineForm","CourseOutline")" style="color:white;">View Outline</a></button>
+                </center>
+            </td>
+        </tr>
+
+        <tr class="row100">
+            <td class="column100 column0" data-column="column0"><input type="checkbox" name="name1" />&nbsp;</td>
+            <td class="column100 column1" data-column="column1">SP21</td>
+            <td class="column100 column2" data-column="column2">SCD</td>
+            <td class="column100 column3" data-column="column3">BSCS</td>
+            <td class="column100 column4" data-column="column4">M Tauseef, Aman Farooq</td>
+            <td class="column100 column3" data-column="column3">Uploaded</td>
+            <td>
+                <center>
+                    <button type="submit" class="btn btn-info"><a href="@Url.Action("CourseOutlineForm","CourseOutline")" style="color:white;">View Outline</a></button>
+                </center>
+            </td>
+        </tr>*@
+
+                    </tbody>
+                </table>
+
+                <br>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-secondary" style="float: right;">Send Notification</button>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-secondary" style="float: right;">Print</button>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-secondary" style="float: right;">Download</button>
+                </div>
+            </div>
+
+
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<footer class="main-footer">
+    <strong>Copyright &copy; 2021-2025 <a href="../#">QEC Portal</a>.</strong>
+    All rights reserved.
+</footer>
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>$.widget.bridge('uibutton', $.ui.button)</script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../plugins/moment/moment.min.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../dist/js/pages/dashboard.js"></script>

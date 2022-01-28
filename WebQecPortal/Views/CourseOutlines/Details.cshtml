@@ -1,0 +1,82 @@
+﻿@model WebQecPortal.Models.CourseOutline
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CourseOutline</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.CourseCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.CourseCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseOutline1.CourseOutlineID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseOutline1.CourseOutlineID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseOutline2.CourseOutlineID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseOutline2.CourseOutlineID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.DepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.DepartmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Instructor.InstructorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instructor.InstructorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Program.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Program.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status.StatusID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.StatusID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Term.Semester)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Term.Semester)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CourseOutlineID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b5cd2ca4f3f641779ce8569c55b9470d" Name="Diagram1">
+        <EntityTypeShape EntityType="QecPortalModel.AdmissionForm" Width="1.5" PointX="11.25" PointY="57.625" />
+        <EntityTypeShape EntityType="QecPortalModel.Alumnus" Width="1.5" PointX="14.25" PointY="57.75" />
+        <EntityTypeShape EntityType="QecPortalModel.Assignment" Width="1.5" PointX="11.25" PointY="52.875" />
+        <EntityTypeShape EntityType="QecPortalModel.AssignmentReport" Width="1.5" PointX="13.5" PointY="53.125" />
+        <EntityTypeShape EntityType="QecPortalModel.AvailableRoom" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="QecPortalModel.ComputerRatio" Width="1.5" PointX="3" PointY="50.5" />
+        <EntityTypeShape EntityType="QecPortalModel.ComputingBudget" Width="1.5" PointX="5.25" PointY="40.125" />
+        <EntityTypeShape EntityType="QecPortalModel.Course" Width="1.5" PointX="6" PointY="78.5" />
+        <EntityTypeShape EntityType="QecPortalModel.CourseDescription" Width="1.5" PointX="5.25" PointY="61.875" />
+        <EntityTypeShape EntityType="QecPortalModel.CourseEvaluation" Width="1.5" PointX="5.25" PointY="58.375" />
+        <EntityTypeShape EntityType="QecPortalModel.CourseOutline" Width="1.5" PointX="8.25" PointY="49" />
+        <EntityTypeShape EntityType="QecPortalModel.CRI" Width="1.5" PointX="11.25" PointY="62.625" />
+        <EntityTypeShape EntityType="QecPortalModel.CYearlyBudget" Width="1.5" PointX="3" PointY="47" />
+        <EntityTypeShape EntityType="QecPortalModel.DCYearlyBudget" Width="1.5" PointX="0.75" PointY="47.625" />
+        <EntityTypeShape EntityType="QecPortalModel.Department" Width="1.5" PointX="0.75" PointY="40.125" />
+        <EntityTypeShape EntityType="QecPortalModel.DepComputingBudget" Width="1.5" PointX="3" PointY="43.25" />
+        <EntityTypeShape EntityType="QecPortalModel.DepOfferProgBudget" Width="1.5" PointX="3" PointY="40.375" />
+        <EntityTypeShape EntityType="QecPortalModel.DepResearchBudget" Width="1.5" PointX="3" PointY="37.375" />
+        <EntityTypeShape EntityType="QecPortalModel.DOPYearlyBudget" Width="1.5" PointX="0.75" PointY="44.625" />
+        <EntityTypeShape EntityType="QecPortalModel.DRYearlyBudget" Width="1.5" PointX="0.75" PointY="36.625" />
+        <EntityTypeShape EntityType="QecPortalModel.ECourseFoder" Width="1.5" PointX="5.25" PointY="49.125" />
+        <EntityTypeShape EntityType="QecPortalModel.FacultyCours" Width="1.5" PointX="8.25" PointY="79.125" />
+        <EntityTypeShape EntityType="QecPortalModel.FIF" Width="1.5" PointX="8.25" PointY="90.5" />
+        <EntityTypeShape EntityType="QecPortalModel.Financial" Width="1.5" PointX="8.25" PointY="41.5" />
+        <EntityTypeShape EntityType="QecPortalModel.FreeStructure" Width="1.5" PointX="6" PointY="26.625" />
+        <EntityTypeShape EntityType="QecPortalModel.FYearlyBudget" Width="1.5" PointX="3.75" PointY="26.75" />
+        <EntityTypeShape EntityType="QecPortalModel.HecAdministration" Width="1.5" PointX="10.5" PointY="40.75" />
+        <EntityTypeShape EntityType="QecPortalModel.InductionYear" Width="1.5" PointX="6.75" PointY="87.25" />
+        <EntityTypeShape EntityType="QecPortalModel.InductionYearsAdmission" Width="1.5" PointX="9" PointY="87.25" />
+        <EntityTypeShape EntityType="QecPortalModel.Institution" Width="1.5" PointX="9" PointY="72.875" />
+        <EntityTypeShape EntityType="QecPortalModel.InstructionalFacility" Width="1.5" PointX="8.25" PointY="37.75" />
+        <EntityTypeShape EntityType="QecPortalModel.Instructor" Width="1.5" PointX="6" PointY="82.75" />
+        <EntityTypeShape EntityType="QecPortalModel.LabAvailability" Width="1.5" PointX="3" PointY="53.125" />
+        <EntityTypeShape EntityType="QecPortalModel.LevelNetworking" Width="1.5" PointX="3" PointY="34.125" />
+        <EntityTypeShape EntityType="QecPortalModel.LibraryBudget" Width="1.5" PointX="8.25" PointY="29.125" />
+        <EntityTypeShape EntityType="QecPortalModel.Login" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QecPortalModel.LYearlyBudget" Width="1.5" PointX="6" PointY="29.625" />
+        <EntityTypeShape EntityType="QecPortalModel.OtherFacility" Width="1.5" PointX="8.25" PointY="33.75" />
+        <EntityTypeShape EntityType="QecPortalModel.PMPF" Width="1.5" PointX="8.25" PointY="57.625" />
+        <EntityTypeShape EntityType="QecPortalModel.Program" Width="1.5" PointX="3" PointY="57.25" />
+        <EntityTypeShape EntityType="QecPortalModel.Project" Width="1.5" PointX="8.25" PointY="62.625" />
+        <EntityTypeShape EntityType="QecPortalModel.ProjectReport" Width="1.5" PointX="13.5" PointY="63.375" />
+        <EntityTypeShape EntityType="QecPortalModel.Quiz" Width="1.5" PointX="5.25" PointY="53.875" />
+        <EntityTypeShape EntityType="QecPortalModel.QuizReport" Width="1.5" PointX="7.5" PointY="54.25" />
+        <EntityTypeShape EntityType="QecPortalModel.RatioYearlyBudget" Width="1.5" PointX="0.75" PointY="50.5" />
+        <EntityTypeShape EntityType="QecPortalModel.ResearchBudget" Width="1.5" PointX="6" PointY="23.375" />
+        <EntityTypeShape EntityType="QecPortalModel.RoomType" Width="1.5" PointX="0.75" PointY="2" />
+        <EntityTypeShape EntityType="QecPortalModel.Rubric" Width="1.5" PointX="11.25" PointY="49.875" />
+        <EntityTypeShape EntityType="QecPortalModel.RYearlyBudget" Width="1.5" PointX="3.75" PointY="23.5" />
+        <EntityTypeShape EntityType="QecPortalModel.SAR" Width="1.5" PointX="5.25" PointY="45.625" />
+        <EntityTypeShape EntityType="QecPortalModel.SourcesOfIncome" Width="1.5" PointX="6" PointY="70.625" />
+        <EntityTypeShape EntityType="QecPortalModel.Status" Width="1.5" PointX="6" PointY="36.75" />
+        <EntityTypeShape EntityType="QecPortalModel.Student" Width="1.5" PointX="9" PointY="69.75" />
+        <EntityTypeShape EntityType="QecPortalModel.StudentCourseReg" Width="1.5" PointX="11.25" PointY="69.375" />
+        <EntityTypeShape EntityType="QecPortalModel.StudentEvaluation" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="QecPortalModel.StudentReport" Width="1.5" PointX="16.75" PointY="58.25" />
+        <EntityTypeShape EntityType="QecPortalModel.SYearlyBudget" Width="1.5" PointX="3.75" PointY="70.75" />
+        <EntityTypeShape EntityType="QecPortalModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="QecPortalModel.Term" Width="1.5" PointX="6" PointY="74.25" />
+        <EntityTypeShape EntityType="QecPortalModel.WholeBudget" Width="1.5" PointX="6" PointY="20.125" />
+        <EntityTypeShape EntityType="QecPortalModel.WholeYearlyBudget" Width="1.5" PointX="3.75" PointY="20.125" />
+        <EntityTypeShape EntityType="QecPortalModel.YearlyPassout" Width="1.5" PointX="12" PointY="46.5" />
+        <AssociationConnector Association="QecPortalModel.FK_AdmissionForm_InductionYearsAdmission" />
+        <AssociationConnector Association="QecPortalModel.FK_AdmissionForm_Institution" />
+        <AssociationConnector Association="QecPortalModel.FK_AdmissionForm_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_Alumni_Institution" />
+        <AssociationConnector Association="QecPortalModel.FK_Alumni_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_Alumni_YearlyPassout" />
+        <AssociationConnector Association="QecPortalModel.FK_Assignment_Instructor" />
+        <AssociationConnector Association="QecPortalModel.FK_Assignment_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_Assignment_Term" />
+        <AssociationConnector Association="QecPortalModel.FK_AssignmentReport_Assignment" />
+        <AssociationConnector Association="QecPortalModel.FK_AssignmentReport_Rubrics" />
+        <AssociationConnector Association="QecPortalModel.FK_AssignmentReport_StudentCourseReg" />
+        <AssociationConnector Association="QecPortalModel.FK_StudentReport_AssignmentReport" />
+        <AssociationConnector Association="QecPortalModel.FK_AvailableRoom_RoomType" />
+        <AssociationConnector Association="QecPortalModel.FK_ComputerRatio_RatioYearlyBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_ComputingBudget_ComputerRatio" />
+        <AssociationConnector Association="QecPortalModel.FK_ComputingBudget_CYearlyBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_ComputingBudget_DepComputingBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_ComputingBudget_LabAvailability" />
+        <AssociationConnector Association="QecPortalModel.FK_ComputingBudget_LevelNetworking" />
+        <AssociationConnector Association="QecPortalModel.FK_HecAdministration_ComputingBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_HecAdministration_ComputingBudget1" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseDescription_Course" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseEvaluation_Course" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseOutline_Course" />
+        <AssociationConnector Association="QecPortalModel.FK_CRI_Course" />
+        <AssociationConnector Association="QecPortalModel.FK_ECourseFoders_Course" />
+        <AssociationConnector Association="QecPortalModel.FK_FacultyCourses_Course" />
+        <AssociationConnector Association="QecPortalModel.FK_SAR_Course" />
+        <AssociationConnector Association="QecPortalModel.FK_StudentCourseReg_Course" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseDescription_Institution" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseDescription_Instructor" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseDescription_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseDescription_Term" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseEvaluation_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseEvaluation_Term" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseOutline_CourseOutline" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseOutline_Department" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseOutline_Instructor" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseOutline_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseOutline_Status" />
+        <AssociationConnector Association="QecPortalModel.FK_CourseOutline_Term" />
+        <AssociationConnector Association="QecPortalModel.FK_CRI_Institution" />
+        <AssociationConnector Association="QecPortalModel.FK_CRI_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_DepComputingBudget_DCYearlyBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_DepComputingBudget_Department" />
+        <AssociationConnector Association="QecPortalModel.FK_DepOfferProgBudget_Department" />
+        <AssociationConnector Association="QecPortalModel.FK_DepResearchBudget_Department" />
+        <AssociationConnector Association="QecPortalModel.FK_ECourseFoders_Department" />
+        <AssociationConnector Association="QecPortalModel.FK_Program_Department1" />
+        <AssociationConnector Association="QecPortalModel.FK_SAR_Department" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_DepComputingBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_DepOfferProgBudget_DOPYearlyBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_DepOfferProgBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_DepResearchBudget_DRYearlyBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_DepResearchBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_ECourseFoders_Instructor" />
+        <AssociationConnector Association="QecPortalModel.FK_ECourseFoders_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_ECourseFoders_Status" />
+        <AssociationConnector Association="QecPortalModel.FK_ECourseFoders_Term" />
+        <AssociationConnector Association="QecPortalModel.FK_FacultyCourses_Instructor" />
+        <AssociationConnector Association="QecPortalModel.FK_FacultyCourses_Term" />
+        <AssociationConnector Association="QecPortalModel.FK_FIF_Instructor" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_FreeStructure" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_FreeStructure1" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_LibraryBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_LibraryBudget1" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_ResearchBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_ResearchBudget1" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_SourcesOfIncome" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_SourcesOfIncome1" />
+        <AssociationConnector Association="QecPortalModel.FK_Financial_WholeBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_FreeStructure_FYearlyBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_HecAdministration_InstructionalFacilities" />
+        <AssociationConnector Association="QecPortalModel.FK_HecAdministration_LibraryBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_HecAdministration_OtherFacilities" />
+        <AssociationConnector Association="QecPortalModel.FK_HecAdministration_OtherFacilities1" />
+        <AssociationConnector Association="QecPortalModel.FK_InductionYears_Term" />
+        <AssociationConnector Association="QecPortalModel.FK_InductionYearsAdmission_InductionYears" />
+        <AssociationConnector Association="QecPortalModel.FK_PMPF_Institution" />
+        <AssociationConnector Association="QecPortalModel.FK_PMPF_Institution1" />
+        <AssociationConnector Association="QecPortalModel.FK_Project_Instructor" />
+        <AssociationConnector Association="QecPortalModel.FK_Project_Instructor1" />
+        <AssociationConnector Association="QecPortalModel.FK_Quiz_Instructor" />
+        <AssociationConnector Association="QecPortalModel.FK_LibraryBudget_LYearlyBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_PMPF_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_PMPF_Program1" />
+        <AssociationConnector Association="QecPortalModel.FK_Project_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_Project_Program1" />
+        <AssociationConnector Association="QecPortalModel.FK_Quiz_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_SAR_Program" />
+        <AssociationConnector Association="QecPortalModel.FK_Project_Term" />
+        <AssociationConnector Association="QecPortalModel.FK_ProjectReport_Project" />
+        <AssociationConnector Association="QecPortalModel.FK_StudentReport_Project" />
+        <AssociationConnector Association="QecPortalModel.FK_ProjectReport_StudentCourseReg" />
+        <AssociationConnector Association="QecPortalModel.FK_StudentReport_ProjectReport" />
+        <AssociationConnector Association="QecPortalModel.FK_Quiz_Term" />
+        <AssociationConnector Association="QecPortalModel.FK_QuizReport_Quiz" />
+        <AssociationConnector Association="QecPortalModel.FK_StudentReport_Quiz" />
+        <AssociationConnector Association="QecPortalModel.FK_QuizReport_StudentCourseReg" />
+        <AssociationConnector Association="QecPortalModel.FK_StudentReport_QuizReport" />
+        <AssociationConnector Association="QecPortalModel.FK_ResearchBudget_RYearlyBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_SAR_Term" />
+        <AssociationConnector Association="QecPortalModel.FK_SourcesOfIncome_SYearlyBudget" />
+        <AssociationConnector Association="QecPortalModel.FK_StudentCourseReg_Student" />
+        <AssociationConnector Association="QecPortalModel.FK_StudentReport_StudentCourseReg" />
+        <AssociationConnector Association="QecPortalModel.FK_WholeBudget_WholeYearlyBudget" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

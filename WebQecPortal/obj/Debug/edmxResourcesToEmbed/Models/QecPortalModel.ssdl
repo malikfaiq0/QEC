@@ -1,0 +1,2454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QecPortalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdmissionForm">
+    <Key>
+      <PropertyRef Name="AdmisionID" />
+    </Key>
+    <Property Name="AdmisionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="FrequencyAdmission" Type="nvarchar(max)" />
+    <Property Name="WhenStudentAdmit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Instrument" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiniRequirement" Type="nvarchar" MaxLength="50" />
+    <Property Name="Merit" Type="bit" />
+    <Property Name="MeritCompiled" Type="nvarchar" MaxLength="50" />
+    <Property Name="policies" Type="nvarchar(max)" />
+    <Property Name="InductionYearsAdmissionID" Type="int" />
+  </EntityType>
+  <EntityType Name="Alumni">
+    <Key>
+      <PropertyRef Name="AlumniID" />
+    </Key>
+    <Property Name="AlumniID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" />
+    <Property Name="FacilityInternship" Type="nvarchar(max)" />
+    <Property Name="ContactAlumni" Type="nvarchar(max)" />
+    <Property Name="CommunicateGraduates" Type="nvarchar(max)" />
+    <Property Name="AlumniAssociation" Type="nvarchar(max)" />
+    <Property Name="ProgramID" Type="int" Nullable="false" />
+    <Property Name="YearlyPassoutID" Type="int" />
+    <Property Name="GraduateIndustryPath" Type="nvarchar(max)" />
+    <Property Name="GraduateAcademicsPath" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Assignment">
+    <Key>
+      <PropertyRef Name="AssignmentID" />
+    </Key>
+    <Property Name="AssignmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AssignNumber" Type="int" />
+    <Property Name="AssignName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssignDate" Type="date" />
+    <Property Name="DedlineDate" Type="date" />
+    <Property Name="TermID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="InstructorID" Type="int" />
+  </EntityType>
+  <EntityType Name="AssignmentReport">
+    <Key>
+      <PropertyRef Name="AssignReportID" />
+    </Key>
+    <Property Name="AssignReportID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLOnumber" Type="int" />
+    <Property Name="AssignmentID" Type="int" />
+    <Property Name="SCRID" Type="int" />
+    <Property Name="RubricsID" Type="int" />
+  </EntityType>
+  <EntityType Name="AvailableRoom">
+    <Key>
+      <PropertyRef Name="AvailableRoomID" />
+    </Key>
+    <Property Name="AvailableRoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoomNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoomTypeID" Type="int" />
+    <Property Name="RoomLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="multimedia" Type="bit" />
+    <Property Name="airConditioned" Type="bit" />
+    <Property Name="wifi" Type="bit" />
+    <Property Name="sound" Type="bit" />
+    <Property Name="advancedEquipment" Type="bit" />
+    <Property Name="lights" Type="bit" />
+    <Property Name="fans" Type="bit" />
+    <Property Name="whiteboard" Type="bit" />
+    <Property Name="projector" Type="bit" />
+  </EntityType>
+  <EntityType Name="ComputerRatio">
+    <Key>
+      <PropertyRef Name="ComputerRatioID" />
+    </Key>
+    <Property Name="ComputerRatioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RatioYearlyBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="ComputingBudget">
+    <Key>
+      <PropertyRef Name="ComputingBudgetID" />
+    </Key>
+    <Property Name="ComputingBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TotalCompLab" Type="nvarchar" MaxLength="50" />
+    <Property Name="AvgCompLab" Type="nvarchar" MaxLength="50" />
+    <Property Name="AvgLifetimePC" Type="nvarchar" MaxLength="50" />
+    <Property Name="LabContact" Type="nvarchar" MaxLength="50" />
+    <Property Name="DLDlab" Type="nvarchar" MaxLength="50" />
+    <Property Name="FYPLab" Type="nvarchar" MaxLength="50" />
+    <Property Name="ComputerRatioID" Type="int" />
+    <Property Name="LevelNetworkingID" Type="int" />
+    <Property Name="LabAvailabilityID" Type="int" />
+    <Property Name="DepComputingBudgetID" Type="int" />
+    <Property Name="CYearlyBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="CourseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CourseCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourseTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="Credithr" Type="int" />
+    <Property Name="PrereqCourse" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CourseDescription">
+    <Key>
+      <PropertyRef Name="CourseDescriptionID" />
+    </Key>
+    <Property Name="CourseDescriptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="URL" Type="nvarchar" MaxLength="50" />
+    <Property Name="Textbook" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourseGoals" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectCourse" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProgrammingAssignment" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssessmentWeights" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeSpentTheory" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeSpentProblem" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeSpentSolution" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeSpentIssues" Type="nvarchar" MaxLength="50" />
+    <Property Name="OWwritten" Type="nvarchar" MaxLength="50" />
+    <Property Name="OWpages" Type="nvarchar" MaxLength="50" />
+    <Property Name="OWpresentation" Type="nvarchar" MaxLength="50" />
+    <Property Name="OWminutes" Type="int" />
+    <Property Name="InstructorID" Type="int" />
+    <Property Name="TermID" Type="int" />
+    <Property Name="CatalogNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="50" />
+    <Property Name="EvaluationInstrument" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourseID" Type="int" />
+    <Property Name="CourseCatDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="topicCover" Type="nvarchar" MaxLength="50" />
+    <Property Name="Application" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CourseEvaluation">
+    <Key>
+      <PropertyRef Name="CourseEvaluationID" />
+    </Key>
+    <Property Name="CourseEvaluationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="CourseID" Type="int" />
+    <Property Name="TermID" Type="int" />
+  </EntityType>
+  <EntityType Name="CourseOutline">
+    <Key>
+      <PropertyRef Name="CourseOutlineID" />
+    </Key>
+    <Property Name="CourseOutlineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CourseID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="InstructorID" Type="int" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="TermID" Type="int" />
+    <Property Name="DepartmentID" Type="int" />
+  </EntityType>
+  <EntityType Name="CRI">
+    <Key>
+      <PropertyRef Name="CRI_ID" />
+    </Key>
+    <Property Name="CRI_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="HecComputingCore" Type="nvarchar" MaxLength="50" />
+    <Property Name="HecMajorCore" Type="nvarchar" MaxLength="50" />
+    <Property Name="HecBasedlective" Type="nvarchar" MaxLength="50" />
+    <Property Name="HecCumulative" Type="nvarchar" MaxLength="50" />
+    <Property Name="HecSupportingSci" Type="nvarchar" MaxLength="50" />
+    <Property Name="HecUniversityElective" Type="nvarchar" MaxLength="50" />
+    <Property Name="HecGeneralElective" Type="nvarchar" MaxLength="50" />
+    <Property Name="HecCumulativeCredit" Type="nvarchar" MaxLength="50" />
+    <Property Name="HecTotalCredit" Type="nvarchar" MaxLength="50" />
+    <Property Name="SumComputingCore" Type="nvarchar" MaxLength="50" />
+    <Property Name="SumMajorCore" Type="nvarchar" MaxLength="50" />
+    <Property Name="SumBasedlective" Type="nvarchar" MaxLength="50" />
+    <Property Name="SumCumulative" Type="nvarchar" MaxLength="50" />
+    <Property Name="SumSupportingSci" Type="nvarchar" MaxLength="50" />
+    <Property Name="SumUniversityElective" Type="nvarchar" MaxLength="50" />
+    <Property Name="SumGeneralElective" Type="nvarchar" MaxLength="50" />
+    <Property Name="SumCumulativeCredit" Type="nvarchar" MaxLength="50" />
+    <Property Name="SumTotalCredit" Type="nvarchar" MaxLength="50" />
+    <Property Name="CourseID" Type="int" />
+  </EntityType>
+  <EntityType Name="CYearlyBudget">
+    <Key>
+      <PropertyRef Name="CYearlyBudgetID" />
+    </Key>
+    <Property Name="CYearlyBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="YearNumber" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DCYearlyBudget">
+    <Key>
+      <PropertyRef Name="DCYearlyBudgetID" />
+    </Key>
+    <Property Name="DCYearlyBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YearNumber" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DepComputingBudget">
+    <Key>
+      <PropertyRef Name="DepComputingBudgetID" />
+    </Key>
+    <Property Name="DepComputingBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" />
+    <Property Name="DCYearlyBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="DepOfferProgBudget">
+    <Key>
+      <PropertyRef Name="DepOfferProgBudgetID" />
+    </Key>
+    <Property Name="DepOfferProgBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" />
+    <Property Name="DOPYearlyBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="DepResearchBudget">
+    <Key>
+      <PropertyRef Name="DepResearchBudgetID" />
+    </Key>
+    <Property Name="DepResearchBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" />
+    <Property Name="DRYearlyBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="DOPYearlyBudget">
+    <Key>
+      <PropertyRef Name="DOPYearlyBudgetID" />
+    </Key>
+    <Property Name="DOPYearlyBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="YearNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="DRYearlyBudget">
+    <Key>
+      <PropertyRef Name="DRYearlyBudgetID" />
+    </Key>
+    <Property Name="DRYearlyBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YearNumber" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ECourseFoders">
+    <Key>
+      <PropertyRef Name="ECourseFolderID" />
+    </Key>
+    <Property Name="ECourseFolderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TermID" Type="int" />
+    <Property Name="CourseID" Type="int" />
+    <Property Name="DepartmentID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="FolderName" Type="nvarchar" MaxLength="50" />
+    <Property Name="InstructorID" Type="int" />
+    <Property Name="StatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="FacultyCourses">
+    <Key>
+      <PropertyRef Name="FacultyCoursesID" />
+    </Key>
+    <Property Name="FacultyCoursesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstructorID" Type="int" />
+    <Property Name="CourseID" Type="int" />
+    <Property Name="TermID" Type="int" />
+  </EntityType>
+  <EntityType Name="FIF">
+    <Key>
+      <PropertyRef Name="FIFID" />
+    </Key>
+    <Property Name="FIFID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InsructorID" Type="int" />
+    <Property Name="AcademicDegree" Type="nvarchar" MaxLength="50" />
+    <Property Name="DegreeAwarding" Type="nvarchar" MaxLength="50" />
+    <Property Name="Specialization" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExpHigherEdu" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExpIndustry" Type="nvarchar" MaxLength="50" />
+    <Property Name="PubJnlinternational" Type="nvarchar(max)" />
+    <Property Name="PubJnlLocal" Type="nvarchar(max)" />
+    <Property Name="PubConinternational" Type="nvarchar(max)" />
+    <Property Name="PubConLocal" Type="nvarchar(max)" />
+    <Property Name="PubBook" Type="nvarchar(max)" />
+    <Property Name="PubBookChap" Type="nvarchar(max)" />
+    <Property Name="Patents" Type="nvarchar(max)" />
+    <Property Name="TechReports" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Financial">
+    <Key>
+      <PropertyRef Name="FinancialID" />
+    </Key>
+    <Property Name="FinancialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" />
+    <Property Name="ResearchBudgetID" Type="int" />
+    <Property Name="LibraryBudgetID" Type="int" />
+    <Property Name="ComputingBudgetID" Type="int" />
+    <Property Name="DepOfferProgBudgetID" Type="int" />
+    <Property Name="FreeStructureID" Type="int" />
+    <Property Name="SourcesOfIncomeID" Type="int" />
+    <Property Name="ProgramID" Type="int" Nullable="false" />
+    <Property Name="TotalAssets" Type="nvarchar(max)" />
+    <Property Name="Fund" Type="nvarchar(max)" />
+    <Property Name="WholeBudgetID" Type="int" />
+    <Property Name="DepResearchBudgetID" Type="int" />
+    <Property Name="DepComputingBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="FreeStructure">
+    <Key>
+      <PropertyRef Name="FreeStructureID" />
+    </Key>
+    <Property Name="FreeStructureID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FYearlyBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="FYearlyBudget">
+    <Key>
+      <PropertyRef Name="FYearlyBudgetID" />
+    </Key>
+    <Property Name="FYearlyBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="YearNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="HecAdministration">
+    <Key>
+      <PropertyRef Name="HecAdminID" />
+    </Key>
+    <Property Name="HecAdminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoomTypeID" Type="int" />
+    <Property Name="InstructionalFacilitiesID" Type="int" />
+    <Property Name="OtherFacilitiesID" Type="int" />
+    <Property Name="ComputingBudgetID" Type="int" />
+    <Property Name="LibraryBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="InductionYears">
+    <Key>
+      <PropertyRef Name="InductionYearID" />
+    </Key>
+    <Property Name="InductionYearID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="TermID" Type="int" />
+  </EntityType>
+  <EntityType Name="InductionYearsAdmission">
+    <Key>
+      <PropertyRef Name="InductionYearsAdmissionID" />
+    </Key>
+    <Property Name="InductionYearsAdmissionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InductionYearID" Type="int" />
+  </EntityType>
+  <EntityType Name="Institution">
+    <Key>
+      <PropertyRef Name="InstitutionID" />
+    </Key>
+    <Property Name="InstitutionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="InstructionalFacilities">
+    <Key>
+      <PropertyRef Name="InstructionalFacilitiesID" />
+    </Key>
+    <Property Name="InstructionalFacilitiesID" Type="int" Nullable="false" />
+    <Property Name="multimedia" Type="bit" />
+    <Property Name="AC" Type="bit" />
+    <Property Name="wifi" Type="bit" />
+    <Property Name="sound" Type="bit" />
+    <Property Name="advanced" Type="bit" />
+  </EntityType>
+  <EntityType Name="Instructor">
+    <Key>
+      <PropertyRef Name="InstructorID" />
+    </Key>
+    <Property Name="InstructorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstructorName" Type="nvarchar" MaxLength="50" />
+    <Property Name="InstructorDept" Type="nvarchar" MaxLength="50" />
+    <Property Name="InstructorRegID" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LabAvailability">
+    <Key>
+      <PropertyRef Name="LabAvailabilityID" />
+    </Key>
+    <Property Name="LabAvailabilityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdvancedLab" Type="bit" />
+    <Property Name="Projectors" Type="bit" />
+    <Property Name="sound" Type="bit" />
+    <Property Name="LAN" Type="bit" />
+    <Property Name="whiteboards" Type="bit" />
+    <Property Name="supportStaff" Type="bit" />
+    <Property Name="Printers" Type="bit" />
+  </EntityType>
+  <EntityType Name="LevelNetworking">
+    <Key>
+      <PropertyRef Name="LevelNetworkingID" />
+    </Key>
+    <Property Name="LevelNetworkingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cisco" Type="bit" />
+    <Property Name="WAN" Type="bit" />
+    <Property Name="HecDigitalLibrary" Type="bit" />
+    <Property Name="Virtualizaion" Type="bit" />
+  </EntityType>
+  <EntityType Name="LibraryBudget">
+    <Key>
+      <PropertyRef Name="LibraryBudgetID" />
+    </Key>
+    <Property Name="LibraryBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HecLib" Type="nvarchar" MaxLength="50" />
+    <Property Name="LibManagment" Type="nvarchar" MaxLength="50" />
+    <Property Name="IEEEElib" Type="nvarchar" MaxLength="50" />
+    <Property Name="LYearlyBudgetID" Type="int" />
+    <Property Name="TotalBooks" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfTitles" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LYearlyBudget">
+    <Key>
+      <PropertyRef Name="LYearlyBudgetID" />
+    </Key>
+    <Property Name="LYearlyBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YearNumber" Type="int" />
+    <Property Name="ComputingBooksAdded" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfMagazines" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OtherFacilities">
+    <Key>
+      <PropertyRef Name="OtherFacilitiesID" />
+    </Key>
+    <Property Name="OtherFacilitiesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ac" Type="bit" />
+    <Property Name="lights" Type="bit" />
+    <Property Name="fans" Type="bit" />
+    <Property Name="whiteboard" Type="bit" />
+    <Property Name="projector" Type="bit" />
+  </EntityType>
+  <EntityType Name="PMPF">
+    <Key>
+      <PropertyRef Name="PMPFID" />
+    </Key>
+    <Property Name="PMPFID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="Objective" Type="nvarchar(max)" />
+    <Property Name="Reviewed" Type="nvarchar(max)" />
+    <Property Name="SummaryProblem" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SummaryTech" Type="nvarchar(max)" />
+    <Property Name="Assesment" Type="nvarchar(max)" />
+    <Property Name="CorrelateIndus" Type="nvarchar(max)" />
+    <Property Name="Application" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Program">
+    <Key>
+      <PropertyRef Name="ProgramID" />
+    </Key>
+    <Property Name="ProgramID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProjectNumber" Type="int" />
+    <Property Name="PAssignDate" Type="date" />
+    <Property Name="DeadlineDate" Type="date" />
+    <Property Name="TermID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="InstructorID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProjectReport">
+    <Key>
+      <PropertyRef Name="ProjectIReportD" />
+    </Key>
+    <Property Name="ProjectIReportD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SCRID" Type="int" />
+    <Property Name="RubricID" Type="int" />
+    <Property Name="ProjectID" Type="int" />
+  </EntityType>
+  <EntityType Name="Quiz">
+    <Key>
+      <PropertyRef Name="QuizID" />
+    </Key>
+    <Property Name="QuizID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QuizNumber" Type="int" />
+    <Property Name="QuizName" Type="nvarchar" MaxLength="50" />
+    <Property Name="QuizDate" Type="date" />
+    <Property Name="TermID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="InstructorID" Type="int" />
+  </EntityType>
+  <EntityType Name="QuizReport">
+    <Key>
+      <PropertyRef Name="QuizReportID" />
+    </Key>
+    <Property Name="QuizReportID" Type="int" Nullable="false" />
+    <Property Name="CLOnumber" Type="int" />
+    <Property Name="RubricID" Type="int" />
+    <Property Name="QuizID" Type="int" />
+    <Property Name="SCRID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RatioYearlyBudget">
+    <Key>
+      <PropertyRef Name="RatioYearlyBudgetID" />
+    </Key>
+    <Property Name="RatioYearlyBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YearNumber" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ResearchBudget">
+    <Key>
+      <PropertyRef Name="ResearchBudgetID" />
+    </Key>
+    <Property Name="ResearchBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RYearlyBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="RoomType">
+    <Key>
+      <PropertyRef Name="RoomTypeID" />
+    </Key>
+    <Property Name="RoomTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="AverageSize" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Rubrics">
+    <Key>
+      <PropertyRef Name="RubricsID" />
+    </Key>
+    <Property Name="RubricsID" Type="int" Nullable="false" />
+    <Property Name="RubricNumber" Type="int" />
+    <Property Name="RubricDescription" Type="int" />
+  </EntityType>
+  <EntityType Name="RYearlyBudget">
+    <Key>
+      <PropertyRef Name="RYearlyBudgetID" />
+    </Key>
+    <Property Name="RYearlyBudgetID" Type="int" Nullable="false" />
+    <Property Name="YearNumber" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SAR">
+    <Key>
+      <PropertyRef Name="SARID" />
+    </Key>
+    <Property Name="SARID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentID" Type="int" />
+    <Property Name="ProgramID" Type="int" />
+    <Property Name="TermID" Type="int" />
+    <Property Name="CourseID" Type="int" />
+  </EntityType>
+  <EntityType Name="SourcesOfIncome">
+    <Key>
+      <PropertyRef Name="SourcesOfIncomeID" />
+    </Key>
+    <Property Name="SourcesOfIncomeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SYearlyBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FolderStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentRegNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="SudentName" Type="nvarchar" MaxLength="50" />
+    <Property Name="StudentContact" Type="bigint" />
+    <Property Name="StudentMail" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StudentCourseReg">
+    <Key>
+      <PropertyRef Name="SCRID" />
+    </Key>
+    <Property Name="SCRID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="int" />
+    <Property Name="CourseID" Type="int" />
+  </EntityType>
+  <EntityType Name="StudentEvaluation">
+    <Key>
+      <PropertyRef Name="StudentEvaluationID" />
+    </Key>
+    <Property Name="StudentEvaluationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="int" />
+    <Property Name="AssignmentReportID" Type="int" />
+  </EntityType>
+  <EntityType Name="StudentReport">
+    <Key>
+      <PropertyRef Name="StudentReportID" />
+    </Key>
+    <Property Name="StudentReportID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AssignReportID" Type="int" />
+    <Property Name="SCRID" Type="int" />
+    <Property Name="QuizIReportD" Type="int" />
+    <Property Name="ProjectReportID" Type="int" />
+  </EntityType>
+  <EntityType Name="SYearlyBudget">
+    <Key>
+      <PropertyRef Name="SYearlyBudgetID" />
+    </Key>
+    <Property Name="SYearlyBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YearNumber" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Term">
+    <Key>
+      <PropertyRef Name="TermID" />
+    </Key>
+    <Property Name="TermID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Semester" Type="nvarchar" MaxLength="50" />
+    <Property Name="Year" Type="int" />
+  </EntityType>
+  <EntityType Name="WholeBudget">
+    <Key>
+      <PropertyRef Name="WholeBudgetID" />
+    </Key>
+    <Property Name="WholeBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WholeYearlyBudgetID" Type="int" />
+  </EntityType>
+  <EntityType Name="WholeYearlyBudget">
+    <Key>
+      <PropertyRef Name="WholeYearlyBudgetID" />
+    </Key>
+    <Property Name="WholeYearlyBudgetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YearNumber" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="YearlyPassout">
+    <Key>
+      <PropertyRef Name="YearlyPassoutID" />
+    </Key>
+    <Property Name="YearlyPassoutID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YearNumber" Type="int" />
+    <Property Name="NoOfGraduatedTotal" Type="int" />
+    <Property Name="NoOfUnderGraduatedTotal" Type="int" />
+  </EntityType>
+  <Association Name="FK_AdmissionForm_InductionYearsAdmission">
+    <End Role="InductionYearsAdmission" Type="Self.InductionYearsAdmission" Multiplicity="0..1" />
+    <End Role="AdmissionForm" Type="Self.AdmissionForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InductionYearsAdmission">
+        <PropertyRef Name="InductionYearsAdmissionID" />
+      </Principal>
+      <Dependent Role="AdmissionForm">
+        <PropertyRef Name="InductionYearsAdmissionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdmissionForm_Institution">
+    <End Role="Institution" Type="Self.Institution" Multiplicity="0..1" />
+    <End Role="AdmissionForm" Type="Self.AdmissionForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="AdmissionForm">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdmissionForm_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="AdmissionForm" Type="Self.AdmissionForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="AdmissionForm">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumni_Institution">
+    <End Role="Institution" Type="Self.Institution" Multiplicity="0..1" />
+    <End Role="Alumni" Type="Self.Alumni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="Alumni">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumni_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="1" />
+    <End Role="Alumni" Type="Self.Alumni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Alumni">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alumni_YearlyPassout">
+    <End Role="YearlyPassout" Type="Self.YearlyPassout" Multiplicity="0..1" />
+    <End Role="Alumni" Type="Self.Alumni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YearlyPassout">
+        <PropertyRef Name="YearlyPassoutID" />
+      </Principal>
+      <Dependent Role="Alumni">
+        <PropertyRef Name="YearlyPassoutID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assignment_Instructor">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="Assignment" Type="Self.Assignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="Assignment">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assignment_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="Assignment" Type="Self.Assignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Assignment">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assignment_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+    <End Role="Assignment" Type="Self.Assignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="Assignment">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssignmentReport_Assignment">
+    <End Role="Assignment" Type="Self.Assignment" Multiplicity="0..1" />
+    <End Role="AssignmentReport" Type="Self.AssignmentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assignment">
+        <PropertyRef Name="AssignmentID" />
+      </Principal>
+      <Dependent Role="AssignmentReport">
+        <PropertyRef Name="AssignmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssignmentReport_Rubrics">
+    <End Role="Rubrics" Type="Self.Rubrics" Multiplicity="0..1" />
+    <End Role="AssignmentReport" Type="Self.AssignmentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rubrics">
+        <PropertyRef Name="RubricsID" />
+      </Principal>
+      <Dependent Role="AssignmentReport">
+        <PropertyRef Name="RubricsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssignmentReport_StudentCourseReg">
+    <End Role="StudentCourseReg" Type="Self.StudentCourseReg" Multiplicity="0..1" />
+    <End Role="AssignmentReport" Type="Self.AssignmentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentCourseReg">
+        <PropertyRef Name="SCRID" />
+      </Principal>
+      <Dependent Role="AssignmentReport">
+        <PropertyRef Name="SCRID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AvailableRoom_RoomType">
+    <End Role="RoomType" Type="Self.RoomType" Multiplicity="0..1" />
+    <End Role="AvailableRoom" Type="Self.AvailableRoom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoomType">
+        <PropertyRef Name="RoomTypeID" />
+      </Principal>
+      <Dependent Role="AvailableRoom">
+        <PropertyRef Name="RoomTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerRatio_RatioYearlyBudget">
+    <End Role="RatioYearlyBudget" Type="Self.RatioYearlyBudget" Multiplicity="0..1" />
+    <End Role="ComputerRatio" Type="Self.ComputerRatio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RatioYearlyBudget">
+        <PropertyRef Name="RatioYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="ComputerRatio">
+        <PropertyRef Name="RatioYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputingBudget_ComputerRatio">
+    <End Role="ComputerRatio" Type="Self.ComputerRatio" Multiplicity="0..1" />
+    <End Role="ComputingBudget" Type="Self.ComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputerRatio">
+        <PropertyRef Name="ComputerRatioID" />
+      </Principal>
+      <Dependent Role="ComputingBudget">
+        <PropertyRef Name="ComputerRatioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputingBudget_CYearlyBudget">
+    <End Role="CYearlyBudget" Type="Self.CYearlyBudget" Multiplicity="0..1" />
+    <End Role="ComputingBudget" Type="Self.ComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CYearlyBudget">
+        <PropertyRef Name="CYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="ComputingBudget">
+        <PropertyRef Name="CYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputingBudget_DepComputingBudget">
+    <End Role="DepComputingBudget" Type="Self.DepComputingBudget" Multiplicity="0..1" />
+    <End Role="ComputingBudget" Type="Self.ComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepComputingBudget">
+        <PropertyRef Name="DepComputingBudgetID" />
+      </Principal>
+      <Dependent Role="ComputingBudget">
+        <PropertyRef Name="DepComputingBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputingBudget_LabAvailability">
+    <End Role="LabAvailability" Type="Self.LabAvailability" Multiplicity="0..1" />
+    <End Role="ComputingBudget" Type="Self.ComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LabAvailability">
+        <PropertyRef Name="LabAvailabilityID" />
+      </Principal>
+      <Dependent Role="ComputingBudget">
+        <PropertyRef Name="LabAvailabilityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputingBudget_LevelNetworking">
+    <End Role="LevelNetworking" Type="Self.LevelNetworking" Multiplicity="0..1" />
+    <End Role="ComputingBudget" Type="Self.ComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LevelNetworking">
+        <PropertyRef Name="LevelNetworkingID" />
+      </Principal>
+      <Dependent Role="ComputingBudget">
+        <PropertyRef Name="LevelNetworkingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDescription_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="CourseDescription" Type="Self.CourseDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CourseDescription">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDescription_Institution">
+    <End Role="Institution" Type="Self.Institution" Multiplicity="0..1" />
+    <End Role="CourseDescription" Type="Self.CourseDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="CourseDescription">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDescription_Instructor">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="CourseDescription" Type="Self.CourseDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="CourseDescription">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDescription_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="CourseDescription" Type="Self.CourseDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="CourseDescription">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseDescription_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+    <End Role="CourseDescription" Type="Self.CourseDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="CourseDescription">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseEvaluation_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="CourseEvaluation" Type="Self.CourseEvaluation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CourseEvaluation">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseEvaluation_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="CourseEvaluation" Type="Self.CourseEvaluation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="CourseEvaluation">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseEvaluation_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+    <End Role="CourseEvaluation" Type="Self.CourseEvaluation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="CourseEvaluation">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_CourseOutline">
+    <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="1" />
+    <End Role="CourseOutline1" Type="Self.CourseOutline" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CourseOutline">
+        <PropertyRef Name="CourseOutlineID" />
+      </Principal>
+      <Dependent Role="CourseOutline1">
+        <PropertyRef Name="CourseOutlineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Department">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Instructor">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CourseOutline_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+    <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="CourseOutline">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CRI_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="CRI" Type="Self.CRI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="CRI">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CRI_Institution">
+    <End Role="Institution" Type="Self.Institution" Multiplicity="0..1" />
+    <End Role="CRI" Type="Self.CRI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="CRI">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CRI_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="CRI" Type="Self.CRI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="CRI">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepComputingBudget_DCYearlyBudget">
+    <End Role="DCYearlyBudget" Type="Self.DCYearlyBudget" Multiplicity="0..1" />
+    <End Role="DepComputingBudget" Type="Self.DepComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DCYearlyBudget">
+        <PropertyRef Name="DCYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="DepComputingBudget">
+        <PropertyRef Name="DCYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepComputingBudget_Department">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="DepComputingBudget" Type="Self.DepComputingBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="DepComputingBudget">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepOfferProgBudget_Department">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="DepOfferProgBudget" Type="Self.DepOfferProgBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="DepOfferProgBudget">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepOfferProgBudget_DOPYearlyBudget">
+    <End Role="DOPYearlyBudget" Type="Self.DOPYearlyBudget" Multiplicity="0..1" />
+    <End Role="DepOfferProgBudget" Type="Self.DepOfferProgBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DOPYearlyBudget">
+        <PropertyRef Name="DOPYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="DepOfferProgBudget">
+        <PropertyRef Name="DOPYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepResearchBudget_Department">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="DepResearchBudget" Type="Self.DepResearchBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="DepResearchBudget">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepResearchBudget_DRYearlyBudget">
+    <End Role="DRYearlyBudget" Type="Self.DRYearlyBudget" Multiplicity="0..1" />
+    <End Role="DepResearchBudget" Type="Self.DepResearchBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DRYearlyBudget">
+        <PropertyRef Name="DRYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="DepResearchBudget">
+        <PropertyRef Name="DRYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="ECourseFoders" Type="Self.ECourseFoders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="ECourseFoders">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Department">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="ECourseFoders" Type="Self.ECourseFoders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="ECourseFoders">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Instructor">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="ECourseFoders" Type="Self.ECourseFoders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="ECourseFoders">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="ECourseFoders" Type="Self.ECourseFoders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="ECourseFoders">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="ECourseFoders" Type="Self.ECourseFoders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="ECourseFoders">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ECourseFoders_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+    <End Role="ECourseFoders" Type="Self.ECourseFoders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="ECourseFoders">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacultyCourses_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="FacultyCourses" Type="Self.FacultyCourses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="FacultyCourses">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacultyCourses_Instructor">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="FacultyCourses" Type="Self.FacultyCourses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="FacultyCourses">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacultyCourses_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+    <End Role="FacultyCourses" Type="Self.FacultyCourses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="FacultyCourses">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FIF_Instructor">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="FIF" Type="Self.FIF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="FIF">
+        <PropertyRef Name="InsructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_DepComputingBudget">
+    <End Role="DepComputingBudget" Type="Self.DepComputingBudget" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepComputingBudget">
+        <PropertyRef Name="DepComputingBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="DepComputingBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_DepOfferProgBudget">
+    <End Role="DepOfferProgBudget" Type="Self.DepOfferProgBudget" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepOfferProgBudget">
+        <PropertyRef Name="DepOfferProgBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="DepOfferProgBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_DepResearchBudget">
+    <End Role="DepResearchBudget" Type="Self.DepResearchBudget" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepResearchBudget">
+        <PropertyRef Name="DepResearchBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="DepResearchBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_FreeStructure">
+    <End Role="FreeStructure" Type="Self.FreeStructure" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FreeStructure">
+        <PropertyRef Name="FreeStructureID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="FreeStructureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_FreeStructure1">
+    <End Role="FreeStructure" Type="Self.FreeStructure" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FreeStructure">
+        <PropertyRef Name="FreeStructureID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="FreeStructureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_LibraryBudget">
+    <End Role="LibraryBudget" Type="Self.LibraryBudget" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LibraryBudget">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_LibraryBudget1">
+    <End Role="LibraryBudget" Type="Self.LibraryBudget" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LibraryBudget">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_ResearchBudget">
+    <End Role="ResearchBudget" Type="Self.ResearchBudget" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResearchBudget">
+        <PropertyRef Name="ResearchBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="ResearchBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_ResearchBudget1">
+    <End Role="ResearchBudget" Type="Self.ResearchBudget" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResearchBudget">
+        <PropertyRef Name="ResearchBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="ResearchBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_SourcesOfIncome">
+    <End Role="SourcesOfIncome" Type="Self.SourcesOfIncome" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SourcesOfIncome">
+        <PropertyRef Name="SourcesOfIncomeID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="SourcesOfIncomeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_SourcesOfIncome1">
+    <End Role="SourcesOfIncome" Type="Self.SourcesOfIncome" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SourcesOfIncome">
+        <PropertyRef Name="SourcesOfIncomeID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="SourcesOfIncomeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Financial_WholeBudget">
+    <End Role="WholeBudget" Type="Self.WholeBudget" Multiplicity="0..1" />
+    <End Role="Financial" Type="Self.Financial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WholeBudget">
+        <PropertyRef Name="WholeBudgetID" />
+      </Principal>
+      <Dependent Role="Financial">
+        <PropertyRef Name="WholeBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FreeStructure_FYearlyBudget">
+    <End Role="FYearlyBudget" Type="Self.FYearlyBudget" Multiplicity="0..1" />
+    <End Role="FreeStructure" Type="Self.FreeStructure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FYearlyBudget">
+        <PropertyRef Name="FYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="FreeStructure">
+        <PropertyRef Name="FYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_ComputingBudget">
+    <End Role="ComputingBudget" Type="Self.ComputingBudget" Multiplicity="0..1" />
+    <End Role="HecAdministration" Type="Self.HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputingBudget">
+        <PropertyRef Name="ComputingBudgetID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="ComputingBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_ComputingBudget1">
+    <End Role="ComputingBudget" Type="Self.ComputingBudget" Multiplicity="0..1" />
+    <End Role="HecAdministration" Type="Self.HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputingBudget">
+        <PropertyRef Name="ComputingBudgetID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="ComputingBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_InstructionalFacilities">
+    <End Role="InstructionalFacilities" Type="Self.InstructionalFacilities" Multiplicity="0..1" />
+    <End Role="HecAdministration" Type="Self.HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstructionalFacilities">
+        <PropertyRef Name="InstructionalFacilitiesID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="InstructionalFacilitiesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_LibraryBudget">
+    <End Role="LibraryBudget" Type="Self.LibraryBudget" Multiplicity="0..1" />
+    <End Role="HecAdministration" Type="Self.HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LibraryBudget">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="LibraryBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_OtherFacilities">
+    <End Role="OtherFacilities" Type="Self.OtherFacilities" Multiplicity="0..1" />
+    <End Role="HecAdministration" Type="Self.HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OtherFacilities">
+        <PropertyRef Name="OtherFacilitiesID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="OtherFacilitiesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HecAdministration_OtherFacilities1">
+    <End Role="OtherFacilities" Type="Self.OtherFacilities" Multiplicity="0..1" />
+    <End Role="HecAdministration" Type="Self.HecAdministration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OtherFacilities">
+        <PropertyRef Name="OtherFacilitiesID" />
+      </Principal>
+      <Dependent Role="HecAdministration">
+        <PropertyRef Name="OtherFacilitiesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InductionYears_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+    <End Role="InductionYears" Type="Self.InductionYears" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="InductionYears">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InductionYearsAdmission_InductionYears">
+    <End Role="InductionYears" Type="Self.InductionYears" Multiplicity="0..1" />
+    <End Role="InductionYearsAdmission" Type="Self.InductionYearsAdmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InductionYears">
+        <PropertyRef Name="InductionYearID" />
+      </Principal>
+      <Dependent Role="InductionYearsAdmission">
+        <PropertyRef Name="InductionYearID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LibraryBudget_LYearlyBudget">
+    <End Role="LYearlyBudget" Type="Self.LYearlyBudget" Multiplicity="0..1" />
+    <End Role="LibraryBudget" Type="Self.LibraryBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LYearlyBudget">
+        <PropertyRef Name="LYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="LibraryBudget">
+        <PropertyRef Name="LYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PMPF_Institution">
+    <End Role="Institution" Type="Self.Institution" Multiplicity="0..1" />
+    <End Role="PMPF" Type="Self.PMPF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="PMPF">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PMPF_Institution1">
+    <End Role="Institution" Type="Self.Institution" Multiplicity="0..1" />
+    <End Role="PMPF" Type="Self.PMPF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="InstitutionID" />
+      </Principal>
+      <Dependent Role="PMPF">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PMPF_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="PMPF" Type="Self.PMPF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="PMPF">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PMPF_Program1">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="PMPF" Type="Self.PMPF" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="PMPF">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Program_Department1">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Program" Type="Self.Program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="Program">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Instructor">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Instructor1">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Program1">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectReport_Project">
+    <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="ProjectReport" Type="Self.ProjectReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="ProjectReport">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectReport_StudentCourseReg">
+    <End Role="StudentCourseReg" Type="Self.StudentCourseReg" Multiplicity="0..1" />
+    <End Role="ProjectReport" Type="Self.ProjectReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentCourseReg">
+        <PropertyRef Name="SCRID" />
+      </Principal>
+      <Dependent Role="ProjectReport">
+        <PropertyRef Name="SCRID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Quiz_Instructor">
+    <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+    <End Role="Quiz" Type="Self.Quiz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Instructor">
+        <PropertyRef Name="InstructorID" />
+      </Principal>
+      <Dependent Role="Quiz">
+        <PropertyRef Name="InstructorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Quiz_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="Quiz" Type="Self.Quiz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="Quiz">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Quiz_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+    <End Role="Quiz" Type="Self.Quiz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="Quiz">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuizReport_Quiz">
+    <End Role="Quiz" Type="Self.Quiz" Multiplicity="0..1" />
+    <End Role="QuizReport" Type="Self.QuizReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Quiz">
+        <PropertyRef Name="QuizID" />
+      </Principal>
+      <Dependent Role="QuizReport">
+        <PropertyRef Name="QuizID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QuizReport_StudentCourseReg">
+    <End Role="StudentCourseReg" Type="Self.StudentCourseReg" Multiplicity="1" />
+    <End Role="QuizReport" Type="Self.QuizReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentCourseReg">
+        <PropertyRef Name="SCRID" />
+      </Principal>
+      <Dependent Role="QuizReport">
+        <PropertyRef Name="SCRID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResearchBudget_RYearlyBudget">
+    <End Role="RYearlyBudget" Type="Self.RYearlyBudget" Multiplicity="0..1" />
+    <End Role="ResearchBudget" Type="Self.ResearchBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RYearlyBudget">
+        <PropertyRef Name="RYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="ResearchBudget">
+        <PropertyRef Name="RYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SAR_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="SAR" Type="Self.SAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="SAR">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SAR_Department">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="SAR" Type="Self.SAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="SAR">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SAR_Program">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="SAR" Type="Self.SAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramID" />
+      </Principal>
+      <Dependent Role="SAR">
+        <PropertyRef Name="ProgramID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SAR_Term">
+    <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+    <End Role="SAR" Type="Self.SAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Term">
+        <PropertyRef Name="TermID" />
+      </Principal>
+      <Dependent Role="SAR">
+        <PropertyRef Name="TermID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SourcesOfIncome_SYearlyBudget">
+    <End Role="SYearlyBudget" Type="Self.SYearlyBudget" Multiplicity="0..1" />
+    <End Role="SourcesOfIncome" Type="Self.SourcesOfIncome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYearlyBudget">
+        <PropertyRef Name="SYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="SourcesOfIncome">
+        <PropertyRef Name="SYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentCourseReg_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="StudentCourseReg" Type="Self.StudentCourseReg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="StudentCourseReg">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentCourseReg_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="StudentCourseReg" Type="Self.StudentCourseReg" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="StudentCourseReg">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_AssignmentReport">
+    <End Role="AssignmentReport" Type="Self.AssignmentReport" Multiplicity="0..1" />
+    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssignmentReport">
+        <PropertyRef Name="AssignReportID" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="AssignReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_Project">
+    <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="ProjectReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_ProjectReport">
+    <End Role="ProjectReport" Type="Self.ProjectReport" Multiplicity="0..1" />
+    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectReport">
+        <PropertyRef Name="ProjectIReportD" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="ProjectReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_Quiz">
+    <End Role="Quiz" Type="Self.Quiz" Multiplicity="0..1" />
+    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Quiz">
+        <PropertyRef Name="QuizID" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="QuizIReportD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_QuizReport">
+    <End Role="QuizReport" Type="Self.QuizReport" Multiplicity="0..1" />
+    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuizReport">
+        <PropertyRef Name="QuizReportID" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="QuizIReportD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentReport_StudentCourseReg">
+    <End Role="StudentCourseReg" Type="Self.StudentCourseReg" Multiplicity="0..1" />
+    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentCourseReg">
+        <PropertyRef Name="SCRID" />
+      </Principal>
+      <Dependent Role="StudentReport">
+        <PropertyRef Name="SCRID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WholeBudget_WholeYearlyBudget">
+    <End Role="WholeYearlyBudget" Type="Self.WholeYearlyBudget" Multiplicity="0..1" />
+    <End Role="WholeBudget" Type="Self.WholeBudget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WholeYearlyBudget">
+        <PropertyRef Name="WholeYearlyBudgetID" />
+      </Principal>
+      <Dependent Role="WholeBudget">
+        <PropertyRef Name="WholeYearlyBudgetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QecPortalModelStoreContainer">
+    <EntitySet Name="AdmissionForm" EntityType="Self.AdmissionForm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Alumni" EntityType="Self.Alumni" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Assignment" EntityType="Self.Assignment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AssignmentReport" EntityType="Self.AssignmentReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AvailableRoom" EntityType="Self.AvailableRoom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ComputerRatio" EntityType="Self.ComputerRatio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ComputingBudget" EntityType="Self.ComputingBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CourseDescription" EntityType="Self.CourseDescription" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CourseEvaluation" EntityType="Self.CourseEvaluation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CourseOutline" EntityType="Self.CourseOutline" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CRI" EntityType="Self.CRI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CYearlyBudget" EntityType="Self.CYearlyBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DCYearlyBudget" EntityType="Self.DCYearlyBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DepComputingBudget" EntityType="Self.DepComputingBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DepOfferProgBudget" EntityType="Self.DepOfferProgBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DepResearchBudget" EntityType="Self.DepResearchBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DOPYearlyBudget" EntityType="Self.DOPYearlyBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DRYearlyBudget" EntityType="Self.DRYearlyBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ECourseFoders" EntityType="Self.ECourseFoders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FacultyCourses" EntityType="Self.FacultyCourses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FIF" EntityType="Self.FIF" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Financial" EntityType="Self.Financial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FreeStructure" EntityType="Self.FreeStructure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FYearlyBudget" EntityType="Self.FYearlyBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HecAdministration" EntityType="Self.HecAdministration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InductionYears" EntityType="Self.InductionYears" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InductionYearsAdmission" EntityType="Self.InductionYearsAdmission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Institution" EntityType="Self.Institution" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InstructionalFacilities" EntityType="Self.InstructionalFacilities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instructor" EntityType="Self.Instructor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LabAvailability" EntityType="Self.LabAvailability" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LevelNetworking" EntityType="Self.LevelNetworking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LibraryBudget" EntityType="Self.LibraryBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LYearlyBudget" EntityType="Self.LYearlyBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OtherFacilities" EntityType="Self.OtherFacilities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PMPF" EntityType="Self.PMPF" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Program" EntityType="Self.Program" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectReport" EntityType="Self.ProjectReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Quiz" EntityType="Self.Quiz" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuizReport" EntityType="Self.QuizReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RatioYearlyBudget" EntityType="Self.RatioYearlyBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResearchBudget" EntityType="Self.ResearchBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoomType" EntityType="Self.RoomType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rubrics" EntityType="Self.Rubrics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RYearlyBudget" EntityType="Self.RYearlyBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SAR" EntityType="Self.SAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SourcesOfIncome" EntityType="Self.SourcesOfIncome" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentCourseReg" EntityType="Self.StudentCourseReg" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentEvaluation" EntityType="Self.StudentEvaluation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentReport" EntityType="Self.StudentReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SYearlyBudget" EntityType="Self.SYearlyBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Term" EntityType="Self.Term" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WholeBudget" EntityType="Self.WholeBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WholeYearlyBudget" EntityType="Self.WholeYearlyBudget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="YearlyPassout" EntityType="Self.YearlyPassout" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AdmissionForm_InductionYearsAdmission" Association="Self.FK_AdmissionForm_InductionYearsAdmission">
+      <End Role="InductionYearsAdmission" EntitySet="InductionYearsAdmission" />
+      <End Role="AdmissionForm" EntitySet="AdmissionForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdmissionForm_Institution" Association="Self.FK_AdmissionForm_Institution">
+      <End Role="Institution" EntitySet="Institution" />
+      <End Role="AdmissionForm" EntitySet="AdmissionForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdmissionForm_Program" Association="Self.FK_AdmissionForm_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="AdmissionForm" EntitySet="AdmissionForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumni_Institution" Association="Self.FK_Alumni_Institution">
+      <End Role="Institution" EntitySet="Institution" />
+      <End Role="Alumni" EntitySet="Alumni" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumni_Program" Association="Self.FK_Alumni_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="Alumni" EntitySet="Alumni" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alumni_YearlyPassout" Association="Self.FK_Alumni_YearlyPassout">
+      <End Role="YearlyPassout" EntitySet="YearlyPassout" />
+      <End Role="Alumni" EntitySet="Alumni" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assignment_Instructor" Association="Self.FK_Assignment_Instructor">
+      <End Role="Instructor" EntitySet="Instructor" />
+      <End Role="Assignment" EntitySet="Assignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assignment_Program" Association="Self.FK_Assignment_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="Assignment" EntitySet="Assignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assignment_Term" Association="Self.FK_Assignment_Term">
+      <End Role="Term" EntitySet="Term" />
+      <End Role="Assignment" EntitySet="Assignment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssignmentReport_Assignment" Association="Self.FK_AssignmentReport_Assignment">
+      <End Role="Assignment" EntitySet="Assignment" />
+      <End Role="AssignmentReport" EntitySet="AssignmentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssignmentReport_Rubrics" Association="Self.FK_AssignmentReport_Rubrics">
+      <End Role="Rubrics" EntitySet="Rubrics" />
+      <End Role="AssignmentReport" EntitySet="AssignmentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssignmentReport_StudentCourseReg" Association="Self.FK_AssignmentReport_StudentCourseReg">
+      <End Role="StudentCourseReg" EntitySet="StudentCourseReg" />
+      <End Role="AssignmentReport" EntitySet="AssignmentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AvailableRoom_RoomType" Association="Self.FK_AvailableRoom_RoomType">
+      <End Role="RoomType" EntitySet="RoomType" />
+      <End Role="AvailableRoom" EntitySet="AvailableRoom" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerRatio_RatioYearlyBudget" Association="Self.FK_ComputerRatio_RatioYearlyBudget">
+      <End Role="RatioYearlyBudget" EntitySet="RatioYearlyBudget" />
+      <End Role="ComputerRatio" EntitySet="ComputerRatio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputingBudget_ComputerRatio" Association="Self.FK_ComputingBudget_ComputerRatio">
+      <End Role="ComputerRatio" EntitySet="ComputerRatio" />
+      <End Role="ComputingBudget" EntitySet="ComputingBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputingBudget_CYearlyBudget" Association="Self.FK_ComputingBudget_CYearlyBudget">
+      <End Role="CYearlyBudget" EntitySet="CYearlyBudget" />
+      <End Role="ComputingBudget" EntitySet="ComputingBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputingBudget_DepComputingBudget" Association="Self.FK_ComputingBudget_DepComputingBudget">
+      <End Role="DepComputingBudget" EntitySet="DepComputingBudget" />
+      <End Role="ComputingBudget" EntitySet="ComputingBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputingBudget_LabAvailability" Association="Self.FK_ComputingBudget_LabAvailability">
+      <End Role="LabAvailability" EntitySet="LabAvailability" />
+      <End Role="ComputingBudget" EntitySet="ComputingBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputingBudget_LevelNetworking" Association="Self.FK_ComputingBudget_LevelNetworking">
+      <End Role="LevelNetworking" EntitySet="LevelNetworking" />
+      <End Role="ComputingBudget" EntitySet="ComputingBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDescription_Course" Association="Self.FK_CourseDescription_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="CourseDescription" EntitySet="CourseDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDescription_Institution" Association="Self.FK_CourseDescription_Institution">
+      <End Role="Institution" EntitySet="Institution" />
+      <End Role="CourseDescription" EntitySet="CourseDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDescription_Instructor" Association="Self.FK_CourseDescription_Instructor">
+      <End Role="Instructor" EntitySet="Instructor" />
+      <End Role="CourseDescription" EntitySet="CourseDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDescription_Program" Association="Self.FK_CourseDescription_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="CourseDescription" EntitySet="CourseDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseDescription_Term" Association="Self.FK_CourseDescription_Term">
+      <End Role="Term" EntitySet="Term" />
+      <End Role="CourseDescription" EntitySet="CourseDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseEvaluation_Course" Association="Self.FK_CourseEvaluation_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="CourseEvaluation" EntitySet="CourseEvaluation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseEvaluation_Program" Association="Self.FK_CourseEvaluation_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="CourseEvaluation" EntitySet="CourseEvaluation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseEvaluation_Term" Association="Self.FK_CourseEvaluation_Term">
+      <End Role="Term" EntitySet="Term" />
+      <End Role="CourseEvaluation" EntitySet="CourseEvaluation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Course" Association="Self.FK_CourseOutline_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="CourseOutline" EntitySet="CourseOutline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_CourseOutline" Association="Self.FK_CourseOutline_CourseOutline">
+      <End Role="CourseOutline" EntitySet="CourseOutline" />
+      <End Role="CourseOutline1" EntitySet="CourseOutline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Department" Association="Self.FK_CourseOutline_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="CourseOutline" EntitySet="CourseOutline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Instructor" Association="Self.FK_CourseOutline_Instructor">
+      <End Role="Instructor" EntitySet="Instructor" />
+      <End Role="CourseOutline" EntitySet="CourseOutline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Program" Association="Self.FK_CourseOutline_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="CourseOutline" EntitySet="CourseOutline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Status" Association="Self.FK_CourseOutline_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="CourseOutline" EntitySet="CourseOutline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CourseOutline_Term" Association="Self.FK_CourseOutline_Term">
+      <End Role="Term" EntitySet="Term" />
+      <End Role="CourseOutline" EntitySet="CourseOutline" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CRI_Course" Association="Self.FK_CRI_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="CRI" EntitySet="CRI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CRI_Institution" Association="Self.FK_CRI_Institution">
+      <End Role="Institution" EntitySet="Institution" />
+      <End Role="CRI" EntitySet="CRI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CRI_Program" Association="Self.FK_CRI_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="CRI" EntitySet="CRI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepComputingBudget_DCYearlyBudget" Association="Self.FK_DepComputingBudget_DCYearlyBudget">
+      <End Role="DCYearlyBudget" EntitySet="DCYearlyBudget" />
+      <End Role="DepComputingBudget" EntitySet="DepComputingBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepComputingBudget_Department" Association="Self.FK_DepComputingBudget_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="DepComputingBudget" EntitySet="DepComputingBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepOfferProgBudget_Department" Association="Self.FK_DepOfferProgBudget_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="DepOfferProgBudget" EntitySet="DepOfferProgBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepOfferProgBudget_DOPYearlyBudget" Association="Self.FK_DepOfferProgBudget_DOPYearlyBudget">
+      <End Role="DOPYearlyBudget" EntitySet="DOPYearlyBudget" />
+      <End Role="DepOfferProgBudget" EntitySet="DepOfferProgBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepResearchBudget_Department" Association="Self.FK_DepResearchBudget_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="DepResearchBudget" EntitySet="DepResearchBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepResearchBudget_DRYearlyBudget" Association="Self.FK_DepResearchBudget_DRYearlyBudget">
+      <End Role="DRYearlyBudget" EntitySet="DRYearlyBudget" />
+      <End Role="DepResearchBudget" EntitySet="DepResearchBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Course" Association="Self.FK_ECourseFoders_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="ECourseFoders" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Department" Association="Self.FK_ECourseFoders_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="ECourseFoders" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Instructor" Association="Self.FK_ECourseFoders_Instructor">
+      <End Role="Instructor" EntitySet="Instructor" />
+      <End Role="ECourseFoders" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Program" Association="Self.FK_ECourseFoders_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="ECourseFoders" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Status" Association="Self.FK_ECourseFoders_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="ECourseFoders" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ECourseFoders_Term" Association="Self.FK_ECourseFoders_Term">
+      <End Role="Term" EntitySet="Term" />
+      <End Role="ECourseFoders" EntitySet="ECourseFoders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacultyCourses_Course" Association="Self.FK_FacultyCourses_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="FacultyCourses" EntitySet="FacultyCourses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacultyCourses_Instructor" Association="Self.FK_FacultyCourses_Instructor">
+      <End Role="Instructor" EntitySet="Instructor" />
+      <End Role="FacultyCourses" EntitySet="FacultyCourses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacultyCourses_Term" Association="Self.FK_FacultyCourses_Term">
+      <End Role="Term" EntitySet="Term" />
+      <End Role="FacultyCourses" EntitySet="FacultyCourses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FIF_Instructor" Association="Self.FK_FIF_Instructor">
+      <End Role="Instructor" EntitySet="Instructor" />
+      <End Role="FIF" EntitySet="FIF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_DepComputingBudget" Association="Self.FK_Financial_DepComputingBudget">
+      <End Role="DepComputingBudget" EntitySet="DepComputingBudget" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_DepOfferProgBudget" Association="Self.FK_Financial_DepOfferProgBudget">
+      <End Role="DepOfferProgBudget" EntitySet="DepOfferProgBudget" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_DepResearchBudget" Association="Self.FK_Financial_DepResearchBudget">
+      <End Role="DepResearchBudget" EntitySet="DepResearchBudget" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_FreeStructure" Association="Self.FK_Financial_FreeStructure">
+      <End Role="FreeStructure" EntitySet="FreeStructure" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_FreeStructure1" Association="Self.FK_Financial_FreeStructure1">
+      <End Role="FreeStructure" EntitySet="FreeStructure" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_LibraryBudget" Association="Self.FK_Financial_LibraryBudget">
+      <End Role="LibraryBudget" EntitySet="LibraryBudget" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_LibraryBudget1" Association="Self.FK_Financial_LibraryBudget1">
+      <End Role="LibraryBudget" EntitySet="LibraryBudget" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_Program" Association="Self.FK_Financial_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_ResearchBudget" Association="Self.FK_Financial_ResearchBudget">
+      <End Role="ResearchBudget" EntitySet="ResearchBudget" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_ResearchBudget1" Association="Self.FK_Financial_ResearchBudget1">
+      <End Role="ResearchBudget" EntitySet="ResearchBudget" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_SourcesOfIncome" Association="Self.FK_Financial_SourcesOfIncome">
+      <End Role="SourcesOfIncome" EntitySet="SourcesOfIncome" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_SourcesOfIncome1" Association="Self.FK_Financial_SourcesOfIncome1">
+      <End Role="SourcesOfIncome" EntitySet="SourcesOfIncome" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Financial_WholeBudget" Association="Self.FK_Financial_WholeBudget">
+      <End Role="WholeBudget" EntitySet="WholeBudget" />
+      <End Role="Financial" EntitySet="Financial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FreeStructure_FYearlyBudget" Association="Self.FK_FreeStructure_FYearlyBudget">
+      <End Role="FYearlyBudget" EntitySet="FYearlyBudget" />
+      <End Role="FreeStructure" EntitySet="FreeStructure" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_ComputingBudget" Association="Self.FK_HecAdministration_ComputingBudget">
+      <End Role="ComputingBudget" EntitySet="ComputingBudget" />
+      <End Role="HecAdministration" EntitySet="HecAdministration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_ComputingBudget1" Association="Self.FK_HecAdministration_ComputingBudget1">
+      <End Role="ComputingBudget" EntitySet="ComputingBudget" />
+      <End Role="HecAdministration" EntitySet="HecAdministration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_InstructionalFacilities" Association="Self.FK_HecAdministration_InstructionalFacilities">
+      <End Role="InstructionalFacilities" EntitySet="InstructionalFacilities" />
+      <End Role="HecAdministration" EntitySet="HecAdministration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_LibraryBudget" Association="Self.FK_HecAdministration_LibraryBudget">
+      <End Role="LibraryBudget" EntitySet="LibraryBudget" />
+      <End Role="HecAdministration" EntitySet="HecAdministration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_OtherFacilities" Association="Self.FK_HecAdministration_OtherFacilities">
+      <End Role="OtherFacilities" EntitySet="OtherFacilities" />
+      <End Role="HecAdministration" EntitySet="HecAdministration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HecAdministration_OtherFacilities1" Association="Self.FK_HecAdministration_OtherFacilities1">
+      <End Role="OtherFacilities" EntitySet="OtherFacilities" />
+      <End Role="HecAdministration" EntitySet="HecAdministration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InductionYears_Term" Association="Self.FK_InductionYears_Term">
+      <End Role="Term" EntitySet="Term" />
+      <End Role="InductionYears" EntitySet="InductionYears" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InductionYearsAdmission_InductionYears" Association="Self.FK_InductionYearsAdmission_InductionYears">
+      <End Role="InductionYears" EntitySet="InductionYears" />
+      <End Role="InductionYearsAdmission" EntitySet="InductionYearsAdmission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LibraryBudget_LYearlyBudget" Association="Self.FK_LibraryBudget_LYearlyBudget">
+      <End Role="LYearlyBudget" EntitySet="LYearlyBudget" />
+      <End Role="LibraryBudget" EntitySet="LibraryBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PMPF_Institution" Association="Self.FK_PMPF_Institution">
+      <End Role="Institution" EntitySet="Institution" />
+      <End Role="PMPF" EntitySet="PMPF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PMPF_Institution1" Association="Self.FK_PMPF_Institution1">
+      <End Role="Institution" EntitySet="Institution" />
+      <End Role="PMPF" EntitySet="PMPF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PMPF_Program" Association="Self.FK_PMPF_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="PMPF" EntitySet="PMPF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PMPF_Program1" Association="Self.FK_PMPF_Program1">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="PMPF" EntitySet="PMPF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Program_Department1" Association="Self.FK_Program_Department1">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Program" EntitySet="Program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Instructor" Association="Self.FK_Project_Instructor">
+      <End Role="Instructor" EntitySet="Instructor" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Instructor1" Association="Self.FK_Project_Instructor1">
+      <End Role="Instructor" EntitySet="Instructor" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Program" Association="Self.FK_Project_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Program1" Association="Self.FK_Project_Program1">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Term" Association="Self.FK_Project_Term">
+      <End Role="Term" EntitySet="Term" />
+      <End Role="Project" EntitySet="Project" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectReport_Project" Association="Self.FK_ProjectReport_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="ProjectReport" EntitySet="ProjectReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectReport_StudentCourseReg" Association="Self.FK_ProjectReport_StudentCourseReg">
+      <End Role="StudentCourseReg" EntitySet="StudentCourseReg" />
+      <End Role="ProjectReport" EntitySet="ProjectReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Quiz_Instructor" Association="Self.FK_Quiz_Instructor">
+      <End Role="Instructor" EntitySet="Instructor" />
+      <End Role="Quiz" EntitySet="Quiz" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Quiz_Program" Association="Self.FK_Quiz_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="Quiz" EntitySet="Quiz" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Quiz_Term" Association="Self.FK_Quiz_Term">
+      <End Role="Term" EntitySet="Term" />
+      <End Role="Quiz" EntitySet="Quiz" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuizReport_Quiz" Association="Self.FK_QuizReport_Quiz">
+      <End Role="Quiz" EntitySet="Quiz" />
+      <End Role="QuizReport" EntitySet="QuizReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QuizReport_StudentCourseReg" Association="Self.FK_QuizReport_StudentCourseReg">
+      <End Role="StudentCourseReg" EntitySet="StudentCourseReg" />
+      <End Role="QuizReport" EntitySet="QuizReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResearchBudget_RYearlyBudget" Association="Self.FK_ResearchBudget_RYearlyBudget">
+      <End Role="RYearlyBudget" EntitySet="RYearlyBudget" />
+      <End Role="ResearchBudget" EntitySet="ResearchBudget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SAR_Course" Association="Self.FK_SAR_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="SAR" EntitySet="SAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SAR_Department" Association="Self.FK_SAR_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="SAR" EntitySet="SAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SAR_Program" Association="Self.FK_SAR_Program">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="SAR" EntitySet="SAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SAR_Term" Association="Self.FK_SAR_Term">
+      <End Role="Term" EntitySet="Term" />
+      <End Role="SAR" EntitySet="SAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SourcesOfIncome_SYearlyBudget" Association="Self.FK_SourcesOfIncome_SYearlyBudget">
+      <End Role="SYearlyBudget" EntitySet="SYearlyBudget" />
+      <End Role="SourcesOfIncome" EntitySet="SourcesOfIncome" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentCourseReg_Course" Association="Self.FK_StudentCourseReg_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="StudentCourseReg" EntitySet="StudentCourseReg" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentCourseReg_Student" Association="Self.FK_StudentCourseReg_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentCourseReg" EntitySet="StudentCourseReg" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_AssignmentReport" Association="Self.FK_StudentReport_AssignmentReport">
+      <End Role="AssignmentReport" EntitySet="AssignmentReport" />
+      <End Role="StudentReport" EntitySet="StudentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_Project" Association="Self.FK_StudentReport_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="StudentReport" EntitySet="StudentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_ProjectReport" Association="Self.FK_StudentReport_ProjectReport">
+      <End Role="ProjectReport" EntitySet="ProjectReport" />
+      <End Role="StudentReport" EntitySet="StudentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_Quiz" Association="Self.FK_StudentReport_Quiz">
+      <End Role="Quiz" EntitySet="Quiz" />
+      <End Role="StudentReport" EntitySet="StudentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_QuizReport" Association="Self.FK_StudentReport_QuizReport">
+      <End Role="QuizReport" EntitySet="QuizReport" />
+      <End Role="StudentReport" EntitySet="StudentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentReport_StudentCourseReg" Association="Self.FK_StudentReport_StudentCourseReg">
+      <End Role="StudentCourseReg" EntitySet="StudentCourseReg" />
+      <End Role="StudentReport" EntitySet="StudentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WholeBudget_WholeYearlyBudget" Association="Self.FK_WholeBudget_WholeYearlyBudget">
+      <End Role="WholeYearlyBudget" EntitySet="WholeYearlyBudget" />
+      <End Role="WholeBudget" EntitySet="WholeBudget" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
