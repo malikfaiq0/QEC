@@ -11,8 +11,6 @@ namespace WebQecPortal.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
     
     public partial class SAR
     {
@@ -21,15 +19,10 @@ namespace WebQecPortal.Models
         public Nullable<int> ProgramID { get; set; }
         public Nullable<int> TermID { get; set; }
         public Nullable<int> CourseID { get; set; }
-
-        
-
-
+    
         public virtual Course Course { get; set; }
         public virtual Department Department { get; set; }
         public virtual Program Program { get; set; }
         public virtual Term Term { get; set; }
-
-  
     }
 }

@@ -17,7 +17,7 @@ namespace WebQecPortal.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public AssignmentReport()
         {
-            this.StudentReports = new HashSet<StudentReport>();
+            this.SARlists = new HashSet<SARlist>();
         }
     
         public int AssignReportID { get; set; }
@@ -30,6 +30,6 @@ namespace WebQecPortal.Models
         public virtual Rubric Rubric { get; set; }
         public virtual StudentCourseReg StudentCourseReg { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StudentReport> StudentReports { get; set; }
+        public virtual ICollection<SARlist> SARlists { get; set; }
     }
 }

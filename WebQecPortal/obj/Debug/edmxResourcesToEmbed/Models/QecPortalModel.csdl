@@ -56,13 +56,14 @@
     <EntitySet Name="Students" EntityType="QecPortalModel.Student" />
     <EntitySet Name="StudentCourseRegs" EntityType="QecPortalModel.StudentCourseReg" />
     <EntitySet Name="StudentEvaluations" EntityType="QecPortalModel.StudentEvaluation" />
-    <EntitySet Name="StudentReports" EntityType="QecPortalModel.StudentReport" />
+    <EntitySet Name="StudentSARs" EntityType="QecPortalModel.StudentSAR" />
     <EntitySet Name="SYearlyBudgets" EntityType="QecPortalModel.SYearlyBudget" />
     <EntitySet Name="sysdiagrams" EntityType="QecPortalModel.sysdiagram" />
     <EntitySet Name="Terms" EntityType="QecPortalModel.Term" />
     <EntitySet Name="WholeBudgets" EntityType="QecPortalModel.WholeBudget" />
     <EntitySet Name="WholeYearlyBudgets" EntityType="QecPortalModel.WholeYearlyBudget" />
     <EntitySet Name="YearlyPassouts" EntityType="QecPortalModel.YearlyPassout" />
+    <EntitySet Name="SARlists" EntityType="QecPortalModel.SARlist" />
     <AssociationSet Name="FK_AdmissionForm_InductionYearsAdmission" Association="QecPortalModel.FK_AdmissionForm_InductionYearsAdmission">
       <End Role="InductionYearsAdmission" EntitySet="InductionYearsAdmissions" />
       <End Role="AdmissionForm" EntitySet="AdmissionForms" />
@@ -111,9 +112,9 @@
       <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
       <End Role="AssignmentReport" EntitySet="AssignmentReports" />
     </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_AssignmentReport" Association="QecPortalModel.FK_StudentReport_AssignmentReport">
+    <AssociationSet Name="FK_SARlist_AssignmentReport" Association="QecPortalModel.FK_SARlist_AssignmentReport">
       <End Role="AssignmentReport" EntitySet="AssignmentReports" />
-      <End Role="StudentReport" EntitySet="StudentReports" />
+      <End Role="SARlist" EntitySet="SARlists" />
     </AssociationSet>
     <AssociationSet Name="FK_AvailableRoom_RoomType" Association="QecPortalModel.FK_AvailableRoom_RoomType">
       <End Role="RoomType" EntitySet="RoomTypes" />
@@ -182,6 +183,10 @@
     <AssociationSet Name="FK_StudentCourseReg_Course" Association="QecPortalModel.FK_StudentCourseReg_Course">
       <End Role="Course" EntitySet="Courses" />
       <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentSAR_Course" Association="QecPortalModel.FK_StudentSAR_Course">
+      <End Role="Course" EntitySet="Courses" />
+      <End Role="StudentSAR" EntitySet="StudentSARs" />
     </AssociationSet>
     <AssociationSet Name="FK_CourseDescription_Institution" Association="QecPortalModel.FK_CourseDescription_Institution">
       <End Role="Institution" EntitySet="Institutions" />
@@ -439,17 +444,13 @@
       <End Role="Project" EntitySet="Projects" />
       <End Role="ProjectReport" EntitySet="ProjectReports" />
     </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_Project" Association="QecPortalModel.FK_StudentReport_Project">
-      <End Role="Project" EntitySet="Projects" />
-      <End Role="StudentReport" EntitySet="StudentReports" />
-    </AssociationSet>
     <AssociationSet Name="FK_ProjectReport_StudentCourseReg" Association="QecPortalModel.FK_ProjectReport_StudentCourseReg">
       <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
       <End Role="ProjectReport" EntitySet="ProjectReports" />
     </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_ProjectReport" Association="QecPortalModel.FK_StudentReport_ProjectReport">
+    <AssociationSet Name="FK_SARlist_ProjectReport" Association="QecPortalModel.FK_SARlist_ProjectReport">
       <End Role="ProjectReport" EntitySet="ProjectReports" />
-      <End Role="StudentReport" EntitySet="StudentReports" />
+      <End Role="SARlist" EntitySet="SARlists" />
     </AssociationSet>
     <AssociationSet Name="FK_Quiz_Term" Association="QecPortalModel.FK_Quiz_Term">
       <End Role="Term" EntitySet="Terms" />
@@ -459,17 +460,13 @@
       <End Role="Quiz" EntitySet="Quizs" />
       <End Role="QuizReport" EntitySet="QuizReports" />
     </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_Quiz" Association="QecPortalModel.FK_StudentReport_Quiz">
-      <End Role="Quiz" EntitySet="Quizs" />
-      <End Role="StudentReport" EntitySet="StudentReports" />
-    </AssociationSet>
     <AssociationSet Name="FK_QuizReport_StudentCourseReg" Association="QecPortalModel.FK_QuizReport_StudentCourseReg">
       <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
       <End Role="QuizReport" EntitySet="QuizReports" />
     </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_QuizReport" Association="QecPortalModel.FK_StudentReport_QuizReport">
+    <AssociationSet Name="FK_SARlist_QuizReport" Association="QecPortalModel.FK_SARlist_QuizReport">
       <End Role="QuizReport" EntitySet="QuizReports" />
-      <End Role="StudentReport" EntitySet="StudentReports" />
+      <End Role="SARlist" EntitySet="SARlists" />
     </AssociationSet>
     <AssociationSet Name="FK_ResearchBudget_RYearlyBudget" Association="QecPortalModel.FK_ResearchBudget_RYearlyBudget">
       <End Role="RYearlyBudget" EntitySet="RYearlyBudgets" />
@@ -487,9 +484,13 @@
       <End Role="Student" EntitySet="Students" />
       <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
     </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_StudentCourseReg" Association="QecPortalModel.FK_StudentReport_StudentCourseReg">
+    <AssociationSet Name="FK_StudentSAR_Student" Association="QecPortalModel.FK_StudentSAR_Student">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="StudentSAR" EntitySet="StudentSARs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SARlist_StudentCourseReg" Association="QecPortalModel.FK_SARlist_StudentCourseReg">
       <End Role="StudentCourseReg" EntitySet="StudentCourseRegs" />
-      <End Role="StudentReport" EntitySet="StudentReports" />
+      <End Role="SARlist" EntitySet="SARlists" />
     </AssociationSet>
     <AssociationSet Name="FK_WholeBudget_WholeYearlyBudget" Association="QecPortalModel.FK_WholeBudget_WholeYearlyBudget">
       <End Role="WholeYearlyBudget" EntitySet="WholeYearlyBudgets" />
@@ -562,7 +563,7 @@
     <NavigationProperty Name="Assignment" Relationship="QecPortalModel.FK_AssignmentReport_Assignment" FromRole="AssignmentReport" ToRole="Assignment" />
     <NavigationProperty Name="Rubric" Relationship="QecPortalModel.FK_AssignmentReport_Rubrics" FromRole="AssignmentReport" ToRole="Rubric" />
     <NavigationProperty Name="StudentCourseReg" Relationship="QecPortalModel.FK_AssignmentReport_StudentCourseReg" FromRole="AssignmentReport" ToRole="StudentCourseReg" />
-    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_AssignmentReport" FromRole="AssignmentReport" ToRole="StudentReport" />
+    <NavigationProperty Name="SARlists" Relationship="QecPortalModel.FK_SARlist_AssignmentReport" FromRole="AssignmentReport" ToRole="SARlist" />
   </EntityType>
   <EntityType Name="AvailableRoom">
     <Key>
@@ -633,6 +634,7 @@
     <NavigationProperty Name="FacultyCourses" Relationship="QecPortalModel.FK_FacultyCourses_Course" FromRole="Course" ToRole="FacultyCours" />
     <NavigationProperty Name="SARs" Relationship="QecPortalModel.FK_SAR_Course" FromRole="Course" ToRole="SAR" />
     <NavigationProperty Name="StudentCourseRegs" Relationship="QecPortalModel.FK_StudentCourseReg_Course" FromRole="Course" ToRole="StudentCourseReg" />
+    <NavigationProperty Name="StudentSARs" Relationship="QecPortalModel.FK_StudentSAR_Course" FromRole="Course" ToRole="StudentSAR" />
   </EntityType>
   <EntityType Name="CourseDescription">
     <Key>
@@ -1134,7 +1136,6 @@
     <NavigationProperty Name="Program1" Relationship="QecPortalModel.FK_Project_Program1" FromRole="Project" ToRole="Program" />
     <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_Project_Term" FromRole="Project" ToRole="Term" />
     <NavigationProperty Name="ProjectReports" Relationship="QecPortalModel.FK_ProjectReport_Project" FromRole="Project" ToRole="ProjectReport" />
-    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_Project" FromRole="Project" ToRole="StudentReport" />
   </EntityType>
   <EntityType Name="ProjectReport">
     <Key>
@@ -1146,7 +1147,7 @@
     <Property Name="ProjectID" Type="Int32" />
     <NavigationProperty Name="Project" Relationship="QecPortalModel.FK_ProjectReport_Project" FromRole="ProjectReport" ToRole="Project" />
     <NavigationProperty Name="StudentCourseReg" Relationship="QecPortalModel.FK_ProjectReport_StudentCourseReg" FromRole="ProjectReport" ToRole="StudentCourseReg" />
-    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_ProjectReport" FromRole="ProjectReport" ToRole="StudentReport" />
+    <NavigationProperty Name="SARlists" Relationship="QecPortalModel.FK_SARlist_ProjectReport" FromRole="ProjectReport" ToRole="SARlist" />
   </EntityType>
   <EntityType Name="Quiz">
     <Key>
@@ -1163,7 +1164,6 @@
     <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_Quiz_Program" FromRole="Quiz" ToRole="Program" />
     <NavigationProperty Name="Term" Relationship="QecPortalModel.FK_Quiz_Term" FromRole="Quiz" ToRole="Term" />
     <NavigationProperty Name="QuizReports" Relationship="QecPortalModel.FK_QuizReport_Quiz" FromRole="Quiz" ToRole="QuizReport" />
-    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_Quiz" FromRole="Quiz" ToRole="StudentReport" />
   </EntityType>
   <EntityType Name="QuizReport">
     <Key>
@@ -1176,7 +1176,7 @@
     <Property Name="SCRID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="Quiz" Relationship="QecPortalModel.FK_QuizReport_Quiz" FromRole="QuizReport" ToRole="Quiz" />
     <NavigationProperty Name="StudentCourseReg" Relationship="QecPortalModel.FK_QuizReport_StudentCourseReg" FromRole="QuizReport" ToRole="StudentCourseReg" />
-    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_QuizReport" FromRole="QuizReport" ToRole="StudentReport" />
+    <NavigationProperty Name="SARlists" Relationship="QecPortalModel.FK_SARlist_QuizReport" FromRole="QuizReport" ToRole="SARlist" />
   </EntityType>
   <EntityType Name="RatioYearlyBudget">
     <Key>
@@ -1267,6 +1267,7 @@
     <Property Name="StudentContact" Type="Int64" />
     <Property Name="StudentMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="StudentCourseRegs" Relationship="QecPortalModel.FK_StudentCourseReg_Student" FromRole="Student" ToRole="StudentCourseReg" />
+    <NavigationProperty Name="StudentSARs" Relationship="QecPortalModel.FK_StudentSAR_Student" FromRole="Student" ToRole="StudentSAR" />
   </EntityType>
   <EntityType Name="StudentCourseReg">
     <Key>
@@ -1280,7 +1281,7 @@
     <NavigationProperty Name="ProjectReports" Relationship="QecPortalModel.FK_ProjectReport_StudentCourseReg" FromRole="StudentCourseReg" ToRole="ProjectReport" />
     <NavigationProperty Name="QuizReports" Relationship="QecPortalModel.FK_QuizReport_StudentCourseReg" FromRole="StudentCourseReg" ToRole="QuizReport" />
     <NavigationProperty Name="Student" Relationship="QecPortalModel.FK_StudentCourseReg_Student" FromRole="StudentCourseReg" ToRole="Student" />
-    <NavigationProperty Name="StudentReports" Relationship="QecPortalModel.FK_StudentReport_StudentCourseReg" FromRole="StudentCourseReg" ToRole="StudentReport" />
+    <NavigationProperty Name="SARlists" Relationship="QecPortalModel.FK_SARlist_StudentCourseReg" FromRole="StudentCourseReg" ToRole="SARlist" />
   </EntityType>
   <EntityType Name="StudentEvaluation">
     <Key>
@@ -1290,21 +1291,21 @@
     <Property Name="StudentID" Type="Int32" />
     <Property Name="AssignmentReportID" Type="Int32" />
   </EntityType>
-  <EntityType Name="StudentReport">
+  <EntityType Name="StudentSAR">
     <Key>
-      <PropertyRef Name="StudentReportID" />
+      <PropertyRef Name="StudentSARID" />
     </Key>
-    <Property Name="StudentReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="AssignReportID" Type="Int32" />
-    <Property Name="SCRID" Type="Int32" />
-    <Property Name="QuizIReportD" Type="Int32" />
-    <Property Name="ProjectReportID" Type="Int32" />
-    <NavigationProperty Name="AssignmentReport" Relationship="QecPortalModel.FK_StudentReport_AssignmentReport" FromRole="StudentReport" ToRole="AssignmentReport" />
-    <NavigationProperty Name="Project" Relationship="QecPortalModel.FK_StudentReport_Project" FromRole="StudentReport" ToRole="Project" />
-    <NavigationProperty Name="ProjectReport" Relationship="QecPortalModel.FK_StudentReport_ProjectReport" FromRole="StudentReport" ToRole="ProjectReport" />
-    <NavigationProperty Name="Quiz" Relationship="QecPortalModel.FK_StudentReport_Quiz" FromRole="StudentReport" ToRole="Quiz" />
-    <NavigationProperty Name="QuizReport" Relationship="QecPortalModel.FK_StudentReport_QuizReport" FromRole="StudentReport" ToRole="QuizReport" />
-    <NavigationProperty Name="StudentCourseReg" Relationship="QecPortalModel.FK_StudentReport_StudentCourseReg" FromRole="StudentReport" ToRole="StudentCourseReg" />
+    <Property Name="StudentSARID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseID" Type="Int32" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="AssignmentNumber" Type="Int32" />
+    <Property Name="QuizNumber" Type="Int32" />
+    <Property Name="Project" Type="Int32" />
+    <Property Name="AssignMarks" Type="Int32" />
+    <Property Name="QuizMarks" Type="Int32" />
+    <Property Name="ProjectMarks" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_StudentSAR_Course" FromRole="StudentSAR" ToRole="Course" />
+    <NavigationProperty Name="Student" Relationship="QecPortalModel.FK_StudentSAR_Student" FromRole="StudentSAR" ToRole="Student" />
   </EntityType>
   <EntityType Name="SYearlyBudget">
     <Key>
@@ -1370,6 +1371,20 @@
     <Property Name="NoOfGraduatedTotal" Type="Int32" />
     <Property Name="NoOfUnderGraduatedTotal" Type="Int32" />
     <NavigationProperty Name="Alumni" Relationship="QecPortalModel.FK_Alumni_YearlyPassout" FromRole="YearlyPassout" ToRole="Alumnus" />
+  </EntityType>
+  <EntityType Name="SARlist">
+    <Key>
+      <PropertyRef Name="SARlistID" />
+    </Key>
+    <Property Name="SARlistID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SCRID" Type="Int32" />
+    <Property Name="ProjectIReportD" Type="Int32" />
+    <Property Name="QuizReportID" Type="Int32" />
+    <Property Name="AssignReportID" Type="Int32" />
+    <NavigationProperty Name="AssignmentReport" Relationship="QecPortalModel.FK_SARlist_AssignmentReport" FromRole="SARlist" ToRole="AssignmentReport" />
+    <NavigationProperty Name="ProjectReport" Relationship="QecPortalModel.FK_SARlist_ProjectReport" FromRole="SARlist" ToRole="ProjectReport" />
+    <NavigationProperty Name="QuizReport" Relationship="QecPortalModel.FK_SARlist_QuizReport" FromRole="SARlist" ToRole="QuizReport" />
+    <NavigationProperty Name="StudentCourseReg" Relationship="QecPortalModel.FK_SARlist_StudentCourseReg" FromRole="SARlist" ToRole="StudentCourseReg" />
   </EntityType>
   <Association Name="FK_AdmissionForm_InductionYearsAdmission">
     <End Type="QecPortalModel.InductionYearsAdmission" Role="InductionYearsAdmission" Multiplicity="0..1" />
@@ -1515,14 +1530,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_StudentReport_AssignmentReport">
+  <Association Name="FK_SARlist_AssignmentReport">
     <End Type="QecPortalModel.AssignmentReport" Role="AssignmentReport" Multiplicity="0..1" />
-    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
+    <End Type="QecPortalModel.SARlist" Role="SARlist" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="AssignmentReport">
         <PropertyRef Name="AssignReportID" />
       </Principal>
-      <Dependent Role="StudentReport">
+      <Dependent Role="SARlist">
         <PropertyRef Name="AssignReportID" />
       </Dependent>
     </ReferentialConstraint>
@@ -1727,6 +1742,18 @@
         <PropertyRef Name="CourseID" />
       </Principal>
       <Dependent Role="StudentCourseReg">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentSAR_Course">
+    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+    <End Type="QecPortalModel.StudentSAR" Role="StudentSAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
+      </Principal>
+      <Dependent Role="StudentSAR">
         <PropertyRef Name="CourseID" />
       </Dependent>
     </ReferentialConstraint>
@@ -2499,18 +2526,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_StudentReport_Project">
-    <End Type="QecPortalModel.Project" Role="Project" Multiplicity="0..1" />
-    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Project">
-        <PropertyRef Name="ProjectID" />
-      </Principal>
-      <Dependent Role="StudentReport">
-        <PropertyRef Name="ProjectReportID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ProjectReport_StudentCourseReg">
     <End Type="QecPortalModel.StudentCourseReg" Role="StudentCourseReg" Multiplicity="0..1" />
     <End Type="QecPortalModel.ProjectReport" Role="ProjectReport" Multiplicity="*" />
@@ -2523,15 +2538,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_StudentReport_ProjectReport">
+  <Association Name="FK_SARlist_ProjectReport">
     <End Type="QecPortalModel.ProjectReport" Role="ProjectReport" Multiplicity="0..1" />
-    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
+    <End Type="QecPortalModel.SARlist" Role="SARlist" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ProjectReport">
         <PropertyRef Name="ProjectIReportD" />
       </Principal>
-      <Dependent Role="StudentReport">
-        <PropertyRef Name="ProjectReportID" />
+      <Dependent Role="SARlist">
+        <PropertyRef Name="ProjectIReportD" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -2559,18 +2574,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_StudentReport_Quiz">
-    <End Type="QecPortalModel.Quiz" Role="Quiz" Multiplicity="0..1" />
-    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Quiz">
-        <PropertyRef Name="QuizID" />
-      </Principal>
-      <Dependent Role="StudentReport">
-        <PropertyRef Name="QuizIReportD" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_QuizReport_StudentCourseReg">
     <End Type="QecPortalModel.StudentCourseReg" Role="StudentCourseReg" Multiplicity="1" />
     <End Type="QecPortalModel.QuizReport" Role="QuizReport" Multiplicity="*" />
@@ -2583,15 +2586,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_StudentReport_QuizReport">
+  <Association Name="FK_SARlist_QuizReport">
     <End Type="QecPortalModel.QuizReport" Role="QuizReport" Multiplicity="0..1" />
-    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
+    <End Type="QecPortalModel.SARlist" Role="SARlist" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="QuizReport">
         <PropertyRef Name="QuizReportID" />
       </Principal>
-      <Dependent Role="StudentReport">
-        <PropertyRef Name="QuizIReportD" />
+      <Dependent Role="SARlist">
+        <PropertyRef Name="QuizReportID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -2643,14 +2646,26 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_StudentReport_StudentCourseReg">
+  <Association Name="FK_StudentSAR_Student">
+    <End Type="QecPortalModel.Student" Role="Student" Multiplicity="0..1" />
+    <End Type="QecPortalModel.StudentSAR" Role="StudentSAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="StudentSAR">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SARlist_StudentCourseReg">
     <End Type="QecPortalModel.StudentCourseReg" Role="StudentCourseReg" Multiplicity="0..1" />
-    <End Type="QecPortalModel.StudentReport" Role="StudentReport" Multiplicity="*" />
+    <End Type="QecPortalModel.SARlist" Role="SARlist" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="StudentCourseReg">
         <PropertyRef Name="SCRID" />
       </Principal>
-      <Dependent Role="StudentReport">
+      <Dependent Role="SARlist">
         <PropertyRef Name="SCRID" />
       </Dependent>
     </ReferentialConstraint>

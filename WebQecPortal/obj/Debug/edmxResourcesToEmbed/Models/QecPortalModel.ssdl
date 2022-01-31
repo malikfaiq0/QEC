@@ -559,6 +559,18 @@
     <Property Name="TermID" Type="int" />
     <Property Name="CourseID" Type="int" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SARlist">
+    <Key>
+      <PropertyRef Name="SARlistID" />
+    </Key>
+    <Property Name="SARlistID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SCRID" Type="int" />
+    <Property Name="ProjectIReportD" Type="int" />
+    <Property Name="QuizReportID" Type="int" />
+    <Property Name="AssignReportID" Type="int" />
+  </EntityType>
   <EntityType Name="SourcesOfIncome">
     <Key>
       <PropertyRef Name="SourcesOfIncomeID" />
@@ -599,15 +611,19 @@
     <Property Name="StudentID" Type="int" />
     <Property Name="AssignmentReportID" Type="int" />
   </EntityType>
-  <EntityType Name="StudentReport">
+  <EntityType Name="StudentSAR">
     <Key>
-      <PropertyRef Name="StudentReportID" />
+      <PropertyRef Name="StudentSARID" />
     </Key>
-    <Property Name="StudentReportID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="AssignReportID" Type="int" />
-    <Property Name="SCRID" Type="int" />
-    <Property Name="QuizIReportD" Type="int" />
-    <Property Name="ProjectReportID" Type="int" />
+    <Property Name="StudentSARID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CourseID" Type="int" />
+    <Property Name="StudentID" Type="int" />
+    <Property Name="AssignmentNumber" Type="int" />
+    <Property Name="QuizNumber" Type="int" />
+    <Property Name="Project" Type="int" />
+    <Property Name="AssignMarks" Type="int" />
+    <Property Name="QuizMarks" Type="int" />
+    <Property Name="ProjectMarks" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="SYearlyBudget">
     <Key>
@@ -1835,6 +1851,54 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_SARlist_AssignmentReport">
+    <End Role="AssignmentReport" Type="Self.AssignmentReport" Multiplicity="0..1" />
+    <End Role="SARlist" Type="Self.SARlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssignmentReport">
+        <PropertyRef Name="AssignReportID" />
+      </Principal>
+      <Dependent Role="SARlist">
+        <PropertyRef Name="AssignReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SARlist_ProjectReport">
+    <End Role="ProjectReport" Type="Self.ProjectReport" Multiplicity="0..1" />
+    <End Role="SARlist" Type="Self.SARlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectReport">
+        <PropertyRef Name="ProjectIReportD" />
+      </Principal>
+      <Dependent Role="SARlist">
+        <PropertyRef Name="ProjectIReportD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SARlist_QuizReport">
+    <End Role="QuizReport" Type="Self.QuizReport" Multiplicity="0..1" />
+    <End Role="SARlist" Type="Self.SARlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuizReport">
+        <PropertyRef Name="QuizReportID" />
+      </Principal>
+      <Dependent Role="SARlist">
+        <PropertyRef Name="QuizReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SARlist_StudentCourseReg">
+    <End Role="StudentCourseReg" Type="Self.StudentCourseReg" Multiplicity="0..1" />
+    <End Role="SARlist" Type="Self.SARlist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentCourseReg">
+        <PropertyRef Name="SCRID" />
+      </Principal>
+      <Dependent Role="SARlist">
+        <PropertyRef Name="SCRID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_SourcesOfIncome_SYearlyBudget">
     <End Role="SYearlyBudget" Type="Self.SYearlyBudget" Multiplicity="0..1" />
     <End Role="SourcesOfIncome" Type="Self.SourcesOfIncome" Multiplicity="*" />
@@ -1871,75 +1935,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_StudentReport_AssignmentReport">
-    <End Role="AssignmentReport" Type="Self.AssignmentReport" Multiplicity="0..1" />
-    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
+  <Association Name="FK_StudentSAR_Course">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="StudentSAR" Type="Self.StudentSAR" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="AssignmentReport">
-        <PropertyRef Name="AssignReportID" />
+      <Principal Role="Course">
+        <PropertyRef Name="CourseID" />
       </Principal>
-      <Dependent Role="StudentReport">
-        <PropertyRef Name="AssignReportID" />
+      <Dependent Role="StudentSAR">
+        <PropertyRef Name="CourseID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_StudentReport_Project">
-    <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
-    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
+  <Association Name="FK_StudentSAR_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="StudentSAR" Type="Self.StudentSAR" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Project">
-        <PropertyRef Name="ProjectID" />
+      <Principal Role="Student">
+        <PropertyRef Name="StudentID" />
       </Principal>
-      <Dependent Role="StudentReport">
-        <PropertyRef Name="ProjectReportID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_StudentReport_ProjectReport">
-    <End Role="ProjectReport" Type="Self.ProjectReport" Multiplicity="0..1" />
-    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ProjectReport">
-        <PropertyRef Name="ProjectIReportD" />
-      </Principal>
-      <Dependent Role="StudentReport">
-        <PropertyRef Name="ProjectReportID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_StudentReport_Quiz">
-    <End Role="Quiz" Type="Self.Quiz" Multiplicity="0..1" />
-    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Quiz">
-        <PropertyRef Name="QuizID" />
-      </Principal>
-      <Dependent Role="StudentReport">
-        <PropertyRef Name="QuizIReportD" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_StudentReport_QuizReport">
-    <End Role="QuizReport" Type="Self.QuizReport" Multiplicity="0..1" />
-    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="QuizReport">
-        <PropertyRef Name="QuizReportID" />
-      </Principal>
-      <Dependent Role="StudentReport">
-        <PropertyRef Name="QuizIReportD" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_StudentReport_StudentCourseReg">
-    <End Role="StudentCourseReg" Type="Self.StudentCourseReg" Multiplicity="0..1" />
-    <End Role="StudentReport" Type="Self.StudentReport" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="StudentCourseReg">
-        <PropertyRef Name="SCRID" />
-      </Principal>
-      <Dependent Role="StudentReport">
-        <PropertyRef Name="SCRID" />
+      <Dependent Role="StudentSAR">
+        <PropertyRef Name="StudentID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -2011,13 +2027,22 @@
     <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StudentCourseReg" EntityType="Self.StudentCourseReg" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StudentEvaluation" EntityType="Self.StudentEvaluation" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="StudentReport" EntityType="Self.StudentReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentSAR" EntityType="Self.StudentSAR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SYearlyBudget" EntityType="Self.SYearlyBudget" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Term" EntityType="Self.Term" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WholeBudget" EntityType="Self.WholeBudget" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WholeYearlyBudget" EntityType="Self.WholeYearlyBudget" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="YearlyPassout" EntityType="Self.YearlyPassout" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SARlist" EntityType="Self.SARlist" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SARlist].[SARlistID] AS [SARlistID], 
+    [SARlist].[SCRID] AS [SCRID], 
+    [SARlist].[ProjectIReportD] AS [ProjectIReportD], 
+    [SARlist].[QuizReportID] AS [QuizReportID], 
+    [SARlist].[AssignReportID] AS [AssignReportID]
+    FROM [dbo].[SARlist] AS [SARlist]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_AdmissionForm_InductionYearsAdmission" Association="Self.FK_AdmissionForm_InductionYearsAdmission">
       <End Role="InductionYearsAdmission" EntitySet="InductionYearsAdmission" />
       <End Role="AdmissionForm" EntitySet="AdmissionForm" />
@@ -2410,6 +2435,22 @@
       <End Role="Term" EntitySet="Term" />
       <End Role="SAR" EntitySet="SAR" />
     </AssociationSet>
+    <AssociationSet Name="FK_SARlist_AssignmentReport" Association="Self.FK_SARlist_AssignmentReport">
+      <End Role="AssignmentReport" EntitySet="AssignmentReport" />
+      <End Role="SARlist" EntitySet="SARlist" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SARlist_ProjectReport" Association="Self.FK_SARlist_ProjectReport">
+      <End Role="ProjectReport" EntitySet="ProjectReport" />
+      <End Role="SARlist" EntitySet="SARlist" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SARlist_QuizReport" Association="Self.FK_SARlist_QuizReport">
+      <End Role="QuizReport" EntitySet="QuizReport" />
+      <End Role="SARlist" EntitySet="SARlist" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SARlist_StudentCourseReg" Association="Self.FK_SARlist_StudentCourseReg">
+      <End Role="StudentCourseReg" EntitySet="StudentCourseReg" />
+      <End Role="SARlist" EntitySet="SARlist" />
+    </AssociationSet>
     <AssociationSet Name="FK_SourcesOfIncome_SYearlyBudget" Association="Self.FK_SourcesOfIncome_SYearlyBudget">
       <End Role="SYearlyBudget" EntitySet="SYearlyBudget" />
       <End Role="SourcesOfIncome" EntitySet="SourcesOfIncome" />
@@ -2422,29 +2463,13 @@
       <End Role="Student" EntitySet="Student" />
       <End Role="StudentCourseReg" EntitySet="StudentCourseReg" />
     </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_AssignmentReport" Association="Self.FK_StudentReport_AssignmentReport">
-      <End Role="AssignmentReport" EntitySet="AssignmentReport" />
-      <End Role="StudentReport" EntitySet="StudentReport" />
+    <AssociationSet Name="FK_StudentSAR_Course" Association="Self.FK_StudentSAR_Course">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="StudentSAR" EntitySet="StudentSAR" />
     </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_Project" Association="Self.FK_StudentReport_Project">
-      <End Role="Project" EntitySet="Project" />
-      <End Role="StudentReport" EntitySet="StudentReport" />
-    </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_ProjectReport" Association="Self.FK_StudentReport_ProjectReport">
-      <End Role="ProjectReport" EntitySet="ProjectReport" />
-      <End Role="StudentReport" EntitySet="StudentReport" />
-    </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_Quiz" Association="Self.FK_StudentReport_Quiz">
-      <End Role="Quiz" EntitySet="Quiz" />
-      <End Role="StudentReport" EntitySet="StudentReport" />
-    </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_QuizReport" Association="Self.FK_StudentReport_QuizReport">
-      <End Role="QuizReport" EntitySet="QuizReport" />
-      <End Role="StudentReport" EntitySet="StudentReport" />
-    </AssociationSet>
-    <AssociationSet Name="FK_StudentReport_StudentCourseReg" Association="Self.FK_StudentReport_StudentCourseReg">
-      <End Role="StudentCourseReg" EntitySet="StudentCourseReg" />
-      <End Role="StudentReport" EntitySet="StudentReport" />
+    <AssociationSet Name="FK_StudentSAR_Student" Association="Self.FK_StudentSAR_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentSAR" EntitySet="StudentSAR" />
     </AssociationSet>
     <AssociationSet Name="FK_WholeBudget_WholeYearlyBudget" Association="Self.FK_WholeBudget_WholeYearlyBudget">
       <End Role="WholeYearlyBudget" EntitySet="WholeYearlyBudget" />

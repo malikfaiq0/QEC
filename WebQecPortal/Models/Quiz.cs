@@ -18,7 +18,6 @@ namespace WebQecPortal.Models
         public Quiz()
         {
             this.QuizReports = new HashSet<QuizReport>();
-            this.StudentReports = new HashSet<StudentReport>();
         }
     
         public int QuizID { get; set; }
@@ -34,7 +33,5 @@ namespace WebQecPortal.Models
         public virtual Term Term { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QuizReport> QuizReports { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StudentReport> StudentReports { get; set; }
     }
 }

@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="enter-class-header">
-                        <h2 class="text-white text-center pt-3">PMPF Form</h2>
+                        <h2 class="text-white text-center pt-3">NCEAC Form # 13</h2>
                     </div>
                 </div>
             </div>
@@ -23,126 +23,140 @@
 
                 <div class="col-md-10">
                     <div class="contact-form">
+                        <div class="contact-form" id="downloadPDFData">
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>INSTITUTION:</p>
-                                <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="enter-class-header">
+                                        <h2 class="text-white text-center pt-3">PMPF Form</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>INSTITUTION:</p>
+                                    <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>
+                                        PROGRAM (S) TO BE
+                                        EVALUATED
+                                        :
+                                    </p>
+                                    <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
+                            </div>
+
+                            <b>Process to monitor the implementation of courses to ensure the following important attributes</b>
+
+                            <br>
+                            <br>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>How far objectives of the program have been achieved?</p>
+                                    <textarea name="name" class="form-control">@ViewBag.objective</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>How frequent program is reviewed and revised? What is process/procedure?</p>
+                                    <textarea name="name" class="form-control">@ViewBag.review</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Summary of Problems Solving Skills Developed by the Program</p>
+                                    <textarea name="name" class="form-control">@ViewBag.problem</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Summary of technologies exposed to the students</p>
+                                    <textarea name="name" class="form-control">@ViewBag.tech</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Assessment Standards</p>
+                                    <textarea name="name" class="form-control">@ViewBag.assess</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>How far program correlates with the existing industrial trends? Give details</p>
+                                    <textarea name="name" class="form-control">@ViewBag.coRelate</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Application of emerging technologies</p>
+                                    <textarea name="name" class="form-control">@ViewBag.application</textarea>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>
-                                    PROGRAM (S) TO BE
-                                    EVALUATED
-                                    :
-                                </p>
-                                <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="" name="fname">
-                            </div>
-                        </div>
-
-                        <b>Process to monitor the implementation of courses to ensure the following important attributes</b>
-
-                        <br>
-                        <br>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>How far objectives of the program have been achieved?</p>
-                                <textarea name="name"  class="form-control">@ViewBag.objective</textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>How frequent program is reviewed and revised? What is process/procedure?</p>
-                                <textarea name="name"  class="form-control">@ViewBag.review</textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Summary of Problems Solving Skills Developed by the Program</p>
-                                <textarea name="name" class="form-control">@ViewBag.problem</textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Summary of technologies exposed to the students</p>
-                                <textarea name="name" class="form-control">@ViewBag.tech</textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Assessment Standards</p>
-                                <textarea name="name"  class="form-control">@ViewBag.assess</textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>How far program correlates with the existing industrial trends? Give details</p>
-                                <textarea name="name"  class="form-control">@ViewBag.coRelate</textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Application of emerging technologies</p>
-                                <textarea name="name"  class="form-control">@ViewBag.application</textarea>
-                            </div>
-                        </div>
-
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-success"><a href="@Url.Action("FacultyWorkload","NCEAC")" style="color:white;">Submit</a></button>
+                                <button type="submit" class="btn btn-success"><a href="@Url.Action("FacultyWorkload","NCEAC")" style="color:white;">Next</a></button>
                             </div>
                         </div>
+                        <br />
+
+
+                        <input type="button" id="downloadPDF" value="Export" />
+
                     </div>
-                </div>
-
-                <div class="col-md-2">
-                    @Html.ActionLink("AdminStructure", "AdminStructure", "NCEAC")
-                    <br />
-
-                    @Html.ActionLink("Admission", "Admission", "NCEAC")
-                    <br />
-                    @Html.ActionLink("AlumniBSCS", "AlumniBSCS", "NCEAC")
-                    <br />
-                    @Html.ActionLink("AlumniBSSE", "AlumniBSSE", "NCEAC")
-                    <br />
-
-                    @Html.ActionLink("CourseDescription", "CourseDescription", "NCEAC")
-                    <br />
-                    @Html.ActionLink("CourseLog", "CourseLog", "NCEAC")
-                    <br />
-
-                    @Html.ActionLink("CPMF", "CPMF", "NCEAC")
-                    <br />
-
-                    @Html.ActionLink("FacultyWorkload", "FacultyWorkload", "NCEAC")
-                    <br />
-                    @Html.ActionLink("FIF", "FIF", "NCEAC")
-                    <br />
-                    @Html.ActionLink("FinancialBSCS", "FinancialBSCS", "NCEAC")
-                    <br />
-                    @Html.ActionLink("FinancialBSSE", "FinancialBSSE", "NCEAC")
-                    <br />
-                    @Html.ActionLink("HECadministration", "HECadministration", "NCEAC")
-                    <br />
-                    @Html.ActionLink("PMPF", "PMPF", "NCEAC")
-                    <br />
-                    @Html.ActionLink("CRI", "CRI", "NCEAC")
-                    <br />
-                </div>
-
             </div>
+
+            <div class="col-md-2">
+                @Html.ActionLink("AdminStructure", "AdminStructure", "NCEAC")
+                <br />
+
+                @Html.ActionLink("Admission", "Admission", "NCEAC")
+                <br />
+                @Html.ActionLink("AlumniBSCS", "AlumniBSCS", "NCEAC")
+                <br />
+                @Html.ActionLink("AlumniBSSE", "AlumniBSSE", "NCEAC")
+                <br />
+
+                @Html.ActionLink("CourseDescription", "CourseDescription", "NCEAC")
+                <br />
+                @Html.ActionLink("CourseLog", "CourseLog", "NCEAC")
+                <br />
+
+                @Html.ActionLink("CPMF", "CPMF", "NCEAC")
+                <br />
+
+                @Html.ActionLink("FacultyWorkload", "FacultyWorkload", "NCEAC")
+                <br />
+                @Html.ActionLink("FIF", "FIF", "NCEAC")
+                <br />
+                @Html.ActionLink("FinancialBSCS", "FinancialBSCS", "NCEAC")
+                <br />
+                @Html.ActionLink("FinancialBSSE", "FinancialBSSE", "NCEAC")
+                <br />
+                @Html.ActionLink("HECadministration", "HECadministration", "NCEAC")
+                <br />
+                @Html.ActionLink("PMPF", "PMPF", "NCEAC")
+                <br />
+                @Html.ActionLink("CRI", "CRI", "NCEAC")
+                <br />
+            </div>
+
         </div>
+</div>
     </section>
-    <!-- /.content -->
+<!-- /.content -->
 </div>
 
 <!-- /.content-wrapper -->
@@ -151,7 +165,53 @@
     <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
-</div>
+<!--jQuery Export file funtion START-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function getClippedRegion(image, x, y, width, height) {
+        var canvas = document.createElement("canvas"),
+            ctx = canvas.getContext("2d");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        //                   source region         dest. region
+        ctx.drawImage(image, x, y, width, height, 0, 0, width, height);
+
+        return {
+            // Those are some pdfMake params
+            image: canvas.toDataURL(),
+            width: 500
+        };
+    }
+
+    $("body").on("click", "#downloadPDF", function () {
+
+        html2canvas($("#downloadPDFData")[0], {
+            onrendered: function (canvas) {
+                // split the canvas produced by html2canvas into several, based on desired PDF page height
+                let splitAt = 775; // A page height which fits for "LETTER" pageSize...
+
+                let images = [];
+                let y = 0;
+                while (canvas.height > y) {
+                    images.push(getClippedRegion(canvas, 0, y, canvas.width, splitAt));
+                    y += splitAt;
+                }
+
+                // PDF creation using pdfMake
+                var docDefinition = {
+                    content: images,
+                    pageSize: "LETTER"
+                };
+                pdfMake.createPdf(docDefinition).download("NCEAC_FORM.pdf");
+            }
+        });
+    });
+</script>
+<!--jQuery Export file funtion END-->
 <!-- ./wrapper -->
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>

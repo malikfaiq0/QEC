@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="enter-class-header">
-                        <h2 class="text-white text-center pt-3">CRI (Curriculum Related Information) Form</h2>
+                        <h2 class="text-white text-center pt-3">NCEAC Form # 09</h2>
                     </div>
                 </div>
             </div>
@@ -24,273 +24,289 @@
                 <div class="col-md-10">
                     <div class="contact-form">
 
+                        <div class="contact-form" id="downloadPDFData">
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>INSTITUTION:</p>
-                                <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="enter-class-header">
+                                        <h2 class="text-white text-center pt-3">CRI (Curriculum Related Information) Form</h2>
+                                    </div>
+                                </div>
                             </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>INSTITUTION:</p>
+                                    <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>
+                                        PROGRAM (S) TO BE
+                                        EVALUATED
+                                        :
+                                    </p>
+                                    <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
+                            </div>
+
+                            <p>
+                                <i>
+                                    Intent: Curriculum has sufficient technical content to prepare students for industry and graduate studies,
+                                    and has adequate humanities and social sciences content to help students become well-rounded individuals. Curriculum meets
+                                    the minimum requirements recommended in the HEC computing curriculum recommendations,
+                                    which have the following area-wise breakdown. Curriculum coverage is well-planned over four years
+                                </i>
+                            </p>
+
+                            <label>
+                                A.	Summary of HEC Minimum Requirements for Computing  Degree Program*
+                                (Computing includes majors in Computer Science, Software Engineering and Information Technology)
+                            </label><br>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+
+                                    <p>1.Computing-Core Courses.</p>
+                                    <label for="computingcr">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.hecComp" id="computingcr" name="computingcr" class="form-control">
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>2.Major (Computer Sciences/Software Engineering/Information Technology)-Core Courses.</p>
+                                    <label for="majorcr">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.hecmajor" id="majorcr" name="majorcr" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>3.Major (Computer Sciences/Software Engineering/Information Technology) Based –Electives.</p>
+                                    <label for="electivecr">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.hecbased" id="electivecr" name="electivecr" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <label for="ccredit">Cumulative Credit Hours</label>
+                                    <input type="text" value="@ViewBag.hecCumu" id="ccredit" name="ccredit" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>4.Supporting Sciences .</p>
+                                    <label for="supportcr">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.hecsuppSci" id="supportcr" name="supportcr" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>5.General Electives  .</p>
+                                    <label for="generalcr">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.hecGene" id="generalcr" name="generalcr" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>6.University Electives.</p>
+                                    <label for="universitycr">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.hecUniElect" id="universitycr" name="universitycr" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <label for="ccredit">Cumulative Credit Hours</label>
+                                    <input type="text" value="@ViewBag.hecCumu2" id="ccredit" name="ccredit" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <label for="tcredit">Total Credit Hours</label>
+                                    <input type="text" value="@ViewBag.hectot" id="tcredit" name="tcredit" class="form-control">
+                                </div>
+                            </div>
+
+                            <p>
+                                *FOR DETAIL REGARDING HEC RECOMMENDED CURRICULUM, REFER TO THE REPORT ENTITLED “CURRICULUM OF
+                                COMPUTER SCIENCE, SOFTWARE
+                                ENGINEERING AND INFORMATION TECHNOLOGY” AVAILABLE AT WEBSITE http://www.nceac.org
+                            </p>
+
+                            <label>
+                                B.Curriculum Summary/Comparison <br>
+                                Provide the summary of the program (under evaluation for accreditation) on the basis of
+                                comparison with the respective above mentioned HEC recommended curriculum
+
+                            </label>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+
+                                    <p>1.Computing-Core Courses.</p>
+                                    <label for="computingcrb">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.sumComp" id="computingcrb" name="computingcrb" class="form-control">
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>2.Major (Computer Sciences/Software Engineering/Information Technology)-Core Courses.</p>
+                                    <label for="majorcrb">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.summajor" id="majorcrb" name="majorcrb" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>3.Major (Computer Sciences/Software Engineering/Information Technology) Based –Electives.</p>
+                                    <label for="electivecrb">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.sumBased" id="electivecrb" name="electivecrb" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <label for="ccredit">Cumulative Credit Hours</label>
+                                    <input type="text" value="@ViewBag.sumCumu" id="ccreditb" name="ccreditb" class="form-control">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>4.Supporting Sciences .</p>
+                                    <label for="supportcrb">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.sumSuppSci" id="supportcrb" name="supportcrb" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>5.General Electives  .</p>
+                                    <label for="generalcrb">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.sumGene" id="generalcrb" name="generalcrb" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>6.University Electives.</p>
+                                    <label for="universitycrb">Credit Hours </label>
+                                    <input type="text" value="@ViewBag.sumUni" id="universitycrb" name="universitycrb" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <label for="ccredit">Cumulative Credit Hours</label>
+                                    <input type="text" value="@ViewBag.sumCumu2" id="ccreditb" name="ccreditb" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <label for="ccredit">Total Credit Hours</label>
+                                    <input type="text" value="@ViewBag.sumtot" id="ccreditb" name="ccreditb" class="form-control">
+                                </div>
+                            </div>
+
+                            <label>
+                                    C.	PROVIDE COMPLETE SUMMARY OF THE RESPECTIVE PROGRAM OF ALL COURSES
+                                    INVOLVING COURSE CODE, COURSE TITLE, CREDIT HOURS, PREREQUSITE FOR THE FOLLOWING CATEGORIES:
+                                </label><br>
+
+                                <label>Core Courses</label>
+
+                            <div class="form-group">
+                                    <div class="col-sm-10">
+                                        <table style="width:auto">
+
+                                            <tr>
+                                                <th>Course Code</th>
+                                                <th>Course Title</th>
+                                                <th>Credit Hours</th>
+                                                <th>Prerequisite</th>
+                                            </tr>
+                                            <tr>
+                                                <td><input value="@ViewBag.coursecode" type="text" id="code" name="code" maxlength="13" size="13"></td>
+                                                <td><input type="text" id="title" name="title" maxlength="13" size="13"></td>
+                                                <td><input type="text" id="hours" name="hours" maxlength="13" size="13"></td>
+                                                <td><input type="text" id="prereq" name="prereq" maxlength="13" size="13"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" id="code" name="code" maxlength="13" size="13"></td>
+                                                <td><input type="text" id="title" name="title" maxlength="13" size="13"></td>
+                                                <td><input type="text" id="hours" name="hours" maxlength="13" size="13"></td>
+                                                <td><input type="text" id="prereq" name="prereq" maxlength="13" size="13"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>
-                                    PROGRAM (S) TO BE
-                                    EVALUATED
-                                    :
-                                </p>
-                                <input type="text"  value="@ViewBag.prog"class="form-control" id="fname" placeholder="" name="fname">
-                            </div>
-                        </div>
+                    
 
-                        <p>
-                            <i>
-                                Intent: Curriculum has sufficient technical content to prepare students for industry and graduate studies,
-                                and has adequate humanities and social sciences content to help students become well-rounded individuals. Curriculum meets
-                                the minimum requirements recommended in the HEC computing curriculum recommendations,
-                                which have the following area-wise breakdown. Curriculum coverage is well-planned over four years
-                            </i>
-                        </p>
-
-                        <label>
-                            A.	Summary of HEC Minimum Requirements for Computing  Degree Program*
-                            (Computing includes majors in Computer Science, Software Engineering and Information Technology)
-                        </label><br>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-
-                                <p>1.Computing-Core Courses.</p>
-                                <label for="computingcr">Credit Hours </label>
-                                <input type="text" value="@ViewBag.hecComp"id="computingcr" name="computingcr" class="form-control">
-
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>2.Major (Computer Sciences/Software Engineering/Information Technology)-Core Courses.</p>
-                                <label for="majorcr">Credit Hours </label>
-                                <input type="text" value="@ViewBag.hecmajor" id="majorcr" name="majorcr" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>3.Major (Computer Sciences/Software Engineering/Information Technology) Based –Electives.</p>
-                                <label for="electivecr">Credit Hours </label>
-                                <input type="text" value="@ViewBag.hecbased" id="electivecr" name="electivecr" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <label for="ccredit">Cumulative Credit Hours</label>
-                                <input type="text"  value="@ViewBag.hecCumu"id="ccredit" name="ccredit" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>4.Supporting Sciences .</p>
-                                <label for="supportcr">Credit Hours </label>
-                                <input type="text"  value="@ViewBag.hecsuppSci"id="supportcr" name="supportcr" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>5.General Electives  .</p>
-                                <label for="generalcr">Credit Hours </label>
-                                <input type="text" value="@ViewBag.hecGene" id="generalcr" name="generalcr" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>6.University Electives.</p>
-                                <label for="universitycr">Credit Hours </label>
-                                <input type="text" value="@ViewBag.hecUniElect" id="universitycr" name="universitycr" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <label for="ccredit">Cumulative Credit Hours</label>
-                                <input type="text" value="@ViewBag.hecCumu2" id="ccredit" name="ccredit" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <label for="tcredit">Total Credit Hours</label>
-                                <input type="text" value="@ViewBag.hectot" id="tcredit" name="tcredit" class="form-control">
-                            </div>
-                        </div>
-
-                        <p>
-                            *FOR DETAIL REGARDING HEC RECOMMENDED CURRICULUM, REFER TO THE REPORT ENTITLED “CURRICULUM OF
-                            COMPUTER SCIENCE, SOFTWARE
-                            ENGINEERING AND INFORMATION TECHNOLOGY” AVAILABLE AT WEBSITE http://www.nceac.org
-                        </p>
-
-                        <label>
-                            B.Curriculum Summary/Comparison <br>
-                            Provide the summary of the program (under evaluation for accreditation) on the basis of
-                            comparison with the respective above mentioned HEC recommended curriculum
-
-                        </label>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-
-                                <p>1.Computing-Core Courses.</p>
-                                <label for="computingcrb">Credit Hours </label>
-                                <input type="text" value="@ViewBag.sumComp" id="computingcrb" name="computingcrb" class="form-control">
-
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>2.Major (Computer Sciences/Software Engineering/Information Technology)-Core Courses.</p>
-                                <label for="majorcrb">Credit Hours </label>
-                                <input type="text" value="@ViewBag.summajor" id="majorcrb" name="majorcrb" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>3.Major (Computer Sciences/Software Engineering/Information Technology) Based –Electives.</p>
-                                <label for="electivecrb">Credit Hours </label>
-                                <input type="text"  value="@ViewBag.sumBased"id="electivecrb" name="electivecrb" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <label for="ccredit">Cumulative Credit Hours</label>
-                                <input type="text" value="@ViewBag.sumCumu" id="ccreditb" name="ccreditb" class="form-control">
-                            </div>
-                        </div>
-
-
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>4.Supporting Sciences .</p>
-                                <label for="supportcrb">Credit Hours </label>
-                                <input type="text" value="@ViewBag.sumSuppSci" id="supportcrb" name="supportcrb" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>5.General Electives  .</p>
-                                <label for="generalcrb">Credit Hours </label>
-                                <input type="text" value="@ViewBag.sumGene" id="generalcrb" name="generalcrb" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>6.University Electives.</p>
-                                <label for="universitycrb">Credit Hours </label>
-                                <input type="text" value="@ViewBag.sumUni" id="universitycrb" name="universitycrb" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <label for="ccredit">Cumulative Credit Hours</label>
-                                <input type="text" value="@ViewBag.sumCumu2" id="ccreditb" name="ccreditb" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <label for="ccredit">Total Credit Hours</label>
-                                <input type="text" value="@ViewBag.sumtot" id="ccreditb" name="ccreditb" class="form-control">
-                            </div>
-                        </div>
-
-                        <label>
-                            C.	PROVIDE COMPLETE SUMMARY OF THE RESPECTIVE PROGRAM OF ALL COURSES
-                            INVOLVING COURSE CODE, COURSE TITLE, CREDIT HOURS, PREREQUSITE FOR THE FOLLOWING CATEGORIES:
-                        </label><br>
-
-                        <label>Core Courses</label>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <table style="width:auto">
-
-                                    <tr>
-                                        <th>Course Code</th>
-                                        <th>Course Title</th>
-                                        <th>Credit Hours</th>
-                                        <th>Prerequisite</th>
-                                    </tr>
-                                    <tr>
-                                        <td><input value="@ViewBag.coursecode" type="text" id="code" name="code" maxlength="13" size="13"></td>
-                                        <td><input type="text" id="title" name="title" maxlength="13" size="13"></td>
-                                        <td><input  type="text" id="hours" name="hours" maxlength="13" size="13"></td>
-                                        <td><input  type="text" id="prereq" name="prereq" maxlength="13" size="13"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="text" id="code" name="code" maxlength="13" size="13"></td>
-                                        <td><input type="text" id="title" name="title" maxlength="13" size="13"></td>
-                                        <td><input type="text" id="hours" name="hours" maxlength="13" size="13"></td>
-                                        <td><input type="text" id="prereq" name="prereq" maxlength="13" size="13"></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary"><a href="@Url.Action("FIF","NCEAC")" style="color:white;">Next</a></button>
-                            </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary"><a href="@Url.Action("FIF","NCEAC")" style="color:white;">Next</a></button>
                         </div>
                     </div>
+                    <br />
+
+
+                    <input type="button" id="downloadPDF" value="Export" />
                 </div>
-
-                <div class="col-md-2">
-                    @Html.ActionLink("AdminStructure", "AdminStructure", "NCEAC")
-                    <br />
-
-                    @Html.ActionLink("Admission", "Admission", "NCEAC")
-                    <br />
-                    @Html.ActionLink("AlumniBSCS", "AlumniBSCS", "NCEAC")
-                    <br />
-                    @Html.ActionLink("AlumniBSSE", "AlumniBSSE", "NCEAC")
-                    <br />
-
-                    @Html.ActionLink("CourseDescription", "CourseDescription", "NCEAC")
-                    <br />
-                    @Html.ActionLink("CourseLog", "CourseLog", "NCEAC")
-                    <br />
-
-                    @Html.ActionLink("CPMF", "CPMF", "NCEAC")
-                    <br />
-
-                    @Html.ActionLink("FacultyWorkload", "FacultyWorkload", "NCEAC")
-                    <br />
-                    @Html.ActionLink("FIF", "FIF", "NCEAC")
-                    <br />
-                    @Html.ActionLink("FinancialBSCS", "FinancialBSCS", "NCEAC")
-                    <br />
-                    @Html.ActionLink("FinancialBSSE", "FinancialBSSE", "NCEAC")
-                    <br />
-                    @Html.ActionLink("HECadministration", "HECadministration", "NCEAC")
-                    <br />
-                    @Html.ActionLink("PMPF", "PMPF", "NCEAC")
-                    <br />
-                    @Html.ActionLink("CRI", "CRI", "NCEAC")
-                    <br />
-                </div>
-
             </div>
+
+            <div class="col-md-2">
+                @Html.ActionLink("AdminStructure", "AdminStructure", "NCEAC")
+                <br />
+
+                @Html.ActionLink("Admission", "Admission", "NCEAC")
+                <br />
+                @Html.ActionLink("AlumniBSCS", "AlumniBSCS", "NCEAC")
+                <br />
+                @Html.ActionLink("AlumniBSSE", "AlumniBSSE", "NCEAC")
+                <br />
+
+                @Html.ActionLink("CourseDescription", "CourseDescription", "NCEAC")
+                <br />
+                @Html.ActionLink("CourseLog", "CourseLog", "NCEAC")
+                <br />
+
+                @Html.ActionLink("CPMF", "CPMF", "NCEAC")
+                <br />
+
+                @Html.ActionLink("FacultyWorkload", "FacultyWorkload", "NCEAC")
+                <br />
+                @Html.ActionLink("FIF", "FIF", "NCEAC")
+                <br />
+                @Html.ActionLink("FinancialBSCS", "FinancialBSCS", "NCEAC")
+                <br />
+                @Html.ActionLink("FinancialBSSE", "FinancialBSSE", "NCEAC")
+                <br />
+                @Html.ActionLink("HECadministration", "HECadministration", "NCEAC")
+                <br />
+                @Html.ActionLink("PMPF", "PMPF", "NCEAC")
+                <br />
+                @Html.ActionLink("CRI", "CRI", "NCEAC")
+                <br />
+            </div>
+
         </div>
+</div>
     </section>
-    <!-- /.content -->
+<!-- /.content -->
 </div>
 
 <!-- /.content-wrapper -->
@@ -299,7 +315,54 @@
     <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
-</div>
+<!-- /.control-sidebar -->
+<!--jQuery Export file funtion START-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function getClippedRegion(image, x, y, width, height) {
+        var canvas = document.createElement("canvas"),
+            ctx = canvas.getContext("2d");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        //                   source region         dest. region
+        ctx.drawImage(image, x, y, width, height, 0, 0, width, height);
+
+        return {
+            // Those are some pdfMake params
+            image: canvas.toDataURL(),
+            width: 500
+        };
+    }
+
+    $("body").on("click", "#downloadPDF", function () {
+
+        html2canvas($("#downloadPDFData")[0], {
+            onrendered: function (canvas) {
+                // split the canvas produced by html2canvas into several, based on desired PDF page height
+                let splitAt = 775; // A page height which fits for "LETTER" pageSize...
+
+                let images = [];
+                let y = 0;
+                while (canvas.height > y) {
+                    images.push(getClippedRegion(canvas, 0, y, canvas.width, splitAt));
+                    y += splitAt;
+                }
+
+                // PDF creation using pdfMake
+                var docDefinition = {
+                    content: images,
+                    pageSize: "LETTER"
+                };
+                pdfMake.createPdf(docDefinition).download("NCEAC_FORM.pdf");
+            }
+        });
+    });
+</script>
+<!--jQuery Export file funtion END-->
 <!-- ./wrapper -->
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>

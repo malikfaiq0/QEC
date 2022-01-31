@@ -4,51 +4,69 @@
     ViewBag.Title = "Index";
 }
 <div class="content-wrapper">
-<h2>Index</h2>
+    <div class="content-header">
+        <div class="container-fluid">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Course.CourseCode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Department.DepartmentName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Program.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Term.Semester)
-        </th>
-        <th></th>
-    </tr>
+            <div class="card bg-info text-white">
+                <div class="card-body">
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Course.CourseCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Department.DepartmentName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Program.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Term.Semester)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.SARID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.SARID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.SARID })
-            </td>
-        </tr>
-    }
+                    <center><h3>SAR Manager</h3></center>
 
-</table>
+                </div>
+            </div>
 
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+            <div class="table100 ver1 m-b-110">
+                <table data-vertable="ver1">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Course.CourseCode)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Department.DepartmentName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Program.Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Term.Semester)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Course.CourseCode)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Department.DepartmentName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Program.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Term.Semester)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.SARID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.SARID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.SARID })
+                            </td>
+                            <td>
+                                <button type="submit" class="btn btn-info"><a href="@Url.Action("StudentEvaluation","SAR")" style="color:white;">Download SAR</a></button>
+
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+
+
+        </div>
+     </div>
 </div>

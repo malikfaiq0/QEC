@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="enter-class-header">
-                        <h2 class="text-white text-center pt-3">Alumni (BSSE) Form</h2>
+                        <h2 class="text-white text-center pt-3">NCEAC Form # 05</h2>
                     </div>
                 </div>
             </div>
@@ -24,84 +24,98 @@
                 <div class="col-md-10">
                     <div class="contact-form">
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>INSTITUTION:</p>
-                                <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                        <div class="contact-form" id="downloadPDFData">
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="enter-class-header">
+                                        <h2 class="text-white text-center pt-3">Alumni (BSSE) Form</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>INSTITUTION:</p>
+                                    <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>How many students has the institution graduated over the past five years?</p>
+                                    <input type="text" value="@ViewBag.noOfGrad15" class="form-control" id="fname" placeholder="2015" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.noOfGrad16" class="form-control" id="fname" placeholder="2016" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.noOfGrad17" class="form-control" id="fname" placeholder="2017" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.noOfGrad18" class="form-control" id="fname" placeholder="2018" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.noOfGrad19" class="form-control" id="fname" placeholder="2019" name="fname" maxlength="6" size="6">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>How many students have graduated under the program over the past five years?</p>
+                                    <input type="text" value="@ViewBag.noOfGrad15" class="form-control" id="fname" placeholder="2015" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.noOfGrad16" class="form-control" id="fname" placeholder="2016" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.noOfGrad17" class="form-control" id="fname" placeholder="2017" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.noOfGrad18" class="form-control" id="fname" placeholder="2018" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.noOfGrad19" class="form-control" id="fname" placeholder="2019" name="fname" maxlength="6" size="6">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>What facilities and resources are available to students for internships and placement?</p>
+                                    <textarea name="name" class="form-control">@ViewBag.facility</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>How does the university maintain contact with her alumni?</p>
+                                    <textarea name="name" class="form-control">@ViewBag.contact</textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Summary of the record of graduate’s placement in industry for the last five years</p>
+                                    <input type="file" value="@ViewBag.industryPath" class="form-control" id="customFile" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Summary of the record of graduate’s placement in national and international institutions for MS and PhD studies</p>
+                                    <input type="file" value="@ViewBag.acadpath" class="form-control" id="customFile" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Process to maintain communication with graduates</p>
+                                    <textarea name="name" class="form-control">@ViewBag.comm</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Alumni Registered Association?</p>
+                                    <textarea name="name" class="form-control">@ViewBag.association</textarea>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>How many students has the institution graduated over the past five years?</p>
-                                <input type="text" value="@ViewBag.noOfGrad15" class="form-control" id="fname" placeholder="2015" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.noOfGrad16" class="form-control" id="fname" placeholder="2016" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.noOfGrad17" class="form-control" id="fname" placeholder="2017" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.noOfGrad18" class="form-control" id="fname" placeholder="2018" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.noOfGrad19" class="form-control" id="fname" placeholder="2019" name="fname" maxlength="6" size="6">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>How many students have graduated under the program over the past five years?</p>
-                                <input type="text" value="@ViewBag.noOfGrad15" class="form-control" id="fname" placeholder="2015" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.noOfGrad16" class="form-control" id="fname" placeholder="2016" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.noOfGrad17" class="form-control" id="fname" placeholder="2017" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.noOfGrad18" class="form-control" id="fname" placeholder="2018" name="fname" maxlength="6" size="6">
-                                <input type="text"  value="@ViewBag.noOfGrad19" class="form-control" id="fname" placeholder="2019" name="fname" maxlength="6" size="6">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>What facilities and resources are available to students for internships and placement?</p>
-                                <textarea name="name"  class="form-control">@ViewBag.facility</textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>How does the university maintain contact with her alumni?</p>
-                                <textarea name="name" class="form-control">@ViewBag.contact</textarea>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Summary of the record of graduate’s placement in industry for the last five years</p>
-                                <input type="file" value="@ViewBag.industryPath" class="form-control" id="customFile" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Summary of the record of graduate’s placement in national and international institutions for MS and PhD studies</p>
-                                <input type="file"  value="@ViewBag.acadpath" class="form-control" id="customFile" />
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Process to maintain communication with graduates</p>
-                                <textarea name="name"  class="form-control">@ViewBag.comm</textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Alumni Registered Association?</p>
-                                <textarea name="name"  class="form-control">@ViewBag.association</textarea>
-                            </div>
-                        </div>
-
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-primary"><a href="@Url.Action("CourseLog","NCEAC")" style="color:white;">Next</a></button>
                             </div>
                         </div>
+                        <br />
+
+
+                        <input type="button" id="downloadPDF" value="Export" />
                     </div>
                 </div>
 
@@ -152,7 +166,53 @@
     <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
-</div>
+<!--jQuery Export file funtion START-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function getClippedRegion(image, x, y, width, height) {
+        var canvas = document.createElement("canvas"),
+            ctx = canvas.getContext("2d");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        //                   source region         dest. region
+        ctx.drawImage(image, x, y, width, height, 0, 0, width, height);
+
+        return {
+            // Those are some pdfMake params
+            image: canvas.toDataURL(),
+            width: 500
+        };
+    }
+
+    $("body").on("click", "#downloadPDF", function () {
+
+        html2canvas($("#downloadPDFData")[0], {
+            onrendered: function (canvas) {
+                // split the canvas produced by html2canvas into several, based on desired PDF page height
+                let splitAt = 775; // A page height which fits for "LETTER" pageSize...
+
+                let images = [];
+                let y = 0;
+                while (canvas.height > y) {
+                    images.push(getClippedRegion(canvas, 0, y, canvas.width, splitAt));
+                    y += splitAt;
+                }
+
+                // PDF creation using pdfMake
+                var docDefinition = {
+                    content: images,
+                    pageSize: "LETTER"
+                };
+                pdfMake.createPdf(docDefinition).download("NCEAC_FORM.pdf");
+            }
+        });
+    });
+</script>
+<!--jQuery Export file funtion END-->
 <!-- ./wrapper -->
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>

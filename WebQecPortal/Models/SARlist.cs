@@ -12,18 +12,16 @@ namespace WebQecPortal.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class StudentReport
+    public partial class SARlist
     {
-        public int StudentReportID { get; set; }
-        public Nullable<int> AssignReportID { get; set; }
+        public int SARlistID { get; set; }
         public Nullable<int> SCRID { get; set; }
-        public Nullable<int> QuizIReportD { get; set; }
-        public Nullable<int> ProjectReportID { get; set; }
+        public Nullable<int> ProjectIReportD { get; set; }
+        public Nullable<int> QuizReportID { get; set; }
+        public Nullable<int> AssignReportID { get; set; }
     
         public virtual AssignmentReport AssignmentReport { get; set; }
-        public virtual Project Project { get; set; }
         public virtual ProjectReport ProjectReport { get; set; }
-        public virtual Quiz Quiz { get; set; }
         public virtual QuizReport QuizReport { get; set; }
         public virtual StudentCourseReg StudentCourseReg { get; set; }
     }

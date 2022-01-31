@@ -655,14 +655,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="StudentReports">
-      <EntityTypeMapping TypeName="QecPortalModel.StudentReport">
-        <MappingFragment StoreEntitySet="StudentReport">
-          <ScalarProperty Name="ProjectReportID" ColumnName="ProjectReportID" />
-          <ScalarProperty Name="QuizIReportD" ColumnName="QuizIReportD" />
-          <ScalarProperty Name="SCRID" ColumnName="SCRID" />
-          <ScalarProperty Name="AssignReportID" ColumnName="AssignReportID" />
-          <ScalarProperty Name="StudentReportID" ColumnName="StudentReportID" />
+    <EntitySetMapping Name="StudentSARs">
+      <EntityTypeMapping TypeName="QecPortalModel.StudentSAR">
+        <MappingFragment StoreEntitySet="StudentSAR">
+          <ScalarProperty Name="ProjectMarks" ColumnName="ProjectMarks" />
+          <ScalarProperty Name="QuizMarks" ColumnName="QuizMarks" />
+          <ScalarProperty Name="AssignMarks" ColumnName="AssignMarks" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="QuizNumber" ColumnName="QuizNumber" />
+          <ScalarProperty Name="AssignmentNumber" ColumnName="AssignmentNumber" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="StudentSARID" ColumnName="StudentSARID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -719,6 +723,17 @@
           <ScalarProperty Name="NoOfGraduatedTotal" ColumnName="NoOfGraduatedTotal" />
           <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
           <ScalarProperty Name="YearlyPassoutID" ColumnName="YearlyPassoutID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SARlists">
+      <EntityTypeMapping TypeName="QecPortalModel.SARlist">
+        <MappingFragment StoreEntitySet="SARlist">
+          <ScalarProperty Name="AssignReportID" ColumnName="AssignReportID" />
+          <ScalarProperty Name="QuizReportID" ColumnName="QuizReportID" />
+          <ScalarProperty Name="ProjectIReportD" ColumnName="ProjectIReportD" />
+          <ScalarProperty Name="SCRID" ColumnName="SCRID" />
+          <ScalarProperty Name="SARlistID" ColumnName="SARlistID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

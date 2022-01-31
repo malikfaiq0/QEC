@@ -1,0 +1,71 @@
+//END OF ASIDE....BEFORE SCRIPT
+
+<!--jQuery Export file funtion START-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function getClippedRegion(image, x, y, width, height) {
+        var canvas = document.createElement("canvas"),
+            ctx = canvas.getContext("2d");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        //                   source region         dest. region
+        ctx.drawImage(image, x, y, width, height, 0, 0, width, height);
+
+        return {
+            // Those are some pdfMake params
+            image: canvas.toDataURL(),
+            width: 500
+        };
+    }
+
+    $("body").on("click", "#downloadPDF", function () {
+
+        html2canvas($("#downloadPDFData")[0], {
+            onrendered: function (canvas) {
+                // split the canvas produced by html2canvas into several, based on desired PDF page height
+                let splitAt = 775; // A page height which fits for "LETTER" pageSize...
+
+                let images = [];
+                let y = 0;
+                while (canvas.height > y) {
+                    images.push(getClippedRegion(canvas, 0, y, canvas.width, splitAt));
+                    y += splitAt;
+                }
+
+                // PDF creation using pdfMake
+                var docDefinition = {
+                    content: images,
+                    pageSize: "LETTER"
+                };
+                pdfMake.createPdf(docDefinition).download("NCEAC_FORM.pdf");
+            }
+        });
+    });
+</script>
+<!--jQuery Export file funtion END-->
+
+
+
+
+//BUTTON AFTER NEXT BUTTON
+
+<input type="button" id="downloadPDF" value="Export" />
+
+//HEADING 
+iv class="row">
+                                <div class="col-md-12">
+                                    <div class="enter-class-header">
+                                        <h2 class="text-white text-center pt-3">Course Description Form</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+
+//CONTACT ID
+
+   <div class="contact-form" id="downloadPDFData">
+//CLOSE DIV BEFORE NEXT BUTTON

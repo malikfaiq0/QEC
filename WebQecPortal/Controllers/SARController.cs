@@ -50,7 +50,19 @@ namespace WebQecPortal.Controllers
         }
         public ActionResult StudentEvaluation()
         {
-            return View();
+
+   
+            var SARList  = from d in db.StudentSARs
+                         
+                               join td in db.Courses on d.CourseID equals td.CourseID
+                               
+                               join ps in db.Students on d.StudentID equals ps.StudentID
+                             
+                             
+                    
+                               select new SARList { Students = ps };
+            return View(db.Students.ToList());
+
         }
         public ActionResult StudentEvaluationDetails()
         {

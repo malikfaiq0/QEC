@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="enter-class-header">
-                        <h2 class="text-white text-center pt-3">Admission Form</h2>
+                        <h2 class="text-white text-center pt-3">NCEAC Form # 03</h2>
                     </div>
                 </div>
             </div>
@@ -23,110 +23,120 @@
 
                 <div class="col-md-10">
                     <div class="contact-form">
+                        <div class="contact-form" id="downloadPDFData">
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>INSTITUTION:</p>
-                                <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>
-                                    PROGRAM (S) TO BE
-                                    EVALUATED
-                                    :
-                                </p>
-                                <div class="form-check">
-                                    <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="" name="fname">
-
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="enter-class-header">
+                                        <h2 class="text-white text-center pt-3">Admission Form</h2>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Frequency of admission per academic year. Give detail.</p>
-                                <input type="text" value="@ViewBag.freq" class="form-control" id="fname" placeholder="" name="fname">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>When are new students admitted in the program?</p>
-                                <input type="text" value="@ViewBag.studAdmit" class="form-control" id="fname" placeholder="" name="fname">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>What instruments (scores in Matriculation and FSc exams, admission test, interview, etc.) are used for admission into the program?</p>
-                                <textarea name="name" value="@ViewBag.instrument" class="form-control"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>What is the minimum requirement for admission in your program?</p>
-                                <input type="text" value="@ViewBag.req" class="form-control" id="fname" placeholder="" name="fname">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Is admission open merit?</p>
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="radio" value="@ViewBag.isYesMerit"
-                                           name="flexRadioDefault"
-                                           id="flexRadioDefault1" />
-                                    <label class="form-check-label" for="flexRadioDefault1"> Yes </label>
-                                </div>
-
-                                <!-- Default checked radio -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="radio" value="@ViewBag.isNoMerit"
-                                           name="flexRadioDefault"
-                                           id="flexRadioDefault2"
-                                           checked />
-                                    <label class="form-check-label" for="flexRadioDefault2"> No </label>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>INSTITUTION:</p>
+                                    <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
                                 </div>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>
+                                        PROGRAM (S) TO BE
+                                        EVALUATED
+                                        :
+                                    </p>
+                                    <div class="form-check">
+                                        <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="" name="fname">
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>How merit list is compiled?</p>
-                                <input type="text"  value="@ViewBag.meritCompiled" class="form-control" id="fname" placeholder="" name="fname">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>How many students are inducted per admission?</p>
-                                <p><b>BSCS:</b></p>
-                                <input type="text" value="@ViewBag.spring19bscs" class="form-control" id="fname" placeholder="Spring 2019" name="fname" maxlength="6" size="6">
-                                <input type="text"  value="@ViewBag.fall19bscs"class="form-control" id="fname" placeholder="Fall 2019" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.spring20bscs" class="form-control" id="fname" placeholder="Spring 2020" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.fall20bscs" class="form-control" id="fname" placeholder="Fall 2020" name="fname" maxlength="6" size="6">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Frequency of admission per academic year. Give detail.</p>
+                                    <input type="text" value="@ViewBag.freq" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p><b>BSSE:</b></p>
-                                <input type="text" value="@ViewBag.spring19bsse" class="form-control" id="fname" placeholder="Spring 2019" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.fall19bsse" class="form-control" id="fname" placeholder="Fall 2019" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.spring20bsse" class="form-control" id="fname" placeholder="Spring 2020" name="fname" maxlength="6" size="6">
-                                <input type="text" value="@ViewBag.fall20bsse"class="form-control" id="fname" placeholder="Fall 2020" name="fname" maxlength="6" size="6">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>When are new students admitted in the program?</p>
+                                    <input type="text" value="@ViewBag.studAdmit" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>How do you ensure that the admission policies and procedures are followed properly and that transparency is maintained in the admission process?</p>
-                                <textarea name="name" class="form-control">@ViewBag.policy </textarea>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>What instruments (scores in Matriculation and FSc exams, admission test, interview, etc.) are used for admission into the program?</p>
+                                    <textarea name="name" value="@ViewBag.instrument" class="form-control"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>What is the minimum requirement for admission in your program?</p>
+                                    <input type="text" value="@ViewBag.req" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Is admission open merit?</p>
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="radio" value="@ViewBag.isYesMerit"
+                                               name="flexRadioDefault"
+                                               id="flexRadioDefault1" />
+                                        <label class="form-check-label" for="flexRadioDefault1"> Yes </label>
+                                    </div>
+
+                                    <!-- Default checked radio -->
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="radio" value="@ViewBag.isNoMerit"
+                                               name="flexRadioDefault"
+                                               id="flexRadioDefault2"
+                                               checked />
+                                        <label class="form-check-label" for="flexRadioDefault2"> No </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>How merit list is compiled?</p>
+                                    <input type="text" value="@ViewBag.meritCompiled" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>How many students are inducted per admission?</p>
+                                    <p><b>BSCS:</b></p>
+                                    <input type="text" value="@ViewBag.spring19bscs" class="form-control" id="fname" placeholder="Spring 2019" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.fall19bscs" class="form-control" id="fname" placeholder="Fall 2019" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.spring20bscs" class="form-control" id="fname" placeholder="Spring 2020" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.fall20bscs" class="form-control" id="fname" placeholder="Fall 2020" name="fname" maxlength="6" size="6">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p><b>BSSE:</b></p>
+                                    <input type="text" value="@ViewBag.spring19bsse" class="form-control" id="fname" placeholder="Spring 2019" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.fall19bsse" class="form-control" id="fname" placeholder="Fall 2019" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.spring20bsse" class="form-control" id="fname" placeholder="Spring 2020" name="fname" maxlength="6" size="6">
+                                    <input type="text" value="@ViewBag.fall20bsse" class="form-control" id="fname" placeholder="Fall 2020" name="fname" maxlength="6" size="6">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>How do you ensure that the admission policies and procedures are followed properly and that transparency is maintained in the admission process?</p>
+                                    <textarea name="name" class="form-control">@ViewBag.policy </textarea>
+                                </div>
                             </div>
                         </div>
 
@@ -135,6 +145,10 @@
                                 <button type="submit" class="btn btn-primary"><a href="@Url.Action("AlumniBSCS","NCEAC")" style="color:white;">Next</a></button>
                             </div>
                         </div>
+                        <br />
+
+
+                        <input type="button" id="downloadPDF" value="Export" />
                     </div>
                 </div>
 
@@ -185,7 +199,53 @@
     <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
-</div>
+<!--jQuery Export file funtion START-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function getClippedRegion(image, x, y, width, height) {
+        var canvas = document.createElement("canvas"),
+            ctx = canvas.getContext("2d");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        //                   source region         dest. region
+        ctx.drawImage(image, x, y, width, height, 0, 0, width, height);
+
+        return {
+            // Those are some pdfMake params
+            image: canvas.toDataURL(),
+            width: 500
+        };
+    }
+
+    $("body").on("click", "#downloadPDF", function () {
+
+        html2canvas($("#downloadPDFData")[0], {
+            onrendered: function (canvas) {
+                // split the canvas produced by html2canvas into several, based on desired PDF page height
+                let splitAt = 775; // A page height which fits for "LETTER" pageSize...
+
+                let images = [];
+                let y = 0;
+                while (canvas.height > y) {
+                    images.push(getClippedRegion(canvas, 0, y, canvas.width, splitAt));
+                    y += splitAt;
+                }
+
+                // PDF creation using pdfMake
+                var docDefinition = {
+                    content: images,
+                    pageSize: "LETTER"
+                };
+                pdfMake.createPdf(docDefinition).download("NCEAC_FORM.pdf");
+            }
+        });
+    });
+</script>
+<!--jQuery Export file funtion END-->
 <!-- ./wrapper -->
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>

@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="enter-class-header">
-                        <h2 class="text-white text-center pt-3">Course Log Form</h2>
+                        <h2 class="text-white text-center pt-3">NCEAC Form # 06</h2>
                     </div>
                 </div>
             </div>
@@ -25,76 +25,88 @@
 
                 <div class="col-md-10">
                     <div class="contact-form">
+                        <div class="contact-form" id="downloadPDFData">
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>INSTITUTION:</p>
-                                <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="enter-class-header">
+                                        <h2 class="text-white text-center pt-3">Course Log Form</h2>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>PROGRAM(S) TO BE EVALUATED:</p>
-                                <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>INSTITUTION:</p>
+                                    <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Course Name:</p>
-                                <input type="text" value="@ViewBag.CourseName " class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>PROGRAM(S) TO BE EVALUATED:</p>
+                                    <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Catalog Number:</p>
-                                <input type="text" class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Course Name:</p>
+                                    <input type="text" value="@ViewBag.CourseName " class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Instructor Name:</p>
-                                <input type="text" value="@ViewBag.InstructorName " class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Catalog Number:</p>
+                                    <input type="text" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Date:</p>
-                                <input type="text" value="@ViewBag.date " class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Instructor Name:</p>
+                                    <input type="text" value="@ViewBag.InstructorName " class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Duration:</p>
-                                <input type="text" value="@ViewBag.duration " class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Date:</p>
+                                    <input type="text" value="@ViewBag.date " class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Topics Covered:</p>
-                                <input type="text" value="@ViewBag.topics " class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Duration:</p>
+                                    <input type="text" value="@ViewBag.duration " class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>Evaluation Instruments Used:</p>
-                                <input type="text" value="@ViewBag.evaluation " class="form-control" id="fname" placeholder="" name="fname">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Topics Covered:</p>
+                                    <input type="text" value="@ViewBag.topics " class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
                             </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>Evaluation Instruments Used:</p>
+                                    <input type="text" value="@ViewBag.evaluation " class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
+                            </div>
+
                         </div>
-
-
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-primary"><a href="@Url.Action("CPMF","NCEAC")" style="color:white;">Next</a></button>
                             </div>
                         </div>
+                        <br />
+
+
+                        <input type="button" id="downloadPDF" value="Export" />
                     </div>
                 </div>
 
@@ -145,7 +157,53 @@
     <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
-</div>
+<!--jQuery Export file funtion START-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function getClippedRegion(image, x, y, width, height) {
+        var canvas = document.createElement("canvas"),
+            ctx = canvas.getContext("2d");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        //                   source region         dest. region
+        ctx.drawImage(image, x, y, width, height, 0, 0, width, height);
+
+        return {
+            // Those are some pdfMake params
+            image: canvas.toDataURL(),
+            width: 500
+        };
+    }
+
+    $("body").on("click", "#downloadPDF", function () {
+
+        html2canvas($("#downloadPDFData")[0], {
+            onrendered: function (canvas) {
+                // split the canvas produced by html2canvas into several, based on desired PDF page height
+                let splitAt = 775; // A page height which fits for "LETTER" pageSize...
+
+                let images = [];
+                let y = 0;
+                while (canvas.height > y) {
+                    images.push(getClippedRegion(canvas, 0, y, canvas.width, splitAt));
+                    y += splitAt;
+                }
+
+                // PDF creation using pdfMake
+                var docDefinition = {
+                    content: images,
+                    pageSize: "LETTER"
+                };
+                pdfMake.createPdf(docDefinition).download("NCEAC_FORM.pdf");
+            }
+        });
+    });
+</script>
+<!--jQuery Export file funtion END-->
 <!-- ./wrapper -->
 <!-- jQuery -->
 <script src="../../../plugins/jquery/jquery.min.js"></script>

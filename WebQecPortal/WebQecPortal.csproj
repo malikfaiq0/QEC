@@ -148,6 +148,8 @@
     <Compile Include="Controllers\NCEACController.cs" />
     <Compile Include="Controllers\SARController.cs" />
     <Compile Include="Controllers\SARsController.cs" />
+    <Compile Include="Controllers\StudentSARsController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -318,6 +320,9 @@
       <DependentUpon>QecPortalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SARDataModel.cs" />
+    <Compile Include="Models\SARlist.cs">
+      <DependentUpon>QecPortalModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\SourcesOfIncome.cs">
       <DependentUpon>QecPortalModel.tt</DependentUpon>
     </Compile>
@@ -333,7 +338,7 @@
     <Compile Include="Models\StudentEvaluation.cs">
       <DependentUpon>QecPortalModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\StudentReport.cs">
+    <Compile Include="Models\StudentSAR.cs">
       <DependentUpon>QecPortalModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SYearlyBudget.cs">
@@ -2408,6 +2413,21 @@
     <Content Include="Views\SARs\Edit.cshtml" />
     <Content Include="Views\SARs\Index.cshtml" />
     <Content Include="Views\_DashboardLayoutPage1.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\StudentReports\Create.cshtml" />
+    <Content Include="Views\StudentReports\Delete.cshtml" />
+    <Content Include="Views\StudentReports\Details.cshtml" />
+    <Content Include="Views\StudentReports\Edit.cshtml" />
+    <Content Include="Views\StudentReports\Index.cshtml" />
+    <Content Include="Views\StudentSARs\Create.cshtml" />
+    <Content Include="Views\StudentSARs\Delete.cshtml" />
+    <Content Include="Views\StudentSARs\Details.cshtml" />
+    <Content Include="Views\StudentSARs\Edit.cshtml" />
+    <Content Include="Views\StudentSARs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\File\" />

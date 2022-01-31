@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebQecPortal.Models.StudentSAR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignmentNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuizNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Project)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignMarks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuizMarks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectMarks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.CourseCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.StudentRegNum)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignmentNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuizNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Project)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignMarks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuizMarks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectMarks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course.CourseCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.StudentRegNum)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentSARID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentSARID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentSARID })
+        </td>
+    </tr>
+}
+
+</table>

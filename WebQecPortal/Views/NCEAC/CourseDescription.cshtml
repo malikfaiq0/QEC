@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="enter-class-header">
-                        <h2 class="text-white text-center pt-3">Course Description Form</h2>
+                        <h2 class="text-white text-center pt-3">NCEAC FORM # 01</h2>
                     </div>
                 </div>
             </div>
@@ -25,128 +25,142 @@
                     <div class="contact-form">
 
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>INSTITUTION:</p>
-                                <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                        <div class="contact-form" id="downloadPDFData">
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="enter-class-header">
+                                        <h2 class="text-white text-center pt-3">Course Description Form</h2>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <p>
-                                    PROGRAM (S) TO BE
-                                    EVALUATED
-                                    :
-                                </p>
-                                <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="" name="fname">
-                            </div>
-                        </div>
 
 
-                        <label>A.	Course Description </label>
-                        <p> (Fill out the following table for each course in your computer science curriculum. A filled out form should not be more than 2-3 pages.)</p>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>INSTITUTION:</p>
+                                    <input type="text" value="@ViewBag.Institution" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <p>
+                                        PROGRAM (S) TO BE
+                                        EVALUATED
+                                        :
+                                    </p>
+                                    <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="" name="fname">
+                                </div>
+                            </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="fname" placeholder="Cource code" name="fname">
 
+                            <label>A.	Course Description </label>
+                            <p> (Fill out the following table for each course in your computer science curriculum. A filled out form should not be more than 2-3 pages.)</p>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="fname" placeholder="Cource code" name="fname">
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.CourseName" class="form-control" id="fname" placeholder="Cource Title" name="fname">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.CourseName" class="form-control" id="fname" placeholder="Cource Title" name="fname">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.Credithr" class="form-control" id="fname" placeholder="Credit Hours" name="fname">
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.Credithr" class="form-control" id="fname" placeholder="Credit Hours" name="fname">
+                                </div>
                             </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.Prereq" class="form-control" id="fname" placeholder="Prerequisites by Course(s) and Topics" name="fname">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <textarea rows="4" cols="50" placeholder="Assessment Instruments with Weights (homework, quizzes, midterms, final, programming assignments, lab work, etc.)">@ViewBag.assess</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.InstructorName" class="form-control" id="fname" placeholder="Course Coordinator" name="fname">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.url" class="form-control" id="fname" placeholder="URL (if any)" name="fname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.catdescrip" class="form-control" id="fname" placeholder="Current Catalog Description" name="fname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.textbook" class="form-control" id="fname" placeholder="Textbook (or Laboratory Manual for Laboratory Courses)" name="fname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.refer" class="form-control" id="fname" placeholder="Reference Material" name="fname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.goal" class="form-control" id="fname" placeholder="Course Goals" name="fname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <textarea rows="4" cols="50" placeholder="Topics Covered in the Course, with Number of Lectures on Each Topic (assume 15-week instruction and one-hour lectures)">@ViewBag.topics</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.project" class="form-control" id="fname" placeholder="Laboratory Projects/Experiments Done in the Course" name="fname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="Programming Assignments Don in the Course" name="fname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <label> Class Time Spent on (in credit hours)</label>
+                                    <input type="text" value="@ViewBag.theory" class="form-control" id="fname" placeholder="Theory" name="fname">
+                                    <input type="text" value="@ViewBag.prob" class="form-control" id="fname" placeholder="Problem Analysis" name="fname">
+                                    <input type="text" value="@ViewBag.sol" class="form-control" id="fname" placeholder="Solution Design" name="fname">
+                                    <input type="text" value="@ViewBag.issues" class="form-control" id="fname" placeholder="Social and Ethical Issues" name="fname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <label>Oral and Written Communications </label>
+                                    <p>
+                                        Every student is required to submit at least <input type="text" value="@ViewBag.Owcwritten" id="code" name="code" maxlength="4" size="4"> written
+                                        reports of typically
+                                        <input type="text" value="@ViewBag.Owcpages" id="code" name="code"
+                                               maxlength="4" size="4"> pages and
+                                        to make <input type="text" value="@ViewBag.Owcpres" id="code" name="code" maxlength="4" size="4"> oral presentations
+                                        of typically <input type="text" value="@ViewBag.Owcminutes" i
+                                                            d="code" name="code" maxlength="4" size="4"> minute’s duration.
+                                        Include only material that
+                                        is graded for grammar, spelling, style,
+                                        and so forth, as well as for technical content, completeness, and accuracy.
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.Prereq" class="form-control" id="fname" placeholder="Prerequisites by Course(s) and Topics" name="fname">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <textarea rows="4" cols="50"  placeholder="Assessment Instruments with Weights (homework, quizzes, midterms, final, programming assignments, lab work, etc.)">@ViewBag.assess</textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.InstructorName" class="form-control" id="fname" placeholder="Course Coordinator" name="fname">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.url" class="form-control" id="fname" placeholder="URL (if any)" name="fname">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.catdescrip" class="form-control" id="fname" placeholder="Current Catalog Description" name="fname">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.textbook" class="form-control" id="fname" placeholder="Textbook (or Laboratory Manual for Laboratory Courses)" name="fname">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.refer" class="form-control" id="fname" placeholder="Reference Material" name="fname">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.goal" class="form-control" id="fname" placeholder="Course Goals" name="fname">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <textarea rows="4" cols="50"  placeholder="Topics Covered in the Course, with Number of Lectures on Each Topic (assume 15-week instruction and one-hour lectures)">@ViewBag.topics</textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.project" class="form-control" id="fname" placeholder="Laboratory Projects/Experiments Done in the Course" name="fname">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="text" value="@ViewBag.prog" class="form-control" id="fname" placeholder="Programming Assignments Don in the Course" name="fname">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <label> Class Time Spent on (in credit hours)</label>
-                                <input type="text" value="@ViewBag.theory" class="form-control" id="fname" placeholder="Theory" name="fname">
-                                <input type="text" value="@ViewBag.prob" class="form-control" id="fname" placeholder="Problem Analysis" name="fname">
-                                <input type="text" value="@ViewBag.sol" class="form-control" id="fname" placeholder="Solution Design" name="fname">
-                                <input type="text" value="@ViewBag.issues" class="form-control" id="fname" placeholder="Social and Ethical Issues" name="fname">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <label>Oral and Written Communications </label>
-                                <p>
-                                    Every student is required to submit at least <input type="text" value="@ViewBag.Owcwritten" id="code" name="code" maxlength="4" size="4"> written
-                                    reports of typically
-                                    <input type="text" value="@ViewBag.Owcpages" id="code" name="code"
-                                           maxlength="4" size="4"> pages and
-                                    to make <input type="text" value="@ViewBag.Owcpres" id="code" name="code" maxlength="4" size="4"> oral presentations
-                                    of typically <input type="text" value="@ViewBag.Owcminutes" i
-                                                        d="code" name="code" maxlength="4" size="4"> minute’s duration.
-                                    Include only material that
-                                    is graded for grammar, spelling, style,
-                                    and so forth, as well as for technical content, completeness, and accuracy.
-                                </p>
-                            </div>
-                        </div>
 
 
                         <div class="form-group">
@@ -154,6 +168,12 @@
                                 <button type="submit" class="btn btn-primary"><a href="@Url.Action("CRI","NCEAC")" style="color:white;">Next</a></button>
                             </div>
                         </div>
+                        <br />
+
+
+                        <input type="button" id="downloadPDF" value="Export" />
+
+
                     </div>
                 </div>
 
@@ -204,7 +224,55 @@
     <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
-</div>
+<!--jQuery Export file funtion START-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function getClippedRegion(image, x, y, width, height) {
+        var canvas = document.createElement("canvas"),
+            ctx = canvas.getContext("2d");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        //                   source region         dest. region
+        ctx.drawImage(image, x, y, width, height, 0, 0, width, height);
+
+        return {
+            // Those are some pdfMake params
+            image: canvas.toDataURL(),
+            width: 500
+        };
+    }
+
+    $("body").on("click", "#downloadPDF", function () {
+
+        html2canvas($("#downloadPDFData")[0], {
+            onrendered: function (canvas) {
+                // split the canvas produced by html2canvas into several, based on desired PDF page height
+                let splitAt = 775; // A page height which fits for "LETTER" pageSize...
+
+                let images = [];
+                let y = 0;
+                while (canvas.height > y) {
+                    images.push(getClippedRegion(canvas, 0, y, canvas.width, splitAt));
+                    y += splitAt;
+                }
+
+                // PDF creation using pdfMake
+                var docDefinition = {
+                    content: images,
+                    pageSize: "LETTER"
+                };
+                pdfMake.createPdf(docDefinition).download("NCEAC_FORM.pdf");
+            }
+        });
+    });
+</script>
+<!--jQuery Export file funtion END-->
+
+
 <!-- ./wrapper -->
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>

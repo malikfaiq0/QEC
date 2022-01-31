@@ -242,7 +242,6 @@ C:\fyp maju\Backup\16122021\WebQecPortal\bin\Newtonsoft.Json.xml
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\Antlr3.Runtime.pdb
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csproj.CopyComplete
-C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csprojAssemblyReference.cache
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\BouncyCastle.Crypto.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.xmlworker.dll

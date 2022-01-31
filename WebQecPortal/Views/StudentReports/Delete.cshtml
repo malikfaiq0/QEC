@@ -1,0 +1,72 @@
+﻿@model WebQecPortal.Models.StudentReport
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>StudentReport</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignmentReport.AssignReportID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignmentReport.AssignReportID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.ProjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project.ProjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectReport.ProjectIReportD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectReport.ProjectIReportD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quiz.QuizName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quiz.QuizName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuizReport.QuizReportID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuizReport.QuizReportID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentCourseReg.SCRID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentCourseReg.SCRID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

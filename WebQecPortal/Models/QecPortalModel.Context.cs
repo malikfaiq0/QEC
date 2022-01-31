@@ -80,12 +80,13 @@ namespace WebQecPortal.Models
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<StudentCourseReg> StudentCourseRegs { get; set; }
         public virtual DbSet<StudentEvaluation> StudentEvaluations { get; set; }
-        public virtual DbSet<StudentReport> StudentReports { get; set; }
+        public virtual DbSet<StudentSAR> StudentSARs { get; set; }
         public virtual DbSet<SYearlyBudget> SYearlyBudgets { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Term> Terms { get; set; }
         public virtual DbSet<WholeBudget> WholeBudgets { get; set; }
         public virtual DbSet<WholeYearlyBudget> WholeYearlyBudgets { get; set; }
         public virtual DbSet<YearlyPassout> YearlyPassouts { get; set; }
+        public virtual DbSet<SARlist> SARlists { get; set; }
     }
 }

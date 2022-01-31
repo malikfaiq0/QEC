@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WebQecPortal.Models.StudentReport>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="content-wrapper">
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignmentReport.AssignReportID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project.ProjectName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectReport.ProjectIReportD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quiz.QuizName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuizReport.QuizReportID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentCourseReg.SCRID)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignmentReport.AssignReportID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Project.ProjectName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectReport.ProjectIReportD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quiz.QuizName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuizReport.QuizReportID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentCourseReg.SCRID)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.StudentReportID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.StudentReportID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.StudentReportID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

@@ -73,19 +73,16 @@ namespace WebQecPortal.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SARID,DepartmentID,ProgramID,TermID,CourseID")] SAR sAR, HttpPostedFileBase file)
+        public ActionResult Create([Bind(Include = "SARID,DepartmentID,ProgramID,TermID,CourseID")] SAR sAR)
         {
-            
+           
+
             if (ModelState.IsValid)
             {
                 db.SARs.Add(sAR);
 
                 db.SaveChanges();
-                //string path = Server.MapPath("~/App_Data/File");
-                //string filename = Path.GetFileName(file.FileName);
-
-                //string fullpath = Path.Combine(path, filename);
-                //file.SaveAs(fullpath);
+               
                 return RedirectToAction("Index");
             }
             ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", sAR.CourseID);

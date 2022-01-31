@@ -1,0 +1,82 @@
+﻿@model WebQecPortal.Models.StudentSAR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentSAR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignmentNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignmentNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuizNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuizNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignMarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignMarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuizMarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuizMarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectMarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectMarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.CourseCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.CourseCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.StudentRegNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.StudentRegNum)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentSARID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -20,7 +20,7 @@ namespace WebQecPortal.Models
             this.AssignmentReports = new HashSet<AssignmentReport>();
             this.ProjectReports = new HashSet<ProjectReport>();
             this.QuizReports = new HashSet<QuizReport>();
-            this.StudentReports = new HashSet<StudentReport>();
+            this.SARlists = new HashSet<SARlist>();
         }
     
         public int SCRID { get; set; }
@@ -36,6 +36,6 @@ namespace WebQecPortal.Models
         public virtual ICollection<QuizReport> QuizReports { get; set; }
         public virtual Student Student { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StudentReport> StudentReports { get; set; }
+        public virtual ICollection<SARlist> SARlists { get; set; }
     }
 }

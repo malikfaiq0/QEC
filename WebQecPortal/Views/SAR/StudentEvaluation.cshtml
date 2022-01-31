@@ -1,4 +1,6 @@
-﻿
+﻿@model IEnumerable<WebQecPortal.Models.Student>
+
+
 @{
     ViewBag.Title = "StudentEvaluation";
 }
@@ -63,8 +65,12 @@
                 <table data-vertable="ver1">
                     <thead>
                         <tr class="row100 head">
-                            <th class="column100 column1" data-column="column1">Reg ID</th>
-                            <th class="column100 column2" data-column="column2">Student Name</th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.StudentRegNum)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.SudentName)
+                            </th>
                             <th class="column100 column3" data-column="column3">Assign 1</th>
                             <th class="column100 column4" data-column="column4">Assign 2</th>
                             <th class="column100 column5" data-column="column5">Quiz 1</th>
@@ -74,67 +80,36 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="row100">
-                            <td class="column100 column1" data-column="column1">SP19-BSSE-0073</td>
-                            <td class="column100 column2" data-column="column2">Inshal Jamal</td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="column100 column4" data-column="column4"><i class="fas fa-times"></i></td>
-                            <td class="column100 column5" data-column="column5"><i class="fas fa-times"></i></td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td>
-                                <center>
-                                    <button type="submit" class="btn btn-info"><a href="@Url.Action("StudentEvaluationDetails","SAR")" style="color:white;">View Details</a></button>
-                                </center>
-                            </td>
-                        </tr>
+                        @foreach (var item in Model)
+                        {
 
-                        <tr class="row100">
-                            <td class="column100 column1" data-column="column1">SP19-BSSE-0069</td>
-                            <td class="column100 column2" data-column="column2">Moiz Madni Khan</td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="column100 column4" data-column="column4"><i class="fas fa-times"></i></td>
-                            <td class="column100 column5" data-column="column5"><i class="fas fa-times"></i></td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td>
-                                <center>
-                                    <button type="submit" class="btn btn-info"><a href="@Url.Action("StudentEvaluationDetails","SAR")"  style="color:white;">View Details</a></button>
-                                </center>
-                            </td>
-                        </tr>
+                    <tr class="row100">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StudentRegNum)
 
-                        <tr class="row100">
-                            <td class="column100 column1" data-column="column1">SP19-BSSE-0042</td>
-                            <td class="column100 column2" data-column="column2">Syed Haider Imam</td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="column100 column4" data-column="column4"><i class="fas fa-times"></i></td>
-                            <td class="column100 column5" data-column="column5"><i class="fas fa-times"></i></td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td>
-                                <center>
-                                    <button type="submit" class="btn btn-info"><a href="@Url.Action("StudentEvaluationDetails","SAR")"  style="color:white;">View Details</a></button>
-                                </center>
-                            </td>
-                        </tr>
-
-                        <tr class="row100">
-                            <td class="column100 column1" data-column="column1">SP19-BSSE-0049</td>
-                            <td class="column100 column2" data-column="column2">Muhammad Zeeshan</td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="column100 column4" data-column="column4"><i class="fas fa-times"></i></td>
-                            <td class="column100 column5" data-column="column5"><i class="fas fa-times"></i></td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                            <td>
-                                <center>
-                                    <button type="submit" class="btn btn-info"><a href="@Url.Action("StudentEvaluationDetails","SAR")"  style="color:white;">View Details</a></button>
-                                </center>
-                            </td>
-                        </tr>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SudentName)
+                        </td>
+                        
+                        <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        <td class="column100 column4" data-column="column4"><i class="fas fa-times"></i></td>
+                        <td class="column100 column5" data-column="column5"><i class="fas fa-times"></i></td>
+                        <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
+                        <td>
+                            <center>
+                                <button type="submit" class="btn btn-info"><a href="@Url.Action("StudentEvaluationDetails", "SAR")" style="color:white;">View Details</a></button>
+                            </center>
+                        </td>
+                    </tr>
 
 
+
+
+
+
+                        }
                     </tbody>
                 </table>
             </div>
@@ -154,11 +129,11 @@
     All rights reserved.
 </footer>
 <div>
-<!-- Control Sidebar -->
-<aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-</aside>
-<!-- /.control-sidebar -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
 <!-- jQuery -->

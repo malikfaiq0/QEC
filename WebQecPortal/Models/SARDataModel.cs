@@ -25,4 +25,21 @@ namespace WebQecPortal.Models
         public Department Departments { get; set; }
 
     }
+    public class SARList
+    {
+        public StudentCourseReg StudentCourseRegs { get; set; }
+        public AssignmentReport AssignmentReports { get; set; }
+        public QuizReport QuizReports { get; set; }
+
+        public ProjectReport ProjectReports { get; set; }
+
+        public Quiz Quizs { get; set; }
+        public Project Projects { get; set; }
+        public Assignment Assignments
+        {
+            set; get;
+        }
+        public Course Courses { get; set; }
+        public Student Students { get; set; }
+    }
 }

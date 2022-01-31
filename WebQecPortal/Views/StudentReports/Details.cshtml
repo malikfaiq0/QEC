@@ -1,0 +1,66 @@
+﻿@model WebQecPortal.Models.StudentReport
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentReport</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignmentReport.AssignReportID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignmentReport.AssignReportID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.ProjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project.ProjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectReport.ProjectIReportD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectReport.ProjectIReportD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quiz.QuizName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quiz.QuizName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuizReport.QuizReportID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuizReport.QuizReportID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentCourseReg.SCRID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentCourseReg.SCRID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentReportID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

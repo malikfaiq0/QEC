@@ -25,6 +25,7 @@ namespace WebQecPortal.Models
             this.FacultyCourses = new HashSet<FacultyCours>();
             this.SARs = new HashSet<SAR>();
             this.StudentCourseRegs = new HashSet<StudentCourseReg>();
+            this.StudentSARs = new HashSet<StudentSAR>();
         }
     
         public int CourseID { get; set; }
@@ -49,5 +50,7 @@ namespace WebQecPortal.Models
         public virtual ICollection<SAR> SARs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StudentCourseReg> StudentCourseRegs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StudentSAR> StudentSARs { get; set; }
     }
 }

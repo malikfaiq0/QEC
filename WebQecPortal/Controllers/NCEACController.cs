@@ -22,24 +22,7 @@ namespace WebQecPortal.Controllers
     
         }
 
-        [HttpPost]
-        [ValidateInput(false)]
-        public FileResult ExportHTML(string ExportData)
-        {
-            using (MemoryStream stream = new System.IO.MemoryStream())
-            {
-                StringReader reader = new StringReader(ExportData);
-                Document PdfFile = new Document(PageSize.A4);
-                PdfWriter writer = PdfWriter.GetInstance(PdfFile, stream);
-                PdfFile.Open();
-                XMLWorkerHelper.GetInstance().ParseXHtml(writer, PdfFile, reader);
-                PdfFile.Add(new Paragraph(ExportData));
-                PdfFile.NewPage();
-                PdfFile.Close();
 
-                return File(stream.ToArray(), "application/pdf", "ExportData.pdf");
-            }
-        }
 
         public ActionResult AdminStructure()
         {
@@ -1619,6 +1602,8 @@ namespace WebQecPortal.Controllers
             return View(lst);
             //return View();
         }
+
+        //Get
         public ActionResult FacultyWorkload()
         {
             //int FacultyID = 2;
@@ -1651,6 +1636,27 @@ namespace WebQecPortal.Controllers
            ViewBag.FacultyCourses2 = String.Join(",", lst2);
            //ViewBag.Save = "<script>alert('Data Save Successfully')</script>";
            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public FileResult ExportHTML(string ExportData)
+        {
+            using (MemoryStream stream = new System.IO.MemoryStream())
+            {
+                StringReader reader = new StringReader(ExportData);
+                Document PdfFile = new Document(PageSize.A4);
+                PdfWriter writer = PdfWriter.GetInstance(PdfFile, stream);
+                PdfFile.Open();
+                XMLWorkerHelper.GetInstance().ParseXHtml(writer, PdfFile, reader);
+                //PdfFile.Add(new Paragraph(ExportData));
+                //PdfFile.NewPage();
+                PdfFile.Close();
+
+
+                return File(stream.ToArray(), "application/pdf", "ExportData.pdf");
+            }
         }
         public ActionResult FIF()
         {
