@@ -6,50 +6,96 @@
 
 }
 <div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
 
 
-    <h2>Details</h2>
+            <h2>Details</h2>
+            <div class="card bg-info text-white" style="height:100px;">
+                <div class="card-body">
 
-    <div>
-        <h4>SAR</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Course.CourseCode)
-            </dt>
+                    <center>
+                        <h3>Student Evaluation</h3>
+                        <p>(Course Wise)</p>
+                        <center>
 
-            <dd>
-                @Html.DisplayFor(model => model.Course.CourseCode)
-            </dd>
+                </div>
+            </div>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Department.DepartmentName)
-            </dt>
+            <div class="card bg-light text-white">
+                <div class="card-body">
 
-            <dd>
-                @Html.DisplayFor(model => model.Department.DepartmentName)
-            </dd>
+                    <div class="row">
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Program.Description)
-            </dt>
+                        <div class="col-md-3"></div>
 
-            <dd>
-                @Html.DisplayFor(model => model.Program.Description)
-            </dd>
+                        <div class="col-md-4">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Course.CourseTitle)
+                            </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Term.Semester)
-            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Course.CourseTitle)
+                            </dd>
+                        </div>
 
-            <dd>
-                @Html.DisplayFor(model => model.Term.Semester)
-            </dd>
+                        <div class="col-md-4">
+                            <b>Semester: SP21</b>
+                        </div>
 
-        </dl>
+                        <div class="col-md-3"></div>
+
+                    </div>
+
+
+
+                    <div class="row">
+
+                        <div class="col-md-3"></div>
+
+                        <div class="col-md-4">
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Department.DepartmentName)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Department.DepartmentName)
+                            </dd>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div>
+                <h4>SAR</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                   
+
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Program.Description)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Program.Description)
+                    </dd>
+
+
+
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.SARID }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.SARID }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-    </div>
+</div>

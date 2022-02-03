@@ -43,7 +43,7 @@ namespace WebQecPortal.Controllers
         // GET: SARs/Create
         public ActionResult Create()
         {
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseTitle");
             ViewBag.DepartmentID = new SelectList(db.Departments, "DepartmentID", "DepartmentName");
             ViewBag.ProgramID = new SelectList(db.Programs, "ProgramID", "Description");
             ViewBag.TermID = new SelectList(db.Terms, "TermID", "Semester");
@@ -85,7 +85,7 @@ namespace WebQecPortal.Controllers
                
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", sAR.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseTitle", sAR.CourseID);
             ViewBag.DepartmentID = new SelectList(db.Departments, "DepartmentID", "DepartmentName", sAR.DepartmentID);
             ViewBag.ProgramID = new SelectList(db.Programs, "ProgramID", "Description", sAR.ProgramID);
             ViewBag.TermID = new SelectList(db.Terms, "TermID", "Semester", sAR.TermID);
@@ -106,7 +106,7 @@ namespace WebQecPortal.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", sAR.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseTitle", sAR.CourseID);
             ViewBag.DepartmentID = new SelectList(db.Departments, "DepartmentID", "DepartmentName", sAR.DepartmentID);
             ViewBag.ProgramID = new SelectList(db.Programs, "ProgramID", "Description", sAR.ProgramID);
             ViewBag.TermID = new SelectList(db.Terms, "TermID", "Semester", sAR.TermID);
@@ -126,7 +126,7 @@ namespace WebQecPortal.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", sAR.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseTitle", sAR.CourseID);
             ViewBag.DepartmentID = new SelectList(db.Departments, "DepartmentID", "DepartmentName", sAR.DepartmentID);
             ViewBag.ProgramID = new SelectList(db.Programs, "ProgramID", "Description", sAR.ProgramID);
             ViewBag.TermID = new SelectList(db.Terms, "TermID", "Semester", sAR.TermID);

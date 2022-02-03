@@ -22,7 +22,7 @@
                 <table data-vertable="ver1">
                     <tr>
                         <th>
-                            @Html.DisplayNameFor(model => model.Course.CourseCode)
+                            @Html.DisplayNameFor(model => model.Course.CourseTitle)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.Department.DepartmentName)
@@ -40,7 +40,7 @@
                     {
                         <tr>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Course.CourseCode)
+                                @Html.DisplayFor(modelItem => item.Course.CourseTitle)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Department.DepartmentName)

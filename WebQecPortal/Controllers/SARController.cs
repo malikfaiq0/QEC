@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebQecPortal.Models;
@@ -51,6 +54,7 @@ namespace WebQecPortal.Controllers
         public ActionResult StudentEvaluation()
         {
 
+
    
             var SARList  = from d in db.StudentSARs
                          
@@ -61,12 +65,23 @@ namespace WebQecPortal.Controllers
                              
                     
                                select new SARList { Students = ps };
-            return View(db.Students.ToList());
+            var studentSARs = db.StudentSARs.Include(s => s.Course).Include(s => s.Student);
+            return View(db.StudentSARs.ToList());
 
         }
-        public ActionResult StudentEvaluationDetails()
+
+            public ActionResult StudentEvaluationDetails(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            StudentSAR studentSAR = db.StudentSARs.Find(id);
+            if (studentSAR == null)
+            {
+                return HttpNotFound();
+            }
+            return View(studentSAR);
         }
     }
 }

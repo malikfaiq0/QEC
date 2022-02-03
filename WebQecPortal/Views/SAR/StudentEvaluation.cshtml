@@ -1,9 +1,10 @@
-﻿@model IEnumerable<WebQecPortal.Models.Student>
+﻿@model IEnumerable<WebQecPortal.Models.StudentSAR>
 
 
 @{
     ViewBag.Title = "StudentEvaluation";
 }
+
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -28,7 +29,7 @@
 
                     <div class="row">
 
-                        <div class="col-md-3"></div>
+                        @*<div class="col-md-3"></div>
 
                         <div class="col-md-4">
                             <b>Course Name: Computer Programming</b>
@@ -50,7 +51,7 @@
 
                         <div class="col-md-4">
                             <b>Weeks Spent: Week 11</b>
-                        </div>
+                        </div>*@
 
 
 
@@ -66,43 +67,80 @@
                     <thead>
                         <tr class="row100 head">
                             <th>
-                                @Html.DisplayNameFor(model => model.StudentRegNum)
+                                @Html.DisplayNameFor(model => model.Student.SudentName)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.SudentName)
+                                @Html.DisplayNameFor(model => model.Student.StudentRegNum)
                             </th>
-                            <th class="column100 column3" data-column="column3">Assign 1</th>
-                            <th class="column100 column4" data-column="column4">Assign 2</th>
-                            <th class="column100 column5" data-column="column5">Quiz 1</th>
-                            <th class="column100 column6" data-column="column6">Quiz 2</th>
-                            <th class="column100 column6" data-column="column6">Project</th>
-                            <th class="column100 column7" data-column="column7"></th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Course.CourseTitle)
+                            </th>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.AssignmentNumber)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.QuizNumber)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Project)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.AssignMarks)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.QuizMarks)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ProjectMarks)
+                            </th>
+
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
 
-                    <tr class="row100">
-                        <td>
-                            @Html.DisplayFor(modelItem => item.StudentRegNum)
+                            <tr class="row100">
 
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.SudentName)
-                        </td>
-                        
-                        <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        <td class="column100 column4" data-column="column4"><i class="fas fa-times"></i></td>
-                        <td class="column100 column5" data-column="column5"><i class="fas fa-times"></i></td>
-                        <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        <td class="column100 column3" data-column="column3"><i class="fa fa-check" aria-hidden="true"></i></td>
-                        <td>
-                            <center>
-                                <button type="submit" class="btn btn-info"><a href="@Url.Action("StudentEvaluationDetails", "SAR")" style="color:white;">View Details</a></button>
-                            </center>
-                        </td>
-                    </tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Student.SudentName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Student.StudentRegNum)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Course.CourseTitle)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AssignmentNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.QuizNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Project)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AssignMarks)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.QuizMarks)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProjectMarks)
+                                </td>
+
+
+                                <td>
+                                    <center>
+                                        @Html.ActionLink("StudentEvaluationDetails", "StudentEvaluationDetails", new { id = item.StudentSARID }, new { Styles = "color:Blue" })
+
+                                    </center>
+                                </td>
+                            </tr>
 
 
 

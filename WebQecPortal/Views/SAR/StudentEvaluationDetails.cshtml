@@ -1,6 +1,9 @@
-﻿
+﻿@model WebQecPortal.Models.StudentSAR
+
 @{
     ViewBag.Title = "StudentEvaluationDetails";
+    Layout = "~/Views/_DashboardLayoutPage1.cshtml";
+
 }
 
 </aside>
@@ -26,11 +29,14 @@
 
 
                                 <div class="col-md-4">
-                                    <b>Student ID: SP19-BSSE-0073</b>
+                                   
+                                    @Html.DisplayFor(model => model.Student.StudentRegNum)
+
                                 </div>
 
                                 <div class="col-md-4">
-                                    <b>Student Name: INSHAL JAMAL</b>
+                                    @Html.DisplayFor(model => model.Student.SudentName)
+
                                 </div>
 
                                 <div class="col-md-2">

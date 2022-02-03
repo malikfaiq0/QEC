@@ -39,7 +39,7 @@ namespace WebQecPortal.Controllers
         // GET: StudentSARs/Create
         public ActionResult Create()
         {
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode");
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseTitle");
             ViewBag.StudentID = new SelectList(db.Students, "StudentID", "StudentRegNum");
             return View();
         }
@@ -58,7 +58,7 @@ namespace WebQecPortal.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", studentSAR.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseTitle", studentSAR.CourseID);
             ViewBag.StudentID = new SelectList(db.Students, "StudentID", "StudentRegNum", studentSAR.StudentID);
             return View(studentSAR);
         }
@@ -75,7 +75,7 @@ namespace WebQecPortal.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", studentSAR.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseTitle", studentSAR.CourseID);
             ViewBag.StudentID = new SelectList(db.Students, "StudentID", "StudentRegNum", studentSAR.StudentID);
             return View(studentSAR);
         }
@@ -93,7 +93,7 @@ namespace WebQecPortal.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseCode", studentSAR.CourseID);
+            ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseTitle", studentSAR.CourseID);
             ViewBag.StudentID = new SelectList(db.Students, "StudentID", "StudentRegNum", studentSAR.StudentID);
             return View(studentSAR);
         }

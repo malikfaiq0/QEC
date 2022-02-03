@@ -160,9 +160,6 @@ C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\EntityFramework.dll
 C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\EntityFramework.SqlServer.dll
 C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\EntityFramework.xml
 C:\fyp maju\Backup\14122021\WebQecPortal\WebQecPortal\bin\EntityFramework.SqlServer.xml
-C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csproj.CoreCompileInputs.cache
-C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.dll
-C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.pdb
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\WebQecPortal.dll.config
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\WebQecPortal.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\WebQecPortal.pdb
@@ -216,8 +213,12 @@ C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\vbc.rsp
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\VBCSCompiler.exe
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\roslyn\VBCSCompiler.exe.config
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\Antlr3.Runtime.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\BouncyCastle.Crypto.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\EntityFramework.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\EntityFramework.SqlServer.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.pdfa.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.xmlworker.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\Microsoft.Web.Infrastructure.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\Newtonsoft.Json.dll
@@ -231,6 +232,7 @@ C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.WebPages.Razor.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\WebGrease.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\EntityFramework.xml
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\EntityFramework.SqlServer.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.xml
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Helpers.xml
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Mvc.xml
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.Optimization.xml
@@ -241,9 +243,8 @@ C:\fyp maju\Backup\16122021\WebQecPortal\bin\System.Web.WebPages.Razor.xml
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\Newtonsoft.Json.xml
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\Antlr3.Runtime.pdb
 C:\fyp maju\Backup\16122021\WebQecPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csproj.CoreCompileInputs.cache
 C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csproj.CopyComplete
-C:\fyp maju\Backup\16122021\WebQecPortal\bin\BouncyCastle.Crypto.dll
-C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.dll
-C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.xmlworker.dll
-C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.xml
-C:\fyp maju\Backup\16122021\WebQecPortal\bin\itextsharp.pdfa.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.pdb
+C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csprojAssemblyReference.cache

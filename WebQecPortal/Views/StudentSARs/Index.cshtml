@@ -10,7 +10,7 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <tr>
+    <tr class="row100 head">
         <th>
             @Html.DisplayNameFor(model => model.AssignmentNumber)
         </th>
@@ -30,7 +30,7 @@
             @Html.DisplayNameFor(model => model.ProjectMarks)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Course.CourseCode)
+            @Html.DisplayNameFor(model => model.Course.CourseTitle)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Student.StudentRegNum)
@@ -59,7 +59,7 @@
             @Html.DisplayFor(modelItem => item.ProjectMarks)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Course.CourseCode)
+            @Html.DisplayFor(modelItem => item.Course.CourseTitle)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Student.StudentRegNum)
