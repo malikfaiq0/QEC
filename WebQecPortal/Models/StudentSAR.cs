@@ -23,11 +23,8 @@ namespace WebQecPortal.Models
         public Nullable<int> AssignMarks { get; set; }
         public Nullable<int> QuizMarks { get; set; }
         public int ProjectMarks { get; set; }
-        public string SudentName { get; set; }
     
         public virtual Course Course { get; set; }
         public virtual Student Student { get; set; }
-        public virtual Program Program { get; set; }
-
     }
 }

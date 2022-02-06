@@ -24,7 +24,14 @@ namespace WebQecPortal.Models
             this.PMPFs = new HashSet<PMPF>();
             this.PMPFs1 = new HashSet<PMPF>();
         }
-    
+
+       
+
+        public string CourseCode { get; set; }
+        public string CourseTitle { get; set; }
+        public Nullable<int> Credithr { get; set; }
+        public string PrereqCourse { get; set; }
+
         public int InstitutionID { get; set; }
         public string InstitutionName { get; set; }
     

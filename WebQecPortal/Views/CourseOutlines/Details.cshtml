@@ -2,81 +2,244 @@
 
 @{
     ViewBag.Title = "Details";
+    Layout = "~/Views/_DashboardLayoutPage1.cshtml";
+
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>CourseOutline</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Course.CourseCode)
-        </dt>
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="card bg-info text-white">
+                <div class="card-body">
 
-        <dd>
-            @Html.DisplayFor(model => model.Course.CourseCode)
-        </dd>
+                    <center><h3>Course Outline</h3></center>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CourseOutline1.CourseOutlineID)
-        </dt>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row" style="border:1px black solid;">
 
-        <dd>
-            @Html.DisplayFor(model => model.CourseOutline1.CourseOutlineID)
-        </dd>
+                    <div class="col-md-12">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CourseOutline2.CourseOutlineID)
-        </dt>
+                        <b>
+                            @Html.DisplayNameFor(model => model.Department.DepartmentName)
+                        </b>   @Html.DisplayFor(model => model.Department.DepartmentName)
 
-        <dd>
-            @Html.DisplayFor(model => model.CourseOutline2.CourseOutlineID)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Department.DepartmentName)
-        </dt>
+                    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Department.DepartmentName)
-        </dd>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Instructor.InstructorName)
-        </dt>
+                <div class="row" style="border:1px black solid;">
 
-        <dd>
-            @Html.DisplayFor(model => model.Instructor.InstructorName)
-        </dd>
+                    <div class="col-md-4">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Program.Description)
-        </dt>
+                        <b>
+                            @Html.DisplayNameFor(model => model.Program.Description)
+                        </b>
+                        @Html.DisplayFor(model => model.Program.Description)
 
-        <dd>
-            @Html.DisplayFor(model => model.Program.Description)
-        </dd>
 
-        <dt>
+                    </div>
+                    <div class="col-md-4">
+
+                        <b>
+                            @Html.DisplayNameFor(model => model.Term.Semester)
+                        </b>
+                        @Html.DisplayFor(model => model.Term.Semester)
+
+
+                    </div>
+
+                </div>
+                <div class="row" style="border:1px black solid;">
+
+                    <div class="col-md-4">
+
+                        <b>
+                            @Html.DisplayNameFor(model => model.Course.CourseCode)
+                        </b>
+                        @Html.DisplayFor(model => model.Course.CourseCode)
+
+
+                    </div>
+                    <div class="col-md-5">
+
+                        <b>
+                            @Html.DisplayNameFor(model => model.Course.CourseTitle)
+                        </b>
+                        @Html.DisplayFor(model => model.Course.CourseTitle)
+
+
+                    </div>
+
+                </div>
+
+                <div class="row" style="border:1px black solid;">
+
+                    <div class="col-md-6">
+
+                        <b>
+                            @Html.DisplayNameFor(model => model.Instructor.InstructorName)
+                        </b>
+                        @Html.DisplayFor(model => model.Instructor.InstructorName)
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+
+
+            @*<dt>
             @Html.DisplayNameFor(model => model.Status.StatusID)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Status.StatusID)
-        </dd>
+        </dd>*@
+            <table class="table table-striped">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Term.Semester)
-        </dt>
+                <thead>
+                <th>No</th>
+                <th><center><b>View Course Outline<b></center></th>
+                <th></th>
+                </thead>
 
-        <dd>
-            @Html.DisplayFor(model => model.Term.Semester)
-        </dd>
+                @*<tbody>
 
-    </dl>
+                <tr>
+                    <td>1</td>
+                    <td>Course Outline (standardized and updated as per BOS)</td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Students attendance list (Course Attendance & Exam Attendance)</td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>
+                        For all quizzes, attach:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Question Paper
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Graded copy of Best, Worst & Average
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Sample solution (as per departmental policy)
+                    </td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>
+                        For all assignments, attach:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Question Sheet
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Graded copy of Best, Worst & Average
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Sample solution (as per departmental policy)
+                    </td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>
+                        For all class projects, if applicable, attach:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Graded copy of Best, Worst & Average
+                    </td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>
+                        For the midterm exam, attach:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Question Sheet
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Graded copy of Best, Worst & Average
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Sample solution (as per departmental policy)
+                    </td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>7</td>
+                    <td>
+                        For the Final exam, attach:
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Question Sheet
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Graded copy of Best, Worst & Average
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Sample solution (as per departmental policy)
+                    </td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td>Final Result breakup (approved detailed sheet from database/MAJU Online)</td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>9</td>
+                    <td>Faculty course review report</td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+                    <td>Weekly Course Coverage Plan (filled)</td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>11</td>
+                    <td>Attach the TEACHER/COURSE EVALUATION data file by Student (system generated)</td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>12</td>
+                    <td>Class activity/guest speaker session/industrial visit/CSR/conference/seminar or any other</td>
+                </tr>
+
+                <tr>
+                    <td>13</td>
+                    <td>Course Completion Certificate</td>
+                    <td><button type="submit" class="btn btn-info">View</button></td>
+                </tr>
+
+                <tr>
+                    <td>14</td>
+                    <td>Any other report required department specific accreditation bodies (CLO Report/Course complete lectures/Course Descriptive form/course format form/Course log) if applicable</td>
+                </tr>
+
+            </tbody>*@
+
+            </table>
+
+
+
+
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.CourseOutlineID }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CourseOutlineID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

@@ -212,10 +212,6 @@
       <End Role="Term" EntitySet="Terms" />
       <End Role="CourseEvaluation" EntitySet="CourseEvaluations" />
     </AssociationSet>
-    <AssociationSet Name="FK_CourseOutline_CourseOutline" Association="QecPortalModel.FK_CourseOutline_CourseOutline">
-      <End Role="CourseOutline" EntitySet="CourseOutlines" />
-      <End Role="CourseOutline1" EntitySet="CourseOutlines" />
-    </AssociationSet>
     <AssociationSet Name="FK_CourseOutline_Department" Association="QecPortalModel.FK_CourseOutline_Department">
       <End Role="Department" EntitySet="Departments" />
       <End Role="CourseOutline" EntitySet="CourseOutlines" />
@@ -691,15 +687,13 @@
       <PropertyRef Name="CourseOutlineID" />
     </Key>
     <Property Name="CourseOutlineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CourseID" Type="Int32" />
-    <Property Name="ProgramID" Type="Int32" />
-    <Property Name="InstructorID" Type="Int32" />
-    <Property Name="StatusID" Type="Int32" />
-    <Property Name="TermID" Type="Int32" />
-    <Property Name="DepartmentID" Type="Int32" />
+    <Property Name="CourseID" Type="Int32" Nullable="false" />
+    <Property Name="ProgramID" Type="Int32" Nullable="false" />
+    <Property Name="InstructorID" Type="Int32" Nullable="false" />
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+    <Property Name="TermID" Type="Int32" Nullable="false" />
+    <Property Name="DepartmentID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_CourseOutline_Course" FromRole="CourseOutline" ToRole="Course" />
-    <NavigationProperty Name="CourseOutline1" Relationship="QecPortalModel.FK_CourseOutline_CourseOutline" FromRole="CourseOutline" ToRole="CourseOutline1" />
-    <NavigationProperty Name="CourseOutline2" Relationship="QecPortalModel.FK_CourseOutline_CourseOutline" FromRole="CourseOutline1" ToRole="CourseOutline" />
     <NavigationProperty Name="Department" Relationship="QecPortalModel.FK_CourseOutline_Department" FromRole="CourseOutline" ToRole="Department" />
     <NavigationProperty Name="Instructor" Relationship="QecPortalModel.FK_CourseOutline_Instructor" FromRole="CourseOutline" ToRole="Instructor" />
     <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_CourseOutline_Program" FromRole="CourseOutline" ToRole="Program" />
@@ -1675,7 +1669,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CourseOutline_Course">
-    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Course" Role="Course" Multiplicity="1" />
     <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Course">
@@ -1830,20 +1824,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_CourseOutline_CourseOutline">
-    <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="1" />
-    <End Type="QecPortalModel.CourseOutline" Role="CourseOutline1" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="CourseOutline">
-        <PropertyRef Name="CourseOutlineID" />
-      </Principal>
-      <Dependent Role="CourseOutline1">
-        <PropertyRef Name="CourseOutlineID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_CourseOutline_Department">
-    <End Type="QecPortalModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Department" Role="Department" Multiplicity="1" />
     <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Department">
@@ -1855,7 +1837,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CourseOutline_Instructor">
-    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="1" />
     <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Instructor">
@@ -1867,7 +1849,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CourseOutline_Program">
-    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Program" Role="Program" Multiplicity="1" />
     <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Program">
@@ -1879,7 +1861,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CourseOutline_Status">
-    <End Type="QecPortalModel.Status" Role="Status" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Status" Role="Status" Multiplicity="1" />
     <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Status">
@@ -1891,7 +1873,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_CourseOutline_Term">
-    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+    <End Type="QecPortalModel.Term" Role="Term" Multiplicity="1" />
     <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Term">

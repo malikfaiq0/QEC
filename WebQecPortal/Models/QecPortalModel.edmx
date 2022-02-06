@@ -158,12 +158,12 @@
             <PropertyRef Name="CourseOutlineID" />
           </Key>
           <Property Name="CourseOutlineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CourseID" Type="int" />
-          <Property Name="ProgramID" Type="int" />
-          <Property Name="InstructorID" Type="int" />
-          <Property Name="StatusID" Type="int" />
-          <Property Name="TermID" Type="int" />
-          <Property Name="DepartmentID" Type="int" />
+          <Property Name="CourseID" Type="int" Nullable="false" />
+          <Property Name="ProgramID" Type="int" Nullable="false" />
+          <Property Name="InstructorID" Type="int" Nullable="false" />
+          <Property Name="StatusID" Type="int" Nullable="false" />
+          <Property Name="TermID" Type="int" Nullable="false" />
+          <Property Name="DepartmentID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CRI">
           <Key>
@@ -1005,7 +1005,7 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseOutline_Course">
-          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+          <End Role="Course" Type="Self.Course" Multiplicity="1" />
           <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Course">
@@ -1016,20 +1016,8 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CourseOutline_CourseOutline">
-          <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="1" />
-          <End Role="CourseOutline1" Type="Self.CourseOutline" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="CourseOutline">
-              <PropertyRef Name="CourseOutlineID" />
-            </Principal>
-            <Dependent Role="CourseOutline1">
-              <PropertyRef Name="CourseOutlineID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_CourseOutline_Department">
-          <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+          <End Role="Department" Type="Self.Department" Multiplicity="1" />
           <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
@@ -1041,7 +1029,7 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseOutline_Instructor">
-          <End Role="Instructor" Type="Self.Instructor" Multiplicity="0..1" />
+          <End Role="Instructor" Type="Self.Instructor" Multiplicity="1" />
           <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Instructor">
@@ -1053,7 +1041,7 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseOutline_Program">
-          <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+          <End Role="Program" Type="Self.Program" Multiplicity="1" />
           <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Program">
@@ -1065,7 +1053,7 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseOutline_Status">
-          <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+          <End Role="Status" Type="Self.Status" Multiplicity="1" />
           <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Status">
@@ -1077,7 +1065,7 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseOutline_Term">
-          <End Role="Term" Type="Self.Term" Multiplicity="0..1" />
+          <End Role="Term" Type="Self.Term" Multiplicity="1" />
           <End Role="CourseOutline" Type="Self.CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Term">
@@ -2160,10 +2148,6 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
             <End Role="Course" EntitySet="Course" />
             <End Role="CourseOutline" EntitySet="CourseOutline" />
           </AssociationSet>
-          <AssociationSet Name="FK_CourseOutline_CourseOutline" Association="Self.FK_CourseOutline_CourseOutline">
-            <End Role="CourseOutline" EntitySet="CourseOutline" />
-            <End Role="CourseOutline1" EntitySet="CourseOutline" />
-          </AssociationSet>
           <AssociationSet Name="FK_CourseOutline_Department" Association="Self.FK_CourseOutline_Department">
             <End Role="Department" EntitySet="Department" />
             <End Role="CourseOutline" EntitySet="CourseOutline" />
@@ -2697,10 +2681,6 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
             <End Role="Term" EntitySet="Terms" />
             <End Role="CourseEvaluation" EntitySet="CourseEvaluations" />
           </AssociationSet>
-          <AssociationSet Name="FK_CourseOutline_CourseOutline" Association="QecPortalModel.FK_CourseOutline_CourseOutline">
-            <End Role="CourseOutline" EntitySet="CourseOutlines" />
-            <End Role="CourseOutline1" EntitySet="CourseOutlines" />
-          </AssociationSet>
           <AssociationSet Name="FK_CourseOutline_Department" Association="QecPortalModel.FK_CourseOutline_Department">
             <End Role="Department" EntitySet="Departments" />
             <End Role="CourseOutline" EntitySet="CourseOutlines" />
@@ -3176,15 +3156,13 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
             <PropertyRef Name="CourseOutlineID" />
           </Key>
           <Property Name="CourseOutlineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CourseID" Type="Int32" />
-          <Property Name="ProgramID" Type="Int32" />
-          <Property Name="InstructorID" Type="Int32" />
-          <Property Name="StatusID" Type="Int32" />
-          <Property Name="TermID" Type="Int32" />
-          <Property Name="DepartmentID" Type="Int32" />
+          <Property Name="CourseID" Type="Int32" Nullable="false" />
+          <Property Name="ProgramID" Type="Int32" Nullable="false" />
+          <Property Name="InstructorID" Type="Int32" Nullable="false" />
+          <Property Name="StatusID" Type="Int32" Nullable="false" />
+          <Property Name="TermID" Type="Int32" Nullable="false" />
+          <Property Name="DepartmentID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Course" Relationship="QecPortalModel.FK_CourseOutline_Course" FromRole="CourseOutline" ToRole="Course" />
-          <NavigationProperty Name="CourseOutline1" Relationship="QecPortalModel.FK_CourseOutline_CourseOutline" FromRole="CourseOutline" ToRole="CourseOutline1" />
-          <NavigationProperty Name="CourseOutline2" Relationship="QecPortalModel.FK_CourseOutline_CourseOutline" FromRole="CourseOutline1" ToRole="CourseOutline" />
           <NavigationProperty Name="Department" Relationship="QecPortalModel.FK_CourseOutline_Department" FromRole="CourseOutline" ToRole="Department" />
           <NavigationProperty Name="Instructor" Relationship="QecPortalModel.FK_CourseOutline_Instructor" FromRole="CourseOutline" ToRole="Instructor" />
           <NavigationProperty Name="Program" Relationship="QecPortalModel.FK_CourseOutline_Program" FromRole="CourseOutline" ToRole="Program" />
@@ -4160,7 +4138,7 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseOutline_Course">
-          <End Type="QecPortalModel.Course" Role="Course" Multiplicity="0..1" />
+          <End Type="QecPortalModel.Course" Role="Course" Multiplicity="1" />
           <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Course">
@@ -4315,20 +4293,8 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CourseOutline_CourseOutline">
-          <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="1" />
-          <End Type="QecPortalModel.CourseOutline" Role="CourseOutline1" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="CourseOutline">
-              <PropertyRef Name="CourseOutlineID" />
-            </Principal>
-            <Dependent Role="CourseOutline1">
-              <PropertyRef Name="CourseOutlineID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_CourseOutline_Department">
-          <End Type="QecPortalModel.Department" Role="Department" Multiplicity="0..1" />
+          <End Type="QecPortalModel.Department" Role="Department" Multiplicity="1" />
           <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
@@ -4340,7 +4306,7 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseOutline_Instructor">
-          <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="0..1" />
+          <End Type="QecPortalModel.Instructor" Role="Instructor" Multiplicity="1" />
           <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Instructor">
@@ -4352,7 +4318,7 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseOutline_Program">
-          <End Type="QecPortalModel.Program" Role="Program" Multiplicity="0..1" />
+          <End Type="QecPortalModel.Program" Role="Program" Multiplicity="1" />
           <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Program">
@@ -4364,7 +4330,7 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseOutline_Status">
-          <End Type="QecPortalModel.Status" Role="Status" Multiplicity="0..1" />
+          <End Type="QecPortalModel.Status" Role="Status" Multiplicity="1" />
           <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Status">
@@ -4376,7 +4342,7 @@ warning 6002: The table/view 'QecPortal.dbo.SARlist' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CourseOutline_Term">
-          <End Type="QecPortalModel.Term" Role="Term" Multiplicity="0..1" />
+          <End Type="QecPortalModel.Term" Role="Term" Multiplicity="1" />
           <End Type="QecPortalModel.CourseOutline" Role="CourseOutline" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Term">

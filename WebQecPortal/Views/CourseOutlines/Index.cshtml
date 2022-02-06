@@ -4,72 +4,272 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@using (Html.BeginForm("Index", "CourseOutlines", FormMethod.Post))
+{
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Course.CourseCode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CourseOutline1.CourseOutlineID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CourseOutline2.CourseOutlineID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Department.DepartmentName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Instructor.InstructorName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Program.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Status.StatusID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Term.Semester)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course.CourseCode)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CourseOutline1.CourseOutlineID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CourseOutline2.CourseOutlineID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Department.DepartmentName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Instructor.InstructorName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Program.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status.StatusID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Term.Semester)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CourseOutlineID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CourseOutlineID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CourseOutlineID })
-        </td>
-    </tr>
+                <div class="card bg-info text-white">
+                    <div class="card-body">
+
+                        <center><h3>Course Outline</h3></center>
+
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+
+                    @*<div class="col-md-1">
+            <div class="checkbox">
+                <label><input type="checkbox" value="">  All </label>
+            </div>
+        </div>*@
+                    @*<div class="btn btn-outline-dark">
+            @Html.ActionLink("Create New", "Create", "CourseOutlines")
+        </div>*@
+                    @*Semester:<input id="txtSemster" type="text" />*@
+                    <br />
+                    <br />
+
+
+
+                    <div class="col-md-9">
+
+                    </div>
+
+
+                </div>
+                <div class="contact-form" id="downloadPDFData">
+
+                    <div class="table100 ver1 m-b-110">
+                        <table class="table">
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Course.CourseCode)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Course.CourseTitle)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Department.DepartmentName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Instructor.InstructorName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Program.Description)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Status.StatusID)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Term.Semester)
+                                </th>
+                                <th></th>
+                            </tr>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Course.CourseCode)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Course.CourseTitle)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Department.DepartmentName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Instructor.InstructorName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Program.Description)
+                                    </td>
+                                    <td>
+                                        @*@Html.DisplayFor(modelItem => item.Status.StatusID)*@
+                                        @{ 
+                                            if (item.StatusID == 1)
+                                            { <p>True</p>}
+                                            else 
+                                            {
+                                                <p>False</p>
+                                            }
+                                        }
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Term.Semester)
+                                    </td>
+                                    <td>
+                                        @*@Html.ActionLink("Edit", "Edit", new { id = item.CourseOutlineID }) |*@
+
+                                        @Html.ActionLink("ViewOutline", "Details", new { id = item.CourseOutlineID }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.CourseOutlineID })
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+
+                        <br>
+
+
+                    </div>
+
+
+                </div><!-- /.container-fluid -->
+            </div>
+            <div class="btn-group">
+                <textarea id="myText">
+    your message here..
+</textarea>
+                <button type="submit" class="btn btn-secondary" onclick="sendMail(); return false">Send Notification</button>
+
+            </div>
+
+            <div class="btn-group">
+                <input type="button" id="downloadPDF" value="Export" />
+
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <section class="content">
+            </section>
+            <!-- /.content -->
+        </div>
+    </div>
 }
+<!-- /.content-wrapper -->
+<!--Searching Funtion-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        GetSemester();
+        $("#txtSemester").keyup(function () {
+            GetSemester();
+        });
+    });
+    function GetCustomers() {
+        var Semester = $.trim($("#txtSemester").val());
+        $.ajax({
+            type: "POST",
+            url: "/CourseOutlines/SearchCourseOutline",
+            data: "{Semester:'" + Semester + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (CourseOutlines) {
+                var table = $("#tblSemester");
+                table.find("tr:not(:first)").remove();
+                $.each(CourseOutlines, function (i, CourseOutline) {
+                    var table = $("#tblSemester");
+                    var row = table[0].insertRow(-1);
+                    $(row).append("<td />");
+                    $(row).find("td").eq(0).html(CourseOutlines.Semester);
+                  
+                });
+            }
+        });
+    }
+</script>
 
-</table>
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+<!--jQuery Export file funtion START-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+    function getClippedRegion(image, x, y, width, height) {
+        var canvas = document.createElement("canvas"),
+            ctx = canvas.getContext("2d");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        //                   source region         dest. region
+        ctx.drawImage(image, x, y, width, height, 0, 0, width, height);
+
+        return {
+            // Those are some pdfMake params
+            image: canvas.toDataURL(),
+            width: 500
+        };
+    }
+
+    $("body").on("click", "#downloadPDF", function () {
+
+        html2canvas($("#downloadPDFData")[0], {
+            onrendered: function (canvas) {
+                // split the canvas produced by html2canvas into several, based on desired PDF page height
+                let splitAt = 775; // A page height which fits for "LETTER" pageSize...
+
+                let images = [];
+                let y = 0;
+                while (canvas.height > y) {
+                    images.push(getClippedRegion(canvas, 0, y, canvas.width, splitAt));
+                    y += splitAt;
+                }
+
+                // PDF creation using pdfMake
+                var docDefinition = {
+                    content: images,
+                    pageSize: "LETTER"
+                };
+                pdfMake.createPdf(docDefinition).download("NCEAC_FORM.pdf");
+            }
+        });
+    });
+</script>
+<!--jQuery Export file funtion END-->
+<!--Send Notification Funtion -->
+<script>
+    function sendMail() {
+        var link = "mailto:sp18bsse0052@maju.edu.pk"
+            + "?cc=sp18bsse0049@maju.edu.pk"
+            + "&subject=" + encodeURIComponent("Upload Outline")
+            + "&body=" + encodeURIComponent(document.getElementById('myText').value)
+            ;
+        window.location.href = link;
+    }
+</script>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>$.widget.bridge('uibutton', $.ui.button)</script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../plugins/moment/moment.min.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../dist/js/pages/dashboard.js"></script>

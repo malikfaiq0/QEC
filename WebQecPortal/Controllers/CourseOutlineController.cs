@@ -59,6 +59,23 @@ namespace WebQecPortal.Controllers
             return View(CourseOutlineViewModel);
         
         }
+        // GET: CourseOutlines/Delete/5
+        public ActionResult Delete(int id)
+        {
+            CourseOutline courseOutline = db.CourseOutlines.Find(id);
+            return View(courseOutline);
+        }
+
+        // POST: CourseOutlines/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            CourseOutline courseOutline = db.CourseOutlines.Find(id);
+            db.CourseOutlines.Remove(courseOutline);
+            db.SaveChanges();
+            return RedirectToAction("CourseOutlineMain", "CourseOutline");
+        }
 
         //[HttpPost]
         //public ActionResult CourseOutlineMain(CourseOutline courseOutline)

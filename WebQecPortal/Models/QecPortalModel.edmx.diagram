@@ -5,69 +5,69 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="b5cd2ca4f3f641779ce8569c55b9470d" Name="Diagram1">
-        <EntityTypeShape EntityType="QecPortalModel.AdmissionForm" Width="1.5" PointX="5.25" PointY="62.5" />
-        <EntityTypeShape EntityType="QecPortalModel.Alumnus" Width="1.5" PointX="8.25" PointY="53.625" />
-        <EntityTypeShape EntityType="QecPortalModel.Assignment" Width="1.5" PointX="5.25" PointY="57.625" />
-        <EntityTypeShape EntityType="QecPortalModel.AssignmentReport" Width="1.5" PointX="13.5" PointY="61" />
+        <EntityTypeShape EntityType="QecPortalModel.AdmissionForm" Width="1.5" PointX="8.25" PointY="61.875" />
+        <EntityTypeShape EntityType="QecPortalModel.Alumnus" Width="1.5" PointX="5.25" PointY="53" />
+        <EntityTypeShape EntityType="QecPortalModel.Assignment" Width="1.5" PointX="11.25" PointY="52.125" />
+        <EntityTypeShape EntityType="QecPortalModel.AssignmentReport" Width="1.5" PointX="13.5" PointY="52.375" />
         <EntityTypeShape EntityType="QecPortalModel.AvailableRoom" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="QecPortalModel.ComputerRatio" Width="1.5" PointX="3" PointY="32.875" />
-        <EntityTypeShape EntityType="QecPortalModel.ComputingBudget" Width="1.5" PointX="5.25" PointY="38.875" />
-        <EntityTypeShape EntityType="QecPortalModel.Course" Width="1.5" PointX="3" PointY="71.5" />
-        <EntityTypeShape EntityType="QecPortalModel.CourseDescription" Width="1.5" PointX="11.25" PointY="62.625" />
-        <EntityTypeShape EntityType="QecPortalModel.CourseEvaluation" Width="1.5" PointX="8.25" PointY="58.125" />
-        <EntityTypeShape EntityType="QecPortalModel.CourseOutline" Width="1.5" PointX="5.25" PointY="48.875" />
-        <EntityTypeShape EntityType="QecPortalModel.CRI" Width="1.5" PointX="8.25" PointY="61.375" />
-        <EntityTypeShape EntityType="QecPortalModel.CYearlyBudget" Width="1.5" PointX="3" PointY="49.875" />
-        <EntityTypeShape EntityType="QecPortalModel.DCYearlyBudget" Width="1.5" PointX="0.75" PointY="44.375" />
-        <EntityTypeShape EntityType="QecPortalModel.Department" Width="1.5" PointX="0.75" PointY="39.875" />
-        <EntityTypeShape EntityType="QecPortalModel.DepComputingBudget" Width="1.5" PointX="3" PointY="40.125" />
-        <EntityTypeShape EntityType="QecPortalModel.DepOfferProgBudget" Width="1.5" PointX="3" PointY="37.125" />
-        <EntityTypeShape EntityType="QecPortalModel.DepResearchBudget" Width="1.5" PointX="3" PointY="43.125" />
-        <EntityTypeShape EntityType="QecPortalModel.DOPYearlyBudget" Width="1.5" PointX="0.75" PointY="36.375" />
-        <EntityTypeShape EntityType="QecPortalModel.DRYearlyBudget" Width="1.5" PointX="0.75" PointY="47.375" />
-        <EntityTypeShape EntityType="QecPortalModel.ECourseFoder" Width="1.5" PointX="8.25" PointY="48.875" />
-        <EntityTypeShape EntityType="QecPortalModel.FacultyCours" Width="1.5" PointX="8.25" PointY="70.875" />
-        <EntityTypeShape EntityType="QecPortalModel.FIF" Width="1.5" PointX="5.25" PointY="78.625" />
-        <EntityTypeShape EntityType="QecPortalModel.Financial" Width="1.5" PointX="11.25" PointY="43.25" />
-        <EntityTypeShape EntityType="QecPortalModel.FreeStructure" Width="1.5" PointX="9" PointY="21.875" />
-        <EntityTypeShape EntityType="QecPortalModel.FYearlyBudget" Width="1.5" PointX="6.75" PointY="22" />
-        <EntityTypeShape EntityType="QecPortalModel.HecAdministration" Width="1.5" PointX="7.5" PointY="39.625" />
-        <EntityTypeShape EntityType="QecPortalModel.InductionYear" Width="1.5" PointX="0.75" PointY="76.375" />
-        <EntityTypeShape EntityType="QecPortalModel.InductionYearsAdmission" Width="1.5" PointX="3" PointY="76.375" />
-        <EntityTypeShape EntityType="QecPortalModel.Institution" Width="1.5" PointX="6" PointY="74.375" />
-        <EntityTypeShape EntityType="QecPortalModel.InstructionalFacility" Width="1.5" PointX="5.25" PointY="44.375" />
-        <EntityTypeShape EntityType="QecPortalModel.Instructor" Width="1.5" PointX="3" PointY="62.875" />
-        <EntityTypeShape EntityType="QecPortalModel.LabAvailability" Width="1.5" PointX="3" PointY="46.375" />
-        <EntityTypeShape EntityType="QecPortalModel.LevelNetworking" Width="1.5" PointX="3" PointY="52.5" />
-        <EntityTypeShape EntityType="QecPortalModel.LibraryBudget" Width="1.5" PointX="5.25" PointY="28.5" />
+        <EntityTypeShape EntityType="QecPortalModel.ComputerRatio" Width="1.5" PointX="3" PointY="51.625" />
+        <EntityTypeShape EntityType="QecPortalModel.ComputingBudget" Width="1.5" PointX="5.25" PointY="38.75" />
+        <EntityTypeShape EntityType="QecPortalModel.Course" Width="1.5" PointX="6" PointY="76.25" />
+        <EntityTypeShape EntityType="QecPortalModel.CourseDescription" Width="1.5" PointX="5.25" PointY="61" />
+        <EntityTypeShape EntityType="QecPortalModel.CourseEvaluation" Width="1.5" PointX="5.25" PointY="57.5" />
+        <EntityTypeShape EntityType="QecPortalModel.CourseOutline" Width="1.5" PointX="8.25" PointY="48.625" />
+        <EntityTypeShape EntityType="QecPortalModel.CRI" Width="1.5" PointX="11.25" PointY="61.875" />
+        <EntityTypeShape EntityType="QecPortalModel.CYearlyBudget" Width="1.5" PointX="3" PointY="46.125" />
+        <EntityTypeShape EntityType="QecPortalModel.DCYearlyBudget" Width="1.5" PointX="0.75" PointY="44.125" />
+        <EntityTypeShape EntityType="QecPortalModel.Department" Width="1.5" PointX="0.75" PointY="39.625" />
+        <EntityTypeShape EntityType="QecPortalModel.DepComputingBudget" Width="1.5" PointX="3" PointY="39.875" />
+        <EntityTypeShape EntityType="QecPortalModel.DepOfferProgBudget" Width="1.5" PointX="3" PointY="43" />
+        <EntityTypeShape EntityType="QecPortalModel.DepResearchBudget" Width="1.5" PointX="3" PointY="37" />
+        <EntityTypeShape EntityType="QecPortalModel.DOPYearlyBudget" Width="1.5" PointX="0.75" PointY="47.125" />
+        <EntityTypeShape EntityType="QecPortalModel.DRYearlyBudget" Width="1.5" PointX="0.75" PointY="36.125" />
+        <EntityTypeShape EntityType="QecPortalModel.ECourseFoder" Width="1.5" PointX="5.25" PointY="48.5" />
+        <EntityTypeShape EntityType="QecPortalModel.FacultyCours" Width="1.5" PointX="11.25" PointY="45.625" />
+        <EntityTypeShape EntityType="QecPortalModel.FIF" Width="1.5" PointX="8.25" PointY="83" />
+        <EntityTypeShape EntityType="QecPortalModel.Financial" Width="1.5" PointX="8.25" PointY="40.875" />
+        <EntityTypeShape EntityType="QecPortalModel.FreeStructure" Width="1.5" PointX="6" PointY="70" />
+        <EntityTypeShape EntityType="QecPortalModel.FYearlyBudget" Width="1.5" PointX="3.75" PointY="70.125" />
+        <EntityTypeShape EntityType="QecPortalModel.HecAdministration" Width="1.5" PointX="7.5" PointY="36.375" />
+        <EntityTypeShape EntityType="QecPortalModel.InductionYear" Width="1.5" PointX="3.75" PointY="87.75" />
+        <EntityTypeShape EntityType="QecPortalModel.InductionYearsAdmission" Width="1.5" PointX="6" PointY="87.875" />
+        <EntityTypeShape EntityType="QecPortalModel.Institution" Width="1.5" PointX="3" PointY="62.125" />
+        <EntityTypeShape EntityType="QecPortalModel.InstructionalFacility" Width="1.5" PointX="5.25" PointY="24.5" />
+        <EntityTypeShape EntityType="QecPortalModel.Instructor" Width="1.5" PointX="6" PointY="83.25" />
+        <EntityTypeShape EntityType="QecPortalModel.LabAvailability" Width="1.5" PointX="3" PointY="32.625" />
+        <EntityTypeShape EntityType="QecPortalModel.LevelNetworking" Width="1.5" PointX="3" PointY="48.75" />
+        <EntityTypeShape EntityType="QecPortalModel.LibraryBudget" Width="1.5" PointX="5.25" PointY="28.25" />
         <EntityTypeShape EntityType="QecPortalModel.Login" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="QecPortalModel.LYearlyBudget" Width="1.5" PointX="3" PointY="29" />
-        <EntityTypeShape EntityType="QecPortalModel.OtherFacility" Width="1.5" PointX="5.25" PointY="35.5" />
-        <EntityTypeShape EntityType="QecPortalModel.PMPF" Width="1.5" PointX="11.25" PointY="57.5" />
-        <EntityTypeShape EntityType="QecPortalModel.Program" Width="1.5" PointX="3" PointY="57" />
-        <EntityTypeShape EntityType="QecPortalModel.Project" Width="1.5" PointX="11.25" PointY="52.5" />
-        <EntityTypeShape EntityType="QecPortalModel.ProjectReport" Width="1.5" PointX="13.5" PointY="53.125" />
-        <EntityTypeShape EntityType="QecPortalModel.Quiz" Width="1.5" PointX="5.25" PointY="53.75" />
-        <EntityTypeShape EntityType="QecPortalModel.QuizReport" Width="1.5" PointX="13.5" PointY="57" />
-        <EntityTypeShape EntityType="QecPortalModel.RatioYearlyBudget" Width="1.5" PointX="0.75" PointY="32.875" />
-        <EntityTypeShape EntityType="QecPortalModel.ResearchBudget" Width="1.5" PointX="9" PointY="32.625" />
+        <EntityTypeShape EntityType="QecPortalModel.LYearlyBudget" Width="1.5" PointX="3" PointY="28.75" />
+        <EntityTypeShape EntityType="QecPortalModel.OtherFacility" Width="1.5" PointX="5.25" PointY="35.125" />
+        <EntityTypeShape EntityType="QecPortalModel.PMPF" Width="1.5" PointX="8.25" PointY="56.875" />
+        <EntityTypeShape EntityType="QecPortalModel.Program" Width="1.5" PointX="3" PointY="56.375" />
+        <EntityTypeShape EntityType="QecPortalModel.Project" Width="1.5" PointX="11.25" PointY="56.875" />
+        <EntityTypeShape EntityType="QecPortalModel.ProjectReport" Width="1.5" PointX="16.5" PointY="57.5" />
+        <EntityTypeShape EntityType="QecPortalModel.Quiz" Width="1.5" PointX="14.25" PointY="57.125" />
+        <EntityTypeShape EntityType="QecPortalModel.QuizReport" Width="1.5" PointX="19.5" PointY="57.5" />
+        <EntityTypeShape EntityType="QecPortalModel.RatioYearlyBudget" Width="1.5" PointX="0.75" PointY="51.625" />
+        <EntityTypeShape EntityType="QecPortalModel.ResearchBudget" Width="1.5" PointX="6" PointY="20.75" />
         <EntityTypeShape EntityType="QecPortalModel.RoomType" Width="1.5" PointX="0.75" PointY="2" />
-        <EntityTypeShape EntityType="QecPortalModel.Rubric" Width="1.5" PointX="11.25" PointY="71.375" />
-        <EntityTypeShape EntityType="QecPortalModel.RYearlyBudget" Width="1.5" PointX="6.75" PointY="32.75" />
-        <EntityTypeShape EntityType="QecPortalModel.SAR" Width="1.5" PointX="8.25" PointY="45.375" />
-        <EntityTypeShape EntityType="QecPortalModel.SourcesOfIncome" Width="1.5" PointX="9" PointY="25.125" />
-        <EntityTypeShape EntityType="QecPortalModel.Status" Width="1.5" PointX="3" PointY="26.375" />
-        <EntityTypeShape EntityType="QecPortalModel.Student" Width="1.5" PointX="9" PointY="36.125" />
-        <EntityTypeShape EntityType="QecPortalModel.StudentCourseReg" Width="1.5" PointX="11.25" PointY="36" />
+        <EntityTypeShape EntityType="QecPortalModel.Rubric" Width="1.5" PointX="11.25" PointY="49.125" />
+        <EntityTypeShape EntityType="QecPortalModel.RYearlyBudget" Width="1.5" PointX="3.75" PointY="20.875" />
+        <EntityTypeShape EntityType="QecPortalModel.SAR" Width="1.5" PointX="5.25" PointY="45" />
+        <EntityTypeShape EntityType="QecPortalModel.SourcesOfIncome" Width="1.5" PointX="6" PointY="72.75" />
+        <EntityTypeShape EntityType="QecPortalModel.Status" Width="1.5" PointX="6" PointY="80.75" />
+        <EntityTypeShape EntityType="QecPortalModel.Student" Width="1.5" PointX="9" PointY="68.875" />
+        <EntityTypeShape EntityType="QecPortalModel.StudentCourseReg" Width="1.5" PointX="11.25" PointY="68.625" />
         <EntityTypeShape EntityType="QecPortalModel.StudentEvaluation" Width="1.5" PointX="0.75" PointY="5.75" />
-        <EntityTypeShape EntityType="QecPortalModel.StudentSAR" Width="1.5" PointX="14.25" PointY="49.125" />
-        <EntityTypeShape EntityType="QecPortalModel.SYearlyBudget" Width="1.5" PointX="6.75" PointY="25.25" />
+        <EntityTypeShape EntityType="QecPortalModel.StudentSAR" Width="1.5" PointX="11.25" PointY="72.875" />
+        <EntityTypeShape EntityType="QecPortalModel.SYearlyBudget" Width="1.5" PointX="3.75" PointY="72.875" />
         <EntityTypeShape EntityType="QecPortalModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5.75" />
-        <EntityTypeShape EntityType="QecPortalModel.Term" Width="1.5" PointX="3" PointY="67.125" />
-        <EntityTypeShape EntityType="QecPortalModel.WholeBudget" Width="1.5" PointX="9" PointY="68.375" />
-        <EntityTypeShape EntityType="QecPortalModel.WholeYearlyBudget" Width="1.5" PointX="6.75" PointY="68.375" />
-        <EntityTypeShape EntityType="QecPortalModel.YearlyPassout" Width="1.5" PointX="6" PointY="71.625" />
-        <EntityTypeShape EntityType="QecPortalModel.SARlist" Width="1.5" PointX="15.75" PointY="57" />
+        <EntityTypeShape EntityType="QecPortalModel.Term" Width="1.5" PointX="6" PointY="13" />
+        <EntityTypeShape EntityType="QecPortalModel.WholeBudget" Width="1.5" PointX="6" PointY="17.5" />
+        <EntityTypeShape EntityType="QecPortalModel.WholeYearlyBudget" Width="1.5" PointX="3.75" PointY="17.5" />
+        <EntityTypeShape EntityType="QecPortalModel.YearlyPassout" Width="1.5" PointX="3" PointY="65.375" />
+        <EntityTypeShape EntityType="QecPortalModel.SARlist" Width="1.5" PointX="21.75" PointY="54.75" />
         <AssociationConnector Association="QecPortalModel.FK_AdmissionForm_InductionYearsAdmission" />
         <AssociationConnector Association="QecPortalModel.FK_AdmissionForm_Institution" />
         <AssociationConnector Association="QecPortalModel.FK_AdmissionForm_Program" />
@@ -105,7 +105,6 @@
         <AssociationConnector Association="QecPortalModel.FK_CourseDescription_Term" />
         <AssociationConnector Association="QecPortalModel.FK_CourseEvaluation_Program" />
         <AssociationConnector Association="QecPortalModel.FK_CourseEvaluation_Term" />
-        <AssociationConnector Association="QecPortalModel.FK_CourseOutline_CourseOutline" />
         <AssociationConnector Association="QecPortalModel.FK_CourseOutline_Department" />
         <AssociationConnector Association="QecPortalModel.FK_CourseOutline_Instructor" />
         <AssociationConnector Association="QecPortalModel.FK_CourseOutline_Program" />

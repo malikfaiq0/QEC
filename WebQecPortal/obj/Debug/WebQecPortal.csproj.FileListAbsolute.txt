@@ -247,4 +247,8 @@ C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csproj.CoreCompi
 C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csproj.CopyComplete
 C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.dll
 C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.pdb
-C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csprojAssemblyReference.cache
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\PagedList.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\PagedList.Mvc.dll
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\PagedList.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\bin\PagedList.Mvc.xml
+C:\fyp maju\Backup\16122021\WebQecPortal\obj\Debug\WebQecPortal.csproj.AssemblyReference.cache

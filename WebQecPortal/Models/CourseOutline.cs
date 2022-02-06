@@ -15,16 +15,14 @@ namespace WebQecPortal.Models
     public partial class CourseOutline
     {
         public int CourseOutlineID { get; set; }
-        public Nullable<int> CourseID { get; set; }
-        public Nullable<int> ProgramID { get; set; }
-        public Nullable<int> InstructorID { get; set; }
-        public Nullable<int> StatusID { get; set; }
-        public Nullable<int> TermID { get; set; }
-        public Nullable<int> DepartmentID { get; set; }
+        public int CourseID { get; set; }
+        public int ProgramID { get; set; }
+        public int InstructorID { get; set; }
+        public int StatusID { get; set; }
+        public int TermID { get; set; }
+        public int DepartmentID { get; set; }
     
         public virtual Course Course { get; set; }
-        public virtual CourseOutline CourseOutline1 { get; set; }
-        public virtual CourseOutline CourseOutline2 { get; set; }
         public virtual Department Department { get; set; }
         public virtual Instructor Instructor { get; set; }
         public virtual Program Program { get; set; }

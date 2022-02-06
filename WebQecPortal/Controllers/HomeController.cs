@@ -10,6 +10,7 @@ namespace WebQecPortal.Controllers
     {
         public ActionResult Index()
         {
+           
             return View();
         }
 
