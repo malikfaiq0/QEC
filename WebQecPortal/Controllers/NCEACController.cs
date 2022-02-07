@@ -1565,22 +1565,23 @@ namespace WebQecPortal.Controllers
 
             ViewBag.sumtot = String.Join(",", sumtot);
 
-            var course= (from pd in db.CRIs
-                           join od in db.Programs on pd.ProgramID equals od.ProgramID
-                           join cd in db.Courses on pd.CourseID equals cd.CourseID
+            var course = (from pd in db.CRIs
+                          join od in db.Programs on pd.ProgramID equals od.ProgramID
+                          join cd in db.Courses on pd.CourseID equals cd.CourseID
 
 
 
-                           where od.Description == "BSSE"
-                           select new
-                           {
-                               cd.CourseCode,
-                               cd.CourseTitle,
-                               cd.Credithr,
-                               cd.PrereqCourse,
-                           }).ToList();
+                          where od.Description == "BSSE"
+                          select new
+                          {
+                              cd.CourseCode,
+                              cd.CourseTitle,
+                          
+                          }).ToList();
 
             ViewBag.course = String.Join(",", course);
+
+
 
 
 

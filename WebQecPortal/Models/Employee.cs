@@ -8,7 +8,7 @@ namespace WebQecPortal.Models
         public class Employee
         {
         public IEnumerable<Course> Courses { get; set; }
-        public virtual ICollection<Institution> Institutions { get; set; }
+        public Institution Institutions { get; set; }
 
 
     }
