@@ -16,7 +16,10 @@
             </div>
 
             <p>
-                @Html.ActionLink("Create New", "Create")
+
+                <input type="button" class="btn btn-info" value="Create" onclick="location.href='@Url.Action("Create", "SARs")'" />
+             
+
             </p>
             <div class="table100 ver1 m-b-110">
                 <table data-vertable="ver1">
@@ -52,9 +55,10 @@
                                 @Html.DisplayFor(modelItem => item.Term.Semester)
                             </td>
                             <td>
-                                @Html.ActionLink("Edit", "Edit", new { id = item.SARID }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.SARID }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.SARID })
+                                <input type="button" class="btn btn-primary" value="Edit" onclick="location.href='@Url.Action("Edit", "SARs", new { id = item.SARID})'" />|
+                                <input type="button" class="btn btn-info" value="Detail" onclick="location.href='@Url.Action("Details", "SARs", new { id = item.SARID})'" />|
+                                <input type="button" class="btn btn-danger" value="Delete" onclick="location.href='@Url.Action("Delete", "SARs", new { id = item.SARID})'" />
+                               
                             </td>
                             <td>
                                 <button type="submit" class="btn btn-info"><a href="@Url.Action("StudentEvaluation","SAR")" style="color:white;">Download SAR</a></button>

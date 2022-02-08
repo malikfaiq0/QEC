@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebQecPortal.Models.Course>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+
+            <div class="card bg-info text-white">
+                <div class="card-body">
+
+                    <center><h3>Core Courses</h3></center>
+
+                </div>
+            </div>
+
+            <p>
+            </p>
+            <div class="table100 ver1 m-b-110">
+                <table data-vertable="ver1">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CourseCode)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CourseTitle)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Credithr)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PrereqCourse)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CourseCode)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CourseTitle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Credithr)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PrereqCourse)
+                            </td>
+
+                        </tr>
+                    }
+
+                </table>
+            </div>
+
+            <div>
+                @Html.ActionLink("Back to List", "CRI", "NCEAC")
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

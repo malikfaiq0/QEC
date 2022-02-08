@@ -22,63 +22,120 @@
             <div>
                 <h4>CourseOutline</h4>
                 <hr />
-                <dl class="dl-horizontal">
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Course.CourseCode)
-                    </dt>
+                <div class="card bg-light text-white">
+                    <div class="card-body">
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Course.CourseCode)
-                    </dd>
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Course.CourseTitle)
-                    </dt>
+                        <div class="row">
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Course.CourseTitle)
-                    </dd>
+                            <div class="col-md-3"></div>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Department.DepartmentName)
-                    </dt>
+                            <div class="col-md-4">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Course.CourseCode)
+                                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Department.DepartmentName)
-                    </dd>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Course.CourseCode)
+                                </dd>
+                            </div>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Instructor.InstructorName)
-                    </dt>
+                            <div class="col-md-4">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Course.CourseTitle)
+                                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Instructor.InstructorName)
-                    </dd>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Course.CourseTitle)
+                                </dd>
+                            </div>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Program.Description)
-                    </dt>
+                            <div class="col-md-3"></div>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Program.Description)
-                    </dd>
+                        </div>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Status.StatusID)
-                    </dt>
+                        <div class="row">
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Status.StatusID)
-                    </dd>
+                            <div class="col-md-3"></div>
 
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Term.Semester)
-                    </dt>
+                            <div class="col-md-4">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Department.DepartmentName)
+                                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Term.Semester)
-                    </dd>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Department.DepartmentName)
+                                </dd>
+                            </div>
 
-                </dl>
+                            <div class="col-md-4">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Instructor.InstructorName)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Instructor.InstructorName)
+                                </dd>
+                            </div>
+
+                            <div class="col-md-3"></div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-3"></div>
+
+                            <div class="col-md-4">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Program.Description)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Program.Description)
+                                </dd>
+                            </div>
+
+                            <div class="col-md-4">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Status.StatusID)
+                                </dt>
+
+                                <dd>
+                               
+                                    @if (Model.Status.StatusID == 1)
+                                    {
+                                    <p>True</p>
+
+                                    }
+                                    else
+                                    {
+                                        <p>False </p>}
+                                </dd>
+                            </div>
+
+                            <div class="col-md-3"></div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-3"></div>
+
+                            <div class="col-md-4">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Term.Semester)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Term.Semester)
+                                </dd>
+                            </div>
+
+                      
+
+                            <div class="col-md-3"></div>
+
+                        </div>
+                    </div>
+                </div>
 
                 @using (Html.BeginForm())
                 {

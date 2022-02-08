@@ -1,12 +1,15 @@
-﻿
+﻿@model IEnumerable<WebQecPortal.Models.StudentSAR>
+
 @{
     ViewBag.Title = "CourseEvaluationAssignment";
 }
 
+<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
+
 
             <div class="card bg-info text-white">
                 <div class="card-body">
@@ -67,77 +70,132 @@
                 </div>
             </div>
 
+            <div class="card bg-light text-white">
+                <div class="card-body">
 
+                    <div class="row">
+
+                        @*<div class="col-md-3"></div>
+
+                        <div class="col-md-4">
+                            <b>Course Name: Computer Programming</b>
+                        </div>
+
+                        <div class="col-md-4">
+                            <b>Semester: SP21</b>
+                        </div>
+
+                        <div class="col-md-3"></div>
+
+                    </div>
+
+
+
+                    <div class="row">
+
+                        <div class="col-md-3"></div>
+
+                        <div class="col-md-4">
+                            <b>Weeks Spent: Week 11</b>
+                        </div>*@
+
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
 
             <div class="table100 ver1 m-b-110">
                 <table data-vertable="ver1">
                     <thead>
                         <tr class="row100 head">
-                            <th class="column100 column1" data-column="column1">Student ID</th>
-                            <th class="column100 column2" data-column="column2">Student Name</th>
-                            <th class="column100 column3" data-column="column3">R1</th>
-                            <th class="column100 column4" data-column="column4">R2</th>
-                            <th class="column100 column5" data-column="column5">R3</th>
-                            <th class="column100 column6" data-column="column6">R4</th>
-                            <th class="column100 column7" data-column="column7">R5</th>
-                            <th class="column100 column8" data-column="column8">Total</th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Student.SudentName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Student.StudentRegNum)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Course.CourseTitle)
+                            </th>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.AssignmentNumber)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.QuizNumber)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Project)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.AssignMarks)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.QuizMarks)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ProjectMarks)
+                            </th>
+
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="row100">
-                            <td class="column100 column1" data-column="column1">SP19-BSSE-0073</td>
-                            <td class="column100 column2" data-column="column2">Inshal Jamal</td>
-                            <td class="column100 column3" data-column="column3">0</td>
-                            <td class="column100 column4" data-column="column4">1</td>
-                            <td class="column100 column5" data-column="column5">1</td>
-                            <td class="column100 column6" data-column="column6">1</td>
-                            <td class="column100 column7" data-column="column7">0</td>
-                            <td class="column100 column8" data-column="column8">3</td>
-                        </tr>
+                        @foreach (var item in Model)
+                        {
 
-                        <tr class="row100">
-                            <td class="column100 column1" data-column="column1">SP19-BSSE-0069</td>
-                            <td class="column100 column2" data-column="column2">Moiz Madni Khan</td>
-                            <td class="column100 column3" data-column="column3">0</td>
-                            <td class="column100 column4" data-column="column4">1</td>
-                            <td class="column100 column5" data-column="column5">1</td>
-                            <td class="column100 column6" data-column="column6">1</td>
-                            <td class="column100 column7" data-column="column7">0</td>
-                            <td class="column100 column8" data-column="column8">3</td>
-                        </tr>
+                            <tr class="row100">
 
-                        <tr class="row100">
-                            <td class="column100 column1" data-column="column1">SP19-BSSE-0042</td>
-                            <td class="column100 column2" data-column="column2">Syed Haider Imam</td>
-                            <td class="column100 column3" data-column="column3">0</td>
-                            <td class="column100 column4" data-column="column4">1</td>
-                            <td class="column100 column5" data-column="column5">1</td>
-                            <td class="column100 column6" data-column="column6">1</td>
-                            <td class="column100 column7" data-column="column7">0</td>
-                            <td class="column100 column8" data-column="column8">3</td>
-                        </tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Student.SudentName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Student.StudentRegNum)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Course.CourseTitle)
+                                </td>
 
-                        <tr class="row100">
-                            <td class="column100 column1" data-column="column1">SP19-BSSE-0049</td>
-                            <td class="column100 column2" data-column="column2">Muhammad Zeeshan</td>
-                            <td class="column100 column3" data-column="column3">0</td>
-                            <td class="column100 column4" data-column="column4">1</td>
-                            <td class="column100 column5" data-column="column5">1</td>
-                            <td class="column100 column6" data-column="column6">1</td>
-                            <td class="column100 column7" data-column="column7">0</td>
-                            <td class="column100 column8" data-column="column8">3</td>
-                        </tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AssignmentNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.QuizNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Project)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AssignMarks)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.QuizMarks)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProjectMarks)
+                                </td>
 
 
+                                @*<td>
+                                <center>
+                                    @Html.ActionLink("StudentEvaluationDetails", "StudentEvaluationDetails", new { id = item.StudentSARID }, new { Styles = "color:Blue" })
+
+                                </center>
+                            </td>*@
+                            </tr>
+
+
+
+
+
+
+                        }
                     </tbody>
                 </table>
-                <br>
-                <div class="btn-group">
-                    <button type="submit" class="btn btn-secondary" style="float: right;">Print</button>
-                </div>
-                <div class="btn-group">
-                    <button type="submit" class="btn btn-secondary" style="float: right;">Download</button>
-                </div>
             </div>
 
 
@@ -150,10 +208,8 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-<footer class="main-footer">
-    <strong>Copyright &copy; 2021-2025 <a href="#">QEC Portal</a>.</strong>
-    All rights reserved.
-</footer>
+<!-- /.content-wrapper -->
+
 
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">

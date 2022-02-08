@@ -16,7 +16,7 @@
                 <div class="card bg-info text-white">
                     <div class="card-body">
 
-                        <center><h3>Course Outline</h3></center>
+                        <center><h3>Complaint</h3></center>
 
                     </div>
                 </div>
@@ -25,13 +25,13 @@
                 <div class="row">
 
                     @*<div class="col-md-1">
-            <div class="checkbox">
-                <label><input type="checkbox" value="">  All </label>
-            </div>
-        </div>*@
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">  All </label>
+                            </div>
+                        </div>*@
                     @*<div class="btn btn-outline-dark">
-            @Html.ActionLink("Create New", "Create", "CourseOutlines")
-        </div>*@
+                            @Html.ActionLink("Create New", "Create", "CourseOutlines")
+                        </div>*@
                     @*Semester:<input id="txtSemster" type="text" />*@
                     <br />
                     <br />
@@ -44,79 +44,10 @@
 
 
                 </div>
-                <div class="contact-form" id="downloadPDFData">
+          
 
                     <div class="table100 ver1 m-b-110">
-                        <table class="table">
-                            <tr>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Course.CourseCode)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Course.CourseTitle)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Department.DepartmentName)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Instructor.InstructorName)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Program.Description)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Status.StatusID)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Term.Semester)
-                                </th>
-                                <th></th>
-                            </tr>
-
-                            @foreach (var item in Model)
-                            {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Course.CourseCode)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Course.CourseTitle)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Department.DepartmentName)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Instructor.InstructorName)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Program.Description)
-                                    </td>
-                                    <td>
-                                        @*@Html.DisplayFor(modelItem => item.Status.StatusID)*@
-                                        @{ 
-                                            if (item.StatusID == 1)
-                                            { <p>True</p>}
-                                            else 
-                                            {
-                                                <p>False</p>
-                                            }
-                                        }
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Term.Semester)
-                                    </td>
-                                    <td>
-                                        @*@Html.ActionLink("Edit", "Edit", new { id = item.CourseOutlineID }) |*@
-                                        <input type="button" class="btn btn-info" value="View Outline" onclick="location.href='@Url.Action("Details", "CourseOutlines", new { id = item.CourseOutlineID })'" />|
-                                        <input type="button" class="btn btn-danger" value="Delete" onclick="location.href='@Url.Action("Delete", "CourseOutlines", new { id = item.CourseOutlineID })'" />
-
-
-                                      
-                                    </td>
-                                </tr>
-                            }
-
-                        </table>
+                      
 
                         <br>
 
@@ -126,12 +57,67 @@
 
                 </div><!-- /.container-fluid -->
             </div>
-            <div class="btn-group">
-                <textarea id="myText">
-    your message here..
-</textarea>
-                <button type="submit" class="btn btn-secondary" onclick="sendMail(); return false">Send Notification</button>
+        <div class="container">
+            <div class="contact-form" id="downloadPDFData">
+                <h3>Complaint Form</h3>
 
+                <div class="container">
+                    <form action="/action_page.php">
+
+
+                        <label for="subject">Subject</label>
+                        <textarea id="mySub" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+                        <label for="subject">Your Message   </label>
+                        <textarea id="myText" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                        <button type="submit" class="btn btn-secondary" onclick="sendMail(); return false">Send Complaint</button>
+
+                    </form>
+                </div>
+                <style>
+                    textarea {
+                        width: 300px;
+                        height: 150px;
+                    }
+
+                    body {
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+
+                    * {
+                        box-sizing: border-box;
+                    }
+
+                    input[type=text], select, textarea {
+                        width: 100%;
+                        padding: 12px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+                        margin-top: 6px;
+                        margin-bottom: 16px;
+                        resize: vertical;
+                    }
+
+                    input[type=submit] {
+                        background-color: #04AA6D;
+                        color: white;
+                        padding: 12px 20px;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+
+                        input[type=submit]:hover {
+                            background-color: #45a049;
+                        }
+
+                    .container {
+                        border-radius: 5px;
+                        background-color: #f2f2f2;
+                        padding: 20px;
+                </style>
             </div>
 
             <div class="btn-group">
@@ -149,7 +135,7 @@
 <!-- /.content-wrapper -->
 <!--Searching Funtion-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript">
+@*<script type="text/javascript">
     $(function () {
         GetSemester();
         $("#txtSemester").keyup(function () {
@@ -172,12 +158,12 @@
                     var row = table[0].insertRow(-1);
                     $(row).append("<td />");
                     $(row).find("td").eq(0).html(CourseOutlines.Semester);
-                  
+
                 });
             }
         });
     }
-</script>
+</script>*@
 
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
@@ -236,7 +222,7 @@
     function sendMail() {
         var link = "mailto:sp18bsse0052@maju.edu.pk"
             + "?cc=sp18bsse0049@maju.edu.pk"
-            + "&subject=" + encodeURIComponent("Upload Outline")
+            + "&subject=" + encodeURIComponent(document.getElementById('mySub').value)
             + "&body=" + encodeURIComponent(document.getElementById('myText').value)
             ;
         window.location.href = link;

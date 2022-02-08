@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebQecPortal.Models;
@@ -64,11 +67,13 @@ namespace WebQecPortal.Controllers
         }
         public ActionResult CourseEvaluationAssignment()
         {
-            return View();
+            var studentSARs = db.StudentSARs.Include(s => s.Course).Include(s => s.Student);
+            return View(db.StudentSARs.ToList());
         }
         public ActionResult CourseEvaluationQuiz()
         {
-            return View();
+            var studentSARs = db.StudentSARs.Include(s => s.Course).Include(s => s.Student);
+            return View(db.StudentSARs.ToList());
         }
         public ActionResult CourseEvaluationProject()
         {
